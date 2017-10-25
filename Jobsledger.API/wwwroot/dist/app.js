@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "0697ec230b8a61858f50"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "6ba1f999f0e5edf62f72"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -21462,7 +21462,7 @@ exports.push([module.i, "@media (max-width: 767px) {\r\n    /* On small screens,
 /***/ "app/components/app/app.html":
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = "<template>\r\n    <require from=\"../navmenu/navmenu.html\"></require>\r\n    <require from=\"./app.css\"></require>\r\n    <div class=\"container-fluid\">\r\n        <div class=\"row\">\r\n            <div class=\"col-sm-3\">\r\n                <navmenu router.bind=\"router\"></navmenu>\r\n            </div>\r\n            <div class=\"col-sm-9 body-content\">\r\n                <router-view></router-view>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</template>\r\n";
+module.exports = "<template>\r\n    <require from=\"../navmenu/navmenu.html\"></require>\r\n    <require from=\"./app.css\"></require>\r\n    <!--We want the nav bar to span the page-->\r\n    <div class=\"container-fluid\">\r\n        <navmenu router.bind=\"router\"></navmenu>\r\n    </div>\r\n    <!--We want the media to centre so we use just container-->\r\n    <div class=\"container\">\r\n        <div className='col-sm-12'>\r\n            <div className='row'>\r\n                <router-view></router-view>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</template>\r\n";
 
 /***/ }),
 
@@ -21570,7 +21570,7 @@ exports = module.exports = __webpack_require__(27)(undefined);
 
 
 // module
-exports.push([module.i, "li .glyphicon {\r\n    margin-right: 10px;\r\n}\r\n\r\n/* Highlighting rules for nav menu items */\r\nli.au-target.link-active a,\r\nli.au-target.link-active a:hover,\r\nli.au-target.link-active a:focus {\r\n    background-color: #4189C7;\r\n    color: white;\r\n}\r\n\r\n/* Keep the nav menu independent of scrolling and on top of other items */\r\n.main-nav {\r\n    position: fixed;\r\n    top: 0;\r\n    left: 0;\r\n    right: 0;\r\n    z-index: 1;\r\n}\r\n\r\n@media (min-width: 768px) {\r\n    /* On small screens, convert the nav menu to a vertical sidebar */\r\n    .main-nav {\r\n        height: 100%;\r\n        width: calc(25% - 20px);\r\n    }\r\n    .navbar {\r\n        border-radius: 0px;\r\n        border-width: 0px;\r\n        height: 100%;\r\n    }\r\n    .navbar-header {\r\n        float: none;\r\n    }\r\n    .navbar-collapse {\r\n        border-top: 1px solid #444;\r\n        padding: 0px;\r\n    }\r\n    .navbar ul {\r\n        float: none;\r\n    }\r\n    .navbar li {\r\n        float: none;\r\n        font-size: 15px;\r\n        margin: 6px;\r\n    }\r\n    .navbar li a {\r\n        padding: 10px 16px;\r\n        border-radius: 4px;\r\n    }\r\n    .navbar a {\r\n        /* If a menu item's text is too long, truncate it */\r\n        width: 100%;\r\n        white-space: nowrap;\r\n        overflow: hidden;\r\n        text-overflow: ellipsis;\r\n    }\r\n}\r\n", ""]);
+exports.push([module.i, "li .glyphicon {\r\n    margin-right: 10px;\r\n}\r\n\r\n/* Highlighting rules for nav menu items */\r\nli.au-target.link-active a,\r\nli.au-target.link-active a:hover,\r\nli.au-target.link-active a:focus {\r\n    background-color: #4189C7;\r\n    color: white;\r\n}\r\n\r\n/* Keep the nav menu independent of scrolling and on top of other items */\r\n.main-nav {\r\n    position: relative;\r\n    top: 0;\r\n    left: 0;\r\n    right: 0;\r\n    z-index: 1;\r\n}\r\n\r\n\r\n\r\n@media (min-width: 768px) {\r\n \r\n}\r\n/* If a menu item's text is too long, truncate it */", ""]);
 
 // exports
 
@@ -21580,7 +21580,7 @@ exports.push([module.i, "li .glyphicon {\r\n    margin-right: 10px;\r\n}\r\n\r\n
 /***/ "app/components/navmenu/navmenu.html":
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = "<template bindable=\"router\">\r\n    <require from=\"./navmenu.css\"></require>\r\n    <div class=\"main-nav\">\r\n        <div class=\"navbar navbar-inverse\">\r\n            <div class=\"navbar-header\">\r\n                <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\".navbar-collapse\">\r\n                    <span class=\"sr-only\">Toggle navigation</span>\r\n                    <span class=\"icon-bar\"></span>\r\n                    <span class=\"icon-bar\"></span>\r\n                    <span class=\"icon-bar\"></span>\r\n                </button>\r\n                <a class=\"navbar-brand\" href=\"#/home\">Jobsledger.API</a>\r\n            </div>\r\n            <div class=\"clearfix\"></div>\r\n            <div class=\"navbar-collapse collapse\">\r\n                <ul class=\"nav navbar-nav\">\r\n                    <li repeat.for = \"row of router.navigation\" class=\"${ row.isActive ? 'link-active' : '' }\" >\r\n                        <a href.bind = \"row.href\">\r\n                            <span class=\"glyphicon glyphicon-${ row.settings.icon }\"></span> ${ row.title }\r\n                        </a>\r\n                    </li>\r\n                </ul>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</template>\r\n";
+module.exports = "<template bindable=\"router\">\r\n    <require from=\"./navmenu.css\"></require>\r\n    <div class=\"main-nav\">\r\n        <div class=\"navbar navbar-inverse\">\r\n            <div class=\"navbar-header\">\r\n                <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\".navbar-collapse\">\r\n                    <span class=\"sr-only\">Toggle navigation</span>\r\n                    <span class=\"icon-bar\"></span>\r\n                    <span class=\"icon-bar\"></span>\r\n                    <span class=\"icon-bar\"></span>\r\n                </button>\r\n                <a class=\"navbar-brand\" href=\"#/home\">Jobsledger.API</a>\r\n            </div>\r\n            <div class=\"navbar-collapse collapse\">\r\n                <ul class=\"nav navbar-nav\">\r\n                    <li repeat.for = \"row of router.navigation\" class=\"${ row.isActive ? 'link-active' : '' }\" >\r\n                        <a href.bind = \"row.href\">\r\n                            <span class=\"glyphicon glyphicon-${ row.settings.icon }\"></span> ${ row.title }\r\n                        </a>\r\n                    </li>\r\n                </ul>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</template>\r\n";
 
 /***/ }),
 

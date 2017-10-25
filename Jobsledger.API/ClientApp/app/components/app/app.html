@@ -1,12 +1,14 @@
 <template>
     <require from="../navmenu/navmenu.html"></require>
     <require from="./app.css"></require>
+    <!--We want the nav bar to span the page-->
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-sm-3">
-                <navmenu router.bind="router"></navmenu>
-            </div>
-            <div class="col-sm-9 body-content">
+        <navmenu router.bind="router"></navmenu>
+    </div>
+    <!--We want the media to centre so we use just container-->
+    <div class="container">
+        <div className='col-sm-12'>
+            <div className='row'>
                 <router-view></router-view>
             </div>
         </div>
