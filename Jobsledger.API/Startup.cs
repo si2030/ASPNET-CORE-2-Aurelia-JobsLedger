@@ -21,6 +21,7 @@ using System.Security.Claims;
 using JobsLedger.API.ControllerServices.SelectDataServices;
 using JobsLedger.API.ControllerServices.ClientServices;
 using JobsLedger.API.ControllerServices.JobServices;
+using Microsoft.AspNetCore.SpaServices.Webpack;
 
 namespace Jobsledger.API
 {
@@ -129,22 +130,33 @@ namespace Jobsledger.API
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
-            loggerFactory.AddConsole(Configuration.GetSection("Logging"));
-            loggerFactory.AddDebug();
-
-            loggerFactory.AddConsole();
-            env.EnvironmentName = EnvironmentName.Production;
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                app.UseWebpackDevMiddleware(new WebpackDevMiddlewareOptions
+                {
+                    HotModuleReplacement = true
+                });
             }
             else
             {
-                app.UseExceptionHandler("/error");
+                app.UseExceptionHandler("/Home/Error");
             }
 
             app.UseAuthentication();
-            app.UseMvc();
+
+            app.UseStaticFiles();
+
+            app.UseMvc(routes =>
+            {
+                routes.MapRoute(
+                    name: "default",
+                    template: "{controller=Home}/{action=Index}/{id?}");
+
+                routes.MapSpaFallbackRoute(
+                    name: "spa-fallback",
+                    defaults: new { controller = "Home", action = "Index" });
+            });
         }
     }
 }
