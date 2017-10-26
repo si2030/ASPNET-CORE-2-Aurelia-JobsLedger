@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "6ba1f999f0e5edf62f72"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "849d27a748eccdfae554"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -21400,7 +21400,7 @@ function filterFlushStack(stack) {
 
 /***/ }),
 
-/***/ "app/components/app/app":
+/***/ "app/app/app":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -21417,21 +21417,21 @@ var App = /** @class */ (function () {
                 route: ['', 'home'],
                 name: 'home',
                 settings: { icon: 'home' },
-                moduleId: '../home/home',
+                moduleId: '../website/home/home',
                 nav: true,
                 title: 'Home'
             }, {
                 route: 'counter',
                 name: 'counter',
                 settings: { icon: 'education' },
-                moduleId: '../counter/counter',
+                moduleId: '../website/counter/counter',
                 nav: true,
                 title: 'Counter'
             }, {
                 route: 'fetch-data',
                 name: 'fetchdata',
                 settings: { icon: 'th-list' },
-                moduleId: '../fetchdata/fetchdata',
+                moduleId: '../website/fetchdata/fetchdata',
                 nav: true,
                 title: 'Fetch data'
             }]);
@@ -21444,7 +21444,7 @@ var App = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "app/components/app/app.css":
+/***/ "app/app/app.css":
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(27)(undefined);
@@ -21459,14 +21459,36 @@ exports.push([module.i, "@media (max-width: 767px) {\r\n    /* On small screens,
 
 /***/ }),
 
-/***/ "app/components/app/app.html":
+/***/ "app/app/app.html":
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = "<template>\r\n    <require from=\"../navmenu/navmenu.html\"></require>\r\n    <require from=\"./app.css\"></require>\r\n    <!--We want the nav bar to span the page-->\r\n    <div class=\"container-fluid\">\r\n        <navmenu router.bind=\"router\"></navmenu>\r\n    </div>\r\n    <!--We want the media to centre so we use just container-->\r\n    <div class=\"container\">\r\n        <div className='col-sm-12'>\r\n            <div className='row'>\r\n                <router-view></router-view>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</template>\r\n";
 
 /***/ }),
 
-/***/ "app/components/counter/counter":
+/***/ "app/navmenu/navmenu.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(27)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, "li .glyphicon {\r\n    margin-right: 10px;\r\n}\r\n\r\n/* Highlighting rules for nav menu items */\r\nli.au-target.link-active a,\r\nli.au-target.link-active a:hover,\r\nli.au-target.link-active a:focus {\r\n    background-color: #4189C7;\r\n    color: white;\r\n}\r\n\r\n/* Keep the nav menu independent of scrolling and on top of other items */\r\n.main-nav {\r\n    position: relative;\r\n    top: 0;\r\n    left: 0;\r\n    right: 0;\r\n    z-index: 1;\r\n}\r\n\r\n\r\n\r\n@media (min-width: 768px) {\r\n \r\n}\r\n/* If a menu item's text is too long, truncate it */", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "app/navmenu/navmenu.html":
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = "<template bindable=\"router\">\r\n    <require from=\"./navmenu.css\"></require>\r\n    <div class=\"main-nav\">\r\n        <div class=\"navbar navbar-inverse\">\r\n            <div class=\"navbar-header\">\r\n                <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\".navbar-collapse\">\r\n                    <span class=\"sr-only\">Toggle navigation</span>\r\n                    <span class=\"icon-bar\"></span>\r\n                    <span class=\"icon-bar\"></span>\r\n                    <span class=\"icon-bar\"></span>\r\n                </button>\r\n                <a class=\"navbar-brand\" href=\"#/home\">Jobsledger.API</a>\r\n            </div>\r\n            <div class=\"navbar-collapse collapse\">\r\n                <ul class=\"nav navbar-nav\">\r\n                    <li repeat.for = \"row of router.navigation\" class=\"${ row.isActive ? 'link-active' : '' }\" >\r\n                        <a href.bind = \"row.href\">\r\n                            <span class=\"glyphicon glyphicon-${ row.settings.icon }\"></span> ${ row.title }\r\n                        </a>\r\n                    </li>\r\n                </ul>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</template>\r\n";
+
+/***/ }),
+
+/***/ "app/website/counter/counter":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -21486,14 +21508,14 @@ var Counter = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "app/components/counter/counter.html":
+/***/ "app/website/counter/counter.html":
 /***/ (function(module, exports) {
 
 module.exports = "<template>\r\n    <h1>Counter</h1>\r\n\r\n    <p>This is a simple example of an Aurelia component.</p>\r\n\r\n    <p>Current count: <strong>${currentCount}</strong></p>\r\n\r\n    <button click.delegate=\"incrementCounter()\">Increment</button>\r\n</template>\r\n";
 
 /***/ }),
 
-/***/ "app/components/fetchdata/fetchdata":
+/***/ "app/website/fetchdata/fetchdata":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -21532,14 +21554,14 @@ var Fetchdata = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "app/components/fetchdata/fetchdata.html":
+/***/ "app/website/fetchdata/fetchdata.html":
 /***/ (function(module, exports) {
 
 module.exports = "<template>\r\n    <h1>Weather forecast</h1>\r\n\r\n    <p>This component demonstrates fetching data from the server.</p>\r\n\r\n    <p if.bind=\"!forecasts\"><em>Loading...</em></p>\r\n\r\n    <table if.bind=\"forecasts\" class=\"table\">\r\n        <thead>\r\n            <tr>\r\n                <th>Date</th>\r\n                <th>Temp. (C)</th>\r\n                <th>Temp. (F)</th>\r\n                <th>Summary</th>\r\n            </tr>\r\n        </thead>\r\n        <tbody>\r\n            <tr repeat.for=\"forecast of forecasts\">\r\n                <td>${ forecast.dateFormatted }</td>\r\n                <td>${ forecast.temperatureC }</td>\r\n                <td>${ forecast.temperatureF }</td>\r\n                <td>${ forecast.summary }</td>\r\n            </tr>\r\n        </tbody>\r\n    </table>\r\n</template>\r\n";
 
 /***/ }),
 
-/***/ "app/components/home/home":
+/***/ "app/website/home/home":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -21555,32 +21577,10 @@ var Home = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "app/components/home/home.html":
+/***/ "app/website/home/home.html":
 /***/ (function(module, exports) {
 
 module.exports = "<template>\r\n    <h1>Hello, world!</h1>\r\n    <p>Welcome to your new single-page application, built with:</p>\r\n    <ul>\r\n        <li><a href=\"https://get.asp.net/\">ASP.NET Core</a> and <a href=\"https://msdn.microsoft.com/en-us/library/67ef8sbd.aspx\">C#</a> for cross-platform server-side code</li>\r\n        <li><a href=\"http://aurelia.io/\">Aurelia</a> and <a href=\"http://www.typescriptlang.org/\">TypeScript</a> for client-side code</li>\r\n        <li><a href=\"https://webpack.github.io/\">Webpack</a> for building and bundling client-side resources</li>\r\n        <li><a href=\"http://getbootstrap.com/\">Bootstrap</a> for layout and styling</li>\r\n    </ul>\r\n    <p>To help you get started, we've also set up:</p>\r\n    <ul>\r\n        <li><strong>Client-side navigation</strong>. For example, click <em>Counter</em> then <em>Back</em> to return here.</li>\r\n        <li><strong>Webpack dev middleware</strong>. In development mode, there's no need to run the <code>webpack</code> build tool. Your client-side resources are dynamically built on demand. Updates are available as soon as you modify any file.</li>\r\n        <li><strong>Efficient production builds</strong>. In production mode, development-time features are disabled, and the <code>webpack</code> build tool produces minified static CSS and JavaScript files.</li>\r\n    </ul>\r\n</template>\r\n";
-
-/***/ }),
-
-/***/ "app/components/navmenu/navmenu.css":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(27)(undefined);
-// imports
-
-
-// module
-exports.push([module.i, "li .glyphicon {\r\n    margin-right: 10px;\r\n}\r\n\r\n/* Highlighting rules for nav menu items */\r\nli.au-target.link-active a,\r\nli.au-target.link-active a:hover,\r\nli.au-target.link-active a:focus {\r\n    background-color: #4189C7;\r\n    color: white;\r\n}\r\n\r\n/* Keep the nav menu independent of scrolling and on top of other items */\r\n.main-nav {\r\n    position: relative;\r\n    top: 0;\r\n    left: 0;\r\n    right: 0;\r\n    z-index: 1;\r\n}\r\n\r\n\r\n\r\n@media (min-width: 768px) {\r\n \r\n}\r\n/* If a menu item's text is too long, truncate it */", ""]);
-
-// exports
-
-
-/***/ }),
-
-/***/ "app/components/navmenu/navmenu.html":
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = "<template bindable=\"router\">\r\n    <require from=\"./navmenu.css\"></require>\r\n    <div class=\"main-nav\">\r\n        <div class=\"navbar navbar-inverse\">\r\n            <div class=\"navbar-header\">\r\n                <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\".navbar-collapse\">\r\n                    <span class=\"sr-only\">Toggle navigation</span>\r\n                    <span class=\"icon-bar\"></span>\r\n                    <span class=\"icon-bar\"></span>\r\n                    <span class=\"icon-bar\"></span>\r\n                </button>\r\n                <a class=\"navbar-brand\" href=\"#/home\">Jobsledger.API</a>\r\n            </div>\r\n            <div class=\"navbar-collapse collapse\">\r\n                <ul class=\"nav navbar-nav\">\r\n                    <li repeat.for = \"row of router.navigation\" class=\"${ row.isActive ? 'link-active' : '' }\" >\r\n                        <a href.bind = \"row.href\">\r\n                            <span class=\"glyphicon glyphicon-${ row.settings.icon }\"></span> ${ row.title }\r\n                        </a>\r\n                    </li>\r\n                </ul>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</template>\r\n";
 
 /***/ }),
 
@@ -25699,7 +25699,7 @@ function configure(aurelia) {
         var baseUrl = document.getElementsByTagName('base')[0].href;
         config.withBaseUrl(baseUrl);
     });
-    aurelia.start().then(function () { return aurelia.setRoot('app/components/app/app'); });
+    aurelia.start().then(function () { return aurelia.setRoot('app/app/app'); });
 }
 
 
