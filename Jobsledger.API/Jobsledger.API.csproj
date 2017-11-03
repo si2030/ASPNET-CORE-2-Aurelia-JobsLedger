@@ -6,6 +6,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="ClientApp\app\components\auth\tokenService.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Update="Views;Areas\**\Views">
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </None>
@@ -13,6 +17,7 @@
   
   <ItemGroup>
     <Folder Include="ClientApp\app\components\auth\login\" />
+    <Folder Include="ClientApp\app\components\auth\NewFolder\" />
     <Folder Include="ClientApp\app\components\auth\register\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
@@ -35,6 +40,10 @@
   
     <ItemGroup>
       <ProjectReference Include="..\JobsLedger.DATA\JobsLedger.DATA.csproj" />
+    </ItemGroup>
+  
+    <ItemGroup>
+      <TypeScriptCompile Include="ClientApp\app\components\auth\tokenService.ts" />
     </ItemGroup>
 	
 	<Target Name="DebugRunWebpack" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('wwwroot\dist') ">

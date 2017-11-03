@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "849d27a748eccdfae554"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "37b9101fe9da01fe550f"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -706,7 +706,7 @@
 /******/ 	__webpack_require__.h = function() { return hotCurrentHash; };
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return hotCreateRequire(63)(__webpack_require__.s = 63);
+/******/ 	return hotCreateRequire(82)(__webpack_require__.s = 82);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -816,7 +816,7 @@ function initializePAL(callback) {
 function reset() {
   isInitialized = false;
 }
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(58)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(77)))
 
 /***/ }),
 
@@ -887,14 +887,14 @@ function reset() {
 /* unused harmony export elementConfig */
 /* unused harmony export viewResources */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return TemplatingEngine; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_logging__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_aurelia_metadata__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_logging__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_aurelia_metadata__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_aurelia_pal__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_aurelia_path__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_aurelia_loader__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_aurelia_dependency_injection__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_aurelia_binding__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_aurelia_task_queue__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_aurelia_task_queue__ = __webpack_require__(8);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _class, _temp, _dec, _class2, _dec2, _class3, _dec3, _class4, _dec4, _class5, _dec5, _class6, _class7, _temp2, _dec6, _class8, _class9, _temp3, _class11, _dec7, _class13, _dec8, _class14, _class15, _temp4, _dec9, _class16, _dec10, _class17, _dec11, _class18;
@@ -5767,13 +5767,6 @@ var TemplatingEngine = (_dec11 = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE
 /***/ }),
 
 /***/ 10:
-/***/ (function(module, exports) {
-
-module.exports = vendor_d43d8086b8d93a0fab09;
-
-/***/ }),
-
-/***/ 11:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5786,7 +5779,7 @@ module.exports = vendor_d43d8086b8d93a0fab09;
 /* unused harmony export NavigationInstruction */
 /* unused harmony export NavModel */
 /* unused harmony export isNavigationCommand */
-/* unused harmony export Redirect */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return Redirect; });
 /* unused harmony export RedirectToRoute */
 /* unused harmony export RouterConfiguration */
 /* unused harmony export activationStrategy */
@@ -5801,10 +5794,10 @@ module.exports = vendor_d43d8086b8d93a0fab09;
 /* unused harmony export LoadRouteStep */
 /* unused harmony export PipelineProvider */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return AppRouter; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_logging__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_aurelia_route_recognizer__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_logging__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_aurelia_route_recognizer__ = __webpack_require__(55);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_aurelia_dependency_injection__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_aurelia_history__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_aurelia_history__ = __webpack_require__(22);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_aurelia_event_aggregator__ = __webpack_require__("aurelia-event-aggregator");
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
@@ -7632,34 +7625,538 @@ function restorePreviousLocation(router) {
 
 /***/ }),
 
+/***/ 11:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ValidationController; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__validator__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__validate_trigger__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__property_info__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__validate_result__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__property_accessor_parser__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__validate_event__ = __webpack_require__(40);
+
+
+
+
+
+
+/**
+ * Orchestrates validation.
+ * Manages a set of bindings, renderers and objects.
+ * Exposes the current list of validation results for binding purposes.
+ */
+var ValidationController = (function () {
+    function ValidationController(validator, propertyParser) {
+        this.validator = validator;
+        this.propertyParser = propertyParser;
+        // Registered bindings (via the validate binding behavior)
+        this.bindings = new Map();
+        // Renderers that have been added to the controller instance.
+        this.renderers = [];
+        /**
+         * Validation results that have been rendered by the controller.
+         */
+        this.results = [];
+        /**
+         * Validation errors that have been rendered by the controller.
+         */
+        this.errors = [];
+        /**
+         *  Whether the controller is currently validating.
+         */
+        this.validating = false;
+        // Elements related to validation results that have been rendered.
+        this.elements = new Map();
+        // Objects that have been added to the controller instance (entity-style validation).
+        this.objects = new Map();
+        /**
+         * The trigger that will invoke automatic validation of a property used in a binding.
+         */
+        this.validateTrigger = __WEBPACK_IMPORTED_MODULE_1__validate_trigger__["a" /* validateTrigger */].blur;
+        // Promise that resolves when validation has completed.
+        this.finishValidating = Promise.resolve();
+        this.eventCallbacks = [];
+    }
+    /**
+     * Subscribe to controller validate and reset events. These events occur when the
+     * controller's "validate"" and "reset" methods are called.
+     * @param callback The callback to be invoked when the controller validates or resets.
+     */
+    ValidationController.prototype.subscribe = function (callback) {
+        var _this = this;
+        this.eventCallbacks.push(callback);
+        return {
+            dispose: function () {
+                var index = _this.eventCallbacks.indexOf(callback);
+                if (index === -1) {
+                    return;
+                }
+                _this.eventCallbacks.splice(index, 1);
+            }
+        };
+    };
+    /**
+     * Adds an object to the set of objects that should be validated when validate is called.
+     * @param object The object.
+     * @param rules Optional. The rules. If rules aren't supplied the Validator implementation will lookup the rules.
+     */
+    ValidationController.prototype.addObject = function (object, rules) {
+        this.objects.set(object, rules);
+    };
+    /**
+     * Removes an object from the set of objects that should be validated when validate is called.
+     * @param object The object.
+     */
+    ValidationController.prototype.removeObject = function (object) {
+        this.objects.delete(object);
+        this.processResultDelta('reset', this.results.filter(function (result) { return result.object === object; }), []);
+    };
+    /**
+     * Adds and renders an error.
+     */
+    ValidationController.prototype.addError = function (message, object, propertyName) {
+        if (propertyName === void 0) { propertyName = null; }
+        var resolvedPropertyName;
+        if (propertyName === null) {
+            resolvedPropertyName = propertyName;
+        }
+        else {
+            resolvedPropertyName = this.propertyParser.parse(propertyName);
+        }
+        var result = new __WEBPACK_IMPORTED_MODULE_3__validate_result__["a" /* ValidateResult */]({ __manuallyAdded__: true }, object, resolvedPropertyName, false, message);
+        this.processResultDelta('validate', [], [result]);
+        return result;
+    };
+    /**
+     * Removes and unrenders an error.
+     */
+    ValidationController.prototype.removeError = function (result) {
+        if (this.results.indexOf(result) !== -1) {
+            this.processResultDelta('reset', [result], []);
+        }
+    };
+    /**
+     * Adds a renderer.
+     * @param renderer The renderer.
+     */
+    ValidationController.prototype.addRenderer = function (renderer) {
+        var _this = this;
+        this.renderers.push(renderer);
+        renderer.render({
+            kind: 'validate',
+            render: this.results.map(function (result) { return ({ result: result, elements: _this.elements.get(result) }); }),
+            unrender: []
+        });
+    };
+    /**
+     * Removes a renderer.
+     * @param renderer The renderer.
+     */
+    ValidationController.prototype.removeRenderer = function (renderer) {
+        var _this = this;
+        this.renderers.splice(this.renderers.indexOf(renderer), 1);
+        renderer.render({
+            kind: 'reset',
+            render: [],
+            unrender: this.results.map(function (result) { return ({ result: result, elements: _this.elements.get(result) }); })
+        });
+    };
+    /**
+     * Registers a binding with the controller.
+     * @param binding The binding instance.
+     * @param target The DOM element.
+     * @param rules (optional) rules associated with the binding. Validator implementation specific.
+     */
+    ValidationController.prototype.registerBinding = function (binding, target, rules) {
+        this.bindings.set(binding, { target: target, rules: rules, propertyInfo: null });
+    };
+    /**
+     * Unregisters a binding with the controller.
+     * @param binding The binding instance.
+     */
+    ValidationController.prototype.unregisterBinding = function (binding) {
+        this.resetBinding(binding);
+        this.bindings.delete(binding);
+    };
+    /**
+     * Interprets the instruction and returns a predicate that will identify
+     * relevant results in the list of rendered validation results.
+     */
+    ValidationController.prototype.getInstructionPredicate = function (instruction) {
+        var _this = this;
+        if (instruction) {
+            var object_1 = instruction.object, propertyName_1 = instruction.propertyName, rules_1 = instruction.rules;
+            var predicate_1;
+            if (instruction.propertyName) {
+                predicate_1 = function (x) { return x.object === object_1 && x.propertyName === propertyName_1; };
+            }
+            else {
+                predicate_1 = function (x) { return x.object === object_1; };
+            }
+            if (rules_1) {
+                return function (x) { return predicate_1(x) && _this.validator.ruleExists(rules_1, x.rule); };
+            }
+            return predicate_1;
+        }
+        else {
+            return function () { return true; };
+        }
+    };
+    /**
+     * Validates and renders results.
+     * @param instruction Optional. Instructions on what to validate. If undefined, all
+     * objects and bindings will be validated.
+     */
+    ValidationController.prototype.validate = function (instruction) {
+        var _this = this;
+        // Get a function that will process the validation instruction.
+        var execute;
+        if (instruction) {
+            // tslint:disable-next-line:prefer-const
+            var object_2 = instruction.object, propertyName_2 = instruction.propertyName, rules_2 = instruction.rules;
+            // if rules were not specified, check the object map.
+            rules_2 = rules_2 || this.objects.get(object_2);
+            // property specified?
+            if (instruction.propertyName === undefined) {
+                // validate the specified object.
+                execute = function () { return _this.validator.validateObject(object_2, rules_2); };
+            }
+            else {
+                // validate the specified property.
+                execute = function () { return _this.validator.validateProperty(object_2, propertyName_2, rules_2); };
+            }
+        }
+        else {
+            // validate all objects and bindings.
+            execute = function () {
+                var promises = [];
+                for (var _i = 0, _a = Array.from(_this.objects); _i < _a.length; _i++) {
+                    var _b = _a[_i], object = _b[0], rules = _b[1];
+                    promises.push(_this.validator.validateObject(object, rules));
+                }
+                for (var _c = 0, _d = Array.from(_this.bindings); _c < _d.length; _c++) {
+                    var _e = _d[_c], binding = _e[0], rules = _e[1].rules;
+                    var propertyInfo = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__property_info__["a" /* getPropertyInfo */])(binding.sourceExpression, binding.source);
+                    if (!propertyInfo || _this.objects.has(propertyInfo.object)) {
+                        continue;
+                    }
+                    promises.push(_this.validator.validateProperty(propertyInfo.object, propertyInfo.propertyName, rules));
+                }
+                return Promise.all(promises).then(function (resultSets) { return resultSets.reduce(function (a, b) { return a.concat(b); }, []); });
+            };
+        }
+        // Wait for any existing validation to finish, execute the instruction, render the results.
+        this.validating = true;
+        var returnPromise = this.finishValidating
+            .then(execute)
+            .then(function (newResults) {
+            var predicate = _this.getInstructionPredicate(instruction);
+            var oldResults = _this.results.filter(predicate);
+            _this.processResultDelta('validate', oldResults, newResults);
+            if (returnPromise === _this.finishValidating) {
+                _this.validating = false;
+            }
+            var result = {
+                instruction: instruction,
+                valid: newResults.find(function (x) { return !x.valid; }) === undefined,
+                results: newResults
+            };
+            _this.invokeCallbacks(instruction, result);
+            return result;
+        })
+            .catch(function (exception) {
+            // recover, to enable subsequent calls to validate()
+            _this.validating = false;
+            _this.finishValidating = Promise.resolve();
+            return Promise.reject(exception);
+        });
+        this.finishValidating = returnPromise;
+        return returnPromise;
+    };
+    /**
+     * Resets any rendered validation results (unrenders).
+     * @param instruction Optional. Instructions on what to reset. If unspecified all rendered results
+     * will be unrendered.
+     */
+    ValidationController.prototype.reset = function (instruction) {
+        var predicate = this.getInstructionPredicate(instruction);
+        var oldResults = this.results.filter(predicate);
+        this.processResultDelta('reset', oldResults, []);
+        this.invokeCallbacks(instruction, null);
+    };
+    /**
+     * Gets the elements associated with an object and propertyName (if any).
+     */
+    ValidationController.prototype.getAssociatedElements = function (_a) {
+        var object = _a.object, propertyName = _a.propertyName;
+        var elements = [];
+        for (var _i = 0, _b = Array.from(this.bindings); _i < _b.length; _i++) {
+            var _c = _b[_i], binding = _c[0], target = _c[1].target;
+            var propertyInfo = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__property_info__["a" /* getPropertyInfo */])(binding.sourceExpression, binding.source);
+            if (propertyInfo && propertyInfo.object === object && propertyInfo.propertyName === propertyName) {
+                elements.push(target);
+            }
+        }
+        return elements;
+    };
+    ValidationController.prototype.processResultDelta = function (kind, oldResults, newResults) {
+        // prepare the instruction.
+        var instruction = {
+            kind: kind,
+            render: [],
+            unrender: []
+        };
+        // create a shallow copy of newResults so we can mutate it without causing side-effects.
+        newResults = newResults.slice(0);
+        var _loop_1 = function (oldResult) {
+            // get the elements associated with the old result.
+            var elements = this_1.elements.get(oldResult);
+            // remove the old result from the element map.
+            this_1.elements.delete(oldResult);
+            // create the unrender instruction.
+            instruction.unrender.push({ result: oldResult, elements: elements });
+            // determine if there's a corresponding new result for the old result we are unrendering.
+            var newResultIndex = newResults.findIndex(function (x) { return x.rule === oldResult.rule && x.object === oldResult.object && x.propertyName === oldResult.propertyName; });
+            if (newResultIndex === -1) {
+                // no corresponding new result... simple remove.
+                this_1.results.splice(this_1.results.indexOf(oldResult), 1);
+                if (!oldResult.valid) {
+                    this_1.errors.splice(this_1.errors.indexOf(oldResult), 1);
+                }
+            }
+            else {
+                // there is a corresponding new result...
+                var newResult = newResults.splice(newResultIndex, 1)[0];
+                // get the elements that are associated with the new result.
+                var elements_1 = this_1.getAssociatedElements(newResult);
+                this_1.elements.set(newResult, elements_1);
+                // create a render instruction for the new result.
+                instruction.render.push({ result: newResult, elements: elements_1 });
+                // do an in-place replacement of the old result with the new result.
+                // this ensures any repeats bound to this.results will not thrash.
+                this_1.results.splice(this_1.results.indexOf(oldResult), 1, newResult);
+                if (!oldResult.valid && newResult.valid) {
+                    this_1.errors.splice(this_1.errors.indexOf(oldResult), 1);
+                }
+                else if (!oldResult.valid && !newResult.valid) {
+                    this_1.errors.splice(this_1.errors.indexOf(oldResult), 1, newResult);
+                }
+                else if (!newResult.valid) {
+                    this_1.errors.push(newResult);
+                }
+            }
+        };
+        var this_1 = this;
+        // create unrender instructions from the old results.
+        for (var _i = 0, oldResults_1 = oldResults; _i < oldResults_1.length; _i++) {
+            var oldResult = oldResults_1[_i];
+            _loop_1(oldResult);
+        }
+        // create render instructions from the remaining new results.
+        for (var _a = 0, newResults_1 = newResults; _a < newResults_1.length; _a++) {
+            var result = newResults_1[_a];
+            var elements = this.getAssociatedElements(result);
+            instruction.render.push({ result: result, elements: elements });
+            this.elements.set(result, elements);
+            this.results.push(result);
+            if (!result.valid) {
+                this.errors.push(result);
+            }
+        }
+        // render.
+        for (var _b = 0, _c = this.renderers; _b < _c.length; _b++) {
+            var renderer = _c[_b];
+            renderer.render(instruction);
+        }
+    };
+    /**
+     * Validates the property associated with a binding.
+     */
+    ValidationController.prototype.validateBinding = function (binding) {
+        if (!binding.isBound) {
+            return;
+        }
+        var propertyInfo = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__property_info__["a" /* getPropertyInfo */])(binding.sourceExpression, binding.source);
+        var rules;
+        var registeredBinding = this.bindings.get(binding);
+        if (registeredBinding) {
+            rules = registeredBinding.rules;
+            registeredBinding.propertyInfo = propertyInfo;
+        }
+        if (!propertyInfo) {
+            return;
+        }
+        var object = propertyInfo.object, propertyName = propertyInfo.propertyName;
+        this.validate({ object: object, propertyName: propertyName, rules: rules });
+    };
+    /**
+     * Resets the results for a property associated with a binding.
+     */
+    ValidationController.prototype.resetBinding = function (binding) {
+        var registeredBinding = this.bindings.get(binding);
+        var propertyInfo = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__property_info__["a" /* getPropertyInfo */])(binding.sourceExpression, binding.source);
+        if (!propertyInfo && registeredBinding) {
+            propertyInfo = registeredBinding.propertyInfo;
+        }
+        if (registeredBinding) {
+            registeredBinding.propertyInfo = null;
+        }
+        if (!propertyInfo) {
+            return;
+        }
+        var object = propertyInfo.object, propertyName = propertyInfo.propertyName;
+        this.reset({ object: object, propertyName: propertyName });
+    };
+    /**
+     * Changes the controller's validateTrigger.
+     * @param newTrigger The new validateTrigger
+     */
+    ValidationController.prototype.changeTrigger = function (newTrigger) {
+        this.validateTrigger = newTrigger;
+        var bindings = Array.from(this.bindings.keys());
+        for (var _i = 0, bindings_1 = bindings; _i < bindings_1.length; _i++) {
+            var binding = bindings_1[_i];
+            var source = binding.source;
+            binding.unbind();
+            binding.bind(source);
+        }
+    };
+    /**
+     * Revalidates the controller's current set of errors.
+     */
+    ValidationController.prototype.revalidateErrors = function () {
+        for (var _i = 0, _a = this.errors; _i < _a.length; _i++) {
+            var _b = _a[_i], object = _b.object, propertyName = _b.propertyName, rule = _b.rule;
+            if (rule.__manuallyAdded__) {
+                continue;
+            }
+            var rules = [[rule]];
+            this.validate({ object: object, propertyName: propertyName, rules: rules });
+        }
+    };
+    ValidationController.prototype.invokeCallbacks = function (instruction, result) {
+        if (this.eventCallbacks.length === 0) {
+            return;
+        }
+        var event = new __WEBPACK_IMPORTED_MODULE_5__validate_event__["a" /* ValidateEvent */](result ? 'validate' : 'reset', this.errors, this.results, instruction || null, result);
+        for (var i = 0; i < this.eventCallbacks.length; i++) {
+            this.eventCallbacks[i](event);
+        }
+    };
+    ValidationController.inject = [__WEBPACK_IMPORTED_MODULE_0__validator__["a" /* Validator */], __WEBPACK_IMPORTED_MODULE_4__property_accessor_parser__["a" /* PropertyAccessorParser */]];
+    return ValidationController;
+}());
+
+
+
+/***/ }),
+
 /***/ 12:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return aureliaHideClassName; });
-/* harmony export (immutable) */ __webpack_exports__["a"] = injectAureliaHideStyleAtHead;
-/* harmony export (immutable) */ __webpack_exports__["b"] = injectAureliaHideStyleAtBoundary;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_pal__ = __webpack_require__(0);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Validator; });
+/**
+ * Validates objects and properties.
+ */
+var Validator = (function () {
+    function Validator() {
+    }
+    return Validator;
+}());
 
 
-var aureliaHideClassName = 'aurelia-hide';
-
-var aureliaHideClass = '.' + aureliaHideClassName + ' { display:none !important; }';
-
-function injectAureliaHideStyleAtHead() {
-  __WEBPACK_IMPORTED_MODULE_0_aurelia_pal__["c" /* DOM */].injectStyles(aureliaHideClass);
-}
-
-function injectAureliaHideStyleAtBoundary(domBoundary) {
-  if (__WEBPACK_IMPORTED_MODULE_0_aurelia_pal__["d" /* FEATURE */].shadowDOM && domBoundary && !domBoundary.hasAureliaHideStyle) {
-    domBoundary.hasAureliaHideStyle = true;
-    __WEBPACK_IMPORTED_MODULE_0_aurelia_pal__["c" /* DOM */].injectStyles(aureliaHideClass, domBoundary);
-  }
-}
 
 /***/ }),
 
 /***/ 13:
+/***/ (function(module, exports) {
+
+module.exports = vendor_d43d8086b8d93a0fab09;
+
+/***/ }),
+
+/***/ 14:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PropertyAccessorParser; });
+/* harmony export (immutable) */ __webpack_exports__["b"] = getAccessorExpression;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_binding__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__util__ = __webpack_require__(39);
+
+
+var PropertyAccessorParser = (function () {
+    function PropertyAccessorParser(parser) {
+        this.parser = parser;
+    }
+    PropertyAccessorParser.prototype.parse = function (property) {
+        if (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__util__["a" /* isString */])(property)) {
+            return property;
+        }
+        var accessorText = getAccessorExpression(property.toString());
+        var accessor = this.parser.parse(accessorText);
+        if (accessor instanceof __WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["C" /* AccessScope */]
+            || accessor instanceof __WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["D" /* AccessMember */] && accessor.object instanceof __WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["C" /* AccessScope */]) {
+            return accessor.name;
+        }
+        throw new Error("Invalid property expression: \"" + accessor + "\"");
+    };
+    PropertyAccessorParser.inject = [__WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["v" /* Parser */]];
+    return PropertyAccessorParser;
+}());
+
+function getAccessorExpression(fn) {
+    /* tslint:disable:max-line-length */
+    var classic = /^function\s*\([$_\w\d]+\)\s*\{(?:\s*"use strict";)?\s*(?:[$_\w\d.['"\]+;]+)?\s*return\s+[$_\w\d]+\.([$_\w\d]+)\s*;?\s*\}$/;
+    /* tslint:enable:max-line-length */
+    var arrow = /^\(?[$_\w\d]+\)?\s*=>\s*[$_\w\d]+\.([$_\w\d]+)$/;
+    var match = classic.exec(fn) || arrow.exec(fn);
+    if (match === null) {
+        throw new Error("Unable to parse accessor function:\n" + fn);
+    }
+    return match[1];
+}
+
+
+/***/ }),
+
+/***/ 15:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return validateTrigger; });
+/**
+ * Validation triggers.
+ */
+var validateTrigger;
+(function (validateTrigger) {
+    /**
+     * Manual validation.  Use the controller's `validate()` and  `reset()` methods
+     * to validate all bindings.
+     */
+    validateTrigger[validateTrigger["manual"] = 0] = "manual";
+    /**
+     * Validate the binding when the binding's target element fires a DOM "blur" event.
+     */
+    validateTrigger[validateTrigger["blur"] = 1] = "blur";
+    /**
+     * Validate the binding when it updates the model due to a change in the view.
+     */
+    validateTrigger[validateTrigger["change"] = 2] = "change";
+    /**
+     * Validate the binding when the binding's target element fires a DOM "blur" event and
+     * when it updates the model due to a change in the view.
+     */
+    validateTrigger[validateTrigger["changeOrBlur"] = 3] = "changeOrBlur";
+})(validateTrigger || (validateTrigger = {}));
+
+
+/***/ }),
+
+/***/ 16:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7913,465 +8410,29 @@ function thrower(x) {
 
 /***/ }),
 
-/***/ 14:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return History; });
-
-
-function mi(name) {
-  throw new Error('History must implement ' + name + '().');
-}
-
-var History = function () {
-  function History() {
-    
-  }
-
-  History.prototype.activate = function activate(options) {
-    mi('activate');
-  };
-
-  History.prototype.deactivate = function deactivate() {
-    mi('deactivate');
-  };
-
-  History.prototype.getAbsoluteRoot = function getAbsoluteRoot() {
-    mi('getAbsoluteRoot');
-  };
-
-  History.prototype.navigate = function navigate(fragment, options) {
-    mi('navigate');
-  };
-
-  History.prototype.navigateBack = function navigateBack() {
-    mi('navigateBack');
-  };
-
-  History.prototype.setTitle = function setTitle(title) {
-    mi('setTitle');
-  };
-
-  History.prototype.setState = function setState(key, value) {
-    mi('setState');
-  };
-
-  History.prototype.getState = function getState(key) {
-    mi('getState');
-  };
-
-  return History;
-}();
-
-/***/ }),
-
-/***/ 15:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (immutable) */ __webpack_exports__["getAuElements"] = getAuElements;
-/* harmony export (immutable) */ __webpack_exports__["getControllersWithClassInstances"] = getControllersWithClassInstances;
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HmrContext", function() { return HmrContext; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_pal__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_aurelia_metadata__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_aurelia_templating__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_aurelia_dependency_injection__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__hmr_css_resource__ = __webpack_require__(35);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__view_model_traverse_controller__ = __webpack_require__(37);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__view_traverse_controller__ = __webpack_require__(38);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__render_utils__ = __webpack_require__(36);
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments)).next());
-    });
-};
-var __generator = (this && this.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t;
-    return { next: verb(0), "throw": verb(1), "return": verb(2) };
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
-            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [0, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
-            }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
-    }
-};
-
-
-
-
-
-
-
-
-var UndefinedResourceModule = { id: null, mainResource: { metadata: {}, value: undefined } };
-function getAuElements() {
-    return Array.from(__WEBPACK_IMPORTED_MODULE_0_aurelia_pal__["c" /* DOM */].querySelectorAll('.au-target'));
-}
-function getControllersWithClassInstances(oldPrototype) {
-    // get visible elements to re-render:
-    var auElements = getAuElements();
-    /* NOTE: viewless components like blur-image do not have el.au.controller set */
-    var controllersLists = auElements.map(function (el) { return el.au && Object.values(el.au) || []; });
-    // list of unique controllers
-    var controllers = Array.from(new Set((_a = []).concat.apply(_a, controllersLists)));
-    var previouslyTraversed = new Set();
-    var traversalInfo = (_b = []).concat.apply(_b, controllers.map(function (parentController) {
-        return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_5__view_model_traverse_controller__["a" /* traverseController */])(oldPrototype, parentController, {
-            previouslyTraversed: previouslyTraversed,
-            parentController: parentController
-        });
-    }));
-    return traversalInfo;
-    var _a, _b;
-}
-var HmrContext = (function () {
-    function HmrContext(loader) {
-        var _this = this;
-        this.loader = loader;
-        this.viewEngine = __WEBPACK_IMPORTED_MODULE_3_aurelia_dependency_injection__["a" /* Container */].instance.get(__WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["f" /* ViewEngine */]);
-        this.moduleAnalyzerCache = this.viewEngine.moduleAnalyzer.cache;
-        this.viewEngine.addResourcePlugin('.css', {
-            fetch: function (moduleId) {
-                return _a = {},
-                    _a[moduleId] = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_4__hmr_css_resource__["a" /* _createCSSResource */])(moduleId),
-                    _a;
-                var _a;
-            },
-            hot: function (moduleId) {
-                _this.reloadCss(moduleId);
-            }
-        });
-    }
-    /**
-     * Handles ViewModel changes
-     */
-    HmrContext.prototype.handleModuleChange = function (moduleId, hot) {
-        return __awaiter(this, void 0, void 0, function () {
-            var previousModule, newModule, oldResourceModule, newResourceModule, origin, normalizedId, moduleMember, keys;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        previousModule = this.loader.moduleRegistry[moduleId];
-                        if (!previousModule) {
-                            return [2 /*return*/];
-                        }
-                        console.log("Running default HMR for " + moduleId);
-                        // reload fresh module:
-                        delete this.loader.moduleRegistry[moduleId];
-                        return [4 /*yield*/, this.loader.loadModule(moduleId)];
-                    case 1:
-                        newModule = _a.sent();
-                        oldResourceModule = this.moduleAnalyzerCache[moduleId];
-                        if (oldResourceModule) {
-                            origin = __WEBPACK_IMPORTED_MODULE_1_aurelia_metadata__["c" /* Origin */].get(newModule);
-                            normalizedId = origin.moduleId;
-                            moduleMember = origin.moduleMember;
-                            newResourceModule = this.viewEngine.moduleAnalyzer.analyze(normalizedId, newModule, moduleMember);
-                            if (!newResourceModule.mainResource && !newResourceModule.resources) {
-                                hot.decline(moduleId);
-                                return [2 /*return*/];
-                            }
-                            if (newResourceModule.mainResource) {
-                                newResourceModule.initialize(this.viewEngine.container);
-                            }
-                            // monkey patch old resource module:
-                            // would be better to simply replace it everywhere
-                            Object.assign(oldResourceModule, newResourceModule);
-                        }
-                        // TODO: kinda CompositionEngine.ensureViewModel()
-                        // TODO: to replace - use closest container: childContainer.get(viewModelResource.value);
-                        if (previousModule instanceof Object) {
-                            keys = Object.keys(previousModule);
-                            keys.forEach(function (key) {
-                                var newExportValue = newModule[key];
-                                if (!newExportValue) {
-                                    return;
-                                }
-                                var previousExportValue = previousModule[key];
-                                var type = typeof previousExportValue;
-                                if (type === 'function' || type === 'object') {
-                                    // these are the only exports we can reliably replace (classes, objects and functions)
-                                    console.log("Analyzing " + moduleId + "->" + key);
-                                    var traversalInfo = getControllersWithClassInstances(previousExportValue);
-                                    // console.log(traversalInfo);
-                                    traversalInfo.forEach(function (info) {
-                                        if (info.propertyInParent === undefined) {
-                                            return;
-                                        }
-                                        if (info.instance) {
-                                            var entry = info.immediateParent[info.propertyInParent];
-                                            var newPrototype = newExportValue.prototype;
-                                            if (newPrototype) {
-                                                Object.setPrototypeOf(entry, newPrototype);
-                                            }
-                                            else {
-                                                console.warn("No new prototype for " + moduleId + "->" + key);
-                                            }
-                                            if (info.relatedView && info.relatedView.isBound) {
-                                                var _a = info.relatedView, bindingContext = _a.bindingContext, overrideContext = _a.overrideContext;
-                                                info.relatedView.unbind();
-                                                info.relatedView.bind(bindingContext, overrideContext);
-                                            }
-                                        }
-                                        else {
-                                            console.log("Replacing", info.immediateParent[info.propertyInParent], "with", newExportValue);
-                                            info.immediateParent[info.propertyInParent] = newExportValue;
-                                        }
-                                    });
-                                }
-                            });
-                        }
-                        return [2 /*return*/];
-                }
-            });
-        });
-    };
-    /**
-     * Handles Hot Reloading when a View changes
-     *
-     * TODO: make a queue of changes and handle after few ms multiple TOGETHER
-     */
-    HmrContext.prototype.handleViewChange = function (moduleId) {
-        return __awaiter(this, void 0, void 0, function () {
-            var templateModuleId, entry, originalFactory, _a, mainResource, associatedModuleId, htmlBehaviorResource, targetClass, compileInstruction, newViewFactory, elementsToReRender, factoryToRenderWith;
-            return __generator(this, function (_b) {
-                switch (_b.label) {
-                    case 0:
-                        templateModuleId = this.loader.applyPluginToUrl(moduleId, 'template-registry-entry');
-                        console.log("Handling HMR for " + moduleId);
-                        entry = this.loader.getOrCreateTemplateRegistryEntry(moduleId);
-                        // delete it, and the module from caches:
-                        delete this.loader.templateRegistry[moduleId];
-                        delete this.loader.moduleRegistry[moduleId];
-                        delete this.loader.moduleRegistry[templateModuleId];
-                        originalFactory = entry.factory;
-                        // just to be safe, lets patch up the old ViewFactory
-                        if (!originalFactory) {
-                            console.error("Something's gone wrong, no original ViewFactory?!");
-                            return [2 /*return*/];
-                        }
-                        _a = this.getResourceModuleByTemplate(originalFactory.template), mainResource = _a.mainResource, associatedModuleId = _a.id;
-                        htmlBehaviorResource = mainResource.metadata, targetClass = mainResource.value;
-                        if (entry.factory !== htmlBehaviorResource.viewFactory) {
-                            console.info("Different origin factories", entry.factory, htmlBehaviorResource.viewFactory);
-                        }
-                        compileInstruction = new __WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["v" /* ViewCompileInstruction */](htmlBehaviorResource.targetShadowDOM, true);
-                        compileInstruction.associatedModuleId = associatedModuleId;
-                        return [4 /*yield*/, this.viewEngine.loadViewFactory(moduleId, compileInstruction, null, targetClass)];
-                    case 1:
-                        newViewFactory = (_b.sent());
-                        // TODO: keep track of hidden Views, e.g. 
-                        // using beforeBind or mutation-observers https://dev.opera.com/articles/mutation-observers-tutorial/
-                        // NOTES:
-                        // the document-fragment in the newViewFactory has different numbers for the same resources:
-                        // newViewFactory.instructions -- have different numbers than originalFactory
-                        // newViewFactory.resources.elements -- contains the resources of children but not the SELF HtmlBehaviorResource
-                        // monkey-patch the template just in case references to it are lying still around somewhere:
-                        originalFactory.template = newViewFactory.template;
-                        originalFactory.instructions = newViewFactory.instructions;
-                        originalFactory.resources = newViewFactory.resources;
-                        elementsToReRender = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_6__view_traverse_controller__["a" /* getElementsToRerender */])(originalFactory.template);
-                        factoryToRenderWith = newViewFactory;
-                        // const factoryToRenderWith = originalFactory;
-                        elementsToReRender.slots.forEach(function (slot) { return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_7__render_utils__["a" /* rerenderMatchingSlotChildren */])(slot, factoryToRenderWith, originalFactory.template); });
-                        elementsToReRender.viewControllers.forEach(function (e) { return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_7__render_utils__["b" /* rerenderController */])(e, 'view', factoryToRenderWith); });
-                        elementsToReRender.scopeControllers.forEach(function (e) { return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_7__render_utils__["b" /* rerenderController */])(e, 'scope', factoryToRenderWith); });
-                        return [2 /*return*/];
-                }
-            });
-        });
-    };
-    /**
-     * handles hot-reloading CSS modules
-     */
-    HmrContext.prototype.reloadCss = function (moduleId) {
-        if (!(moduleId in this.loader.moduleRegistry)) {
-            return; // first load
-        }
-        var cssPluginModuleId = this.loader.applyPluginToUrl(moduleId, 'css-resource-plugin');
-        console.log("Handling HMR for " + moduleId);
-        delete this.loader.moduleRegistry[moduleId];
-        delete this.loader.moduleRegistry[cssPluginModuleId];
-        var analyzedModule = this.moduleAnalyzerCache["css-resource-plugin!" + moduleId];
-        if (!analyzedModule.resources || !analyzedModule.resources.length) {
-            console.error("Something's wrong, no resources for this CSS file " + moduleId);
-            return;
-        }
-        var mainResource = analyzedModule.resources[0];
-        var cssResource = mainResource.metadata;
-        if (cssResource._scoped && cssResource._scoped.injectedElements.length) {
-            console.error("Hot Reloading scopedCSS is not yet supported!");
-            return;
-        }
-        if (cssResource.injectedElement) {
-            cssResource.injectedElement.remove();
-        }
-        // reload resource
-        cssResource.load(__WEBPACK_IMPORTED_MODULE_3_aurelia_dependency_injection__["a" /* Container */].instance);
-    };
-    HmrContext.prototype.getResourceModuleByTemplate = function (template) {
-        // find the related ResourceModule (if any)
-        var relatedResourceModule = Object.values(this.moduleAnalyzerCache).find(function (resourceModule) {
-            return resourceModule.mainResource &&
-                resourceModule.mainResource.metadata &&
-                resourceModule.mainResource.metadata.viewFactory &&
-                resourceModule.mainResource.metadata.viewFactory.template === template;
-        });
-        return relatedResourceModule || UndefinedResourceModule;
-    };
-    HmrContext.prototype.getResourceModuleById = function (moduleId) {
-        return moduleId in this.moduleAnalyzerCache ? this.moduleAnalyzerCache[moduleId] : UndefinedResourceModule;
-    };
-    return HmrContext;
-}());
-
-
-
-/***/ }),
-
-/***/ 16:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AbstractRepeater; });
-
-
-var AbstractRepeater = function () {
-  function AbstractRepeater(options) {
-    
-
-    Object.assign(this, {
-      local: 'items',
-      viewsRequireLifecycle: true
-    }, options);
-  }
-
-  AbstractRepeater.prototype.viewCount = function viewCount() {
-    throw new Error('subclass must implement `viewCount`');
-  };
-
-  AbstractRepeater.prototype.views = function views() {
-    throw new Error('subclass must implement `views`');
-  };
-
-  AbstractRepeater.prototype.view = function view(index) {
-    throw new Error('subclass must implement `view`');
-  };
-
-  AbstractRepeater.prototype.matcher = function matcher() {
-    throw new Error('subclass must implement `matcher`');
-  };
-
-  AbstractRepeater.prototype.addView = function addView(bindingContext, overrideContext) {
-    throw new Error('subclass must implement `addView`');
-  };
-
-  AbstractRepeater.prototype.insertView = function insertView(index, bindingContext, overrideContext) {
-    throw new Error('subclass must implement `insertView`');
-  };
-
-  AbstractRepeater.prototype.moveView = function moveView(sourceIndex, targetIndex) {
-    throw new Error('subclass must implement `moveView`');
-  };
-
-  AbstractRepeater.prototype.removeAllViews = function removeAllViews(returnToCache, skipAnimation) {
-    throw new Error('subclass must implement `removeAllViews`');
-  };
-
-  AbstractRepeater.prototype.removeViews = function removeViews(viewsToRemove, returnToCache, skipAnimation) {
-    throw new Error('subclass must implement `removeView`');
-  };
-
-  AbstractRepeater.prototype.removeView = function removeView(index, returnToCache, skipAnimation) {
-    throw new Error('subclass must implement `removeView`');
-  };
-
-  AbstractRepeater.prototype.updateBindings = function updateBindings(view) {
-    throw new Error('subclass must implement `updateBindings`');
-  };
-
-  return AbstractRepeater;
-}();
-
-/***/ }),
-
 /***/ 17:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* unused harmony export lifecycleOptionalBehaviors */
-/* harmony export (immutable) */ __webpack_exports__["a"] = viewsRequireLifecycle;
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return aureliaHideClassName; });
+/* harmony export (immutable) */ __webpack_exports__["a"] = injectAureliaHideStyleAtHead;
+/* harmony export (immutable) */ __webpack_exports__["b"] = injectAureliaHideStyleAtBoundary;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_pal__ = __webpack_require__(0);
 
-var lifecycleOptionalBehaviors = ['focus', 'if', 'repeat', 'show', 'with'];
 
-function behaviorRequiresLifecycle(instruction) {
-  var t = instruction.type;
-  var name = t.elementName !== null ? t.elementName : t.attributeName;
-  return lifecycleOptionalBehaviors.indexOf(name) === -1 && (t.handlesAttached || t.handlesBind || t.handlesCreated || t.handlesDetached || t.handlesUnbind) || t.viewFactory && viewsRequireLifecycle(t.viewFactory) || instruction.viewFactory && viewsRequireLifecycle(instruction.viewFactory);
+var aureliaHideClassName = 'aurelia-hide';
+
+var aureliaHideClass = '.' + aureliaHideClassName + ' { display:none !important; }';
+
+function injectAureliaHideStyleAtHead() {
+  __WEBPACK_IMPORTED_MODULE_0_aurelia_pal__["c" /* DOM */].injectStyles(aureliaHideClass);
 }
 
-function targetRequiresLifecycle(instruction) {
-  var behaviors = instruction.behaviorInstructions;
-  if (behaviors) {
-    var i = behaviors.length;
-    while (i--) {
-      if (behaviorRequiresLifecycle(behaviors[i])) {
-        return true;
-      }
-    }
+function injectAureliaHideStyleAtBoundary(domBoundary) {
+  if (__WEBPACK_IMPORTED_MODULE_0_aurelia_pal__["d" /* FEATURE */].shadowDOM && domBoundary && !domBoundary.hasAureliaHideStyle) {
+    domBoundary.hasAureliaHideStyle = true;
+    __WEBPACK_IMPORTED_MODULE_0_aurelia_pal__["c" /* DOM */].injectStyles(aureliaHideClass, domBoundary);
   }
-
-  return instruction.viewFactory && viewsRequireLifecycle(instruction.viewFactory);
-}
-
-function viewsRequireLifecycle(viewFactory) {
-  if ('_viewsRequireLifecycle' in viewFactory) {
-    return viewFactory._viewsRequireLifecycle;
-  }
-
-  viewFactory._viewsRequireLifecycle = false;
-
-  if (viewFactory.viewFactory) {
-    viewFactory._viewsRequireLifecycle = viewsRequireLifecycle(viewFactory.viewFactory);
-    return viewFactory._viewsRequireLifecycle;
-  }
-
-  if (viewFactory.template.querySelector('.au-animate')) {
-    viewFactory._viewsRequireLifecycle = true;
-    return true;
-  }
-
-  for (var id in viewFactory.instructions) {
-    if (targetRequiresLifecycle(viewFactory.instructions[id])) {
-      viewFactory._viewsRequireLifecycle = true;
-      return true;
-    }
-  }
-
-  viewFactory._viewsRequireLifecycle = false;
-  return false;
 }
 
 /***/ }),
@@ -8380,242 +8441,45 @@ function viewsRequireLifecycle(viewFactory) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ArrayRepeatStrategy; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__repeat_utilities__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_aurelia_binding__ = __webpack_require__(3);
-
-
-
-
-
-var ArrayRepeatStrategy = function () {
-  function ArrayRepeatStrategy() {
-    
-  }
-
-  ArrayRepeatStrategy.prototype.getCollectionObserver = function getCollectionObserver(observerLocator, items) {
-    return observerLocator.getArrayObserver(items);
-  };
-
-  ArrayRepeatStrategy.prototype.instanceChanged = function instanceChanged(repeat, items) {
-    var _this = this;
-
-    var itemsLength = items.length;
-
-    if (!items || itemsLength === 0) {
-      repeat.removeAllViews(true, !repeat.viewsRequireLifecycle);
-      return;
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Rules; });
+/**
+ * Sets, unsets and retrieves rules on an object or constructor function.
+ */
+var Rules = (function () {
+    function Rules() {
     }
-
-    var children = repeat.views();
-    var viewsLength = children.length;
-
-    if (viewsLength === 0) {
-      this._standardProcessInstanceChanged(repeat, items);
-      return;
-    }
-
-    if (repeat.viewsRequireLifecycle) {
-      var childrenSnapshot = children.slice(0);
-      var itemNameInBindingContext = repeat.local;
-      var matcher = repeat.matcher();
-
-      var itemsPreviouslyInViews = [];
-      var viewsToRemove = [];
-
-      for (var index = 0; index < viewsLength; index++) {
-        var view = childrenSnapshot[index];
-        var oldItem = view.bindingContext[itemNameInBindingContext];
-
-        if (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__repeat_utilities__["g" /* indexOf */])(items, oldItem, matcher) === -1) {
-          viewsToRemove.push(view);
-        } else {
-          itemsPreviouslyInViews.push(oldItem);
+    /**
+     * Applies the rules to a target.
+     */
+    Rules.set = function (target, rules) {
+        if (target instanceof Function) {
+            target = target.prototype;
         }
-      }
-
-      var updateViews = void 0;
-      var removePromise = void 0;
-
-      if (itemsPreviouslyInViews.length > 0) {
-        removePromise = repeat.removeViews(viewsToRemove, true, !repeat.viewsRequireLifecycle);
-        updateViews = function updateViews() {
-          for (var _index = 0; _index < itemsLength; _index++) {
-            var item = items[_index];
-            var indexOfView = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__repeat_utilities__["g" /* indexOf */])(itemsPreviouslyInViews, item, matcher, _index);
-            var _view = void 0;
-
-            if (indexOfView === -1) {
-              var overrideContext = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__repeat_utilities__["e" /* createFullOverrideContext */])(repeat, items[_index], _index, itemsLength);
-              repeat.insertView(_index, overrideContext.bindingContext, overrideContext);
-
-              itemsPreviouslyInViews.splice(_index, 0, undefined);
-            } else if (indexOfView === _index) {
-              _view = children[indexOfView];
-              itemsPreviouslyInViews[indexOfView] = undefined;
-            } else {
-              _view = children[indexOfView];
-              repeat.moveView(indexOfView, _index);
-              itemsPreviouslyInViews.splice(indexOfView, 1);
-              itemsPreviouslyInViews.splice(_index, 0, undefined);
-            }
-
-            if (_view) {
-              __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__repeat_utilities__["h" /* updateOverrideContext */])(_view.overrideContext, _index, itemsLength);
-            }
-          }
-
-          _this._inPlaceProcessItems(repeat, items);
-        };
-      } else {
-        removePromise = repeat.removeAllViews(true, !repeat.viewsRequireLifecycle);
-        updateViews = function updateViews() {
-          return _this._standardProcessInstanceChanged(repeat, items);
-        };
-      }
-
-      if (removePromise instanceof Promise) {
-        removePromise.then(updateViews);
-      } else {
-        updateViews();
-      }
-    } else {
-      this._inPlaceProcessItems(repeat, items);
-    }
-  };
-
-  ArrayRepeatStrategy.prototype._standardProcessInstanceChanged = function _standardProcessInstanceChanged(repeat, items) {
-    for (var i = 0, ii = items.length; i < ii; i++) {
-      var overrideContext = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__repeat_utilities__["e" /* createFullOverrideContext */])(repeat, items[i], i, ii);
-      repeat.addView(overrideContext.bindingContext, overrideContext);
-    }
-  };
-
-  ArrayRepeatStrategy.prototype._inPlaceProcessItems = function _inPlaceProcessItems(repeat, items) {
-    var itemsLength = items.length;
-    var viewsLength = repeat.viewCount();
-
-    while (viewsLength > itemsLength) {
-      viewsLength--;
-      repeat.removeView(viewsLength, true, !repeat.viewsRequireLifecycle);
-    }
-
-    var local = repeat.local;
-
-    for (var i = 0; i < viewsLength; i++) {
-      var view = repeat.view(i);
-      var last = i === itemsLength - 1;
-      var middle = i !== 0 && !last;
-
-      if (view.bindingContext[local] === items[i] && view.overrideContext.$middle === middle && view.overrideContext.$last === last) {
-        continue;
-      }
-
-      view.bindingContext[local] = items[i];
-      view.overrideContext.$middle = middle;
-      view.overrideContext.$last = last;
-      repeat.updateBindings(view);
-    }
-
-    for (var _i = viewsLength; _i < itemsLength; _i++) {
-      var overrideContext = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__repeat_utilities__["e" /* createFullOverrideContext */])(repeat, items[_i], _i, itemsLength);
-      repeat.addView(overrideContext.bindingContext, overrideContext);
-    }
-  };
-
-  ArrayRepeatStrategy.prototype.instanceMutated = function instanceMutated(repeat, array, splices) {
-    var _this2 = this;
-
-    if (repeat.__queuedSplices) {
-      for (var i = 0, ii = splices.length; i < ii; ++i) {
-        var _splices$i = splices[i],
-            index = _splices$i.index,
-            removed = _splices$i.removed,
-            addedCount = _splices$i.addedCount;
-
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_aurelia_binding__["l" /* mergeSplice */])(repeat.__queuedSplices, index, removed, addedCount);
-      }
-
-      repeat.__array = array.slice(0);
-      return;
-    }
-
-    var maybePromise = this._runSplices(repeat, array.slice(0), splices);
-    if (maybePromise instanceof Promise) {
-      var queuedSplices = repeat.__queuedSplices = [];
-
-      var runQueuedSplices = function runQueuedSplices() {
-        if (!queuedSplices.length) {
-          repeat.__queuedSplices = undefined;
-          repeat.__array = undefined;
-          return;
+        Object.defineProperty(target, Rules.key, { enumerable: false, configurable: false, writable: true, value: rules });
+    };
+    /**
+     * Removes rules from a target.
+     */
+    Rules.unset = function (target) {
+        if (target instanceof Function) {
+            target = target.prototype;
         }
+        target[Rules.key] = null;
+    };
+    /**
+     * Retrieves the target's rules.
+     */
+    Rules.get = function (target) {
+        return target[Rules.key] || null;
+    };
+    /**
+     * The name of the property that stores the rules.
+     */
+    Rules.key = '__rules__';
+    return Rules;
+}());
 
-        var nextPromise = _this2._runSplices(repeat, repeat.__array, queuedSplices) || Promise.resolve();
-        queuedSplices = repeat.__queuedSplices = [];
-        nextPromise.then(runQueuedSplices);
-      };
 
-      maybePromise.then(runQueuedSplices);
-    }
-  };
-
-  ArrayRepeatStrategy.prototype._runSplices = function _runSplices(repeat, array, splices) {
-    var _this3 = this;
-
-    var removeDelta = 0;
-    var rmPromises = [];
-
-    for (var i = 0, ii = splices.length; i < ii; ++i) {
-      var splice = splices[i];
-      var removed = splice.removed;
-
-      for (var j = 0, jj = removed.length; j < jj; ++j) {
-        var viewOrPromise = repeat.removeView(splice.index + removeDelta + rmPromises.length, true);
-        if (viewOrPromise instanceof Promise) {
-          rmPromises.push(viewOrPromise);
-        }
-      }
-      removeDelta -= splice.addedCount;
-    }
-
-    if (rmPromises.length > 0) {
-      return Promise.all(rmPromises).then(function () {
-        var spliceIndexLow = _this3._handleAddedSplices(repeat, array, splices);
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__repeat_utilities__["f" /* updateOverrideContexts */])(repeat.views(), spliceIndexLow);
-      });
-    }
-
-    var spliceIndexLow = this._handleAddedSplices(repeat, array, splices);
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__repeat_utilities__["f" /* updateOverrideContexts */])(repeat.views(), spliceIndexLow);
-
-    return undefined;
-  };
-
-  ArrayRepeatStrategy.prototype._handleAddedSplices = function _handleAddedSplices(repeat, array, splices) {
-    var spliceIndex = void 0;
-    var spliceIndexLow = void 0;
-    var arrayLength = array.length;
-    for (var i = 0, ii = splices.length; i < ii; ++i) {
-      var splice = splices[i];
-      var addIndex = spliceIndex = splice.index;
-      var end = splice.index + splice.addedCount;
-
-      if (typeof spliceIndexLow === 'undefined' || spliceIndexLow === null || spliceIndexLow > splice.index) {
-        spliceIndexLow = spliceIndex;
-      }
-
-      for (; addIndex < end; ++addIndex) {
-        var overrideContext = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__repeat_utilities__["e" /* createFullOverrideContext */])(repeat, array[addIndex], addIndex, arrayLength);
-        repeat.insertView(addIndex, overrideContext.bindingContext, overrideContext);
-      }
-    }
-
-    return spliceIndexLow;
-  };
-
-  return ArrayRepeatStrategy;
-}();
 
 /***/ }),
 
@@ -8623,32 +8487,82 @@ var ArrayRepeatStrategy = function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BindingSignaler; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ValidationMessageParser; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return MessageExpressionValidator; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_binding__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_aurelia_templating__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_aurelia_logging__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__expression_visitor__ = __webpack_require__(60);
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 
 
 
 
-var BindingSignaler = function () {
-  function BindingSignaler() {
-    
-
-    this.signals = {};
-  }
-
-  BindingSignaler.prototype.signal = function signal(name) {
-    var bindings = this.signals[name];
-    if (!bindings) {
-      return;
+var ValidationMessageParser = (function () {
+    function ValidationMessageParser(bindinqLanguage) {
+        this.bindinqLanguage = bindinqLanguage;
+        this.emptyStringExpression = new __WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["x" /* LiteralString */]('');
+        this.nullExpression = new __WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["y" /* LiteralPrimitive */](null);
+        this.undefinedExpression = new __WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["y" /* LiteralPrimitive */](undefined);
+        this.cache = {};
     }
-    var i = bindings.length;
-    while (i--) {
-      bindings[i].call(__WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["k" /* sourceContext */]);
-    }
-  };
+    ValidationMessageParser.prototype.parse = function (message) {
+        if (this.cache[message] !== undefined) {
+            return this.cache[message];
+        }
+        var parts = this.bindinqLanguage.parseInterpolation(null, message);
+        if (parts === null) {
+            return new __WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["x" /* LiteralString */](message);
+        }
+        var expression = new __WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["x" /* LiteralString */](parts[0]);
+        for (var i = 1; i < parts.length; i += 2) {
+            expression = new __WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["z" /* Binary */]('+', expression, new __WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["z" /* Binary */]('+', this.coalesce(parts[i]), new __WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["x" /* LiteralString */](parts[i + 1])));
+        }
+        MessageExpressionValidator.validate(expression, message);
+        this.cache[message] = expression;
+        return expression;
+    };
+    ValidationMessageParser.prototype.coalesce = function (part) {
+        // part === null || part === undefined ? '' : part
+        return new __WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["A" /* Conditional */](new __WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["z" /* Binary */]('||', new __WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["z" /* Binary */]('===', part, this.nullExpression), new __WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["z" /* Binary */]('===', part, this.undefinedExpression)), this.emptyStringExpression, new __WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["B" /* CallMember */](part, 'toString', []));
+    };
+    ValidationMessageParser.inject = [__WEBPACK_IMPORTED_MODULE_1_aurelia_templating__["b" /* BindingLanguage */]];
+    return ValidationMessageParser;
+}());
 
-  return BindingSignaler;
-}();
+var MessageExpressionValidator = (function (_super) {
+    __extends(MessageExpressionValidator, _super);
+    function MessageExpressionValidator(originalMessage) {
+        var _this = _super.call(this) || this;
+        _this.originalMessage = originalMessage;
+        return _this;
+    }
+    MessageExpressionValidator.validate = function (expression, originalMessage) {
+        var visitor = new MessageExpressionValidator(originalMessage);
+        expression.accept(visitor);
+    };
+    MessageExpressionValidator.prototype.visitAccessScope = function (access) {
+        if (access.ancestor !== 0) {
+            throw new Error('$parent is not permitted in validation message expressions.');
+        }
+        if (['displayName', 'propertyName', 'value', 'object', 'config', 'getDisplayName'].indexOf(access.name) !== -1) {
+            __WEBPACK_IMPORTED_MODULE_2_aurelia_logging__["getLogger"]('aurelia-validation')
+                .warn("Did you mean to use \"$" + access.name + "\" instead of \"" + access.name + "\" in this validation message template: \"" + this.originalMessage + "\"?");
+        }
+    };
+    return MessageExpressionValidator;
+}(__WEBPACK_IMPORTED_MODULE_3__expression_visitor__["a" /* ExpressionVisitor */]));
+
+
 
 /***/ }),
 
@@ -8657,7 +8571,7 @@ var BindingSignaler = function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return resolver; });
-/* unused harmony export Lazy */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return Lazy; });
 /* unused harmony export All */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return Optional; });
 /* unused harmony export Parent */
@@ -8682,9 +8596,9 @@ var BindingSignaler = function () {
 /* unused harmony export _emptyParameters */
 /* unused harmony export InvocationHandler */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Container; });
-/* unused harmony export autoinject */
+/* harmony export (immutable) */ __webpack_exports__["f"] = autoinject;
 /* harmony export (immutable) */ __webpack_exports__["b"] = inject;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_metadata__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_metadata__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_aurelia_pal__ = __webpack_require__(0);
 var _dec, _class, _dec2, _class3, _dec3, _class5, _dec4, _class7, _dec5, _class9, _dec6, _class11, _dec7, _class13, _classInvokers;
 
@@ -9446,6 +9360,849 @@ function inject() {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return validationMessages; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return ValidationMessageProvider; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__validation_message_parser__ = __webpack_require__(19);
+
+/**
+ * Dictionary of validation messages. [messageKey]: messageExpression
+ */
+var validationMessages = {
+    /**
+     * The default validation message. Used with rules that have no standard message.
+     */
+    default: "${$displayName} is invalid.",
+    required: "${$displayName} is required.",
+    matches: "${$displayName} is not correctly formatted.",
+    email: "${$displayName} is not a valid email.",
+    minLength: "${$displayName} must be at least ${$config.length} character${$config.length === 1 ? '' : 's'}.",
+    maxLength: "${$displayName} cannot be longer than ${$config.length} character${$config.length === 1 ? '' : 's'}.",
+    minItems: "${$displayName} must contain at least ${$config.count} item${$config.count === 1 ? '' : 's'}.",
+    maxItems: "${$displayName} cannot contain more than ${$config.count} item${$config.count === 1 ? '' : 's'}.",
+    equals: "${$displayName} must be ${$config.expectedValue}.",
+};
+/**
+ * Retrieves validation messages and property display names.
+ */
+var ValidationMessageProvider = (function () {
+    function ValidationMessageProvider(parser) {
+        this.parser = parser;
+    }
+    /**
+     * Returns a message binding expression that corresponds to the key.
+     * @param key The message key.
+     */
+    ValidationMessageProvider.prototype.getMessage = function (key) {
+        var message;
+        if (key in validationMessages) {
+            message = validationMessages[key];
+        }
+        else {
+            message = validationMessages['default'];
+        }
+        return this.parser.parse(message);
+    };
+    /**
+     * Formulates a property display name using the property name and the configured
+     * displayName (if provided).
+     * Override this with your own custom logic.
+     * @param propertyName The property name.
+     */
+    ValidationMessageProvider.prototype.getDisplayName = function (propertyName, displayName) {
+        if (displayName !== null && displayName !== undefined) {
+            return (displayName instanceof Function) ? displayName() : displayName;
+        }
+        // split on upper-case letters.
+        var words = propertyName.split(/(?=[A-Z])/).join(' ');
+        // capitalize first letter.
+        return words.charAt(0).toUpperCase() + words.slice(1);
+    };
+    ValidationMessageProvider.inject = [__WEBPACK_IMPORTED_MODULE_0__validation_message_parser__["a" /* ValidationMessageParser */]];
+    return ValidationMessageProvider;
+}());
+
+
+
+/***/ }),
+
+/***/ 21:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ValidateResult; });
+/**
+ * The result of validating an individual validation rule.
+ */
+var ValidateResult = (function () {
+    /**
+     * @param rule The rule associated with the result. Validator implementation specific.
+     * @param object The object that was validated.
+     * @param propertyName The name of the property that was validated.
+     * @param error The error, if the result is a validation error.
+     */
+    function ValidateResult(rule, object, propertyName, valid, message) {
+        if (message === void 0) { message = null; }
+        this.rule = rule;
+        this.object = object;
+        this.propertyName = propertyName;
+        this.valid = valid;
+        this.message = message;
+        this.id = ValidateResult.nextId++;
+    }
+    ValidateResult.prototype.toString = function () {
+        return this.valid ? 'Valid.' : this.message;
+    };
+    ValidateResult.nextId = 0;
+    return ValidateResult;
+}());
+
+
+
+/***/ }),
+
+/***/ 22:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return History; });
+
+
+function mi(name) {
+  throw new Error('History must implement ' + name + '().');
+}
+
+var History = function () {
+  function History() {
+    
+  }
+
+  History.prototype.activate = function activate(options) {
+    mi('activate');
+  };
+
+  History.prototype.deactivate = function deactivate() {
+    mi('deactivate');
+  };
+
+  History.prototype.getAbsoluteRoot = function getAbsoluteRoot() {
+    mi('getAbsoluteRoot');
+  };
+
+  History.prototype.navigate = function navigate(fragment, options) {
+    mi('navigate');
+  };
+
+  History.prototype.navigateBack = function navigateBack() {
+    mi('navigateBack');
+  };
+
+  History.prototype.setTitle = function setTitle(title) {
+    mi('setTitle');
+  };
+
+  History.prototype.setState = function setState(key, value) {
+    mi('setState');
+  };
+
+  History.prototype.getState = function getState(key) {
+    mi('getState');
+  };
+
+  return History;
+}();
+
+/***/ }),
+
+/***/ 23:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (immutable) */ __webpack_exports__["getAuElements"] = getAuElements;
+/* harmony export (immutable) */ __webpack_exports__["getControllersWithClassInstances"] = getControllersWithClassInstances;
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HmrContext", function() { return HmrContext; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_pal__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_aurelia_metadata__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_aurelia_templating__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_aurelia_dependency_injection__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__hmr_css_resource__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__view_model_traverse_controller__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__view_traverse_controller__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__render_utils__ = __webpack_require__(50);
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments)).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t;
+    return { next: verb(0), "throw": verb(1), "return": verb(2) };
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [0, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+
+
+
+
+
+
+
+
+var UndefinedResourceModule = { id: null, mainResource: { metadata: {}, value: undefined } };
+function getAuElements() {
+    return Array.from(__WEBPACK_IMPORTED_MODULE_0_aurelia_pal__["c" /* DOM */].querySelectorAll('.au-target'));
+}
+function getControllersWithClassInstances(oldPrototype) {
+    // get visible elements to re-render:
+    var auElements = getAuElements();
+    /* NOTE: viewless components like blur-image do not have el.au.controller set */
+    var controllersLists = auElements.map(function (el) { return el.au && Object.values(el.au) || []; });
+    // list of unique controllers
+    var controllers = Array.from(new Set((_a = []).concat.apply(_a, controllersLists)));
+    var previouslyTraversed = new Set();
+    var traversalInfo = (_b = []).concat.apply(_b, controllers.map(function (parentController) {
+        return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_5__view_model_traverse_controller__["a" /* traverseController */])(oldPrototype, parentController, {
+            previouslyTraversed: previouslyTraversed,
+            parentController: parentController
+        });
+    }));
+    return traversalInfo;
+    var _a, _b;
+}
+var HmrContext = (function () {
+    function HmrContext(loader) {
+        var _this = this;
+        this.loader = loader;
+        this.viewEngine = __WEBPACK_IMPORTED_MODULE_3_aurelia_dependency_injection__["a" /* Container */].instance.get(__WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["f" /* ViewEngine */]);
+        this.moduleAnalyzerCache = this.viewEngine.moduleAnalyzer.cache;
+        this.viewEngine.addResourcePlugin('.css', {
+            fetch: function (moduleId) {
+                return _a = {},
+                    _a[moduleId] = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_4__hmr_css_resource__["a" /* _createCSSResource */])(moduleId),
+                    _a;
+                var _a;
+            },
+            hot: function (moduleId) {
+                _this.reloadCss(moduleId);
+            }
+        });
+    }
+    /**
+     * Handles ViewModel changes
+     */
+    HmrContext.prototype.handleModuleChange = function (moduleId, hot) {
+        return __awaiter(this, void 0, void 0, function () {
+            var previousModule, newModule, oldResourceModule, newResourceModule, origin, normalizedId, moduleMember, keys;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        previousModule = this.loader.moduleRegistry[moduleId];
+                        if (!previousModule) {
+                            return [2 /*return*/];
+                        }
+                        console.log("Running default HMR for " + moduleId);
+                        // reload fresh module:
+                        delete this.loader.moduleRegistry[moduleId];
+                        return [4 /*yield*/, this.loader.loadModule(moduleId)];
+                    case 1:
+                        newModule = _a.sent();
+                        oldResourceModule = this.moduleAnalyzerCache[moduleId];
+                        if (oldResourceModule) {
+                            origin = __WEBPACK_IMPORTED_MODULE_1_aurelia_metadata__["c" /* Origin */].get(newModule);
+                            normalizedId = origin.moduleId;
+                            moduleMember = origin.moduleMember;
+                            newResourceModule = this.viewEngine.moduleAnalyzer.analyze(normalizedId, newModule, moduleMember);
+                            if (!newResourceModule.mainResource && !newResourceModule.resources) {
+                                hot.decline(moduleId);
+                                return [2 /*return*/];
+                            }
+                            if (newResourceModule.mainResource) {
+                                newResourceModule.initialize(this.viewEngine.container);
+                            }
+                            // monkey patch old resource module:
+                            // would be better to simply replace it everywhere
+                            Object.assign(oldResourceModule, newResourceModule);
+                        }
+                        // TODO: kinda CompositionEngine.ensureViewModel()
+                        // TODO: to replace - use closest container: childContainer.get(viewModelResource.value);
+                        if (previousModule instanceof Object) {
+                            keys = Object.keys(previousModule);
+                            keys.forEach(function (key) {
+                                var newExportValue = newModule[key];
+                                if (!newExportValue) {
+                                    return;
+                                }
+                                var previousExportValue = previousModule[key];
+                                var type = typeof previousExportValue;
+                                if (type === 'function' || type === 'object') {
+                                    // these are the only exports we can reliably replace (classes, objects and functions)
+                                    console.log("Analyzing " + moduleId + "->" + key);
+                                    var traversalInfo = getControllersWithClassInstances(previousExportValue);
+                                    // console.log(traversalInfo);
+                                    traversalInfo.forEach(function (info) {
+                                        if (info.propertyInParent === undefined) {
+                                            return;
+                                        }
+                                        if (info.instance) {
+                                            var entry = info.immediateParent[info.propertyInParent];
+                                            var newPrototype = newExportValue.prototype;
+                                            if (newPrototype) {
+                                                Object.setPrototypeOf(entry, newPrototype);
+                                            }
+                                            else {
+                                                console.warn("No new prototype for " + moduleId + "->" + key);
+                                            }
+                                            if (info.relatedView && info.relatedView.isBound) {
+                                                var _a = info.relatedView, bindingContext = _a.bindingContext, overrideContext = _a.overrideContext;
+                                                info.relatedView.unbind();
+                                                info.relatedView.bind(bindingContext, overrideContext);
+                                            }
+                                        }
+                                        else {
+                                            console.log("Replacing", info.immediateParent[info.propertyInParent], "with", newExportValue);
+                                            info.immediateParent[info.propertyInParent] = newExportValue;
+                                        }
+                                    });
+                                }
+                            });
+                        }
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    /**
+     * Handles Hot Reloading when a View changes
+     *
+     * TODO: make a queue of changes and handle after few ms multiple TOGETHER
+     */
+    HmrContext.prototype.handleViewChange = function (moduleId) {
+        return __awaiter(this, void 0, void 0, function () {
+            var templateModuleId, entry, originalFactory, _a, mainResource, associatedModuleId, htmlBehaviorResource, targetClass, compileInstruction, newViewFactory, elementsToReRender, factoryToRenderWith;
+            return __generator(this, function (_b) {
+                switch (_b.label) {
+                    case 0:
+                        templateModuleId = this.loader.applyPluginToUrl(moduleId, 'template-registry-entry');
+                        console.log("Handling HMR for " + moduleId);
+                        entry = this.loader.getOrCreateTemplateRegistryEntry(moduleId);
+                        // delete it, and the module from caches:
+                        delete this.loader.templateRegistry[moduleId];
+                        delete this.loader.moduleRegistry[moduleId];
+                        delete this.loader.moduleRegistry[templateModuleId];
+                        originalFactory = entry.factory;
+                        // just to be safe, lets patch up the old ViewFactory
+                        if (!originalFactory) {
+                            console.error("Something's gone wrong, no original ViewFactory?!");
+                            return [2 /*return*/];
+                        }
+                        _a = this.getResourceModuleByTemplate(originalFactory.template), mainResource = _a.mainResource, associatedModuleId = _a.id;
+                        htmlBehaviorResource = mainResource.metadata, targetClass = mainResource.value;
+                        if (entry.factory !== htmlBehaviorResource.viewFactory) {
+                            console.info("Different origin factories", entry.factory, htmlBehaviorResource.viewFactory);
+                        }
+                        compileInstruction = new __WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["v" /* ViewCompileInstruction */](htmlBehaviorResource.targetShadowDOM, true);
+                        compileInstruction.associatedModuleId = associatedModuleId;
+                        return [4 /*yield*/, this.viewEngine.loadViewFactory(moduleId, compileInstruction, null, targetClass)];
+                    case 1:
+                        newViewFactory = (_b.sent());
+                        // TODO: keep track of hidden Views, e.g. 
+                        // using beforeBind or mutation-observers https://dev.opera.com/articles/mutation-observers-tutorial/
+                        // NOTES:
+                        // the document-fragment in the newViewFactory has different numbers for the same resources:
+                        // newViewFactory.instructions -- have different numbers than originalFactory
+                        // newViewFactory.resources.elements -- contains the resources of children but not the SELF HtmlBehaviorResource
+                        // monkey-patch the template just in case references to it are lying still around somewhere:
+                        originalFactory.template = newViewFactory.template;
+                        originalFactory.instructions = newViewFactory.instructions;
+                        originalFactory.resources = newViewFactory.resources;
+                        elementsToReRender = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_6__view_traverse_controller__["a" /* getElementsToRerender */])(originalFactory.template);
+                        factoryToRenderWith = newViewFactory;
+                        // const factoryToRenderWith = originalFactory;
+                        elementsToReRender.slots.forEach(function (slot) { return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_7__render_utils__["a" /* rerenderMatchingSlotChildren */])(slot, factoryToRenderWith, originalFactory.template); });
+                        elementsToReRender.viewControllers.forEach(function (e) { return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_7__render_utils__["b" /* rerenderController */])(e, 'view', factoryToRenderWith); });
+                        elementsToReRender.scopeControllers.forEach(function (e) { return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_7__render_utils__["b" /* rerenderController */])(e, 'scope', factoryToRenderWith); });
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    /**
+     * handles hot-reloading CSS modules
+     */
+    HmrContext.prototype.reloadCss = function (moduleId) {
+        if (!(moduleId in this.loader.moduleRegistry)) {
+            return; // first load
+        }
+        var cssPluginModuleId = this.loader.applyPluginToUrl(moduleId, 'css-resource-plugin');
+        console.log("Handling HMR for " + moduleId);
+        delete this.loader.moduleRegistry[moduleId];
+        delete this.loader.moduleRegistry[cssPluginModuleId];
+        var analyzedModule = this.moduleAnalyzerCache["css-resource-plugin!" + moduleId];
+        if (!analyzedModule.resources || !analyzedModule.resources.length) {
+            console.error("Something's wrong, no resources for this CSS file " + moduleId);
+            return;
+        }
+        var mainResource = analyzedModule.resources[0];
+        var cssResource = mainResource.metadata;
+        if (cssResource._scoped && cssResource._scoped.injectedElements.length) {
+            console.error("Hot Reloading scopedCSS is not yet supported!");
+            return;
+        }
+        if (cssResource.injectedElement) {
+            cssResource.injectedElement.remove();
+        }
+        // reload resource
+        cssResource.load(__WEBPACK_IMPORTED_MODULE_3_aurelia_dependency_injection__["a" /* Container */].instance);
+    };
+    HmrContext.prototype.getResourceModuleByTemplate = function (template) {
+        // find the related ResourceModule (if any)
+        var relatedResourceModule = Object.values(this.moduleAnalyzerCache).find(function (resourceModule) {
+            return resourceModule.mainResource &&
+                resourceModule.mainResource.metadata &&
+                resourceModule.mainResource.metadata.viewFactory &&
+                resourceModule.mainResource.metadata.viewFactory.template === template;
+        });
+        return relatedResourceModule || UndefinedResourceModule;
+    };
+    HmrContext.prototype.getResourceModuleById = function (moduleId) {
+        return moduleId in this.moduleAnalyzerCache ? this.moduleAnalyzerCache[moduleId] : UndefinedResourceModule;
+    };
+    return HmrContext;
+}());
+
+
+
+/***/ }),
+
+/***/ 24:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AbstractRepeater; });
+
+
+var AbstractRepeater = function () {
+  function AbstractRepeater(options) {
+    
+
+    Object.assign(this, {
+      local: 'items',
+      viewsRequireLifecycle: true
+    }, options);
+  }
+
+  AbstractRepeater.prototype.viewCount = function viewCount() {
+    throw new Error('subclass must implement `viewCount`');
+  };
+
+  AbstractRepeater.prototype.views = function views() {
+    throw new Error('subclass must implement `views`');
+  };
+
+  AbstractRepeater.prototype.view = function view(index) {
+    throw new Error('subclass must implement `view`');
+  };
+
+  AbstractRepeater.prototype.matcher = function matcher() {
+    throw new Error('subclass must implement `matcher`');
+  };
+
+  AbstractRepeater.prototype.addView = function addView(bindingContext, overrideContext) {
+    throw new Error('subclass must implement `addView`');
+  };
+
+  AbstractRepeater.prototype.insertView = function insertView(index, bindingContext, overrideContext) {
+    throw new Error('subclass must implement `insertView`');
+  };
+
+  AbstractRepeater.prototype.moveView = function moveView(sourceIndex, targetIndex) {
+    throw new Error('subclass must implement `moveView`');
+  };
+
+  AbstractRepeater.prototype.removeAllViews = function removeAllViews(returnToCache, skipAnimation) {
+    throw new Error('subclass must implement `removeAllViews`');
+  };
+
+  AbstractRepeater.prototype.removeViews = function removeViews(viewsToRemove, returnToCache, skipAnimation) {
+    throw new Error('subclass must implement `removeView`');
+  };
+
+  AbstractRepeater.prototype.removeView = function removeView(index, returnToCache, skipAnimation) {
+    throw new Error('subclass must implement `removeView`');
+  };
+
+  AbstractRepeater.prototype.updateBindings = function updateBindings(view) {
+    throw new Error('subclass must implement `updateBindings`');
+  };
+
+  return AbstractRepeater;
+}();
+
+/***/ }),
+
+/***/ 25:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* unused harmony export lifecycleOptionalBehaviors */
+/* harmony export (immutable) */ __webpack_exports__["a"] = viewsRequireLifecycle;
+
+var lifecycleOptionalBehaviors = ['focus', 'if', 'repeat', 'show', 'with'];
+
+function behaviorRequiresLifecycle(instruction) {
+  var t = instruction.type;
+  var name = t.elementName !== null ? t.elementName : t.attributeName;
+  return lifecycleOptionalBehaviors.indexOf(name) === -1 && (t.handlesAttached || t.handlesBind || t.handlesCreated || t.handlesDetached || t.handlesUnbind) || t.viewFactory && viewsRequireLifecycle(t.viewFactory) || instruction.viewFactory && viewsRequireLifecycle(instruction.viewFactory);
+}
+
+function targetRequiresLifecycle(instruction) {
+  var behaviors = instruction.behaviorInstructions;
+  if (behaviors) {
+    var i = behaviors.length;
+    while (i--) {
+      if (behaviorRequiresLifecycle(behaviors[i])) {
+        return true;
+      }
+    }
+  }
+
+  return instruction.viewFactory && viewsRequireLifecycle(instruction.viewFactory);
+}
+
+function viewsRequireLifecycle(viewFactory) {
+  if ('_viewsRequireLifecycle' in viewFactory) {
+    return viewFactory._viewsRequireLifecycle;
+  }
+
+  viewFactory._viewsRequireLifecycle = false;
+
+  if (viewFactory.viewFactory) {
+    viewFactory._viewsRequireLifecycle = viewsRequireLifecycle(viewFactory.viewFactory);
+    return viewFactory._viewsRequireLifecycle;
+  }
+
+  if (viewFactory.template.querySelector('.au-animate')) {
+    viewFactory._viewsRequireLifecycle = true;
+    return true;
+  }
+
+  for (var id in viewFactory.instructions) {
+    if (targetRequiresLifecycle(viewFactory.instructions[id])) {
+      viewFactory._viewsRequireLifecycle = true;
+      return true;
+    }
+  }
+
+  viewFactory._viewsRequireLifecycle = false;
+  return false;
+}
+
+/***/ }),
+
+/***/ 26:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ArrayRepeatStrategy; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__repeat_utilities__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_aurelia_binding__ = __webpack_require__(3);
+
+
+
+
+
+var ArrayRepeatStrategy = function () {
+  function ArrayRepeatStrategy() {
+    
+  }
+
+  ArrayRepeatStrategy.prototype.getCollectionObserver = function getCollectionObserver(observerLocator, items) {
+    return observerLocator.getArrayObserver(items);
+  };
+
+  ArrayRepeatStrategy.prototype.instanceChanged = function instanceChanged(repeat, items) {
+    var _this = this;
+
+    var itemsLength = items.length;
+
+    if (!items || itemsLength === 0) {
+      repeat.removeAllViews(true, !repeat.viewsRequireLifecycle);
+      return;
+    }
+
+    var children = repeat.views();
+    var viewsLength = children.length;
+
+    if (viewsLength === 0) {
+      this._standardProcessInstanceChanged(repeat, items);
+      return;
+    }
+
+    if (repeat.viewsRequireLifecycle) {
+      var childrenSnapshot = children.slice(0);
+      var itemNameInBindingContext = repeat.local;
+      var matcher = repeat.matcher();
+
+      var itemsPreviouslyInViews = [];
+      var viewsToRemove = [];
+
+      for (var index = 0; index < viewsLength; index++) {
+        var view = childrenSnapshot[index];
+        var oldItem = view.bindingContext[itemNameInBindingContext];
+
+        if (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__repeat_utilities__["g" /* indexOf */])(items, oldItem, matcher) === -1) {
+          viewsToRemove.push(view);
+        } else {
+          itemsPreviouslyInViews.push(oldItem);
+        }
+      }
+
+      var updateViews = void 0;
+      var removePromise = void 0;
+
+      if (itemsPreviouslyInViews.length > 0) {
+        removePromise = repeat.removeViews(viewsToRemove, true, !repeat.viewsRequireLifecycle);
+        updateViews = function updateViews() {
+          for (var _index = 0; _index < itemsLength; _index++) {
+            var item = items[_index];
+            var indexOfView = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__repeat_utilities__["g" /* indexOf */])(itemsPreviouslyInViews, item, matcher, _index);
+            var _view = void 0;
+
+            if (indexOfView === -1) {
+              var overrideContext = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__repeat_utilities__["e" /* createFullOverrideContext */])(repeat, items[_index], _index, itemsLength);
+              repeat.insertView(_index, overrideContext.bindingContext, overrideContext);
+
+              itemsPreviouslyInViews.splice(_index, 0, undefined);
+            } else if (indexOfView === _index) {
+              _view = children[indexOfView];
+              itemsPreviouslyInViews[indexOfView] = undefined;
+            } else {
+              _view = children[indexOfView];
+              repeat.moveView(indexOfView, _index);
+              itemsPreviouslyInViews.splice(indexOfView, 1);
+              itemsPreviouslyInViews.splice(_index, 0, undefined);
+            }
+
+            if (_view) {
+              __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__repeat_utilities__["h" /* updateOverrideContext */])(_view.overrideContext, _index, itemsLength);
+            }
+          }
+
+          _this._inPlaceProcessItems(repeat, items);
+        };
+      } else {
+        removePromise = repeat.removeAllViews(true, !repeat.viewsRequireLifecycle);
+        updateViews = function updateViews() {
+          return _this._standardProcessInstanceChanged(repeat, items);
+        };
+      }
+
+      if (removePromise instanceof Promise) {
+        removePromise.then(updateViews);
+      } else {
+        updateViews();
+      }
+    } else {
+      this._inPlaceProcessItems(repeat, items);
+    }
+  };
+
+  ArrayRepeatStrategy.prototype._standardProcessInstanceChanged = function _standardProcessInstanceChanged(repeat, items) {
+    for (var i = 0, ii = items.length; i < ii; i++) {
+      var overrideContext = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__repeat_utilities__["e" /* createFullOverrideContext */])(repeat, items[i], i, ii);
+      repeat.addView(overrideContext.bindingContext, overrideContext);
+    }
+  };
+
+  ArrayRepeatStrategy.prototype._inPlaceProcessItems = function _inPlaceProcessItems(repeat, items) {
+    var itemsLength = items.length;
+    var viewsLength = repeat.viewCount();
+
+    while (viewsLength > itemsLength) {
+      viewsLength--;
+      repeat.removeView(viewsLength, true, !repeat.viewsRequireLifecycle);
+    }
+
+    var local = repeat.local;
+
+    for (var i = 0; i < viewsLength; i++) {
+      var view = repeat.view(i);
+      var last = i === itemsLength - 1;
+      var middle = i !== 0 && !last;
+
+      if (view.bindingContext[local] === items[i] && view.overrideContext.$middle === middle && view.overrideContext.$last === last) {
+        continue;
+      }
+
+      view.bindingContext[local] = items[i];
+      view.overrideContext.$middle = middle;
+      view.overrideContext.$last = last;
+      repeat.updateBindings(view);
+    }
+
+    for (var _i = viewsLength; _i < itemsLength; _i++) {
+      var overrideContext = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__repeat_utilities__["e" /* createFullOverrideContext */])(repeat, items[_i], _i, itemsLength);
+      repeat.addView(overrideContext.bindingContext, overrideContext);
+    }
+  };
+
+  ArrayRepeatStrategy.prototype.instanceMutated = function instanceMutated(repeat, array, splices) {
+    var _this2 = this;
+
+    if (repeat.__queuedSplices) {
+      for (var i = 0, ii = splices.length; i < ii; ++i) {
+        var _splices$i = splices[i],
+            index = _splices$i.index,
+            removed = _splices$i.removed,
+            addedCount = _splices$i.addedCount;
+
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_aurelia_binding__["l" /* mergeSplice */])(repeat.__queuedSplices, index, removed, addedCount);
+      }
+
+      repeat.__array = array.slice(0);
+      return;
+    }
+
+    var maybePromise = this._runSplices(repeat, array.slice(0), splices);
+    if (maybePromise instanceof Promise) {
+      var queuedSplices = repeat.__queuedSplices = [];
+
+      var runQueuedSplices = function runQueuedSplices() {
+        if (!queuedSplices.length) {
+          repeat.__queuedSplices = undefined;
+          repeat.__array = undefined;
+          return;
+        }
+
+        var nextPromise = _this2._runSplices(repeat, repeat.__array, queuedSplices) || Promise.resolve();
+        queuedSplices = repeat.__queuedSplices = [];
+        nextPromise.then(runQueuedSplices);
+      };
+
+      maybePromise.then(runQueuedSplices);
+    }
+  };
+
+  ArrayRepeatStrategy.prototype._runSplices = function _runSplices(repeat, array, splices) {
+    var _this3 = this;
+
+    var removeDelta = 0;
+    var rmPromises = [];
+
+    for (var i = 0, ii = splices.length; i < ii; ++i) {
+      var splice = splices[i];
+      var removed = splice.removed;
+
+      for (var j = 0, jj = removed.length; j < jj; ++j) {
+        var viewOrPromise = repeat.removeView(splice.index + removeDelta + rmPromises.length, true);
+        if (viewOrPromise instanceof Promise) {
+          rmPromises.push(viewOrPromise);
+        }
+      }
+      removeDelta -= splice.addedCount;
+    }
+
+    if (rmPromises.length > 0) {
+      return Promise.all(rmPromises).then(function () {
+        var spliceIndexLow = _this3._handleAddedSplices(repeat, array, splices);
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__repeat_utilities__["f" /* updateOverrideContexts */])(repeat.views(), spliceIndexLow);
+      });
+    }
+
+    var spliceIndexLow = this._handleAddedSplices(repeat, array, splices);
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__repeat_utilities__["f" /* updateOverrideContexts */])(repeat.views(), spliceIndexLow);
+
+    return undefined;
+  };
+
+  ArrayRepeatStrategy.prototype._handleAddedSplices = function _handleAddedSplices(repeat, array, splices) {
+    var spliceIndex = void 0;
+    var spliceIndexLow = void 0;
+    var arrayLength = array.length;
+    for (var i = 0, ii = splices.length; i < ii; ++i) {
+      var splice = splices[i];
+      var addIndex = spliceIndex = splice.index;
+      var end = splice.index + splice.addedCount;
+
+      if (typeof spliceIndexLow === 'undefined' || spliceIndexLow === null || spliceIndexLow > splice.index) {
+        spliceIndexLow = spliceIndex;
+      }
+
+      for (; addIndex < end; ++addIndex) {
+        var overrideContext = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__repeat_utilities__["e" /* createFullOverrideContext */])(repeat, array[addIndex], addIndex, arrayLength);
+        repeat.insertView(addIndex, overrideContext.bindingContext, overrideContext);
+      }
+    }
+
+    return spliceIndexLow;
+  };
+
+  return ArrayRepeatStrategy;
+}();
+
+/***/ }),
+
+/***/ 27:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BindingSignaler; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_binding__ = __webpack_require__(3);
+
+
+
+
+var BindingSignaler = function () {
+  function BindingSignaler() {
+    
+
+    this.signals = {};
+  }
+
+  BindingSignaler.prototype.signal = function signal(name) {
+    var bindings = this.signals[name];
+    if (!bindings) {
+      return;
+    }
+    var i = bindings.length;
+    while (i--) {
+      bindings[i].call(__WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["k" /* sourceContext */]);
+    }
+  };
+
+  return BindingSignaler;
+}();
+
+/***/ }),
+
+/***/ 28:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HTMLSanitizer; });
 
 
@@ -9465,7 +10222,7 @@ var HTMLSanitizer = function () {
 
 /***/ }),
 
-/***/ 21:
+/***/ 29:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9553,839 +10310,6 @@ var IfCore = function () {
 
 /***/ }),
 
-/***/ 22:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MapRepeatStrategy; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__repeat_utilities__ = __webpack_require__(8);
-
-
-
-
-var MapRepeatStrategy = function () {
-  function MapRepeatStrategy() {
-    
-  }
-
-  MapRepeatStrategy.prototype.getCollectionObserver = function getCollectionObserver(observerLocator, items) {
-    return observerLocator.getMapObserver(items);
-  };
-
-  MapRepeatStrategy.prototype.instanceChanged = function instanceChanged(repeat, items) {
-    var _this = this;
-
-    var removePromise = repeat.removeAllViews(true, !repeat.viewsRequireLifecycle);
-    if (removePromise instanceof Promise) {
-      removePromise.then(function () {
-        return _this._standardProcessItems(repeat, items);
-      });
-      return;
-    }
-    this._standardProcessItems(repeat, items);
-  };
-
-  MapRepeatStrategy.prototype._standardProcessItems = function _standardProcessItems(repeat, items) {
-    var index = 0;
-    var overrideContext = void 0;
-
-    items.forEach(function (value, key) {
-      overrideContext = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__repeat_utilities__["e" /* createFullOverrideContext */])(repeat, value, index, items.size, key);
-      repeat.addView(overrideContext.bindingContext, overrideContext);
-      ++index;
-    });
-  };
-
-  MapRepeatStrategy.prototype.instanceMutated = function instanceMutated(repeat, map, records) {
-    var key = void 0;
-    var i = void 0;
-    var ii = void 0;
-    var overrideContext = void 0;
-    var removeIndex = void 0;
-    var addIndex = void 0;
-    var record = void 0;
-    var rmPromises = [];
-    var viewOrPromise = void 0;
-
-    for (i = 0, ii = records.length; i < ii; ++i) {
-      record = records[i];
-      key = record.key;
-      switch (record.type) {
-        case 'update':
-          removeIndex = this._getViewIndexByKey(repeat, key);
-          viewOrPromise = repeat.removeView(removeIndex, true, !repeat.viewsRequireLifecycle);
-          if (viewOrPromise instanceof Promise) {
-            rmPromises.push(viewOrPromise);
-          }
-          overrideContext = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__repeat_utilities__["e" /* createFullOverrideContext */])(repeat, map.get(key), removeIndex, map.size, key);
-          repeat.insertView(removeIndex, overrideContext.bindingContext, overrideContext);
-          break;
-        case 'add':
-          addIndex = repeat.viewCount() <= map.size - 1 ? repeat.viewCount() : map.size - 1;
-          overrideContext = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__repeat_utilities__["e" /* createFullOverrideContext */])(repeat, map.get(key), addIndex, map.size, key);
-          repeat.insertView(map.size - 1, overrideContext.bindingContext, overrideContext);
-          break;
-        case 'delete':
-          if (record.oldValue === undefined) {
-            return;
-          }
-          removeIndex = this._getViewIndexByKey(repeat, key);
-          viewOrPromise = repeat.removeView(removeIndex, true, !repeat.viewsRequireLifecycle);
-          if (viewOrPromise instanceof Promise) {
-            rmPromises.push(viewOrPromise);
-          }
-          break;
-        case 'clear':
-          repeat.removeAllViews(true, !repeat.viewsRequireLifecycle);
-          break;
-        default:
-          continue;
-      }
-    }
-
-    if (rmPromises.length > 0) {
-      Promise.all(rmPromises).then(function () {
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__repeat_utilities__["f" /* updateOverrideContexts */])(repeat.views(), 0);
-      });
-    } else {
-      __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__repeat_utilities__["f" /* updateOverrideContexts */])(repeat.views(), 0);
-    }
-  };
-
-  MapRepeatStrategy.prototype._getViewIndexByKey = function _getViewIndexByKey(repeat, key) {
-    var i = void 0;
-    var ii = void 0;
-    var child = void 0;
-
-    for (i = 0, ii = repeat.viewCount(); i < ii; ++i) {
-      child = repeat.view(i);
-      if (child.bindingContext[repeat.key] === key) {
-        return i;
-      }
-    }
-
-    return undefined;
-  };
-
-  return MapRepeatStrategy;
-}();
-
-/***/ }),
-
-/***/ 23:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NullRepeatStrategy; });
-
-
-var NullRepeatStrategy = function () {
-  function NullRepeatStrategy() {
-    
-  }
-
-  NullRepeatStrategy.prototype.instanceChanged = function instanceChanged(repeat, items) {
-    repeat.removeAllViews(true);
-  };
-
-  NullRepeatStrategy.prototype.getCollectionObserver = function getCollectionObserver(observerLocator, items) {};
-
-  return NullRepeatStrategy;
-}();
-
-/***/ }),
-
-/***/ 24:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NumberRepeatStrategy; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__repeat_utilities__ = __webpack_require__(8);
-
-
-
-
-var NumberRepeatStrategy = function () {
-  function NumberRepeatStrategy() {
-    
-  }
-
-  NumberRepeatStrategy.prototype.getCollectionObserver = function getCollectionObserver() {
-    return null;
-  };
-
-  NumberRepeatStrategy.prototype.instanceChanged = function instanceChanged(repeat, value) {
-    var _this = this;
-
-    var removePromise = repeat.removeAllViews(true, !repeat.viewsRequireLifecycle);
-    if (removePromise instanceof Promise) {
-      removePromise.then(function () {
-        return _this._standardProcessItems(repeat, value);
-      });
-      return;
-    }
-    this._standardProcessItems(repeat, value);
-  };
-
-  NumberRepeatStrategy.prototype._standardProcessItems = function _standardProcessItems(repeat, value) {
-    var childrenLength = repeat.viewCount();
-    var i = void 0;
-    var ii = void 0;
-    var overrideContext = void 0;
-    var viewsToRemove = void 0;
-
-    value = Math.floor(value);
-    viewsToRemove = childrenLength - value;
-
-    if (viewsToRemove > 0) {
-      if (viewsToRemove > childrenLength) {
-        viewsToRemove = childrenLength;
-      }
-
-      for (i = 0, ii = viewsToRemove; i < ii; ++i) {
-        repeat.removeView(childrenLength - (i + 1), true, !repeat.viewsRequireLifecycle);
-      }
-
-      return;
-    }
-
-    for (i = childrenLength, ii = value; i < ii; ++i) {
-      overrideContext = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__repeat_utilities__["e" /* createFullOverrideContext */])(repeat, i, i, ii);
-      repeat.addView(overrideContext.bindingContext, overrideContext);
-    }
-
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__repeat_utilities__["f" /* updateOverrideContexts */])(repeat.views(), 0);
-  };
-
-  return NumberRepeatStrategy;
-}();
-
-/***/ }),
-
-/***/ 25:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RepeatStrategyLocator; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__null_repeat_strategy__ = __webpack_require__(23);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__array_repeat_strategy__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__map_repeat_strategy__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__set_repeat_strategy__ = __webpack_require__(26);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__number_repeat_strategy__ = __webpack_require__(24);
-
-
-
-
-
-
-
-
-var RepeatStrategyLocator = function () {
-  function RepeatStrategyLocator() {
-    
-
-    this.matchers = [];
-    this.strategies = [];
-
-    this.addStrategy(function (items) {
-      return items === null || items === undefined;
-    }, new __WEBPACK_IMPORTED_MODULE_0__null_repeat_strategy__["a" /* NullRepeatStrategy */]());
-    this.addStrategy(function (items) {
-      return items instanceof Array;
-    }, new __WEBPACK_IMPORTED_MODULE_1__array_repeat_strategy__["a" /* ArrayRepeatStrategy */]());
-    this.addStrategy(function (items) {
-      return items instanceof Map;
-    }, new __WEBPACK_IMPORTED_MODULE_2__map_repeat_strategy__["a" /* MapRepeatStrategy */]());
-    this.addStrategy(function (items) {
-      return items instanceof Set;
-    }, new __WEBPACK_IMPORTED_MODULE_3__set_repeat_strategy__["a" /* SetRepeatStrategy */]());
-    this.addStrategy(function (items) {
-      return typeof items === 'number';
-    }, new __WEBPACK_IMPORTED_MODULE_4__number_repeat_strategy__["a" /* NumberRepeatStrategy */]());
-  }
-
-  RepeatStrategyLocator.prototype.addStrategy = function addStrategy(matcher, strategy) {
-    this.matchers.push(matcher);
-    this.strategies.push(strategy);
-  };
-
-  RepeatStrategyLocator.prototype.getStrategy = function getStrategy(items) {
-    var matchers = this.matchers;
-
-    for (var i = 0, ii = matchers.length; i < ii; ++i) {
-      if (matchers[i](items)) {
-        return this.strategies[i];
-      }
-    }
-
-    return null;
-  };
-
-  return RepeatStrategyLocator;
-}();
-
-/***/ }),
-
-/***/ 26:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SetRepeatStrategy; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__repeat_utilities__ = __webpack_require__(8);
-
-
-
-
-var SetRepeatStrategy = function () {
-  function SetRepeatStrategy() {
-    
-  }
-
-  SetRepeatStrategy.prototype.getCollectionObserver = function getCollectionObserver(observerLocator, items) {
-    return observerLocator.getSetObserver(items);
-  };
-
-  SetRepeatStrategy.prototype.instanceChanged = function instanceChanged(repeat, items) {
-    var _this = this;
-
-    var removePromise = repeat.removeAllViews(true, !repeat.viewsRequireLifecycle);
-    if (removePromise instanceof Promise) {
-      removePromise.then(function () {
-        return _this._standardProcessItems(repeat, items);
-      });
-      return;
-    }
-    this._standardProcessItems(repeat, items);
-  };
-
-  SetRepeatStrategy.prototype._standardProcessItems = function _standardProcessItems(repeat, items) {
-    var index = 0;
-    var overrideContext = void 0;
-
-    items.forEach(function (value) {
-      overrideContext = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__repeat_utilities__["e" /* createFullOverrideContext */])(repeat, value, index, items.size);
-      repeat.addView(overrideContext.bindingContext, overrideContext);
-      ++index;
-    });
-  };
-
-  SetRepeatStrategy.prototype.instanceMutated = function instanceMutated(repeat, set, records) {
-    var value = void 0;
-    var i = void 0;
-    var ii = void 0;
-    var overrideContext = void 0;
-    var removeIndex = void 0;
-    var record = void 0;
-    var rmPromises = [];
-    var viewOrPromise = void 0;
-
-    for (i = 0, ii = records.length; i < ii; ++i) {
-      record = records[i];
-      value = record.value;
-      switch (record.type) {
-        case 'add':
-          var size = Math.max(set.size - 1, 0);
-          overrideContext = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__repeat_utilities__["e" /* createFullOverrideContext */])(repeat, value, size, set.size);
-          repeat.insertView(size, overrideContext.bindingContext, overrideContext);
-          break;
-        case 'delete':
-          removeIndex = this._getViewIndexByValue(repeat, value);
-          viewOrPromise = repeat.removeView(removeIndex, true, !repeat.viewsRequireLifecycle);
-          if (viewOrPromise instanceof Promise) {
-            rmPromises.push(viewOrPromise);
-          }
-          break;
-        case 'clear':
-          repeat.removeAllViews(true, !repeat.viewsRequireLifecycle);
-          break;
-        default:
-          continue;
-      }
-    }
-
-    if (rmPromises.length > 0) {
-      Promise.all(rmPromises).then(function () {
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__repeat_utilities__["f" /* updateOverrideContexts */])(repeat.views(), 0);
-      });
-    } else {
-      __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__repeat_utilities__["f" /* updateOverrideContexts */])(repeat.views(), 0);
-    }
-  };
-
-  SetRepeatStrategy.prototype._getViewIndexByValue = function _getViewIndexByValue(repeat, value) {
-    var i = void 0;
-    var ii = void 0;
-    var child = void 0;
-
-    for (i = 0, ii = repeat.viewCount(); i < ii; ++i) {
-      child = repeat.view(i);
-      if (child.bindingContext[repeat.local] === value) {
-        return i;
-      }
-    }
-
-    return undefined;
-  };
-
-  return SetRepeatStrategy;
-}();
-
-/***/ }),
-
-/***/ 27:
-/***/ (function(module, exports) {
-
-/*
-	MIT License http://www.opensource.org/licenses/mit-license.php
-	Author Tobias Koppers @sokra
-*/
-// css base code, injected by the css-loader
-module.exports = function(useSourceMap) {
-	var list = [];
-
-	// return the list of modules as css string
-	list.toString = function toString() {
-		return this.map(function (item) {
-			var content = cssWithMappingToString(item, useSourceMap);
-			if(item[2]) {
-				return "@media " + item[2] + "{" + content + "}";
-			} else {
-				return content;
-			}
-		}).join("");
-	};
-
-	// import a list of modules into the list
-	list.i = function(modules, mediaQuery) {
-		if(typeof modules === "string")
-			modules = [[null, modules, ""]];
-		var alreadyImportedModules = {};
-		for(var i = 0; i < this.length; i++) {
-			var id = this[i][0];
-			if(typeof id === "number")
-				alreadyImportedModules[id] = true;
-		}
-		for(i = 0; i < modules.length; i++) {
-			var item = modules[i];
-			// skip already imported module
-			// this implementation is not 100% perfect for weird media query combinations
-			//  when a module is imported multiple times with different media queries.
-			//  I hope this will never occur (Hey this way we have smaller bundles)
-			if(typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
-				if(mediaQuery && !item[2]) {
-					item[2] = mediaQuery;
-				} else if(mediaQuery) {
-					item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
-				}
-				list.push(item);
-			}
-		}
-	};
-	return list;
-};
-
-function cssWithMappingToString(item, useSourceMap) {
-	var content = item[1] || '';
-	var cssMapping = item[3];
-	if (!cssMapping) {
-		return content;
-	}
-
-	if (useSourceMap && typeof btoa === 'function') {
-		var sourceMapping = toComment(cssMapping);
-		var sourceURLs = cssMapping.sources.map(function (source) {
-			return '/*# sourceURL=' + cssMapping.sourceRoot + source + ' */'
-		});
-
-		return [content].concat(sourceURLs).concat([sourceMapping]).join('\n');
-	}
-
-	return [content].join('\n');
-}
-
-// Adapted from convert-source-map (MIT)
-function toComment(sourceMap) {
-	// eslint-disable-next-line no-undef
-	var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));
-	var data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;
-
-	return '/*# ' + data + ' */';
-}
-
-
-/***/ }),
-
-/***/ 28:
-/***/ (function(module, exports) {
-
-var ENTITIES = [['Aacute', [193]], ['aacute', [225]], ['Abreve', [258]], ['abreve', [259]], ['ac', [8766]], ['acd', [8767]], ['acE', [8766, 819]], ['Acirc', [194]], ['acirc', [226]], ['acute', [180]], ['Acy', [1040]], ['acy', [1072]], ['AElig', [198]], ['aelig', [230]], ['af', [8289]], ['Afr', [120068]], ['afr', [120094]], ['Agrave', [192]], ['agrave', [224]], ['alefsym', [8501]], ['aleph', [8501]], ['Alpha', [913]], ['alpha', [945]], ['Amacr', [256]], ['amacr', [257]], ['amalg', [10815]], ['amp', [38]], ['AMP', [38]], ['andand', [10837]], ['And', [10835]], ['and', [8743]], ['andd', [10844]], ['andslope', [10840]], ['andv', [10842]], ['ang', [8736]], ['ange', [10660]], ['angle', [8736]], ['angmsdaa', [10664]], ['angmsdab', [10665]], ['angmsdac', [10666]], ['angmsdad', [10667]], ['angmsdae', [10668]], ['angmsdaf', [10669]], ['angmsdag', [10670]], ['angmsdah', [10671]], ['angmsd', [8737]], ['angrt', [8735]], ['angrtvb', [8894]], ['angrtvbd', [10653]], ['angsph', [8738]], ['angst', [197]], ['angzarr', [9084]], ['Aogon', [260]], ['aogon', [261]], ['Aopf', [120120]], ['aopf', [120146]], ['apacir', [10863]], ['ap', [8776]], ['apE', [10864]], ['ape', [8778]], ['apid', [8779]], ['apos', [39]], ['ApplyFunction', [8289]], ['approx', [8776]], ['approxeq', [8778]], ['Aring', [197]], ['aring', [229]], ['Ascr', [119964]], ['ascr', [119990]], ['Assign', [8788]], ['ast', [42]], ['asymp', [8776]], ['asympeq', [8781]], ['Atilde', [195]], ['atilde', [227]], ['Auml', [196]], ['auml', [228]], ['awconint', [8755]], ['awint', [10769]], ['backcong', [8780]], ['backepsilon', [1014]], ['backprime', [8245]], ['backsim', [8765]], ['backsimeq', [8909]], ['Backslash', [8726]], ['Barv', [10983]], ['barvee', [8893]], ['barwed', [8965]], ['Barwed', [8966]], ['barwedge', [8965]], ['bbrk', [9141]], ['bbrktbrk', [9142]], ['bcong', [8780]], ['Bcy', [1041]], ['bcy', [1073]], ['bdquo', [8222]], ['becaus', [8757]], ['because', [8757]], ['Because', [8757]], ['bemptyv', [10672]], ['bepsi', [1014]], ['bernou', [8492]], ['Bernoullis', [8492]], ['Beta', [914]], ['beta', [946]], ['beth', [8502]], ['between', [8812]], ['Bfr', [120069]], ['bfr', [120095]], ['bigcap', [8898]], ['bigcirc', [9711]], ['bigcup', [8899]], ['bigodot', [10752]], ['bigoplus', [10753]], ['bigotimes', [10754]], ['bigsqcup', [10758]], ['bigstar', [9733]], ['bigtriangledown', [9661]], ['bigtriangleup', [9651]], ['biguplus', [10756]], ['bigvee', [8897]], ['bigwedge', [8896]], ['bkarow', [10509]], ['blacklozenge', [10731]], ['blacksquare', [9642]], ['blacktriangle', [9652]], ['blacktriangledown', [9662]], ['blacktriangleleft', [9666]], ['blacktriangleright', [9656]], ['blank', [9251]], ['blk12', [9618]], ['blk14', [9617]], ['blk34', [9619]], ['block', [9608]], ['bne', [61, 8421]], ['bnequiv', [8801, 8421]], ['bNot', [10989]], ['bnot', [8976]], ['Bopf', [120121]], ['bopf', [120147]], ['bot', [8869]], ['bottom', [8869]], ['bowtie', [8904]], ['boxbox', [10697]], ['boxdl', [9488]], ['boxdL', [9557]], ['boxDl', [9558]], ['boxDL', [9559]], ['boxdr', [9484]], ['boxdR', [9554]], ['boxDr', [9555]], ['boxDR', [9556]], ['boxh', [9472]], ['boxH', [9552]], ['boxhd', [9516]], ['boxHd', [9572]], ['boxhD', [9573]], ['boxHD', [9574]], ['boxhu', [9524]], ['boxHu', [9575]], ['boxhU', [9576]], ['boxHU', [9577]], ['boxminus', [8863]], ['boxplus', [8862]], ['boxtimes', [8864]], ['boxul', [9496]], ['boxuL', [9563]], ['boxUl', [9564]], ['boxUL', [9565]], ['boxur', [9492]], ['boxuR', [9560]], ['boxUr', [9561]], ['boxUR', [9562]], ['boxv', [9474]], ['boxV', [9553]], ['boxvh', [9532]], ['boxvH', [9578]], ['boxVh', [9579]], ['boxVH', [9580]], ['boxvl', [9508]], ['boxvL', [9569]], ['boxVl', [9570]], ['boxVL', [9571]], ['boxvr', [9500]], ['boxvR', [9566]], ['boxVr', [9567]], ['boxVR', [9568]], ['bprime', [8245]], ['breve', [728]], ['Breve', [728]], ['brvbar', [166]], ['bscr', [119991]], ['Bscr', [8492]], ['bsemi', [8271]], ['bsim', [8765]], ['bsime', [8909]], ['bsolb', [10693]], ['bsol', [92]], ['bsolhsub', [10184]], ['bull', [8226]], ['bullet', [8226]], ['bump', [8782]], ['bumpE', [10926]], ['bumpe', [8783]], ['Bumpeq', [8782]], ['bumpeq', [8783]], ['Cacute', [262]], ['cacute', [263]], ['capand', [10820]], ['capbrcup', [10825]], ['capcap', [10827]], ['cap', [8745]], ['Cap', [8914]], ['capcup', [10823]], ['capdot', [10816]], ['CapitalDifferentialD', [8517]], ['caps', [8745, 65024]], ['caret', [8257]], ['caron', [711]], ['Cayleys', [8493]], ['ccaps', [10829]], ['Ccaron', [268]], ['ccaron', [269]], ['Ccedil', [199]], ['ccedil', [231]], ['Ccirc', [264]], ['ccirc', [265]], ['Cconint', [8752]], ['ccups', [10828]], ['ccupssm', [10832]], ['Cdot', [266]], ['cdot', [267]], ['cedil', [184]], ['Cedilla', [184]], ['cemptyv', [10674]], ['cent', [162]], ['centerdot', [183]], ['CenterDot', [183]], ['cfr', [120096]], ['Cfr', [8493]], ['CHcy', [1063]], ['chcy', [1095]], ['check', [10003]], ['checkmark', [10003]], ['Chi', [935]], ['chi', [967]], ['circ', [710]], ['circeq', [8791]], ['circlearrowleft', [8634]], ['circlearrowright', [8635]], ['circledast', [8859]], ['circledcirc', [8858]], ['circleddash', [8861]], ['CircleDot', [8857]], ['circledR', [174]], ['circledS', [9416]], ['CircleMinus', [8854]], ['CirclePlus', [8853]], ['CircleTimes', [8855]], ['cir', [9675]], ['cirE', [10691]], ['cire', [8791]], ['cirfnint', [10768]], ['cirmid', [10991]], ['cirscir', [10690]], ['ClockwiseContourIntegral', [8754]], ['clubs', [9827]], ['clubsuit', [9827]], ['colon', [58]], ['Colon', [8759]], ['Colone', [10868]], ['colone', [8788]], ['coloneq', [8788]], ['comma', [44]], ['commat', [64]], ['comp', [8705]], ['compfn', [8728]], ['complement', [8705]], ['complexes', [8450]], ['cong', [8773]], ['congdot', [10861]], ['Congruent', [8801]], ['conint', [8750]], ['Conint', [8751]], ['ContourIntegral', [8750]], ['copf', [120148]], ['Copf', [8450]], ['coprod', [8720]], ['Coproduct', [8720]], ['copy', [169]], ['COPY', [169]], ['copysr', [8471]], ['CounterClockwiseContourIntegral', [8755]], ['crarr', [8629]], ['cross', [10007]], ['Cross', [10799]], ['Cscr', [119966]], ['cscr', [119992]], ['csub', [10959]], ['csube', [10961]], ['csup', [10960]], ['csupe', [10962]], ['ctdot', [8943]], ['cudarrl', [10552]], ['cudarrr', [10549]], ['cuepr', [8926]], ['cuesc', [8927]], ['cularr', [8630]], ['cularrp', [10557]], ['cupbrcap', [10824]], ['cupcap', [10822]], ['CupCap', [8781]], ['cup', [8746]], ['Cup', [8915]], ['cupcup', [10826]], ['cupdot', [8845]], ['cupor', [10821]], ['cups', [8746, 65024]], ['curarr', [8631]], ['curarrm', [10556]], ['curlyeqprec', [8926]], ['curlyeqsucc', [8927]], ['curlyvee', [8910]], ['curlywedge', [8911]], ['curren', [164]], ['curvearrowleft', [8630]], ['curvearrowright', [8631]], ['cuvee', [8910]], ['cuwed', [8911]], ['cwconint', [8754]], ['cwint', [8753]], ['cylcty', [9005]], ['dagger', [8224]], ['Dagger', [8225]], ['daleth', [8504]], ['darr', [8595]], ['Darr', [8609]], ['dArr', [8659]], ['dash', [8208]], ['Dashv', [10980]], ['dashv', [8867]], ['dbkarow', [10511]], ['dblac', [733]], ['Dcaron', [270]], ['dcaron', [271]], ['Dcy', [1044]], ['dcy', [1076]], ['ddagger', [8225]], ['ddarr', [8650]], ['DD', [8517]], ['dd', [8518]], ['DDotrahd', [10513]], ['ddotseq', [10871]], ['deg', [176]], ['Del', [8711]], ['Delta', [916]], ['delta', [948]], ['demptyv', [10673]], ['dfisht', [10623]], ['Dfr', [120071]], ['dfr', [120097]], ['dHar', [10597]], ['dharl', [8643]], ['dharr', [8642]], ['DiacriticalAcute', [180]], ['DiacriticalDot', [729]], ['DiacriticalDoubleAcute', [733]], ['DiacriticalGrave', [96]], ['DiacriticalTilde', [732]], ['diam', [8900]], ['diamond', [8900]], ['Diamond', [8900]], ['diamondsuit', [9830]], ['diams', [9830]], ['die', [168]], ['DifferentialD', [8518]], ['digamma', [989]], ['disin', [8946]], ['div', [247]], ['divide', [247]], ['divideontimes', [8903]], ['divonx', [8903]], ['DJcy', [1026]], ['djcy', [1106]], ['dlcorn', [8990]], ['dlcrop', [8973]], ['dollar', [36]], ['Dopf', [120123]], ['dopf', [120149]], ['Dot', [168]], ['dot', [729]], ['DotDot', [8412]], ['doteq', [8784]], ['doteqdot', [8785]], ['DotEqual', [8784]], ['dotminus', [8760]], ['dotplus', [8724]], ['dotsquare', [8865]], ['doublebarwedge', [8966]], ['DoubleContourIntegral', [8751]], ['DoubleDot', [168]], ['DoubleDownArrow', [8659]], ['DoubleLeftArrow', [8656]], ['DoubleLeftRightArrow', [8660]], ['DoubleLeftTee', [10980]], ['DoubleLongLeftArrow', [10232]], ['DoubleLongLeftRightArrow', [10234]], ['DoubleLongRightArrow', [10233]], ['DoubleRightArrow', [8658]], ['DoubleRightTee', [8872]], ['DoubleUpArrow', [8657]], ['DoubleUpDownArrow', [8661]], ['DoubleVerticalBar', [8741]], ['DownArrowBar', [10515]], ['downarrow', [8595]], ['DownArrow', [8595]], ['Downarrow', [8659]], ['DownArrowUpArrow', [8693]], ['DownBreve', [785]], ['downdownarrows', [8650]], ['downharpoonleft', [8643]], ['downharpoonright', [8642]], ['DownLeftRightVector', [10576]], ['DownLeftTeeVector', [10590]], ['DownLeftVectorBar', [10582]], ['DownLeftVector', [8637]], ['DownRightTeeVector', [10591]], ['DownRightVectorBar', [10583]], ['DownRightVector', [8641]], ['DownTeeArrow', [8615]], ['DownTee', [8868]], ['drbkarow', [10512]], ['drcorn', [8991]], ['drcrop', [8972]], ['Dscr', [119967]], ['dscr', [119993]], ['DScy', [1029]], ['dscy', [1109]], ['dsol', [10742]], ['Dstrok', [272]], ['dstrok', [273]], ['dtdot', [8945]], ['dtri', [9663]], ['dtrif', [9662]], ['duarr', [8693]], ['duhar', [10607]], ['dwangle', [10662]], ['DZcy', [1039]], ['dzcy', [1119]], ['dzigrarr', [10239]], ['Eacute', [201]], ['eacute', [233]], ['easter', [10862]], ['Ecaron', [282]], ['ecaron', [283]], ['Ecirc', [202]], ['ecirc', [234]], ['ecir', [8790]], ['ecolon', [8789]], ['Ecy', [1069]], ['ecy', [1101]], ['eDDot', [10871]], ['Edot', [278]], ['edot', [279]], ['eDot', [8785]], ['ee', [8519]], ['efDot', [8786]], ['Efr', [120072]], ['efr', [120098]], ['eg', [10906]], ['Egrave', [200]], ['egrave', [232]], ['egs', [10902]], ['egsdot', [10904]], ['el', [10905]], ['Element', [8712]], ['elinters', [9191]], ['ell', [8467]], ['els', [10901]], ['elsdot', [10903]], ['Emacr', [274]], ['emacr', [275]], ['empty', [8709]], ['emptyset', [8709]], ['EmptySmallSquare', [9723]], ['emptyv', [8709]], ['EmptyVerySmallSquare', [9643]], ['emsp13', [8196]], ['emsp14', [8197]], ['emsp', [8195]], ['ENG', [330]], ['eng', [331]], ['ensp', [8194]], ['Eogon', [280]], ['eogon', [281]], ['Eopf', [120124]], ['eopf', [120150]], ['epar', [8917]], ['eparsl', [10723]], ['eplus', [10865]], ['epsi', [949]], ['Epsilon', [917]], ['epsilon', [949]], ['epsiv', [1013]], ['eqcirc', [8790]], ['eqcolon', [8789]], ['eqsim', [8770]], ['eqslantgtr', [10902]], ['eqslantless', [10901]], ['Equal', [10869]], ['equals', [61]], ['EqualTilde', [8770]], ['equest', [8799]], ['Equilibrium', [8652]], ['equiv', [8801]], ['equivDD', [10872]], ['eqvparsl', [10725]], ['erarr', [10609]], ['erDot', [8787]], ['escr', [8495]], ['Escr', [8496]], ['esdot', [8784]], ['Esim', [10867]], ['esim', [8770]], ['Eta', [919]], ['eta', [951]], ['ETH', [208]], ['eth', [240]], ['Euml', [203]], ['euml', [235]], ['euro', [8364]], ['excl', [33]], ['exist', [8707]], ['Exists', [8707]], ['expectation', [8496]], ['exponentiale', [8519]], ['ExponentialE', [8519]], ['fallingdotseq', [8786]], ['Fcy', [1060]], ['fcy', [1092]], ['female', [9792]], ['ffilig', [64259]], ['fflig', [64256]], ['ffllig', [64260]], ['Ffr', [120073]], ['ffr', [120099]], ['filig', [64257]], ['FilledSmallSquare', [9724]], ['FilledVerySmallSquare', [9642]], ['fjlig', [102, 106]], ['flat', [9837]], ['fllig', [64258]], ['fltns', [9649]], ['fnof', [402]], ['Fopf', [120125]], ['fopf', [120151]], ['forall', [8704]], ['ForAll', [8704]], ['fork', [8916]], ['forkv', [10969]], ['Fouriertrf', [8497]], ['fpartint', [10765]], ['frac12', [189]], ['frac13', [8531]], ['frac14', [188]], ['frac15', [8533]], ['frac16', [8537]], ['frac18', [8539]], ['frac23', [8532]], ['frac25', [8534]], ['frac34', [190]], ['frac35', [8535]], ['frac38', [8540]], ['frac45', [8536]], ['frac56', [8538]], ['frac58', [8541]], ['frac78', [8542]], ['frasl', [8260]], ['frown', [8994]], ['fscr', [119995]], ['Fscr', [8497]], ['gacute', [501]], ['Gamma', [915]], ['gamma', [947]], ['Gammad', [988]], ['gammad', [989]], ['gap', [10886]], ['Gbreve', [286]], ['gbreve', [287]], ['Gcedil', [290]], ['Gcirc', [284]], ['gcirc', [285]], ['Gcy', [1043]], ['gcy', [1075]], ['Gdot', [288]], ['gdot', [289]], ['ge', [8805]], ['gE', [8807]], ['gEl', [10892]], ['gel', [8923]], ['geq', [8805]], ['geqq', [8807]], ['geqslant', [10878]], ['gescc', [10921]], ['ges', [10878]], ['gesdot', [10880]], ['gesdoto', [10882]], ['gesdotol', [10884]], ['gesl', [8923, 65024]], ['gesles', [10900]], ['Gfr', [120074]], ['gfr', [120100]], ['gg', [8811]], ['Gg', [8921]], ['ggg', [8921]], ['gimel', [8503]], ['GJcy', [1027]], ['gjcy', [1107]], ['gla', [10917]], ['gl', [8823]], ['glE', [10898]], ['glj', [10916]], ['gnap', [10890]], ['gnapprox', [10890]], ['gne', [10888]], ['gnE', [8809]], ['gneq', [10888]], ['gneqq', [8809]], ['gnsim', [8935]], ['Gopf', [120126]], ['gopf', [120152]], ['grave', [96]], ['GreaterEqual', [8805]], ['GreaterEqualLess', [8923]], ['GreaterFullEqual', [8807]], ['GreaterGreater', [10914]], ['GreaterLess', [8823]], ['GreaterSlantEqual', [10878]], ['GreaterTilde', [8819]], ['Gscr', [119970]], ['gscr', [8458]], ['gsim', [8819]], ['gsime', [10894]], ['gsiml', [10896]], ['gtcc', [10919]], ['gtcir', [10874]], ['gt', [62]], ['GT', [62]], ['Gt', [8811]], ['gtdot', [8919]], ['gtlPar', [10645]], ['gtquest', [10876]], ['gtrapprox', [10886]], ['gtrarr', [10616]], ['gtrdot', [8919]], ['gtreqless', [8923]], ['gtreqqless', [10892]], ['gtrless', [8823]], ['gtrsim', [8819]], ['gvertneqq', [8809, 65024]], ['gvnE', [8809, 65024]], ['Hacek', [711]], ['hairsp', [8202]], ['half', [189]], ['hamilt', [8459]], ['HARDcy', [1066]], ['hardcy', [1098]], ['harrcir', [10568]], ['harr', [8596]], ['hArr', [8660]], ['harrw', [8621]], ['Hat', [94]], ['hbar', [8463]], ['Hcirc', [292]], ['hcirc', [293]], ['hearts', [9829]], ['heartsuit', [9829]], ['hellip', [8230]], ['hercon', [8889]], ['hfr', [120101]], ['Hfr', [8460]], ['HilbertSpace', [8459]], ['hksearow', [10533]], ['hkswarow', [10534]], ['hoarr', [8703]], ['homtht', [8763]], ['hookleftarrow', [8617]], ['hookrightarrow', [8618]], ['hopf', [120153]], ['Hopf', [8461]], ['horbar', [8213]], ['HorizontalLine', [9472]], ['hscr', [119997]], ['Hscr', [8459]], ['hslash', [8463]], ['Hstrok', [294]], ['hstrok', [295]], ['HumpDownHump', [8782]], ['HumpEqual', [8783]], ['hybull', [8259]], ['hyphen', [8208]], ['Iacute', [205]], ['iacute', [237]], ['ic', [8291]], ['Icirc', [206]], ['icirc', [238]], ['Icy', [1048]], ['icy', [1080]], ['Idot', [304]], ['IEcy', [1045]], ['iecy', [1077]], ['iexcl', [161]], ['iff', [8660]], ['ifr', [120102]], ['Ifr', [8465]], ['Igrave', [204]], ['igrave', [236]], ['ii', [8520]], ['iiiint', [10764]], ['iiint', [8749]], ['iinfin', [10716]], ['iiota', [8489]], ['IJlig', [306]], ['ijlig', [307]], ['Imacr', [298]], ['imacr', [299]], ['image', [8465]], ['ImaginaryI', [8520]], ['imagline', [8464]], ['imagpart', [8465]], ['imath', [305]], ['Im', [8465]], ['imof', [8887]], ['imped', [437]], ['Implies', [8658]], ['incare', [8453]], ['in', [8712]], ['infin', [8734]], ['infintie', [10717]], ['inodot', [305]], ['intcal', [8890]], ['int', [8747]], ['Int', [8748]], ['integers', [8484]], ['Integral', [8747]], ['intercal', [8890]], ['Intersection', [8898]], ['intlarhk', [10775]], ['intprod', [10812]], ['InvisibleComma', [8291]], ['InvisibleTimes', [8290]], ['IOcy', [1025]], ['iocy', [1105]], ['Iogon', [302]], ['iogon', [303]], ['Iopf', [120128]], ['iopf', [120154]], ['Iota', [921]], ['iota', [953]], ['iprod', [10812]], ['iquest', [191]], ['iscr', [119998]], ['Iscr', [8464]], ['isin', [8712]], ['isindot', [8949]], ['isinE', [8953]], ['isins', [8948]], ['isinsv', [8947]], ['isinv', [8712]], ['it', [8290]], ['Itilde', [296]], ['itilde', [297]], ['Iukcy', [1030]], ['iukcy', [1110]], ['Iuml', [207]], ['iuml', [239]], ['Jcirc', [308]], ['jcirc', [309]], ['Jcy', [1049]], ['jcy', [1081]], ['Jfr', [120077]], ['jfr', [120103]], ['jmath', [567]], ['Jopf', [120129]], ['jopf', [120155]], ['Jscr', [119973]], ['jscr', [119999]], ['Jsercy', [1032]], ['jsercy', [1112]], ['Jukcy', [1028]], ['jukcy', [1108]], ['Kappa', [922]], ['kappa', [954]], ['kappav', [1008]], ['Kcedil', [310]], ['kcedil', [311]], ['Kcy', [1050]], ['kcy', [1082]], ['Kfr', [120078]], ['kfr', [120104]], ['kgreen', [312]], ['KHcy', [1061]], ['khcy', [1093]], ['KJcy', [1036]], ['kjcy', [1116]], ['Kopf', [120130]], ['kopf', [120156]], ['Kscr', [119974]], ['kscr', [120000]], ['lAarr', [8666]], ['Lacute', [313]], ['lacute', [314]], ['laemptyv', [10676]], ['lagran', [8466]], ['Lambda', [923]], ['lambda', [955]], ['lang', [10216]], ['Lang', [10218]], ['langd', [10641]], ['langle', [10216]], ['lap', [10885]], ['Laplacetrf', [8466]], ['laquo', [171]], ['larrb', [8676]], ['larrbfs', [10527]], ['larr', [8592]], ['Larr', [8606]], ['lArr', [8656]], ['larrfs', [10525]], ['larrhk', [8617]], ['larrlp', [8619]], ['larrpl', [10553]], ['larrsim', [10611]], ['larrtl', [8610]], ['latail', [10521]], ['lAtail', [10523]], ['lat', [10923]], ['late', [10925]], ['lates', [10925, 65024]], ['lbarr', [10508]], ['lBarr', [10510]], ['lbbrk', [10098]], ['lbrace', [123]], ['lbrack', [91]], ['lbrke', [10635]], ['lbrksld', [10639]], ['lbrkslu', [10637]], ['Lcaron', [317]], ['lcaron', [318]], ['Lcedil', [315]], ['lcedil', [316]], ['lceil', [8968]], ['lcub', [123]], ['Lcy', [1051]], ['lcy', [1083]], ['ldca', [10550]], ['ldquo', [8220]], ['ldquor', [8222]], ['ldrdhar', [10599]], ['ldrushar', [10571]], ['ldsh', [8626]], ['le', [8804]], ['lE', [8806]], ['LeftAngleBracket', [10216]], ['LeftArrowBar', [8676]], ['leftarrow', [8592]], ['LeftArrow', [8592]], ['Leftarrow', [8656]], ['LeftArrowRightArrow', [8646]], ['leftarrowtail', [8610]], ['LeftCeiling', [8968]], ['LeftDoubleBracket', [10214]], ['LeftDownTeeVector', [10593]], ['LeftDownVectorBar', [10585]], ['LeftDownVector', [8643]], ['LeftFloor', [8970]], ['leftharpoondown', [8637]], ['leftharpoonup', [8636]], ['leftleftarrows', [8647]], ['leftrightarrow', [8596]], ['LeftRightArrow', [8596]], ['Leftrightarrow', [8660]], ['leftrightarrows', [8646]], ['leftrightharpoons', [8651]], ['leftrightsquigarrow', [8621]], ['LeftRightVector', [10574]], ['LeftTeeArrow', [8612]], ['LeftTee', [8867]], ['LeftTeeVector', [10586]], ['leftthreetimes', [8907]], ['LeftTriangleBar', [10703]], ['LeftTriangle', [8882]], ['LeftTriangleEqual', [8884]], ['LeftUpDownVector', [10577]], ['LeftUpTeeVector', [10592]], ['LeftUpVectorBar', [10584]], ['LeftUpVector', [8639]], ['LeftVectorBar', [10578]], ['LeftVector', [8636]], ['lEg', [10891]], ['leg', [8922]], ['leq', [8804]], ['leqq', [8806]], ['leqslant', [10877]], ['lescc', [10920]], ['les', [10877]], ['lesdot', [10879]], ['lesdoto', [10881]], ['lesdotor', [10883]], ['lesg', [8922, 65024]], ['lesges', [10899]], ['lessapprox', [10885]], ['lessdot', [8918]], ['lesseqgtr', [8922]], ['lesseqqgtr', [10891]], ['LessEqualGreater', [8922]], ['LessFullEqual', [8806]], ['LessGreater', [8822]], ['lessgtr', [8822]], ['LessLess', [10913]], ['lesssim', [8818]], ['LessSlantEqual', [10877]], ['LessTilde', [8818]], ['lfisht', [10620]], ['lfloor', [8970]], ['Lfr', [120079]], ['lfr', [120105]], ['lg', [8822]], ['lgE', [10897]], ['lHar', [10594]], ['lhard', [8637]], ['lharu', [8636]], ['lharul', [10602]], ['lhblk', [9604]], ['LJcy', [1033]], ['ljcy', [1113]], ['llarr', [8647]], ['ll', [8810]], ['Ll', [8920]], ['llcorner', [8990]], ['Lleftarrow', [8666]], ['llhard', [10603]], ['lltri', [9722]], ['Lmidot', [319]], ['lmidot', [320]], ['lmoustache', [9136]], ['lmoust', [9136]], ['lnap', [10889]], ['lnapprox', [10889]], ['lne', [10887]], ['lnE', [8808]], ['lneq', [10887]], ['lneqq', [8808]], ['lnsim', [8934]], ['loang', [10220]], ['loarr', [8701]], ['lobrk', [10214]], ['longleftarrow', [10229]], ['LongLeftArrow', [10229]], ['Longleftarrow', [10232]], ['longleftrightarrow', [10231]], ['LongLeftRightArrow', [10231]], ['Longleftrightarrow', [10234]], ['longmapsto', [10236]], ['longrightarrow', [10230]], ['LongRightArrow', [10230]], ['Longrightarrow', [10233]], ['looparrowleft', [8619]], ['looparrowright', [8620]], ['lopar', [10629]], ['Lopf', [120131]], ['lopf', [120157]], ['loplus', [10797]], ['lotimes', [10804]], ['lowast', [8727]], ['lowbar', [95]], ['LowerLeftArrow', [8601]], ['LowerRightArrow', [8600]], ['loz', [9674]], ['lozenge', [9674]], ['lozf', [10731]], ['lpar', [40]], ['lparlt', [10643]], ['lrarr', [8646]], ['lrcorner', [8991]], ['lrhar', [8651]], ['lrhard', [10605]], ['lrm', [8206]], ['lrtri', [8895]], ['lsaquo', [8249]], ['lscr', [120001]], ['Lscr', [8466]], ['lsh', [8624]], ['Lsh', [8624]], ['lsim', [8818]], ['lsime', [10893]], ['lsimg', [10895]], ['lsqb', [91]], ['lsquo', [8216]], ['lsquor', [8218]], ['Lstrok', [321]], ['lstrok', [322]], ['ltcc', [10918]], ['ltcir', [10873]], ['lt', [60]], ['LT', [60]], ['Lt', [8810]], ['ltdot', [8918]], ['lthree', [8907]], ['ltimes', [8905]], ['ltlarr', [10614]], ['ltquest', [10875]], ['ltri', [9667]], ['ltrie', [8884]], ['ltrif', [9666]], ['ltrPar', [10646]], ['lurdshar', [10570]], ['luruhar', [10598]], ['lvertneqq', [8808, 65024]], ['lvnE', [8808, 65024]], ['macr', [175]], ['male', [9794]], ['malt', [10016]], ['maltese', [10016]], ['Map', [10501]], ['map', [8614]], ['mapsto', [8614]], ['mapstodown', [8615]], ['mapstoleft', [8612]], ['mapstoup', [8613]], ['marker', [9646]], ['mcomma', [10793]], ['Mcy', [1052]], ['mcy', [1084]], ['mdash', [8212]], ['mDDot', [8762]], ['measuredangle', [8737]], ['MediumSpace', [8287]], ['Mellintrf', [8499]], ['Mfr', [120080]], ['mfr', [120106]], ['mho', [8487]], ['micro', [181]], ['midast', [42]], ['midcir', [10992]], ['mid', [8739]], ['middot', [183]], ['minusb', [8863]], ['minus', [8722]], ['minusd', [8760]], ['minusdu', [10794]], ['MinusPlus', [8723]], ['mlcp', [10971]], ['mldr', [8230]], ['mnplus', [8723]], ['models', [8871]], ['Mopf', [120132]], ['mopf', [120158]], ['mp', [8723]], ['mscr', [120002]], ['Mscr', [8499]], ['mstpos', [8766]], ['Mu', [924]], ['mu', [956]], ['multimap', [8888]], ['mumap', [8888]], ['nabla', [8711]], ['Nacute', [323]], ['nacute', [324]], ['nang', [8736, 8402]], ['nap', [8777]], ['napE', [10864, 824]], ['napid', [8779, 824]], ['napos', [329]], ['napprox', [8777]], ['natural', [9838]], ['naturals', [8469]], ['natur', [9838]], ['nbsp', [160]], ['nbump', [8782, 824]], ['nbumpe', [8783, 824]], ['ncap', [10819]], ['Ncaron', [327]], ['ncaron', [328]], ['Ncedil', [325]], ['ncedil', [326]], ['ncong', [8775]], ['ncongdot', [10861, 824]], ['ncup', [10818]], ['Ncy', [1053]], ['ncy', [1085]], ['ndash', [8211]], ['nearhk', [10532]], ['nearr', [8599]], ['neArr', [8663]], ['nearrow', [8599]], ['ne', [8800]], ['nedot', [8784, 824]], ['NegativeMediumSpace', [8203]], ['NegativeThickSpace', [8203]], ['NegativeThinSpace', [8203]], ['NegativeVeryThinSpace', [8203]], ['nequiv', [8802]], ['nesear', [10536]], ['nesim', [8770, 824]], ['NestedGreaterGreater', [8811]], ['NestedLessLess', [8810]], ['nexist', [8708]], ['nexists', [8708]], ['Nfr', [120081]], ['nfr', [120107]], ['ngE', [8807, 824]], ['nge', [8817]], ['ngeq', [8817]], ['ngeqq', [8807, 824]], ['ngeqslant', [10878, 824]], ['nges', [10878, 824]], ['nGg', [8921, 824]], ['ngsim', [8821]], ['nGt', [8811, 8402]], ['ngt', [8815]], ['ngtr', [8815]], ['nGtv', [8811, 824]], ['nharr', [8622]], ['nhArr', [8654]], ['nhpar', [10994]], ['ni', [8715]], ['nis', [8956]], ['nisd', [8954]], ['niv', [8715]], ['NJcy', [1034]], ['njcy', [1114]], ['nlarr', [8602]], ['nlArr', [8653]], ['nldr', [8229]], ['nlE', [8806, 824]], ['nle', [8816]], ['nleftarrow', [8602]], ['nLeftarrow', [8653]], ['nleftrightarrow', [8622]], ['nLeftrightarrow', [8654]], ['nleq', [8816]], ['nleqq', [8806, 824]], ['nleqslant', [10877, 824]], ['nles', [10877, 824]], ['nless', [8814]], ['nLl', [8920, 824]], ['nlsim', [8820]], ['nLt', [8810, 8402]], ['nlt', [8814]], ['nltri', [8938]], ['nltrie', [8940]], ['nLtv', [8810, 824]], ['nmid', [8740]], ['NoBreak', [8288]], ['NonBreakingSpace', [160]], ['nopf', [120159]], ['Nopf', [8469]], ['Not', [10988]], ['not', [172]], ['NotCongruent', [8802]], ['NotCupCap', [8813]], ['NotDoubleVerticalBar', [8742]], ['NotElement', [8713]], ['NotEqual', [8800]], ['NotEqualTilde', [8770, 824]], ['NotExists', [8708]], ['NotGreater', [8815]], ['NotGreaterEqual', [8817]], ['NotGreaterFullEqual', [8807, 824]], ['NotGreaterGreater', [8811, 824]], ['NotGreaterLess', [8825]], ['NotGreaterSlantEqual', [10878, 824]], ['NotGreaterTilde', [8821]], ['NotHumpDownHump', [8782, 824]], ['NotHumpEqual', [8783, 824]], ['notin', [8713]], ['notindot', [8949, 824]], ['notinE', [8953, 824]], ['notinva', [8713]], ['notinvb', [8951]], ['notinvc', [8950]], ['NotLeftTriangleBar', [10703, 824]], ['NotLeftTriangle', [8938]], ['NotLeftTriangleEqual', [8940]], ['NotLess', [8814]], ['NotLessEqual', [8816]], ['NotLessGreater', [8824]], ['NotLessLess', [8810, 824]], ['NotLessSlantEqual', [10877, 824]], ['NotLessTilde', [8820]], ['NotNestedGreaterGreater', [10914, 824]], ['NotNestedLessLess', [10913, 824]], ['notni', [8716]], ['notniva', [8716]], ['notnivb', [8958]], ['notnivc', [8957]], ['NotPrecedes', [8832]], ['NotPrecedesEqual', [10927, 824]], ['NotPrecedesSlantEqual', [8928]], ['NotReverseElement', [8716]], ['NotRightTriangleBar', [10704, 824]], ['NotRightTriangle', [8939]], ['NotRightTriangleEqual', [8941]], ['NotSquareSubset', [8847, 824]], ['NotSquareSubsetEqual', [8930]], ['NotSquareSuperset', [8848, 824]], ['NotSquareSupersetEqual', [8931]], ['NotSubset', [8834, 8402]], ['NotSubsetEqual', [8840]], ['NotSucceeds', [8833]], ['NotSucceedsEqual', [10928, 824]], ['NotSucceedsSlantEqual', [8929]], ['NotSucceedsTilde', [8831, 824]], ['NotSuperset', [8835, 8402]], ['NotSupersetEqual', [8841]], ['NotTilde', [8769]], ['NotTildeEqual', [8772]], ['NotTildeFullEqual', [8775]], ['NotTildeTilde', [8777]], ['NotVerticalBar', [8740]], ['nparallel', [8742]], ['npar', [8742]], ['nparsl', [11005, 8421]], ['npart', [8706, 824]], ['npolint', [10772]], ['npr', [8832]], ['nprcue', [8928]], ['nprec', [8832]], ['npreceq', [10927, 824]], ['npre', [10927, 824]], ['nrarrc', [10547, 824]], ['nrarr', [8603]], ['nrArr', [8655]], ['nrarrw', [8605, 824]], ['nrightarrow', [8603]], ['nRightarrow', [8655]], ['nrtri', [8939]], ['nrtrie', [8941]], ['nsc', [8833]], ['nsccue', [8929]], ['nsce', [10928, 824]], ['Nscr', [119977]], ['nscr', [120003]], ['nshortmid', [8740]], ['nshortparallel', [8742]], ['nsim', [8769]], ['nsime', [8772]], ['nsimeq', [8772]], ['nsmid', [8740]], ['nspar', [8742]], ['nsqsube', [8930]], ['nsqsupe', [8931]], ['nsub', [8836]], ['nsubE', [10949, 824]], ['nsube', [8840]], ['nsubset', [8834, 8402]], ['nsubseteq', [8840]], ['nsubseteqq', [10949, 824]], ['nsucc', [8833]], ['nsucceq', [10928, 824]], ['nsup', [8837]], ['nsupE', [10950, 824]], ['nsupe', [8841]], ['nsupset', [8835, 8402]], ['nsupseteq', [8841]], ['nsupseteqq', [10950, 824]], ['ntgl', [8825]], ['Ntilde', [209]], ['ntilde', [241]], ['ntlg', [8824]], ['ntriangleleft', [8938]], ['ntrianglelefteq', [8940]], ['ntriangleright', [8939]], ['ntrianglerighteq', [8941]], ['Nu', [925]], ['nu', [957]], ['num', [35]], ['numero', [8470]], ['numsp', [8199]], ['nvap', [8781, 8402]], ['nvdash', [8876]], ['nvDash', [8877]], ['nVdash', [8878]], ['nVDash', [8879]], ['nvge', [8805, 8402]], ['nvgt', [62, 8402]], ['nvHarr', [10500]], ['nvinfin', [10718]], ['nvlArr', [10498]], ['nvle', [8804, 8402]], ['nvlt', [60, 8402]], ['nvltrie', [8884, 8402]], ['nvrArr', [10499]], ['nvrtrie', [8885, 8402]], ['nvsim', [8764, 8402]], ['nwarhk', [10531]], ['nwarr', [8598]], ['nwArr', [8662]], ['nwarrow', [8598]], ['nwnear', [10535]], ['Oacute', [211]], ['oacute', [243]], ['oast', [8859]], ['Ocirc', [212]], ['ocirc', [244]], ['ocir', [8858]], ['Ocy', [1054]], ['ocy', [1086]], ['odash', [8861]], ['Odblac', [336]], ['odblac', [337]], ['odiv', [10808]], ['odot', [8857]], ['odsold', [10684]], ['OElig', [338]], ['oelig', [339]], ['ofcir', [10687]], ['Ofr', [120082]], ['ofr', [120108]], ['ogon', [731]], ['Ograve', [210]], ['ograve', [242]], ['ogt', [10689]], ['ohbar', [10677]], ['ohm', [937]], ['oint', [8750]], ['olarr', [8634]], ['olcir', [10686]], ['olcross', [10683]], ['oline', [8254]], ['olt', [10688]], ['Omacr', [332]], ['omacr', [333]], ['Omega', [937]], ['omega', [969]], ['Omicron', [927]], ['omicron', [959]], ['omid', [10678]], ['ominus', [8854]], ['Oopf', [120134]], ['oopf', [120160]], ['opar', [10679]], ['OpenCurlyDoubleQuote', [8220]], ['OpenCurlyQuote', [8216]], ['operp', [10681]], ['oplus', [8853]], ['orarr', [8635]], ['Or', [10836]], ['or', [8744]], ['ord', [10845]], ['order', [8500]], ['orderof', [8500]], ['ordf', [170]], ['ordm', [186]], ['origof', [8886]], ['oror', [10838]], ['orslope', [10839]], ['orv', [10843]], ['oS', [9416]], ['Oscr', [119978]], ['oscr', [8500]], ['Oslash', [216]], ['oslash', [248]], ['osol', [8856]], ['Otilde', [213]], ['otilde', [245]], ['otimesas', [10806]], ['Otimes', [10807]], ['otimes', [8855]], ['Ouml', [214]], ['ouml', [246]], ['ovbar', [9021]], ['OverBar', [8254]], ['OverBrace', [9182]], ['OverBracket', [9140]], ['OverParenthesis', [9180]], ['para', [182]], ['parallel', [8741]], ['par', [8741]], ['parsim', [10995]], ['parsl', [11005]], ['part', [8706]], ['PartialD', [8706]], ['Pcy', [1055]], ['pcy', [1087]], ['percnt', [37]], ['period', [46]], ['permil', [8240]], ['perp', [8869]], ['pertenk', [8241]], ['Pfr', [120083]], ['pfr', [120109]], ['Phi', [934]], ['phi', [966]], ['phiv', [981]], ['phmmat', [8499]], ['phone', [9742]], ['Pi', [928]], ['pi', [960]], ['pitchfork', [8916]], ['piv', [982]], ['planck', [8463]], ['planckh', [8462]], ['plankv', [8463]], ['plusacir', [10787]], ['plusb', [8862]], ['pluscir', [10786]], ['plus', [43]], ['plusdo', [8724]], ['plusdu', [10789]], ['pluse', [10866]], ['PlusMinus', [177]], ['plusmn', [177]], ['plussim', [10790]], ['plustwo', [10791]], ['pm', [177]], ['Poincareplane', [8460]], ['pointint', [10773]], ['popf', [120161]], ['Popf', [8473]], ['pound', [163]], ['prap', [10935]], ['Pr', [10939]], ['pr', [8826]], ['prcue', [8828]], ['precapprox', [10935]], ['prec', [8826]], ['preccurlyeq', [8828]], ['Precedes', [8826]], ['PrecedesEqual', [10927]], ['PrecedesSlantEqual', [8828]], ['PrecedesTilde', [8830]], ['preceq', [10927]], ['precnapprox', [10937]], ['precneqq', [10933]], ['precnsim', [8936]], ['pre', [10927]], ['prE', [10931]], ['precsim', [8830]], ['prime', [8242]], ['Prime', [8243]], ['primes', [8473]], ['prnap', [10937]], ['prnE', [10933]], ['prnsim', [8936]], ['prod', [8719]], ['Product', [8719]], ['profalar', [9006]], ['profline', [8978]], ['profsurf', [8979]], ['prop', [8733]], ['Proportional', [8733]], ['Proportion', [8759]], ['propto', [8733]], ['prsim', [8830]], ['prurel', [8880]], ['Pscr', [119979]], ['pscr', [120005]], ['Psi', [936]], ['psi', [968]], ['puncsp', [8200]], ['Qfr', [120084]], ['qfr', [120110]], ['qint', [10764]], ['qopf', [120162]], ['Qopf', [8474]], ['qprime', [8279]], ['Qscr', [119980]], ['qscr', [120006]], ['quaternions', [8461]], ['quatint', [10774]], ['quest', [63]], ['questeq', [8799]], ['quot', [34]], ['QUOT', [34]], ['rAarr', [8667]], ['race', [8765, 817]], ['Racute', [340]], ['racute', [341]], ['radic', [8730]], ['raemptyv', [10675]], ['rang', [10217]], ['Rang', [10219]], ['rangd', [10642]], ['range', [10661]], ['rangle', [10217]], ['raquo', [187]], ['rarrap', [10613]], ['rarrb', [8677]], ['rarrbfs', [10528]], ['rarrc', [10547]], ['rarr', [8594]], ['Rarr', [8608]], ['rArr', [8658]], ['rarrfs', [10526]], ['rarrhk', [8618]], ['rarrlp', [8620]], ['rarrpl', [10565]], ['rarrsim', [10612]], ['Rarrtl', [10518]], ['rarrtl', [8611]], ['rarrw', [8605]], ['ratail', [10522]], ['rAtail', [10524]], ['ratio', [8758]], ['rationals', [8474]], ['rbarr', [10509]], ['rBarr', [10511]], ['RBarr', [10512]], ['rbbrk', [10099]], ['rbrace', [125]], ['rbrack', [93]], ['rbrke', [10636]], ['rbrksld', [10638]], ['rbrkslu', [10640]], ['Rcaron', [344]], ['rcaron', [345]], ['Rcedil', [342]], ['rcedil', [343]], ['rceil', [8969]], ['rcub', [125]], ['Rcy', [1056]], ['rcy', [1088]], ['rdca', [10551]], ['rdldhar', [10601]], ['rdquo', [8221]], ['rdquor', [8221]], ['CloseCurlyDoubleQuote', [8221]], ['rdsh', [8627]], ['real', [8476]], ['realine', [8475]], ['realpart', [8476]], ['reals', [8477]], ['Re', [8476]], ['rect', [9645]], ['reg', [174]], ['REG', [174]], ['ReverseElement', [8715]], ['ReverseEquilibrium', [8651]], ['ReverseUpEquilibrium', [10607]], ['rfisht', [10621]], ['rfloor', [8971]], ['rfr', [120111]], ['Rfr', [8476]], ['rHar', [10596]], ['rhard', [8641]], ['rharu', [8640]], ['rharul', [10604]], ['Rho', [929]], ['rho', [961]], ['rhov', [1009]], ['RightAngleBracket', [10217]], ['RightArrowBar', [8677]], ['rightarrow', [8594]], ['RightArrow', [8594]], ['Rightarrow', [8658]], ['RightArrowLeftArrow', [8644]], ['rightarrowtail', [8611]], ['RightCeiling', [8969]], ['RightDoubleBracket', [10215]], ['RightDownTeeVector', [10589]], ['RightDownVectorBar', [10581]], ['RightDownVector', [8642]], ['RightFloor', [8971]], ['rightharpoondown', [8641]], ['rightharpoonup', [8640]], ['rightleftarrows', [8644]], ['rightleftharpoons', [8652]], ['rightrightarrows', [8649]], ['rightsquigarrow', [8605]], ['RightTeeArrow', [8614]], ['RightTee', [8866]], ['RightTeeVector', [10587]], ['rightthreetimes', [8908]], ['RightTriangleBar', [10704]], ['RightTriangle', [8883]], ['RightTriangleEqual', [8885]], ['RightUpDownVector', [10575]], ['RightUpTeeVector', [10588]], ['RightUpVectorBar', [10580]], ['RightUpVector', [8638]], ['RightVectorBar', [10579]], ['RightVector', [8640]], ['ring', [730]], ['risingdotseq', [8787]], ['rlarr', [8644]], ['rlhar', [8652]], ['rlm', [8207]], ['rmoustache', [9137]], ['rmoust', [9137]], ['rnmid', [10990]], ['roang', [10221]], ['roarr', [8702]], ['robrk', [10215]], ['ropar', [10630]], ['ropf', [120163]], ['Ropf', [8477]], ['roplus', [10798]], ['rotimes', [10805]], ['RoundImplies', [10608]], ['rpar', [41]], ['rpargt', [10644]], ['rppolint', [10770]], ['rrarr', [8649]], ['Rrightarrow', [8667]], ['rsaquo', [8250]], ['rscr', [120007]], ['Rscr', [8475]], ['rsh', [8625]], ['Rsh', [8625]], ['rsqb', [93]], ['rsquo', [8217]], ['rsquor', [8217]], ['CloseCurlyQuote', [8217]], ['rthree', [8908]], ['rtimes', [8906]], ['rtri', [9657]], ['rtrie', [8885]], ['rtrif', [9656]], ['rtriltri', [10702]], ['RuleDelayed', [10740]], ['ruluhar', [10600]], ['rx', [8478]], ['Sacute', [346]], ['sacute', [347]], ['sbquo', [8218]], ['scap', [10936]], ['Scaron', [352]], ['scaron', [353]], ['Sc', [10940]], ['sc', [8827]], ['sccue', [8829]], ['sce', [10928]], ['scE', [10932]], ['Scedil', [350]], ['scedil', [351]], ['Scirc', [348]], ['scirc', [349]], ['scnap', [10938]], ['scnE', [10934]], ['scnsim', [8937]], ['scpolint', [10771]], ['scsim', [8831]], ['Scy', [1057]], ['scy', [1089]], ['sdotb', [8865]], ['sdot', [8901]], ['sdote', [10854]], ['searhk', [10533]], ['searr', [8600]], ['seArr', [8664]], ['searrow', [8600]], ['sect', [167]], ['semi', [59]], ['seswar', [10537]], ['setminus', [8726]], ['setmn', [8726]], ['sext', [10038]], ['Sfr', [120086]], ['sfr', [120112]], ['sfrown', [8994]], ['sharp', [9839]], ['SHCHcy', [1065]], ['shchcy', [1097]], ['SHcy', [1064]], ['shcy', [1096]], ['ShortDownArrow', [8595]], ['ShortLeftArrow', [8592]], ['shortmid', [8739]], ['shortparallel', [8741]], ['ShortRightArrow', [8594]], ['ShortUpArrow', [8593]], ['shy', [173]], ['Sigma', [931]], ['sigma', [963]], ['sigmaf', [962]], ['sigmav', [962]], ['sim', [8764]], ['simdot', [10858]], ['sime', [8771]], ['simeq', [8771]], ['simg', [10910]], ['simgE', [10912]], ['siml', [10909]], ['simlE', [10911]], ['simne', [8774]], ['simplus', [10788]], ['simrarr', [10610]], ['slarr', [8592]], ['SmallCircle', [8728]], ['smallsetminus', [8726]], ['smashp', [10803]], ['smeparsl', [10724]], ['smid', [8739]], ['smile', [8995]], ['smt', [10922]], ['smte', [10924]], ['smtes', [10924, 65024]], ['SOFTcy', [1068]], ['softcy', [1100]], ['solbar', [9023]], ['solb', [10692]], ['sol', [47]], ['Sopf', [120138]], ['sopf', [120164]], ['spades', [9824]], ['spadesuit', [9824]], ['spar', [8741]], ['sqcap', [8851]], ['sqcaps', [8851, 65024]], ['sqcup', [8852]], ['sqcups', [8852, 65024]], ['Sqrt', [8730]], ['sqsub', [8847]], ['sqsube', [8849]], ['sqsubset', [8847]], ['sqsubseteq', [8849]], ['sqsup', [8848]], ['sqsupe', [8850]], ['sqsupset', [8848]], ['sqsupseteq', [8850]], ['square', [9633]], ['Square', [9633]], ['SquareIntersection', [8851]], ['SquareSubset', [8847]], ['SquareSubsetEqual', [8849]], ['SquareSuperset', [8848]], ['SquareSupersetEqual', [8850]], ['SquareUnion', [8852]], ['squarf', [9642]], ['squ', [9633]], ['squf', [9642]], ['srarr', [8594]], ['Sscr', [119982]], ['sscr', [120008]], ['ssetmn', [8726]], ['ssmile', [8995]], ['sstarf', [8902]], ['Star', [8902]], ['star', [9734]], ['starf', [9733]], ['straightepsilon', [1013]], ['straightphi', [981]], ['strns', [175]], ['sub', [8834]], ['Sub', [8912]], ['subdot', [10941]], ['subE', [10949]], ['sube', [8838]], ['subedot', [10947]], ['submult', [10945]], ['subnE', [10955]], ['subne', [8842]], ['subplus', [10943]], ['subrarr', [10617]], ['subset', [8834]], ['Subset', [8912]], ['subseteq', [8838]], ['subseteqq', [10949]], ['SubsetEqual', [8838]], ['subsetneq', [8842]], ['subsetneqq', [10955]], ['subsim', [10951]], ['subsub', [10965]], ['subsup', [10963]], ['succapprox', [10936]], ['succ', [8827]], ['succcurlyeq', [8829]], ['Succeeds', [8827]], ['SucceedsEqual', [10928]], ['SucceedsSlantEqual', [8829]], ['SucceedsTilde', [8831]], ['succeq', [10928]], ['succnapprox', [10938]], ['succneqq', [10934]], ['succnsim', [8937]], ['succsim', [8831]], ['SuchThat', [8715]], ['sum', [8721]], ['Sum', [8721]], ['sung', [9834]], ['sup1', [185]], ['sup2', [178]], ['sup3', [179]], ['sup', [8835]], ['Sup', [8913]], ['supdot', [10942]], ['supdsub', [10968]], ['supE', [10950]], ['supe', [8839]], ['supedot', [10948]], ['Superset', [8835]], ['SupersetEqual', [8839]], ['suphsol', [10185]], ['suphsub', [10967]], ['suplarr', [10619]], ['supmult', [10946]], ['supnE', [10956]], ['supne', [8843]], ['supplus', [10944]], ['supset', [8835]], ['Supset', [8913]], ['supseteq', [8839]], ['supseteqq', [10950]], ['supsetneq', [8843]], ['supsetneqq', [10956]], ['supsim', [10952]], ['supsub', [10964]], ['supsup', [10966]], ['swarhk', [10534]], ['swarr', [8601]], ['swArr', [8665]], ['swarrow', [8601]], ['swnwar', [10538]], ['szlig', [223]], ['Tab', [9]], ['target', [8982]], ['Tau', [932]], ['tau', [964]], ['tbrk', [9140]], ['Tcaron', [356]], ['tcaron', [357]], ['Tcedil', [354]], ['tcedil', [355]], ['Tcy', [1058]], ['tcy', [1090]], ['tdot', [8411]], ['telrec', [8981]], ['Tfr', [120087]], ['tfr', [120113]], ['there4', [8756]], ['therefore', [8756]], ['Therefore', [8756]], ['Theta', [920]], ['theta', [952]], ['thetasym', [977]], ['thetav', [977]], ['thickapprox', [8776]], ['thicksim', [8764]], ['ThickSpace', [8287, 8202]], ['ThinSpace', [8201]], ['thinsp', [8201]], ['thkap', [8776]], ['thksim', [8764]], ['THORN', [222]], ['thorn', [254]], ['tilde', [732]], ['Tilde', [8764]], ['TildeEqual', [8771]], ['TildeFullEqual', [8773]], ['TildeTilde', [8776]], ['timesbar', [10801]], ['timesb', [8864]], ['times', [215]], ['timesd', [10800]], ['tint', [8749]], ['toea', [10536]], ['topbot', [9014]], ['topcir', [10993]], ['top', [8868]], ['Topf', [120139]], ['topf', [120165]], ['topfork', [10970]], ['tosa', [10537]], ['tprime', [8244]], ['trade', [8482]], ['TRADE', [8482]], ['triangle', [9653]], ['triangledown', [9663]], ['triangleleft', [9667]], ['trianglelefteq', [8884]], ['triangleq', [8796]], ['triangleright', [9657]], ['trianglerighteq', [8885]], ['tridot', [9708]], ['trie', [8796]], ['triminus', [10810]], ['TripleDot', [8411]], ['triplus', [10809]], ['trisb', [10701]], ['tritime', [10811]], ['trpezium', [9186]], ['Tscr', [119983]], ['tscr', [120009]], ['TScy', [1062]], ['tscy', [1094]], ['TSHcy', [1035]], ['tshcy', [1115]], ['Tstrok', [358]], ['tstrok', [359]], ['twixt', [8812]], ['twoheadleftarrow', [8606]], ['twoheadrightarrow', [8608]], ['Uacute', [218]], ['uacute', [250]], ['uarr', [8593]], ['Uarr', [8607]], ['uArr', [8657]], ['Uarrocir', [10569]], ['Ubrcy', [1038]], ['ubrcy', [1118]], ['Ubreve', [364]], ['ubreve', [365]], ['Ucirc', [219]], ['ucirc', [251]], ['Ucy', [1059]], ['ucy', [1091]], ['udarr', [8645]], ['Udblac', [368]], ['udblac', [369]], ['udhar', [10606]], ['ufisht', [10622]], ['Ufr', [120088]], ['ufr', [120114]], ['Ugrave', [217]], ['ugrave', [249]], ['uHar', [10595]], ['uharl', [8639]], ['uharr', [8638]], ['uhblk', [9600]], ['ulcorn', [8988]], ['ulcorner', [8988]], ['ulcrop', [8975]], ['ultri', [9720]], ['Umacr', [362]], ['umacr', [363]], ['uml', [168]], ['UnderBar', [95]], ['UnderBrace', [9183]], ['UnderBracket', [9141]], ['UnderParenthesis', [9181]], ['Union', [8899]], ['UnionPlus', [8846]], ['Uogon', [370]], ['uogon', [371]], ['Uopf', [120140]], ['uopf', [120166]], ['UpArrowBar', [10514]], ['uparrow', [8593]], ['UpArrow', [8593]], ['Uparrow', [8657]], ['UpArrowDownArrow', [8645]], ['updownarrow', [8597]], ['UpDownArrow', [8597]], ['Updownarrow', [8661]], ['UpEquilibrium', [10606]], ['upharpoonleft', [8639]], ['upharpoonright', [8638]], ['uplus', [8846]], ['UpperLeftArrow', [8598]], ['UpperRightArrow', [8599]], ['upsi', [965]], ['Upsi', [978]], ['upsih', [978]], ['Upsilon', [933]], ['upsilon', [965]], ['UpTeeArrow', [8613]], ['UpTee', [8869]], ['upuparrows', [8648]], ['urcorn', [8989]], ['urcorner', [8989]], ['urcrop', [8974]], ['Uring', [366]], ['uring', [367]], ['urtri', [9721]], ['Uscr', [119984]], ['uscr', [120010]], ['utdot', [8944]], ['Utilde', [360]], ['utilde', [361]], ['utri', [9653]], ['utrif', [9652]], ['uuarr', [8648]], ['Uuml', [220]], ['uuml', [252]], ['uwangle', [10663]], ['vangrt', [10652]], ['varepsilon', [1013]], ['varkappa', [1008]], ['varnothing', [8709]], ['varphi', [981]], ['varpi', [982]], ['varpropto', [8733]], ['varr', [8597]], ['vArr', [8661]], ['varrho', [1009]], ['varsigma', [962]], ['varsubsetneq', [8842, 65024]], ['varsubsetneqq', [10955, 65024]], ['varsupsetneq', [8843, 65024]], ['varsupsetneqq', [10956, 65024]], ['vartheta', [977]], ['vartriangleleft', [8882]], ['vartriangleright', [8883]], ['vBar', [10984]], ['Vbar', [10987]], ['vBarv', [10985]], ['Vcy', [1042]], ['vcy', [1074]], ['vdash', [8866]], ['vDash', [8872]], ['Vdash', [8873]], ['VDash', [8875]], ['Vdashl', [10982]], ['veebar', [8891]], ['vee', [8744]], ['Vee', [8897]], ['veeeq', [8794]], ['vellip', [8942]], ['verbar', [124]], ['Verbar', [8214]], ['vert', [124]], ['Vert', [8214]], ['VerticalBar', [8739]], ['VerticalLine', [124]], ['VerticalSeparator', [10072]], ['VerticalTilde', [8768]], ['VeryThinSpace', [8202]], ['Vfr', [120089]], ['vfr', [120115]], ['vltri', [8882]], ['vnsub', [8834, 8402]], ['vnsup', [8835, 8402]], ['Vopf', [120141]], ['vopf', [120167]], ['vprop', [8733]], ['vrtri', [8883]], ['Vscr', [119985]], ['vscr', [120011]], ['vsubnE', [10955, 65024]], ['vsubne', [8842, 65024]], ['vsupnE', [10956, 65024]], ['vsupne', [8843, 65024]], ['Vvdash', [8874]], ['vzigzag', [10650]], ['Wcirc', [372]], ['wcirc', [373]], ['wedbar', [10847]], ['wedge', [8743]], ['Wedge', [8896]], ['wedgeq', [8793]], ['weierp', [8472]], ['Wfr', [120090]], ['wfr', [120116]], ['Wopf', [120142]], ['wopf', [120168]], ['wp', [8472]], ['wr', [8768]], ['wreath', [8768]], ['Wscr', [119986]], ['wscr', [120012]], ['xcap', [8898]], ['xcirc', [9711]], ['xcup', [8899]], ['xdtri', [9661]], ['Xfr', [120091]], ['xfr', [120117]], ['xharr', [10231]], ['xhArr', [10234]], ['Xi', [926]], ['xi', [958]], ['xlarr', [10229]], ['xlArr', [10232]], ['xmap', [10236]], ['xnis', [8955]], ['xodot', [10752]], ['Xopf', [120143]], ['xopf', [120169]], ['xoplus', [10753]], ['xotime', [10754]], ['xrarr', [10230]], ['xrArr', [10233]], ['Xscr', [119987]], ['xscr', [120013]], ['xsqcup', [10758]], ['xuplus', [10756]], ['xutri', [9651]], ['xvee', [8897]], ['xwedge', [8896]], ['Yacute', [221]], ['yacute', [253]], ['YAcy', [1071]], ['yacy', [1103]], ['Ycirc', [374]], ['ycirc', [375]], ['Ycy', [1067]], ['ycy', [1099]], ['yen', [165]], ['Yfr', [120092]], ['yfr', [120118]], ['YIcy', [1031]], ['yicy', [1111]], ['Yopf', [120144]], ['yopf', [120170]], ['Yscr', [119988]], ['yscr', [120014]], ['YUcy', [1070]], ['yucy', [1102]], ['yuml', [255]], ['Yuml', [376]], ['Zacute', [377]], ['zacute', [378]], ['Zcaron', [381]], ['zcaron', [382]], ['Zcy', [1047]], ['zcy', [1079]], ['Zdot', [379]], ['zdot', [380]], ['zeetrf', [8488]], ['ZeroWidthSpace', [8203]], ['Zeta', [918]], ['zeta', [950]], ['zfr', [120119]], ['Zfr', [8488]], ['ZHcy', [1046]], ['zhcy', [1078]], ['zigrarr', [8669]], ['zopf', [120171]], ['Zopf', [8484]], ['Zscr', [119989]], ['zscr', [120015]], ['zwj', [8205]], ['zwnj', [8204]]];
-
-var alphaIndex = {};
-var charIndex = {};
-
-createIndexes(alphaIndex, charIndex);
-
-/**
- * @constructor
- */
-function Html5Entities() {}
-
-/**
- * @param {String} str
- * @returns {String}
- */
-Html5Entities.prototype.decode = function(str) {
-    if (!str || !str.length) {
-        return '';
-    }
-    return str.replace(/&(#?[\w\d]+);?/g, function(s, entity) {
-        var chr;
-        if (entity.charAt(0) === "#") {
-            var code = entity.charAt(1) === 'x' ?
-                parseInt(entity.substr(2).toLowerCase(), 16) :
-                parseInt(entity.substr(1));
-
-            if (!(isNaN(code) || code < -32768 || code > 65535)) {
-                chr = String.fromCharCode(code);
-            }
-        } else {
-            chr = alphaIndex[entity];
-        }
-        return chr || s;
-    });
-};
-
-/**
- * @param {String} str
- * @returns {String}
- */
- Html5Entities.decode = function(str) {
-    return new Html5Entities().decode(str);
- };
-
-/**
- * @param {String} str
- * @returns {String}
- */
-Html5Entities.prototype.encode = function(str) {
-    if (!str || !str.length) {
-        return '';
-    }
-    var strLength = str.length;
-    var result = '';
-    var i = 0;
-    while (i < strLength) {
-        var charInfo = charIndex[str.charCodeAt(i)];
-        if (charInfo) {
-            var alpha = charInfo[str.charCodeAt(i + 1)];
-            if (alpha) {
-                i++;
-            } else {
-                alpha = charInfo[''];
-            }
-            if (alpha) {
-                result += "&" + alpha + ";";
-                i++;
-                continue;
-            }
-        }
-        result += str.charAt(i);
-        i++;
-    }
-    return result;
-};
-
-/**
- * @param {String} str
- * @returns {String}
- */
- Html5Entities.encode = function(str) {
-    return new Html5Entities().encode(str);
- };
-
-/**
- * @param {String} str
- * @returns {String}
- */
-Html5Entities.prototype.encodeNonUTF = function(str) {
-    if (!str || !str.length) {
-        return '';
-    }
-    var strLength = str.length;
-    var result = '';
-    var i = 0;
-    while (i < strLength) {
-        var c = str.charCodeAt(i);
-        var charInfo = charIndex[c];
-        if (charInfo) {
-            var alpha = charInfo[str.charCodeAt(i + 1)];
-            if (alpha) {
-                i++;
-            } else {
-                alpha = charInfo[''];
-            }
-            if (alpha) {
-                result += "&" + alpha + ";";
-                i++;
-                continue;
-            }
-        }
-        if (c < 32 || c > 126) {
-            result += '&#' + c + ';';
-        } else {
-            result += str.charAt(i);
-        }
-        i++;
-    }
-    return result;
-};
-
-/**
- * @param {String} str
- * @returns {String}
- */
- Html5Entities.encodeNonUTF = function(str) {
-    return new Html5Entities().encodeNonUTF(str);
- };
-
-/**
- * @param {String} str
- * @returns {String}
- */
-Html5Entities.prototype.encodeNonASCII = function(str) {
-    if (!str || !str.length) {
-        return '';
-    }
-    var strLength = str.length;
-    var result = '';
-    var i = 0;
-    while (i < strLength) {
-        var c = str.charCodeAt(i);
-        if (c <= 255) {
-            result += str[i++];
-            continue;
-        }
-        result += '&#' + c + ';';
-        i++
-    }
-    return result;
-};
-
-/**
- * @param {String} str
- * @returns {String}
- */
- Html5Entities.encodeNonASCII = function(str) {
-    return new Html5Entities().encodeNonASCII(str);
- };
-
-/**
- * @param {Object} alphaIndex Passed by reference.
- * @param {Object} charIndex Passed by reference.
- */
-function createIndexes(alphaIndex, charIndex) {
-    var i = ENTITIES.length;
-    var _results = [];
-    while (i--) {
-        var e = ENTITIES[i];
-        var alpha = e[0];
-        var chars = e[1];
-        var chr = chars[0];
-        var addChar = (chr < 32 || chr > 126) || chr === 62 || chr === 60 || chr === 38 || chr === 34 || chr === 39;
-        var charInfo;
-        if (addChar) {
-            charInfo = charIndex[chr] = charIndex[chr] || {};
-        }
-        if (chars[1]) {
-            var chr2 = chars[1];
-            alphaIndex[alpha] = String.fromCharCode(chr) + String.fromCharCode(chr2);
-            _results.push(addChar && (charInfo[chr2] = alpha));
-        } else {
-            alphaIndex[alpha] = String.fromCharCode(chr);
-            _results.push(addChar && (charInfo[''] = alpha));
-        }
-    }
-}
-
-module.exports = Html5Entities;
-
-
-/***/ }),
-
-/***/ 29:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* WEBPACK VAR INJECTION */(function(process) {/* harmony export (immutable) */ __webpack_exports__["bootstrap"] = bootstrap;
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "starting", function() { return starting; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_polyfills__ = __webpack_require__(40);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_aurelia_pal__ = __webpack_require__(0);
-
-
-
-var bootstrapPromises = [];
-var startResolve = void 0;
-
-var startPromise = new Promise(function (resolve) {
-  return startResolve = resolve;
-});
-var host = __WEBPACK_IMPORTED_MODULE_1_aurelia_pal__["a" /* PLATFORM */].global;
-var isNodeLike = typeof process !== 'undefined' && !process.browser;
-
-function ready() {
-  if (!host.document || host.document.readyState === 'complete') {
-    return Promise.resolve();
-  }
-
-  return new Promise(function (resolve) {
-    host.document.addEventListener('DOMContentLoaded', completed);
-    host.addEventListener('load', completed);
-
-    function completed() {
-      host.document.removeEventListener('DOMContentLoaded', completed);
-      host.removeEventListener('load', completed);
-      resolve();
-    }
-  });
-}
-
-function createLoader() {
-  if (__WEBPACK_IMPORTED_MODULE_1_aurelia_pal__["a" /* PLATFORM */].Loader) {
-    return Promise.resolve(new __WEBPACK_IMPORTED_MODULE_1_aurelia_pal__["a" /* PLATFORM */].Loader());
-  }
-
-  if (false) {
-    if (typeof __webpack_require__ !== 'undefined') {
-      var m = __webpack_require__(require.resolve('aurelia-loader-webpack'));
-      return Promise.resolve(new m.WebpackLoader());
-    }
-
-    if (host.System && typeof host.System.config === 'function') {
-      return host.System.normalize('aurelia-bootstrapper').then(function (bsn) {
-        return host.System.normalize('aurelia-loader-default', bsn);
-      }).then(function (loaderName) {
-        return host.System.import(loaderName).then(function (m) {
-          return new m.DefaultLoader();
-        });
-      });
-    }
-
-    if (typeof host.require === 'function' && typeof host.require.version === 'string') {
-      return new Promise(function (resolve, reject) {
-        return host.require(['aurelia-loader-default'], function (m) {
-          return resolve(new m.DefaultLoader());
-        }, reject);
-      });
-    }
-
-    if (isNodeLike && typeof module !== 'undefined' && typeof module.require !== 'undefined') {
-      var _m = module.require('aurelia-loader-nodejs');
-      return Promise.resolve(new _m.NodeJsLoader());
-    }
-  }
-
-  return Promise.reject('No PLATFORM.Loader is defined and there is neither a System API (ES6) or a Require API (AMD) globally available to load your app.');
-}
-
-function initializePal(loader) {
-  var type = void 0;
-
-  var isRenderer = isNodeLike && (process.type === 'renderer' || process.versions['node-webkit']);
-
-  if (isNodeLike && !isRenderer) {
-    type = 'nodejs';
-  } else if (typeof window !== 'undefined') {
-    type = 'browser';
-  } else if (typeof self !== 'undefined') {
-    type = 'worker';
-  } else {
-    throw new Error('Could not determine platform implementation to load.');
-  }
-
-  return loader.loadModule('aurelia-pal-' + type).then(function (palModule) {
-    return type === 'nodejs' && !__WEBPACK_IMPORTED_MODULE_1_aurelia_pal__["b" /* isInitialized */] && palModule.globalize() || palModule.initialize();
-  });
-}
-
-function preparePlatform(loader) {
-  var map = function map(moduleId, relativeTo) {
-    return loader.normalize(moduleId, relativeTo).then(function (normalized) {
-      loader.map(moduleId, normalized);
-      return normalized;
-    });
-  };
-
-  return initializePal(loader).then(function () {
-    return loader.normalize('aurelia-bootstrapper');
-  }).then(function (bootstrapperName) {
-    var frameworkPromise = map('aurelia-framework', bootstrapperName);
-
-    return Promise.all([frameworkPromise, frameworkPromise.then(function (frameworkName) {
-      return map('aurelia-dependency-injection', frameworkName);
-    }), map('aurelia-router', bootstrapperName), map('aurelia-logging-console', bootstrapperName)]);
-  }).then(function (_ref) {
-    var frameworkName = _ref[0];
-    return loader.loadModule(frameworkName);
-  }).then(function (fx) {
-    return startResolve(function () {
-      return new fx.Aurelia(loader);
-    });
-  });
-}
-
-function config(appHost, configModuleId, aurelia) {
-  aurelia.host = appHost;
-  aurelia.configModuleId = configModuleId || null;
-
-  if (configModuleId) {
-    return aurelia.loader.loadModule(configModuleId).then(function (customConfig) {
-      if (!customConfig.configure) {
-        throw new Error('Cannot initialize module \'' + configModuleId + '\' without a configure function.');
-      }
-
-      return customConfig.configure(aurelia);
-    });
-  }
-
-  aurelia.use.standardConfiguration().developmentLogging();
-
-  return aurelia.start().then(function () {
-    return aurelia.setRoot();
-  });
-}
-
-function run() {
-  return ready().then(createLoader).then(preparePlatform).then(function () {
-    var appHosts = host.document.querySelectorAll('[aurelia-app],[data-aurelia-app]');
-    for (var i = 0, ii = appHosts.length; i < ii; ++i) {
-      var appHost = appHosts[i];
-      var moduleId = appHost.getAttribute('aurelia-app') || appHost.getAttribute('data-aurelia-app');
-      bootstrap(config.bind(null, appHost, moduleId));
-    }
-
-    var toConsole = console.error.bind(console);
-    var bootstraps = bootstrapPromises.map(function (p) {
-      return p.catch(toConsole);
-    });
-    bootstrapPromises = null;
-    return Promise.all(bootstraps);
-  });
-}
-
-function bootstrap(configure) {
-  var p = startPromise.then(function (factory) {
-    return configure(factory());
-  });
-  if (bootstrapPromises) bootstrapPromises.push(p);
-  return p;
-}
-
-var starting = run();
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(61)))
-
-/***/ }),
-
 /***/ 3:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -10397,7 +10321,7 @@ var starting = run();
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "k", function() { return sourceContext; });
 /* harmony export (immutable) */ __webpack_exports__["n"] = camelCase;
 /* harmony export (immutable) */ __webpack_exports__["b"] = createOverrideContext;
-/* unused harmony export getContextFor */
+/* harmony export (immutable) */ __webpack_exports__["E"] = getContextFor;
 /* unused harmony export createScopeForTest */
 /* harmony export (immutable) */ __webpack_exports__["p"] = connectable;
 /* harmony export (immutable) */ __webpack_exports__["q"] = enqueueBindingConnect;
@@ -10414,18 +10338,18 @@ var starting = run();
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return BindingBehavior; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return ValueConverter; });
 /* unused harmony export Assign */
-/* unused harmony export Conditional */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "A", function() { return Conditional; });
 /* unused harmony export AccessThis */
-/* unused harmony export AccessScope */
-/* unused harmony export AccessMember */
-/* unused harmony export AccessKeyed */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "C", function() { return AccessScope; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "D", function() { return AccessMember; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "F", function() { return AccessKeyed; });
 /* unused harmony export CallScope */
-/* unused harmony export CallMember */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "B", function() { return CallMember; });
 /* unused harmony export CallFunction */
-/* unused harmony export Binary */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "z", function() { return Binary; });
 /* unused harmony export PrefixNot */
-/* unused harmony export LiteralPrimitive */
-/* unused harmony export LiteralString */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "y", function() { return LiteralPrimitive; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "x", function() { return LiteralString; });
 /* unused harmony export LiteralArray */
 /* unused harmony export LiteralObject */
 /* unused harmony export Unparser */
@@ -10478,10 +10402,10 @@ var starting = run();
 /* unused harmony export observable */
 /* unused harmony export connectBindingToSignal */
 /* unused harmony export signalBindings */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_logging__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_logging__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_aurelia_pal__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_aurelia_task_queue__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_aurelia_metadata__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_aurelia_task_queue__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_aurelia_metadata__ = __webpack_require__(5);
 
 
 
@@ -15975,6 +15899,1709 @@ function signalBindings(name) {
 /***/ }),
 
 /***/ 30:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MapRepeatStrategy; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__repeat_utilities__ = __webpack_require__(9);
+
+
+
+
+var MapRepeatStrategy = function () {
+  function MapRepeatStrategy() {
+    
+  }
+
+  MapRepeatStrategy.prototype.getCollectionObserver = function getCollectionObserver(observerLocator, items) {
+    return observerLocator.getMapObserver(items);
+  };
+
+  MapRepeatStrategy.prototype.instanceChanged = function instanceChanged(repeat, items) {
+    var _this = this;
+
+    var removePromise = repeat.removeAllViews(true, !repeat.viewsRequireLifecycle);
+    if (removePromise instanceof Promise) {
+      removePromise.then(function () {
+        return _this._standardProcessItems(repeat, items);
+      });
+      return;
+    }
+    this._standardProcessItems(repeat, items);
+  };
+
+  MapRepeatStrategy.prototype._standardProcessItems = function _standardProcessItems(repeat, items) {
+    var index = 0;
+    var overrideContext = void 0;
+
+    items.forEach(function (value, key) {
+      overrideContext = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__repeat_utilities__["e" /* createFullOverrideContext */])(repeat, value, index, items.size, key);
+      repeat.addView(overrideContext.bindingContext, overrideContext);
+      ++index;
+    });
+  };
+
+  MapRepeatStrategy.prototype.instanceMutated = function instanceMutated(repeat, map, records) {
+    var key = void 0;
+    var i = void 0;
+    var ii = void 0;
+    var overrideContext = void 0;
+    var removeIndex = void 0;
+    var addIndex = void 0;
+    var record = void 0;
+    var rmPromises = [];
+    var viewOrPromise = void 0;
+
+    for (i = 0, ii = records.length; i < ii; ++i) {
+      record = records[i];
+      key = record.key;
+      switch (record.type) {
+        case 'update':
+          removeIndex = this._getViewIndexByKey(repeat, key);
+          viewOrPromise = repeat.removeView(removeIndex, true, !repeat.viewsRequireLifecycle);
+          if (viewOrPromise instanceof Promise) {
+            rmPromises.push(viewOrPromise);
+          }
+          overrideContext = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__repeat_utilities__["e" /* createFullOverrideContext */])(repeat, map.get(key), removeIndex, map.size, key);
+          repeat.insertView(removeIndex, overrideContext.bindingContext, overrideContext);
+          break;
+        case 'add':
+          addIndex = repeat.viewCount() <= map.size - 1 ? repeat.viewCount() : map.size - 1;
+          overrideContext = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__repeat_utilities__["e" /* createFullOverrideContext */])(repeat, map.get(key), addIndex, map.size, key);
+          repeat.insertView(map.size - 1, overrideContext.bindingContext, overrideContext);
+          break;
+        case 'delete':
+          if (record.oldValue === undefined) {
+            return;
+          }
+          removeIndex = this._getViewIndexByKey(repeat, key);
+          viewOrPromise = repeat.removeView(removeIndex, true, !repeat.viewsRequireLifecycle);
+          if (viewOrPromise instanceof Promise) {
+            rmPromises.push(viewOrPromise);
+          }
+          break;
+        case 'clear':
+          repeat.removeAllViews(true, !repeat.viewsRequireLifecycle);
+          break;
+        default:
+          continue;
+      }
+    }
+
+    if (rmPromises.length > 0) {
+      Promise.all(rmPromises).then(function () {
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__repeat_utilities__["f" /* updateOverrideContexts */])(repeat.views(), 0);
+      });
+    } else {
+      __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__repeat_utilities__["f" /* updateOverrideContexts */])(repeat.views(), 0);
+    }
+  };
+
+  MapRepeatStrategy.prototype._getViewIndexByKey = function _getViewIndexByKey(repeat, key) {
+    var i = void 0;
+    var ii = void 0;
+    var child = void 0;
+
+    for (i = 0, ii = repeat.viewCount(); i < ii; ++i) {
+      child = repeat.view(i);
+      if (child.bindingContext[repeat.key] === key) {
+        return i;
+      }
+    }
+
+    return undefined;
+  };
+
+  return MapRepeatStrategy;
+}();
+
+/***/ }),
+
+/***/ 31:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NullRepeatStrategy; });
+
+
+var NullRepeatStrategy = function () {
+  function NullRepeatStrategy() {
+    
+  }
+
+  NullRepeatStrategy.prototype.instanceChanged = function instanceChanged(repeat, items) {
+    repeat.removeAllViews(true);
+  };
+
+  NullRepeatStrategy.prototype.getCollectionObserver = function getCollectionObserver(observerLocator, items) {};
+
+  return NullRepeatStrategy;
+}();
+
+/***/ }),
+
+/***/ 32:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NumberRepeatStrategy; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__repeat_utilities__ = __webpack_require__(9);
+
+
+
+
+var NumberRepeatStrategy = function () {
+  function NumberRepeatStrategy() {
+    
+  }
+
+  NumberRepeatStrategy.prototype.getCollectionObserver = function getCollectionObserver() {
+    return null;
+  };
+
+  NumberRepeatStrategy.prototype.instanceChanged = function instanceChanged(repeat, value) {
+    var _this = this;
+
+    var removePromise = repeat.removeAllViews(true, !repeat.viewsRequireLifecycle);
+    if (removePromise instanceof Promise) {
+      removePromise.then(function () {
+        return _this._standardProcessItems(repeat, value);
+      });
+      return;
+    }
+    this._standardProcessItems(repeat, value);
+  };
+
+  NumberRepeatStrategy.prototype._standardProcessItems = function _standardProcessItems(repeat, value) {
+    var childrenLength = repeat.viewCount();
+    var i = void 0;
+    var ii = void 0;
+    var overrideContext = void 0;
+    var viewsToRemove = void 0;
+
+    value = Math.floor(value);
+    viewsToRemove = childrenLength - value;
+
+    if (viewsToRemove > 0) {
+      if (viewsToRemove > childrenLength) {
+        viewsToRemove = childrenLength;
+      }
+
+      for (i = 0, ii = viewsToRemove; i < ii; ++i) {
+        repeat.removeView(childrenLength - (i + 1), true, !repeat.viewsRequireLifecycle);
+      }
+
+      return;
+    }
+
+    for (i = childrenLength, ii = value; i < ii; ++i) {
+      overrideContext = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__repeat_utilities__["e" /* createFullOverrideContext */])(repeat, i, i, ii);
+      repeat.addView(overrideContext.bindingContext, overrideContext);
+    }
+
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__repeat_utilities__["f" /* updateOverrideContexts */])(repeat.views(), 0);
+  };
+
+  return NumberRepeatStrategy;
+}();
+
+/***/ }),
+
+/***/ 33:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RepeatStrategyLocator; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__null_repeat_strategy__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__array_repeat_strategy__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__map_repeat_strategy__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__set_repeat_strategy__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__number_repeat_strategy__ = __webpack_require__(32);
+
+
+
+
+
+
+
+
+var RepeatStrategyLocator = function () {
+  function RepeatStrategyLocator() {
+    
+
+    this.matchers = [];
+    this.strategies = [];
+
+    this.addStrategy(function (items) {
+      return items === null || items === undefined;
+    }, new __WEBPACK_IMPORTED_MODULE_0__null_repeat_strategy__["a" /* NullRepeatStrategy */]());
+    this.addStrategy(function (items) {
+      return items instanceof Array;
+    }, new __WEBPACK_IMPORTED_MODULE_1__array_repeat_strategy__["a" /* ArrayRepeatStrategy */]());
+    this.addStrategy(function (items) {
+      return items instanceof Map;
+    }, new __WEBPACK_IMPORTED_MODULE_2__map_repeat_strategy__["a" /* MapRepeatStrategy */]());
+    this.addStrategy(function (items) {
+      return items instanceof Set;
+    }, new __WEBPACK_IMPORTED_MODULE_3__set_repeat_strategy__["a" /* SetRepeatStrategy */]());
+    this.addStrategy(function (items) {
+      return typeof items === 'number';
+    }, new __WEBPACK_IMPORTED_MODULE_4__number_repeat_strategy__["a" /* NumberRepeatStrategy */]());
+  }
+
+  RepeatStrategyLocator.prototype.addStrategy = function addStrategy(matcher, strategy) {
+    this.matchers.push(matcher);
+    this.strategies.push(strategy);
+  };
+
+  RepeatStrategyLocator.prototype.getStrategy = function getStrategy(items) {
+    var matchers = this.matchers;
+
+    for (var i = 0, ii = matchers.length; i < ii; ++i) {
+      if (matchers[i](items)) {
+        return this.strategies[i];
+      }
+    }
+
+    return null;
+  };
+
+  return RepeatStrategyLocator;
+}();
+
+/***/ }),
+
+/***/ 34:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SetRepeatStrategy; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__repeat_utilities__ = __webpack_require__(9);
+
+
+
+
+var SetRepeatStrategy = function () {
+  function SetRepeatStrategy() {
+    
+  }
+
+  SetRepeatStrategy.prototype.getCollectionObserver = function getCollectionObserver(observerLocator, items) {
+    return observerLocator.getSetObserver(items);
+  };
+
+  SetRepeatStrategy.prototype.instanceChanged = function instanceChanged(repeat, items) {
+    var _this = this;
+
+    var removePromise = repeat.removeAllViews(true, !repeat.viewsRequireLifecycle);
+    if (removePromise instanceof Promise) {
+      removePromise.then(function () {
+        return _this._standardProcessItems(repeat, items);
+      });
+      return;
+    }
+    this._standardProcessItems(repeat, items);
+  };
+
+  SetRepeatStrategy.prototype._standardProcessItems = function _standardProcessItems(repeat, items) {
+    var index = 0;
+    var overrideContext = void 0;
+
+    items.forEach(function (value) {
+      overrideContext = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__repeat_utilities__["e" /* createFullOverrideContext */])(repeat, value, index, items.size);
+      repeat.addView(overrideContext.bindingContext, overrideContext);
+      ++index;
+    });
+  };
+
+  SetRepeatStrategy.prototype.instanceMutated = function instanceMutated(repeat, set, records) {
+    var value = void 0;
+    var i = void 0;
+    var ii = void 0;
+    var overrideContext = void 0;
+    var removeIndex = void 0;
+    var record = void 0;
+    var rmPromises = [];
+    var viewOrPromise = void 0;
+
+    for (i = 0, ii = records.length; i < ii; ++i) {
+      record = records[i];
+      value = record.value;
+      switch (record.type) {
+        case 'add':
+          var size = Math.max(set.size - 1, 0);
+          overrideContext = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__repeat_utilities__["e" /* createFullOverrideContext */])(repeat, value, size, set.size);
+          repeat.insertView(size, overrideContext.bindingContext, overrideContext);
+          break;
+        case 'delete':
+          removeIndex = this._getViewIndexByValue(repeat, value);
+          viewOrPromise = repeat.removeView(removeIndex, true, !repeat.viewsRequireLifecycle);
+          if (viewOrPromise instanceof Promise) {
+            rmPromises.push(viewOrPromise);
+          }
+          break;
+        case 'clear':
+          repeat.removeAllViews(true, !repeat.viewsRequireLifecycle);
+          break;
+        default:
+          continue;
+      }
+    }
+
+    if (rmPromises.length > 0) {
+      Promise.all(rmPromises).then(function () {
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__repeat_utilities__["f" /* updateOverrideContexts */])(repeat.views(), 0);
+      });
+    } else {
+      __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__repeat_utilities__["f" /* updateOverrideContexts */])(repeat.views(), 0);
+    }
+  };
+
+  SetRepeatStrategy.prototype._getViewIndexByValue = function _getViewIndexByValue(repeat, value) {
+    var i = void 0;
+    var ii = void 0;
+    var child = void 0;
+
+    for (i = 0, ii = repeat.viewCount(); i < ii; ++i) {
+      child = repeat.view(i);
+      if (child.bindingContext[repeat.local] === value) {
+        return i;
+      }
+    }
+
+    return undefined;
+  };
+
+  return SetRepeatStrategy;
+}();
+
+/***/ }),
+
+/***/ 35:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = getTargetDOMElement;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_pal__ = __webpack_require__(0);
+
+/**
+ * Gets the DOM element associated with the data-binding. Most of the time it's
+ * the binding.target but sometimes binding.target is an aurelia custom element,
+ * or custom attribute which is a javascript "class" instance, so we need to use
+ * the controller's container to retrieve the actual DOM element.
+ */
+function getTargetDOMElement(binding, view) {
+    var target = binding.target;
+    // DOM element
+    if (target instanceof Element) {
+        return target;
+    }
+    // custom element or custom attribute
+    // tslint:disable-next-line:prefer-const
+    for (var i = 0, ii = view.controllers.length; i < ii; i++) {
+        var controller = view.controllers[i];
+        if (controller.viewModel === target) {
+            var element = controller.container.get(__WEBPACK_IMPORTED_MODULE_0_aurelia_pal__["c" /* DOM */].Element);
+            if (element) {
+                return element;
+            }
+            throw new Error("Unable to locate target element for \"" + binding.sourceExpression + "\".");
+        }
+    }
+    throw new Error("Unable to locate target element for \"" + binding.sourceExpression + "\".");
+}
+
+
+/***/ }),
+
+/***/ 36:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return StandardValidator; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_templating__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__validator__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__validate_result__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__rules__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__validation_messages__ = __webpack_require__(20);
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+
+
+
+
+
+/**
+ * Validates.
+ * Responsible for validating objects and properties.
+ */
+var StandardValidator = (function (_super) {
+    __extends(StandardValidator, _super);
+    function StandardValidator(messageProvider, resources) {
+        var _this = _super.call(this) || this;
+        _this.messageProvider = messageProvider;
+        _this.lookupFunctions = resources.lookupFunctions;
+        _this.getDisplayName = messageProvider.getDisplayName.bind(messageProvider);
+        return _this;
+    }
+    /**
+     * Validates the specified property.
+     * @param object The object to validate.
+     * @param propertyName The name of the property to validate.
+     * @param rules Optional. If unspecified, the rules will be looked up using the metadata
+     * for the object created by ValidationRules....on(class/object)
+     */
+    StandardValidator.prototype.validateProperty = function (object, propertyName, rules) {
+        return this.validate(object, propertyName, rules || null);
+    };
+    /**
+     * Validates all rules for specified object and it's properties.
+     * @param object The object to validate.
+     * @param rules Optional. If unspecified, the rules will be looked up using the metadata
+     * for the object created by ValidationRules....on(class/object)
+     */
+    StandardValidator.prototype.validateObject = function (object, rules) {
+        return this.validate(object, null, rules || null);
+    };
+    /**
+     * Determines whether a rule exists in a set of rules.
+     * @param rules The rules to search.
+     * @parem rule The rule to find.
+     */
+    StandardValidator.prototype.ruleExists = function (rules, rule) {
+        var i = rules.length;
+        while (i--) {
+            if (rules[i].indexOf(rule) !== -1) {
+                return true;
+            }
+        }
+        return false;
+    };
+    StandardValidator.prototype.getMessage = function (rule, object, value) {
+        var expression = rule.message || this.messageProvider.getMessage(rule.messageKey);
+        // tslint:disable-next-line:prefer-const
+        var _a = rule.property, propertyName = _a.name, displayName = _a.displayName;
+        if (propertyName !== null) {
+            displayName = this.messageProvider.getDisplayName(propertyName, displayName);
+        }
+        var overrideContext = {
+            $displayName: displayName,
+            $propertyName: propertyName,
+            $value: value,
+            $object: object,
+            $config: rule.config,
+            // returns the name of a given property, given just the property name (irrespective of the property's displayName)
+            // split on capital letters, first letter ensured to be capitalized
+            $getDisplayName: this.getDisplayName
+        };
+        return expression.evaluate({ bindingContext: object, overrideContext: overrideContext }, this.lookupFunctions);
+    };
+    StandardValidator.prototype.validateRuleSequence = function (object, propertyName, ruleSequence, sequence, results) {
+        var _this = this;
+        // are we validating all properties or a single property?
+        var validateAllProperties = propertyName === null || propertyName === undefined;
+        var rules = ruleSequence[sequence];
+        var allValid = true;
+        // validate each rule.
+        var promises = [];
+        var _loop_1 = function (i) {
+            var rule = rules[i];
+            // is the rule related to the property we're validating.
+            if (!validateAllProperties && rule.property.name !== propertyName) {
+                return "continue";
+            }
+            // is this a conditional rule? is the condition met?
+            if (rule.when && !rule.when(object)) {
+                return "continue";
+            }
+            // validate.
+            var value = rule.property.name === null ? object : object[rule.property.name];
+            var promiseOrBoolean = rule.condition(value, object);
+            if (!(promiseOrBoolean instanceof Promise)) {
+                promiseOrBoolean = Promise.resolve(promiseOrBoolean);
+            }
+            promises.push(promiseOrBoolean.then(function (valid) {
+                var message = valid ? null : _this.getMessage(rule, object, value);
+                results.push(new __WEBPACK_IMPORTED_MODULE_2__validate_result__["a" /* ValidateResult */](rule, object, rule.property.name, valid, message));
+                allValid = allValid && valid;
+                return valid;
+            }));
+        };
+        for (var i = 0; i < rules.length; i++) {
+            _loop_1(i);
+        }
+        return Promise.all(promises)
+            .then(function () {
+            sequence++;
+            if (allValid && sequence < ruleSequence.length) {
+                return _this.validateRuleSequence(object, propertyName, ruleSequence, sequence, results);
+            }
+            return results;
+        });
+    };
+    StandardValidator.prototype.validate = function (object, propertyName, rules) {
+        // rules specified?
+        if (!rules) {
+            // no. attempt to locate the rules.
+            rules = __WEBPACK_IMPORTED_MODULE_3__rules__["a" /* Rules */].get(object);
+        }
+        // any rules?
+        if (!rules) {
+            return Promise.resolve([]);
+        }
+        return this.validateRuleSequence(object, propertyName, rules, 0, []);
+    };
+    StandardValidator.inject = [__WEBPACK_IMPORTED_MODULE_4__validation_messages__["b" /* ValidationMessageProvider */], __WEBPACK_IMPORTED_MODULE_0_aurelia_templating__["a" /* ViewResources */]];
+    return StandardValidator;
+}(__WEBPACK_IMPORTED_MODULE_1__validator__["a" /* Validator */]));
+
+
+
+/***/ }),
+
+/***/ 37:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FluentRuleCustomizer; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return FluentRules; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return FluentEnsure; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return ValidationRules; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__rules__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__validation_messages__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__util__ = __webpack_require__(39);
+
+
+
+/**
+ * Part of the fluent rule API. Enables customizing property rules.
+ */
+var FluentRuleCustomizer = (function () {
+    function FluentRuleCustomizer(property, condition, config, fluentEnsure, fluentRules, parsers) {
+        if (config === void 0) { config = {}; }
+        this.fluentEnsure = fluentEnsure;
+        this.fluentRules = fluentRules;
+        this.parsers = parsers;
+        this.rule = {
+            property: property,
+            condition: condition,
+            config: config,
+            when: null,
+            messageKey: 'default',
+            message: null,
+            sequence: fluentRules.sequence
+        };
+        this.fluentEnsure._addRule(this.rule);
+    }
+    /**
+     * Validate subsequent rules after previously declared rules have
+     * been validated successfully. Use to postpone validation of costly
+     * rules until less expensive rules pass validation.
+     */
+    FluentRuleCustomizer.prototype.then = function () {
+        this.fluentRules.sequence++;
+        return this;
+    };
+    /**
+     * Specifies the key to use when looking up the rule's validation message.
+     */
+    FluentRuleCustomizer.prototype.withMessageKey = function (key) {
+        this.rule.messageKey = key;
+        this.rule.message = null;
+        return this;
+    };
+    /**
+     * Specifies rule's validation message.
+     */
+    FluentRuleCustomizer.prototype.withMessage = function (message) {
+        this.rule.messageKey = 'custom';
+        this.rule.message = this.parsers.message.parse(message);
+        return this;
+    };
+    /**
+     * Specifies a condition that must be met before attempting to validate the rule.
+     * @param condition A function that accepts the object as a parameter and returns true
+     * or false whether the rule should be evaluated.
+     */
+    FluentRuleCustomizer.prototype.when = function (condition) {
+        this.rule.when = condition;
+        return this;
+    };
+    /**
+     * Tags the rule instance, enabling the rule to be found easily
+     * using ValidationRules.taggedRules(rules, tag)
+     */
+    FluentRuleCustomizer.prototype.tag = function (tag) {
+        this.rule.tag = tag;
+        return this;
+    };
+    ///// FluentEnsure APIs /////
+    /**
+     * Target a property with validation rules.
+     * @param property The property to target. Can be the property name or a property accessor function.
+     */
+    FluentRuleCustomizer.prototype.ensure = function (subject) {
+        return this.fluentEnsure.ensure(subject);
+    };
+    /**
+     * Targets an object with validation rules.
+     */
+    FluentRuleCustomizer.prototype.ensureObject = function () {
+        return this.fluentEnsure.ensureObject();
+    };
+    Object.defineProperty(FluentRuleCustomizer.prototype, "rules", {
+        /**
+         * Rules that have been defined using the fluent API.
+         */
+        get: function () {
+            return this.fluentEnsure.rules;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Applies the rules to a class or object, making them discoverable by the StandardValidator.
+     * @param target A class or object.
+     */
+    FluentRuleCustomizer.prototype.on = function (target) {
+        return this.fluentEnsure.on(target);
+    };
+    ///////// FluentRules APIs /////////
+    /**
+     * Applies an ad-hoc rule function to the ensured property or object.
+     * @param condition The function to validate the rule.
+     * Will be called with two arguments, the property value and the object.
+     * Should return a boolean or a Promise that resolves to a boolean.
+     */
+    FluentRuleCustomizer.prototype.satisfies = function (condition, config) {
+        return this.fluentRules.satisfies(condition, config);
+    };
+    /**
+     * Applies a rule by name.
+     * @param name The name of the custom or standard rule.
+     * @param args The rule's arguments.
+     */
+    FluentRuleCustomizer.prototype.satisfiesRule = function (name) {
+        var args = [];
+        for (var _i = 1; _i < arguments.length; _i++) {
+            args[_i - 1] = arguments[_i];
+        }
+        return (_a = this.fluentRules).satisfiesRule.apply(_a, [name].concat(args));
+        var _a;
+    };
+    /**
+     * Applies the "required" rule to the property.
+     * The value cannot be null, undefined or whitespace.
+     */
+    FluentRuleCustomizer.prototype.required = function () {
+        return this.fluentRules.required();
+    };
+    /**
+     * Applies the "matches" rule to the property.
+     * Value must match the specified regular expression.
+     * null, undefined and empty-string values are considered valid.
+     */
+    FluentRuleCustomizer.prototype.matches = function (regex) {
+        return this.fluentRules.matches(regex);
+    };
+    /**
+     * Applies the "email" rule to the property.
+     * null, undefined and empty-string values are considered valid.
+     */
+    FluentRuleCustomizer.prototype.email = function () {
+        return this.fluentRules.email();
+    };
+    /**
+     * Applies the "minLength" STRING validation rule to the property.
+     * null, undefined and empty-string values are considered valid.
+     */
+    FluentRuleCustomizer.prototype.minLength = function (length) {
+        return this.fluentRules.minLength(length);
+    };
+    /**
+     * Applies the "maxLength" STRING validation rule to the property.
+     * null, undefined and empty-string values are considered valid.
+     */
+    FluentRuleCustomizer.prototype.maxLength = function (length) {
+        return this.fluentRules.maxLength(length);
+    };
+    /**
+     * Applies the "minItems" ARRAY validation rule to the property.
+     * null and undefined values are considered valid.
+     */
+    FluentRuleCustomizer.prototype.minItems = function (count) {
+        return this.fluentRules.minItems(count);
+    };
+    /**
+     * Applies the "maxItems" ARRAY validation rule to the property.
+     * null and undefined values are considered valid.
+     */
+    FluentRuleCustomizer.prototype.maxItems = function (count) {
+        return this.fluentRules.maxItems(count);
+    };
+    /**
+     * Applies the "equals" validation rule to the property.
+     * null, undefined and empty-string values are considered valid.
+     */
+    FluentRuleCustomizer.prototype.equals = function (expectedValue) {
+        return this.fluentRules.equals(expectedValue);
+    };
+    return FluentRuleCustomizer;
+}());
+
+/**
+ * Part of the fluent rule API. Enables applying rules to properties and objects.
+ */
+var FluentRules = (function () {
+    function FluentRules(fluentEnsure, parsers, property) {
+        this.fluentEnsure = fluentEnsure;
+        this.parsers = parsers;
+        this.property = property;
+        /**
+         * Current rule sequence number. Used to postpone evaluation of rules until rules
+         * with lower sequence number have successfully validated. The "then" fluent API method
+         * manages this property, there's usually no need to set it directly.
+         */
+        this.sequence = 0;
+    }
+    /**
+     * Sets the display name of the ensured property.
+     */
+    FluentRules.prototype.displayName = function (name) {
+        this.property.displayName = name;
+        return this;
+    };
+    /**
+     * Applies an ad-hoc rule function to the ensured property or object.
+     * @param condition The function to validate the rule.
+     * Will be called with two arguments, the property value and the object.
+     * Should return a boolean or a Promise that resolves to a boolean.
+     */
+    FluentRules.prototype.satisfies = function (condition, config) {
+        return new FluentRuleCustomizer(this.property, condition, config, this.fluentEnsure, this, this.parsers);
+    };
+    /**
+     * Applies a rule by name.
+     * @param name The name of the custom or standard rule.
+     * @param args The rule's arguments.
+     */
+    FluentRules.prototype.satisfiesRule = function (name) {
+        var _this = this;
+        var args = [];
+        for (var _i = 1; _i < arguments.length; _i++) {
+            args[_i - 1] = arguments[_i];
+        }
+        var rule = FluentRules.customRules[name];
+        if (!rule) {
+            // standard rule?
+            rule = this[name];
+            if (rule instanceof Function) {
+                return rule.call.apply(rule, [this].concat(args));
+            }
+            throw new Error("Rule with name \"" + name + "\" does not exist.");
+        }
+        var config = rule.argsToConfig ? rule.argsToConfig.apply(rule, args) : undefined;
+        return this.satisfies(function (value, obj) {
+            return (_a = rule.condition).call.apply(_a, [_this, value, obj].concat(args));
+            var _a;
+        }, config)
+            .withMessageKey(name);
+    };
+    /**
+     * Applies the "required" rule to the property.
+     * The value cannot be null, undefined or whitespace.
+     */
+    FluentRules.prototype.required = function () {
+        return this.satisfies(function (value) {
+            return value !== null
+                && value !== undefined
+                && !(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__util__["a" /* isString */])(value) && !/\S/.test(value));
+        }).withMessageKey('required');
+    };
+    /**
+     * Applies the "matches" rule to the property.
+     * Value must match the specified regular expression.
+     * null, undefined and empty-string values are considered valid.
+     */
+    FluentRules.prototype.matches = function (regex) {
+        return this.satisfies(function (value) { return value === null || value === undefined || value.length === 0 || regex.test(value); })
+            .withMessageKey('matches');
+    };
+    /**
+     * Applies the "email" rule to the property.
+     * null, undefined and empty-string values are considered valid.
+     */
+    FluentRules.prototype.email = function () {
+        // regex from https://html.spec.whatwg.org/multipage/forms.html#valid-e-mail-address
+        /* tslint:disable:max-line-length */
+        return this.matches(/^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/)
+            .withMessageKey('email');
+    };
+    /**
+     * Applies the "minLength" STRING validation rule to the property.
+     * null, undefined and empty-string values are considered valid.
+     */
+    FluentRules.prototype.minLength = function (length) {
+        return this.satisfies(function (value) { return value === null || value === undefined || value.length === 0 || value.length >= length; }, { length: length })
+            .withMessageKey('minLength');
+    };
+    /**
+     * Applies the "maxLength" STRING validation rule to the property.
+     * null, undefined and empty-string values are considered valid.
+     */
+    FluentRules.prototype.maxLength = function (length) {
+        return this.satisfies(function (value) { return value === null || value === undefined || value.length === 0 || value.length <= length; }, { length: length })
+            .withMessageKey('maxLength');
+    };
+    /**
+     * Applies the "minItems" ARRAY validation rule to the property.
+     * null and undefined values are considered valid.
+     */
+    FluentRules.prototype.minItems = function (count) {
+        return this.satisfies(function (value) { return value === null || value === undefined || value.length >= count; }, { count: count })
+            .withMessageKey('minItems');
+    };
+    /**
+     * Applies the "maxItems" ARRAY validation rule to the property.
+     * null and undefined values are considered valid.
+     */
+    FluentRules.prototype.maxItems = function (count) {
+        return this.satisfies(function (value) { return value === null || value === undefined || value.length <= count; }, { count: count })
+            .withMessageKey('maxItems');
+    };
+    /**
+     * Applies the "equals" validation rule to the property.
+     * null and undefined values are considered valid.
+     */
+    FluentRules.prototype.equals = function (expectedValue) {
+        return this.satisfies(function (value) { return value === null || value === undefined || value === '' || value === expectedValue; }, { expectedValue: expectedValue })
+            .withMessageKey('equals');
+    };
+    FluentRules.customRules = {};
+    return FluentRules;
+}());
+
+/**
+ * Part of the fluent rule API. Enables targeting properties and objects with rules.
+ */
+var FluentEnsure = (function () {
+    function FluentEnsure(parsers) {
+        this.parsers = parsers;
+        /**
+         * Rules that have been defined using the fluent API.
+         */
+        this.rules = [];
+    }
+    /**
+     * Target a property with validation rules.
+     * @param property The property to target. Can be the property name or a property accessor
+     * function.
+     */
+    FluentEnsure.prototype.ensure = function (property) {
+        this.assertInitialized();
+        var name = this.parsers.property.parse(property);
+        var fluentRules = new FluentRules(this, this.parsers, { name: name, displayName: null });
+        return this.mergeRules(fluentRules, name);
+    };
+    /**
+     * Targets an object with validation rules.
+     */
+    FluentEnsure.prototype.ensureObject = function () {
+        this.assertInitialized();
+        var fluentRules = new FluentRules(this, this.parsers, { name: null, displayName: null });
+        return this.mergeRules(fluentRules, null);
+    };
+    /**
+     * Applies the rules to a class or object, making them discoverable by the StandardValidator.
+     * @param target A class or object.
+     */
+    FluentEnsure.prototype.on = function (target) {
+        __WEBPACK_IMPORTED_MODULE_0__rules__["a" /* Rules */].set(target, this.rules);
+        return this;
+    };
+    /**
+     * Adds a rule definition to the sequenced ruleset.
+     * @internal
+     */
+    FluentEnsure.prototype._addRule = function (rule) {
+        while (this.rules.length < rule.sequence + 1) {
+            this.rules.push([]);
+        }
+        this.rules[rule.sequence].push(rule);
+    };
+    FluentEnsure.prototype.assertInitialized = function () {
+        if (this.parsers) {
+            return;
+        }
+        throw new Error("Did you forget to add \".plugin('aurelia-validation')\" to your main.js?");
+    };
+    FluentEnsure.prototype.mergeRules = function (fluentRules, propertyName) {
+        var existingRules = this.rules.find(function (r) { return r.length > 0 && r[0].property.name === propertyName; });
+        if (existingRules) {
+            var rule = existingRules[existingRules.length - 1];
+            fluentRules.sequence = rule.sequence;
+            if (rule.property.displayName !== null) {
+                fluentRules = fluentRules.displayName(rule.property.displayName);
+            }
+        }
+        return fluentRules;
+    };
+    return FluentEnsure;
+}());
+
+/**
+ * Fluent rule definition API.
+ */
+var ValidationRules = (function () {
+    function ValidationRules() {
+    }
+    ValidationRules.initialize = function (messageParser, propertyParser) {
+        this.parsers = {
+            message: messageParser,
+            property: propertyParser
+        };
+    };
+    /**
+     * Target a property with validation rules.
+     * @param property The property to target. Can be the property name or a property accessor function.
+     */
+    ValidationRules.ensure = function (property) {
+        return new FluentEnsure(ValidationRules.parsers).ensure(property);
+    };
+    /**
+     * Targets an object with validation rules.
+     */
+    ValidationRules.ensureObject = function () {
+        return new FluentEnsure(ValidationRules.parsers).ensureObject();
+    };
+    /**
+     * Defines a custom rule.
+     * @param name The name of the custom rule. Also serves as the message key.
+     * @param condition The rule function.
+     * @param message The message expression
+     * @param argsToConfig A function that maps the rule's arguments to a "config"
+     * object that can be used when evaluating the message expression.
+     */
+    ValidationRules.customRule = function (name, condition, message, argsToConfig) {
+        __WEBPACK_IMPORTED_MODULE_1__validation_messages__["a" /* validationMessages */][name] = message;
+        FluentRules.customRules[name] = { condition: condition, argsToConfig: argsToConfig };
+    };
+    /**
+     * Returns rules with the matching tag.
+     * @param rules The rules to search.
+     * @param tag The tag to search for.
+     */
+    ValidationRules.taggedRules = function (rules, tag) {
+        return rules.map(function (x) { return x.filter(function (r) { return r.tag === tag; }); });
+    };
+    /**
+     * Returns rules that have no tag.
+     * @param rules The rules to search.
+     */
+    ValidationRules.untaggedRules = function (rules) {
+        return rules.map(function (x) { return x.filter(function (r) { return r.tag === undefined; }); });
+    };
+    /**
+     * Removes the rules from a class or object.
+     * @param target A class or object.
+     */
+    ValidationRules.off = function (target) {
+        __WEBPACK_IMPORTED_MODULE_0__rules__["a" /* Rules */].unset(target);
+    };
+    return ValidationRules;
+}());
+
+
+
+/***/ }),
+
+/***/ 38:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = getPropertyInfo;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_binding__ = __webpack_require__(3);
+
+function getObject(expression, objectExpression, source) {
+    var value = objectExpression.evaluate(source, null);
+    if (value === null || value === undefined || value instanceof Object) {
+        return value;
+    }
+    // tslint:disable-next-line:max-line-length
+    throw new Error("The '" + objectExpression + "' part of '" + expression + "' evaluates to " + value + " instead of an object, null or undefined.");
+}
+/**
+ * Retrieves the object and property name for the specified expression.
+ * @param expression The expression
+ * @param source The scope
+ */
+function getPropertyInfo(expression, source) {
+    var originalExpression = expression;
+    while (expression instanceof __WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["i" /* BindingBehavior */] || expression instanceof __WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["j" /* ValueConverter */]) {
+        expression = expression.expression;
+    }
+    var object;
+    var propertyName;
+    if (expression instanceof __WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["C" /* AccessScope */]) {
+        object = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["E" /* getContextFor */])(expression.name, source, expression.ancestor);
+        propertyName = expression.name;
+    }
+    else if (expression instanceof __WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["D" /* AccessMember */]) {
+        object = getObject(originalExpression, expression.object, source);
+        propertyName = expression.name;
+    }
+    else if (expression instanceof __WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["F" /* AccessKeyed */]) {
+        object = getObject(originalExpression, expression.object, source);
+        propertyName = expression.key.evaluate(source);
+    }
+    else {
+        throw new Error("Expression '" + originalExpression + "' is not compatible with the validate binding-behavior.");
+    }
+    if (object === null || object === undefined) {
+        return null;
+    }
+    return { object: object, propertyName: propertyName };
+}
+
+
+/***/ }),
+
+/***/ 39:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = isString;
+function isString(value) {
+    return Object.prototype.toString.call(value) === '[object String]';
+}
+
+
+/***/ }),
+
+/***/ 4:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "logLevel", function() { return logLevel; });
+/* harmony export (immutable) */ __webpack_exports__["getLogger"] = getLogger;
+/* harmony export (immutable) */ __webpack_exports__["addAppender"] = addAppender;
+/* harmony export (immutable) */ __webpack_exports__["removeAppender"] = removeAppender;
+/* harmony export (immutable) */ __webpack_exports__["setLevel"] = setLevel;
+/* harmony export (immutable) */ __webpack_exports__["getLevel"] = getLevel;
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Logger", function() { return Logger; });
+
+
+var logLevel = {
+  none: 0,
+  error: 1,
+  warn: 2,
+  info: 3,
+  debug: 4
+};
+
+var loggers = {};
+var appenders = [];
+var globalDefaultLevel = logLevel.none;
+
+function appendArgs() {
+  return [this].concat(Array.prototype.slice.call(arguments));
+}
+
+function logFactory(level) {
+  var threshold = logLevel[level];
+  return function () {
+    if (this.level < threshold) {
+      return;
+    }
+
+    var args = appendArgs.apply(this, arguments);
+    var i = appenders.length;
+    while (i--) {
+      var _appenders$i;
+
+      (_appenders$i = appenders[i])[level].apply(_appenders$i, args);
+    }
+  };
+}
+
+function connectLoggers() {
+  var proto = Logger.prototype;
+  proto.debug = logFactory('debug');
+  proto.info = logFactory('info');
+  proto.warn = logFactory('warn');
+  proto.error = logFactory('error');
+}
+
+function getLogger(id) {
+  return loggers[id] || new Logger(id);
+}
+
+function addAppender(appender) {
+  if (appenders.push(appender) === 1) {
+    connectLoggers();
+  }
+}
+
+function removeAppender(appender) {
+  appenders = appenders.filter(function (a) {
+    return a !== appender;
+  });
+}
+
+function setLevel(level) {
+  globalDefaultLevel = level;
+  for (var key in loggers) {
+    loggers[key].setLevel(level);
+  }
+}
+
+function getLevel() {
+  return globalDefaultLevel;
+}
+
+var Logger = function () {
+  function Logger(id) {
+    
+
+    var cached = loggers[id];
+    if (cached) {
+      return cached;
+    }
+
+    loggers[id] = this;
+    this.id = id;
+    this.level = globalDefaultLevel;
+  }
+
+  Logger.prototype.debug = function debug(message) {};
+
+  Logger.prototype.info = function info(message) {};
+
+  Logger.prototype.warn = function warn(message) {};
+
+  Logger.prototype.error = function error(message) {};
+
+  Logger.prototype.setLevel = function setLevel(level) {
+    this.level = level;
+  };
+
+  return Logger;
+}();
+
+/***/ }),
+
+/***/ 40:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ValidateEvent; });
+var ValidateEvent = (function () {
+    function ValidateEvent(
+        /**
+         * The type of validate event. Either "validate" or "reset".
+         */
+        type, 
+        /**
+         * The controller's current array of errors. For an array containing both
+         * failed rules and passed rules, use the "results" property.
+         */
+        errors, 
+        /**
+         * The controller's current array of validate results. This
+         * includes both passed rules and failed rules. For an array of only failed rules,
+         * use the "errors" property.
+         */
+        results, 
+        /**
+         * The instruction passed to the "validate" or "reset" event. Will be null when
+         * the controller's validate/reset method was called with no instruction argument.
+         */
+        instruction, 
+        /**
+         * In events with type === "validate", this property will contain the result
+         * of validating the instruction (see "instruction" property). Use the controllerValidateResult
+         * to access the validate results specific to the call to "validate"
+         * (as opposed to using the "results" and "errors" properties to access the controller's entire
+         * set of results/errors).
+         */
+        controllerValidateResult) {
+        this.type = type;
+        this.errors = errors;
+        this.results = results;
+        this.instruction = instruction;
+        this.controllerValidateResult = controllerValidateResult;
+    }
+    return ValidateEvent;
+}());
+
+
+
+/***/ }),
+
+/***/ 41:
+/***/ (function(module, exports) {
+
+/*
+	MIT License http://www.opensource.org/licenses/mit-license.php
+	Author Tobias Koppers @sokra
+*/
+// css base code, injected by the css-loader
+module.exports = function(useSourceMap) {
+	var list = [];
+
+	// return the list of modules as css string
+	list.toString = function toString() {
+		return this.map(function (item) {
+			var content = cssWithMappingToString(item, useSourceMap);
+			if(item[2]) {
+				return "@media " + item[2] + "{" + content + "}";
+			} else {
+				return content;
+			}
+		}).join("");
+	};
+
+	// import a list of modules into the list
+	list.i = function(modules, mediaQuery) {
+		if(typeof modules === "string")
+			modules = [[null, modules, ""]];
+		var alreadyImportedModules = {};
+		for(var i = 0; i < this.length; i++) {
+			var id = this[i][0];
+			if(typeof id === "number")
+				alreadyImportedModules[id] = true;
+		}
+		for(i = 0; i < modules.length; i++) {
+			var item = modules[i];
+			// skip already imported module
+			// this implementation is not 100% perfect for weird media query combinations
+			//  when a module is imported multiple times with different media queries.
+			//  I hope this will never occur (Hey this way we have smaller bundles)
+			if(typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
+				if(mediaQuery && !item[2]) {
+					item[2] = mediaQuery;
+				} else if(mediaQuery) {
+					item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
+				}
+				list.push(item);
+			}
+		}
+	};
+	return list;
+};
+
+function cssWithMappingToString(item, useSourceMap) {
+	var content = item[1] || '';
+	var cssMapping = item[3];
+	if (!cssMapping) {
+		return content;
+	}
+
+	if (useSourceMap && typeof btoa === 'function') {
+		var sourceMapping = toComment(cssMapping);
+		var sourceURLs = cssMapping.sources.map(function (source) {
+			return '/*# sourceURL=' + cssMapping.sourceRoot + source + ' */'
+		});
+
+		return [content].concat(sourceURLs).concat([sourceMapping]).join('\n');
+	}
+
+	return [content].join('\n');
+}
+
+// Adapted from convert-source-map (MIT)
+function toComment(sourceMap) {
+	// eslint-disable-next-line no-undef
+	var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));
+	var data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;
+
+	return '/*# ' + data + ' */';
+}
+
+
+/***/ }),
+
+/***/ 42:
+/***/ (function(module, exports) {
+
+var ENTITIES = [['Aacute', [193]], ['aacute', [225]], ['Abreve', [258]], ['abreve', [259]], ['ac', [8766]], ['acd', [8767]], ['acE', [8766, 819]], ['Acirc', [194]], ['acirc', [226]], ['acute', [180]], ['Acy', [1040]], ['acy', [1072]], ['AElig', [198]], ['aelig', [230]], ['af', [8289]], ['Afr', [120068]], ['afr', [120094]], ['Agrave', [192]], ['agrave', [224]], ['alefsym', [8501]], ['aleph', [8501]], ['Alpha', [913]], ['alpha', [945]], ['Amacr', [256]], ['amacr', [257]], ['amalg', [10815]], ['amp', [38]], ['AMP', [38]], ['andand', [10837]], ['And', [10835]], ['and', [8743]], ['andd', [10844]], ['andslope', [10840]], ['andv', [10842]], ['ang', [8736]], ['ange', [10660]], ['angle', [8736]], ['angmsdaa', [10664]], ['angmsdab', [10665]], ['angmsdac', [10666]], ['angmsdad', [10667]], ['angmsdae', [10668]], ['angmsdaf', [10669]], ['angmsdag', [10670]], ['angmsdah', [10671]], ['angmsd', [8737]], ['angrt', [8735]], ['angrtvb', [8894]], ['angrtvbd', [10653]], ['angsph', [8738]], ['angst', [197]], ['angzarr', [9084]], ['Aogon', [260]], ['aogon', [261]], ['Aopf', [120120]], ['aopf', [120146]], ['apacir', [10863]], ['ap', [8776]], ['apE', [10864]], ['ape', [8778]], ['apid', [8779]], ['apos', [39]], ['ApplyFunction', [8289]], ['approx', [8776]], ['approxeq', [8778]], ['Aring', [197]], ['aring', [229]], ['Ascr', [119964]], ['ascr', [119990]], ['Assign', [8788]], ['ast', [42]], ['asymp', [8776]], ['asympeq', [8781]], ['Atilde', [195]], ['atilde', [227]], ['Auml', [196]], ['auml', [228]], ['awconint', [8755]], ['awint', [10769]], ['backcong', [8780]], ['backepsilon', [1014]], ['backprime', [8245]], ['backsim', [8765]], ['backsimeq', [8909]], ['Backslash', [8726]], ['Barv', [10983]], ['barvee', [8893]], ['barwed', [8965]], ['Barwed', [8966]], ['barwedge', [8965]], ['bbrk', [9141]], ['bbrktbrk', [9142]], ['bcong', [8780]], ['Bcy', [1041]], ['bcy', [1073]], ['bdquo', [8222]], ['becaus', [8757]], ['because', [8757]], ['Because', [8757]], ['bemptyv', [10672]], ['bepsi', [1014]], ['bernou', [8492]], ['Bernoullis', [8492]], ['Beta', [914]], ['beta', [946]], ['beth', [8502]], ['between', [8812]], ['Bfr', [120069]], ['bfr', [120095]], ['bigcap', [8898]], ['bigcirc', [9711]], ['bigcup', [8899]], ['bigodot', [10752]], ['bigoplus', [10753]], ['bigotimes', [10754]], ['bigsqcup', [10758]], ['bigstar', [9733]], ['bigtriangledown', [9661]], ['bigtriangleup', [9651]], ['biguplus', [10756]], ['bigvee', [8897]], ['bigwedge', [8896]], ['bkarow', [10509]], ['blacklozenge', [10731]], ['blacksquare', [9642]], ['blacktriangle', [9652]], ['blacktriangledown', [9662]], ['blacktriangleleft', [9666]], ['blacktriangleright', [9656]], ['blank', [9251]], ['blk12', [9618]], ['blk14', [9617]], ['blk34', [9619]], ['block', [9608]], ['bne', [61, 8421]], ['bnequiv', [8801, 8421]], ['bNot', [10989]], ['bnot', [8976]], ['Bopf', [120121]], ['bopf', [120147]], ['bot', [8869]], ['bottom', [8869]], ['bowtie', [8904]], ['boxbox', [10697]], ['boxdl', [9488]], ['boxdL', [9557]], ['boxDl', [9558]], ['boxDL', [9559]], ['boxdr', [9484]], ['boxdR', [9554]], ['boxDr', [9555]], ['boxDR', [9556]], ['boxh', [9472]], ['boxH', [9552]], ['boxhd', [9516]], ['boxHd', [9572]], ['boxhD', [9573]], ['boxHD', [9574]], ['boxhu', [9524]], ['boxHu', [9575]], ['boxhU', [9576]], ['boxHU', [9577]], ['boxminus', [8863]], ['boxplus', [8862]], ['boxtimes', [8864]], ['boxul', [9496]], ['boxuL', [9563]], ['boxUl', [9564]], ['boxUL', [9565]], ['boxur', [9492]], ['boxuR', [9560]], ['boxUr', [9561]], ['boxUR', [9562]], ['boxv', [9474]], ['boxV', [9553]], ['boxvh', [9532]], ['boxvH', [9578]], ['boxVh', [9579]], ['boxVH', [9580]], ['boxvl', [9508]], ['boxvL', [9569]], ['boxVl', [9570]], ['boxVL', [9571]], ['boxvr', [9500]], ['boxvR', [9566]], ['boxVr', [9567]], ['boxVR', [9568]], ['bprime', [8245]], ['breve', [728]], ['Breve', [728]], ['brvbar', [166]], ['bscr', [119991]], ['Bscr', [8492]], ['bsemi', [8271]], ['bsim', [8765]], ['bsime', [8909]], ['bsolb', [10693]], ['bsol', [92]], ['bsolhsub', [10184]], ['bull', [8226]], ['bullet', [8226]], ['bump', [8782]], ['bumpE', [10926]], ['bumpe', [8783]], ['Bumpeq', [8782]], ['bumpeq', [8783]], ['Cacute', [262]], ['cacute', [263]], ['capand', [10820]], ['capbrcup', [10825]], ['capcap', [10827]], ['cap', [8745]], ['Cap', [8914]], ['capcup', [10823]], ['capdot', [10816]], ['CapitalDifferentialD', [8517]], ['caps', [8745, 65024]], ['caret', [8257]], ['caron', [711]], ['Cayleys', [8493]], ['ccaps', [10829]], ['Ccaron', [268]], ['ccaron', [269]], ['Ccedil', [199]], ['ccedil', [231]], ['Ccirc', [264]], ['ccirc', [265]], ['Cconint', [8752]], ['ccups', [10828]], ['ccupssm', [10832]], ['Cdot', [266]], ['cdot', [267]], ['cedil', [184]], ['Cedilla', [184]], ['cemptyv', [10674]], ['cent', [162]], ['centerdot', [183]], ['CenterDot', [183]], ['cfr', [120096]], ['Cfr', [8493]], ['CHcy', [1063]], ['chcy', [1095]], ['check', [10003]], ['checkmark', [10003]], ['Chi', [935]], ['chi', [967]], ['circ', [710]], ['circeq', [8791]], ['circlearrowleft', [8634]], ['circlearrowright', [8635]], ['circledast', [8859]], ['circledcirc', [8858]], ['circleddash', [8861]], ['CircleDot', [8857]], ['circledR', [174]], ['circledS', [9416]], ['CircleMinus', [8854]], ['CirclePlus', [8853]], ['CircleTimes', [8855]], ['cir', [9675]], ['cirE', [10691]], ['cire', [8791]], ['cirfnint', [10768]], ['cirmid', [10991]], ['cirscir', [10690]], ['ClockwiseContourIntegral', [8754]], ['clubs', [9827]], ['clubsuit', [9827]], ['colon', [58]], ['Colon', [8759]], ['Colone', [10868]], ['colone', [8788]], ['coloneq', [8788]], ['comma', [44]], ['commat', [64]], ['comp', [8705]], ['compfn', [8728]], ['complement', [8705]], ['complexes', [8450]], ['cong', [8773]], ['congdot', [10861]], ['Congruent', [8801]], ['conint', [8750]], ['Conint', [8751]], ['ContourIntegral', [8750]], ['copf', [120148]], ['Copf', [8450]], ['coprod', [8720]], ['Coproduct', [8720]], ['copy', [169]], ['COPY', [169]], ['copysr', [8471]], ['CounterClockwiseContourIntegral', [8755]], ['crarr', [8629]], ['cross', [10007]], ['Cross', [10799]], ['Cscr', [119966]], ['cscr', [119992]], ['csub', [10959]], ['csube', [10961]], ['csup', [10960]], ['csupe', [10962]], ['ctdot', [8943]], ['cudarrl', [10552]], ['cudarrr', [10549]], ['cuepr', [8926]], ['cuesc', [8927]], ['cularr', [8630]], ['cularrp', [10557]], ['cupbrcap', [10824]], ['cupcap', [10822]], ['CupCap', [8781]], ['cup', [8746]], ['Cup', [8915]], ['cupcup', [10826]], ['cupdot', [8845]], ['cupor', [10821]], ['cups', [8746, 65024]], ['curarr', [8631]], ['curarrm', [10556]], ['curlyeqprec', [8926]], ['curlyeqsucc', [8927]], ['curlyvee', [8910]], ['curlywedge', [8911]], ['curren', [164]], ['curvearrowleft', [8630]], ['curvearrowright', [8631]], ['cuvee', [8910]], ['cuwed', [8911]], ['cwconint', [8754]], ['cwint', [8753]], ['cylcty', [9005]], ['dagger', [8224]], ['Dagger', [8225]], ['daleth', [8504]], ['darr', [8595]], ['Darr', [8609]], ['dArr', [8659]], ['dash', [8208]], ['Dashv', [10980]], ['dashv', [8867]], ['dbkarow', [10511]], ['dblac', [733]], ['Dcaron', [270]], ['dcaron', [271]], ['Dcy', [1044]], ['dcy', [1076]], ['ddagger', [8225]], ['ddarr', [8650]], ['DD', [8517]], ['dd', [8518]], ['DDotrahd', [10513]], ['ddotseq', [10871]], ['deg', [176]], ['Del', [8711]], ['Delta', [916]], ['delta', [948]], ['demptyv', [10673]], ['dfisht', [10623]], ['Dfr', [120071]], ['dfr', [120097]], ['dHar', [10597]], ['dharl', [8643]], ['dharr', [8642]], ['DiacriticalAcute', [180]], ['DiacriticalDot', [729]], ['DiacriticalDoubleAcute', [733]], ['DiacriticalGrave', [96]], ['DiacriticalTilde', [732]], ['diam', [8900]], ['diamond', [8900]], ['Diamond', [8900]], ['diamondsuit', [9830]], ['diams', [9830]], ['die', [168]], ['DifferentialD', [8518]], ['digamma', [989]], ['disin', [8946]], ['div', [247]], ['divide', [247]], ['divideontimes', [8903]], ['divonx', [8903]], ['DJcy', [1026]], ['djcy', [1106]], ['dlcorn', [8990]], ['dlcrop', [8973]], ['dollar', [36]], ['Dopf', [120123]], ['dopf', [120149]], ['Dot', [168]], ['dot', [729]], ['DotDot', [8412]], ['doteq', [8784]], ['doteqdot', [8785]], ['DotEqual', [8784]], ['dotminus', [8760]], ['dotplus', [8724]], ['dotsquare', [8865]], ['doublebarwedge', [8966]], ['DoubleContourIntegral', [8751]], ['DoubleDot', [168]], ['DoubleDownArrow', [8659]], ['DoubleLeftArrow', [8656]], ['DoubleLeftRightArrow', [8660]], ['DoubleLeftTee', [10980]], ['DoubleLongLeftArrow', [10232]], ['DoubleLongLeftRightArrow', [10234]], ['DoubleLongRightArrow', [10233]], ['DoubleRightArrow', [8658]], ['DoubleRightTee', [8872]], ['DoubleUpArrow', [8657]], ['DoubleUpDownArrow', [8661]], ['DoubleVerticalBar', [8741]], ['DownArrowBar', [10515]], ['downarrow', [8595]], ['DownArrow', [8595]], ['Downarrow', [8659]], ['DownArrowUpArrow', [8693]], ['DownBreve', [785]], ['downdownarrows', [8650]], ['downharpoonleft', [8643]], ['downharpoonright', [8642]], ['DownLeftRightVector', [10576]], ['DownLeftTeeVector', [10590]], ['DownLeftVectorBar', [10582]], ['DownLeftVector', [8637]], ['DownRightTeeVector', [10591]], ['DownRightVectorBar', [10583]], ['DownRightVector', [8641]], ['DownTeeArrow', [8615]], ['DownTee', [8868]], ['drbkarow', [10512]], ['drcorn', [8991]], ['drcrop', [8972]], ['Dscr', [119967]], ['dscr', [119993]], ['DScy', [1029]], ['dscy', [1109]], ['dsol', [10742]], ['Dstrok', [272]], ['dstrok', [273]], ['dtdot', [8945]], ['dtri', [9663]], ['dtrif', [9662]], ['duarr', [8693]], ['duhar', [10607]], ['dwangle', [10662]], ['DZcy', [1039]], ['dzcy', [1119]], ['dzigrarr', [10239]], ['Eacute', [201]], ['eacute', [233]], ['easter', [10862]], ['Ecaron', [282]], ['ecaron', [283]], ['Ecirc', [202]], ['ecirc', [234]], ['ecir', [8790]], ['ecolon', [8789]], ['Ecy', [1069]], ['ecy', [1101]], ['eDDot', [10871]], ['Edot', [278]], ['edot', [279]], ['eDot', [8785]], ['ee', [8519]], ['efDot', [8786]], ['Efr', [120072]], ['efr', [120098]], ['eg', [10906]], ['Egrave', [200]], ['egrave', [232]], ['egs', [10902]], ['egsdot', [10904]], ['el', [10905]], ['Element', [8712]], ['elinters', [9191]], ['ell', [8467]], ['els', [10901]], ['elsdot', [10903]], ['Emacr', [274]], ['emacr', [275]], ['empty', [8709]], ['emptyset', [8709]], ['EmptySmallSquare', [9723]], ['emptyv', [8709]], ['EmptyVerySmallSquare', [9643]], ['emsp13', [8196]], ['emsp14', [8197]], ['emsp', [8195]], ['ENG', [330]], ['eng', [331]], ['ensp', [8194]], ['Eogon', [280]], ['eogon', [281]], ['Eopf', [120124]], ['eopf', [120150]], ['epar', [8917]], ['eparsl', [10723]], ['eplus', [10865]], ['epsi', [949]], ['Epsilon', [917]], ['epsilon', [949]], ['epsiv', [1013]], ['eqcirc', [8790]], ['eqcolon', [8789]], ['eqsim', [8770]], ['eqslantgtr', [10902]], ['eqslantless', [10901]], ['Equal', [10869]], ['equals', [61]], ['EqualTilde', [8770]], ['equest', [8799]], ['Equilibrium', [8652]], ['equiv', [8801]], ['equivDD', [10872]], ['eqvparsl', [10725]], ['erarr', [10609]], ['erDot', [8787]], ['escr', [8495]], ['Escr', [8496]], ['esdot', [8784]], ['Esim', [10867]], ['esim', [8770]], ['Eta', [919]], ['eta', [951]], ['ETH', [208]], ['eth', [240]], ['Euml', [203]], ['euml', [235]], ['euro', [8364]], ['excl', [33]], ['exist', [8707]], ['Exists', [8707]], ['expectation', [8496]], ['exponentiale', [8519]], ['ExponentialE', [8519]], ['fallingdotseq', [8786]], ['Fcy', [1060]], ['fcy', [1092]], ['female', [9792]], ['ffilig', [64259]], ['fflig', [64256]], ['ffllig', [64260]], ['Ffr', [120073]], ['ffr', [120099]], ['filig', [64257]], ['FilledSmallSquare', [9724]], ['FilledVerySmallSquare', [9642]], ['fjlig', [102, 106]], ['flat', [9837]], ['fllig', [64258]], ['fltns', [9649]], ['fnof', [402]], ['Fopf', [120125]], ['fopf', [120151]], ['forall', [8704]], ['ForAll', [8704]], ['fork', [8916]], ['forkv', [10969]], ['Fouriertrf', [8497]], ['fpartint', [10765]], ['frac12', [189]], ['frac13', [8531]], ['frac14', [188]], ['frac15', [8533]], ['frac16', [8537]], ['frac18', [8539]], ['frac23', [8532]], ['frac25', [8534]], ['frac34', [190]], ['frac35', [8535]], ['frac38', [8540]], ['frac45', [8536]], ['frac56', [8538]], ['frac58', [8541]], ['frac78', [8542]], ['frasl', [8260]], ['frown', [8994]], ['fscr', [119995]], ['Fscr', [8497]], ['gacute', [501]], ['Gamma', [915]], ['gamma', [947]], ['Gammad', [988]], ['gammad', [989]], ['gap', [10886]], ['Gbreve', [286]], ['gbreve', [287]], ['Gcedil', [290]], ['Gcirc', [284]], ['gcirc', [285]], ['Gcy', [1043]], ['gcy', [1075]], ['Gdot', [288]], ['gdot', [289]], ['ge', [8805]], ['gE', [8807]], ['gEl', [10892]], ['gel', [8923]], ['geq', [8805]], ['geqq', [8807]], ['geqslant', [10878]], ['gescc', [10921]], ['ges', [10878]], ['gesdot', [10880]], ['gesdoto', [10882]], ['gesdotol', [10884]], ['gesl', [8923, 65024]], ['gesles', [10900]], ['Gfr', [120074]], ['gfr', [120100]], ['gg', [8811]], ['Gg', [8921]], ['ggg', [8921]], ['gimel', [8503]], ['GJcy', [1027]], ['gjcy', [1107]], ['gla', [10917]], ['gl', [8823]], ['glE', [10898]], ['glj', [10916]], ['gnap', [10890]], ['gnapprox', [10890]], ['gne', [10888]], ['gnE', [8809]], ['gneq', [10888]], ['gneqq', [8809]], ['gnsim', [8935]], ['Gopf', [120126]], ['gopf', [120152]], ['grave', [96]], ['GreaterEqual', [8805]], ['GreaterEqualLess', [8923]], ['GreaterFullEqual', [8807]], ['GreaterGreater', [10914]], ['GreaterLess', [8823]], ['GreaterSlantEqual', [10878]], ['GreaterTilde', [8819]], ['Gscr', [119970]], ['gscr', [8458]], ['gsim', [8819]], ['gsime', [10894]], ['gsiml', [10896]], ['gtcc', [10919]], ['gtcir', [10874]], ['gt', [62]], ['GT', [62]], ['Gt', [8811]], ['gtdot', [8919]], ['gtlPar', [10645]], ['gtquest', [10876]], ['gtrapprox', [10886]], ['gtrarr', [10616]], ['gtrdot', [8919]], ['gtreqless', [8923]], ['gtreqqless', [10892]], ['gtrless', [8823]], ['gtrsim', [8819]], ['gvertneqq', [8809, 65024]], ['gvnE', [8809, 65024]], ['Hacek', [711]], ['hairsp', [8202]], ['half', [189]], ['hamilt', [8459]], ['HARDcy', [1066]], ['hardcy', [1098]], ['harrcir', [10568]], ['harr', [8596]], ['hArr', [8660]], ['harrw', [8621]], ['Hat', [94]], ['hbar', [8463]], ['Hcirc', [292]], ['hcirc', [293]], ['hearts', [9829]], ['heartsuit', [9829]], ['hellip', [8230]], ['hercon', [8889]], ['hfr', [120101]], ['Hfr', [8460]], ['HilbertSpace', [8459]], ['hksearow', [10533]], ['hkswarow', [10534]], ['hoarr', [8703]], ['homtht', [8763]], ['hookleftarrow', [8617]], ['hookrightarrow', [8618]], ['hopf', [120153]], ['Hopf', [8461]], ['horbar', [8213]], ['HorizontalLine', [9472]], ['hscr', [119997]], ['Hscr', [8459]], ['hslash', [8463]], ['Hstrok', [294]], ['hstrok', [295]], ['HumpDownHump', [8782]], ['HumpEqual', [8783]], ['hybull', [8259]], ['hyphen', [8208]], ['Iacute', [205]], ['iacute', [237]], ['ic', [8291]], ['Icirc', [206]], ['icirc', [238]], ['Icy', [1048]], ['icy', [1080]], ['Idot', [304]], ['IEcy', [1045]], ['iecy', [1077]], ['iexcl', [161]], ['iff', [8660]], ['ifr', [120102]], ['Ifr', [8465]], ['Igrave', [204]], ['igrave', [236]], ['ii', [8520]], ['iiiint', [10764]], ['iiint', [8749]], ['iinfin', [10716]], ['iiota', [8489]], ['IJlig', [306]], ['ijlig', [307]], ['Imacr', [298]], ['imacr', [299]], ['image', [8465]], ['ImaginaryI', [8520]], ['imagline', [8464]], ['imagpart', [8465]], ['imath', [305]], ['Im', [8465]], ['imof', [8887]], ['imped', [437]], ['Implies', [8658]], ['incare', [8453]], ['in', [8712]], ['infin', [8734]], ['infintie', [10717]], ['inodot', [305]], ['intcal', [8890]], ['int', [8747]], ['Int', [8748]], ['integers', [8484]], ['Integral', [8747]], ['intercal', [8890]], ['Intersection', [8898]], ['intlarhk', [10775]], ['intprod', [10812]], ['InvisibleComma', [8291]], ['InvisibleTimes', [8290]], ['IOcy', [1025]], ['iocy', [1105]], ['Iogon', [302]], ['iogon', [303]], ['Iopf', [120128]], ['iopf', [120154]], ['Iota', [921]], ['iota', [953]], ['iprod', [10812]], ['iquest', [191]], ['iscr', [119998]], ['Iscr', [8464]], ['isin', [8712]], ['isindot', [8949]], ['isinE', [8953]], ['isins', [8948]], ['isinsv', [8947]], ['isinv', [8712]], ['it', [8290]], ['Itilde', [296]], ['itilde', [297]], ['Iukcy', [1030]], ['iukcy', [1110]], ['Iuml', [207]], ['iuml', [239]], ['Jcirc', [308]], ['jcirc', [309]], ['Jcy', [1049]], ['jcy', [1081]], ['Jfr', [120077]], ['jfr', [120103]], ['jmath', [567]], ['Jopf', [120129]], ['jopf', [120155]], ['Jscr', [119973]], ['jscr', [119999]], ['Jsercy', [1032]], ['jsercy', [1112]], ['Jukcy', [1028]], ['jukcy', [1108]], ['Kappa', [922]], ['kappa', [954]], ['kappav', [1008]], ['Kcedil', [310]], ['kcedil', [311]], ['Kcy', [1050]], ['kcy', [1082]], ['Kfr', [120078]], ['kfr', [120104]], ['kgreen', [312]], ['KHcy', [1061]], ['khcy', [1093]], ['KJcy', [1036]], ['kjcy', [1116]], ['Kopf', [120130]], ['kopf', [120156]], ['Kscr', [119974]], ['kscr', [120000]], ['lAarr', [8666]], ['Lacute', [313]], ['lacute', [314]], ['laemptyv', [10676]], ['lagran', [8466]], ['Lambda', [923]], ['lambda', [955]], ['lang', [10216]], ['Lang', [10218]], ['langd', [10641]], ['langle', [10216]], ['lap', [10885]], ['Laplacetrf', [8466]], ['laquo', [171]], ['larrb', [8676]], ['larrbfs', [10527]], ['larr', [8592]], ['Larr', [8606]], ['lArr', [8656]], ['larrfs', [10525]], ['larrhk', [8617]], ['larrlp', [8619]], ['larrpl', [10553]], ['larrsim', [10611]], ['larrtl', [8610]], ['latail', [10521]], ['lAtail', [10523]], ['lat', [10923]], ['late', [10925]], ['lates', [10925, 65024]], ['lbarr', [10508]], ['lBarr', [10510]], ['lbbrk', [10098]], ['lbrace', [123]], ['lbrack', [91]], ['lbrke', [10635]], ['lbrksld', [10639]], ['lbrkslu', [10637]], ['Lcaron', [317]], ['lcaron', [318]], ['Lcedil', [315]], ['lcedil', [316]], ['lceil', [8968]], ['lcub', [123]], ['Lcy', [1051]], ['lcy', [1083]], ['ldca', [10550]], ['ldquo', [8220]], ['ldquor', [8222]], ['ldrdhar', [10599]], ['ldrushar', [10571]], ['ldsh', [8626]], ['le', [8804]], ['lE', [8806]], ['LeftAngleBracket', [10216]], ['LeftArrowBar', [8676]], ['leftarrow', [8592]], ['LeftArrow', [8592]], ['Leftarrow', [8656]], ['LeftArrowRightArrow', [8646]], ['leftarrowtail', [8610]], ['LeftCeiling', [8968]], ['LeftDoubleBracket', [10214]], ['LeftDownTeeVector', [10593]], ['LeftDownVectorBar', [10585]], ['LeftDownVector', [8643]], ['LeftFloor', [8970]], ['leftharpoondown', [8637]], ['leftharpoonup', [8636]], ['leftleftarrows', [8647]], ['leftrightarrow', [8596]], ['LeftRightArrow', [8596]], ['Leftrightarrow', [8660]], ['leftrightarrows', [8646]], ['leftrightharpoons', [8651]], ['leftrightsquigarrow', [8621]], ['LeftRightVector', [10574]], ['LeftTeeArrow', [8612]], ['LeftTee', [8867]], ['LeftTeeVector', [10586]], ['leftthreetimes', [8907]], ['LeftTriangleBar', [10703]], ['LeftTriangle', [8882]], ['LeftTriangleEqual', [8884]], ['LeftUpDownVector', [10577]], ['LeftUpTeeVector', [10592]], ['LeftUpVectorBar', [10584]], ['LeftUpVector', [8639]], ['LeftVectorBar', [10578]], ['LeftVector', [8636]], ['lEg', [10891]], ['leg', [8922]], ['leq', [8804]], ['leqq', [8806]], ['leqslant', [10877]], ['lescc', [10920]], ['les', [10877]], ['lesdot', [10879]], ['lesdoto', [10881]], ['lesdotor', [10883]], ['lesg', [8922, 65024]], ['lesges', [10899]], ['lessapprox', [10885]], ['lessdot', [8918]], ['lesseqgtr', [8922]], ['lesseqqgtr', [10891]], ['LessEqualGreater', [8922]], ['LessFullEqual', [8806]], ['LessGreater', [8822]], ['lessgtr', [8822]], ['LessLess', [10913]], ['lesssim', [8818]], ['LessSlantEqual', [10877]], ['LessTilde', [8818]], ['lfisht', [10620]], ['lfloor', [8970]], ['Lfr', [120079]], ['lfr', [120105]], ['lg', [8822]], ['lgE', [10897]], ['lHar', [10594]], ['lhard', [8637]], ['lharu', [8636]], ['lharul', [10602]], ['lhblk', [9604]], ['LJcy', [1033]], ['ljcy', [1113]], ['llarr', [8647]], ['ll', [8810]], ['Ll', [8920]], ['llcorner', [8990]], ['Lleftarrow', [8666]], ['llhard', [10603]], ['lltri', [9722]], ['Lmidot', [319]], ['lmidot', [320]], ['lmoustache', [9136]], ['lmoust', [9136]], ['lnap', [10889]], ['lnapprox', [10889]], ['lne', [10887]], ['lnE', [8808]], ['lneq', [10887]], ['lneqq', [8808]], ['lnsim', [8934]], ['loang', [10220]], ['loarr', [8701]], ['lobrk', [10214]], ['longleftarrow', [10229]], ['LongLeftArrow', [10229]], ['Longleftarrow', [10232]], ['longleftrightarrow', [10231]], ['LongLeftRightArrow', [10231]], ['Longleftrightarrow', [10234]], ['longmapsto', [10236]], ['longrightarrow', [10230]], ['LongRightArrow', [10230]], ['Longrightarrow', [10233]], ['looparrowleft', [8619]], ['looparrowright', [8620]], ['lopar', [10629]], ['Lopf', [120131]], ['lopf', [120157]], ['loplus', [10797]], ['lotimes', [10804]], ['lowast', [8727]], ['lowbar', [95]], ['LowerLeftArrow', [8601]], ['LowerRightArrow', [8600]], ['loz', [9674]], ['lozenge', [9674]], ['lozf', [10731]], ['lpar', [40]], ['lparlt', [10643]], ['lrarr', [8646]], ['lrcorner', [8991]], ['lrhar', [8651]], ['lrhard', [10605]], ['lrm', [8206]], ['lrtri', [8895]], ['lsaquo', [8249]], ['lscr', [120001]], ['Lscr', [8466]], ['lsh', [8624]], ['Lsh', [8624]], ['lsim', [8818]], ['lsime', [10893]], ['lsimg', [10895]], ['lsqb', [91]], ['lsquo', [8216]], ['lsquor', [8218]], ['Lstrok', [321]], ['lstrok', [322]], ['ltcc', [10918]], ['ltcir', [10873]], ['lt', [60]], ['LT', [60]], ['Lt', [8810]], ['ltdot', [8918]], ['lthree', [8907]], ['ltimes', [8905]], ['ltlarr', [10614]], ['ltquest', [10875]], ['ltri', [9667]], ['ltrie', [8884]], ['ltrif', [9666]], ['ltrPar', [10646]], ['lurdshar', [10570]], ['luruhar', [10598]], ['lvertneqq', [8808, 65024]], ['lvnE', [8808, 65024]], ['macr', [175]], ['male', [9794]], ['malt', [10016]], ['maltese', [10016]], ['Map', [10501]], ['map', [8614]], ['mapsto', [8614]], ['mapstodown', [8615]], ['mapstoleft', [8612]], ['mapstoup', [8613]], ['marker', [9646]], ['mcomma', [10793]], ['Mcy', [1052]], ['mcy', [1084]], ['mdash', [8212]], ['mDDot', [8762]], ['measuredangle', [8737]], ['MediumSpace', [8287]], ['Mellintrf', [8499]], ['Mfr', [120080]], ['mfr', [120106]], ['mho', [8487]], ['micro', [181]], ['midast', [42]], ['midcir', [10992]], ['mid', [8739]], ['middot', [183]], ['minusb', [8863]], ['minus', [8722]], ['minusd', [8760]], ['minusdu', [10794]], ['MinusPlus', [8723]], ['mlcp', [10971]], ['mldr', [8230]], ['mnplus', [8723]], ['models', [8871]], ['Mopf', [120132]], ['mopf', [120158]], ['mp', [8723]], ['mscr', [120002]], ['Mscr', [8499]], ['mstpos', [8766]], ['Mu', [924]], ['mu', [956]], ['multimap', [8888]], ['mumap', [8888]], ['nabla', [8711]], ['Nacute', [323]], ['nacute', [324]], ['nang', [8736, 8402]], ['nap', [8777]], ['napE', [10864, 824]], ['napid', [8779, 824]], ['napos', [329]], ['napprox', [8777]], ['natural', [9838]], ['naturals', [8469]], ['natur', [9838]], ['nbsp', [160]], ['nbump', [8782, 824]], ['nbumpe', [8783, 824]], ['ncap', [10819]], ['Ncaron', [327]], ['ncaron', [328]], ['Ncedil', [325]], ['ncedil', [326]], ['ncong', [8775]], ['ncongdot', [10861, 824]], ['ncup', [10818]], ['Ncy', [1053]], ['ncy', [1085]], ['ndash', [8211]], ['nearhk', [10532]], ['nearr', [8599]], ['neArr', [8663]], ['nearrow', [8599]], ['ne', [8800]], ['nedot', [8784, 824]], ['NegativeMediumSpace', [8203]], ['NegativeThickSpace', [8203]], ['NegativeThinSpace', [8203]], ['NegativeVeryThinSpace', [8203]], ['nequiv', [8802]], ['nesear', [10536]], ['nesim', [8770, 824]], ['NestedGreaterGreater', [8811]], ['NestedLessLess', [8810]], ['nexist', [8708]], ['nexists', [8708]], ['Nfr', [120081]], ['nfr', [120107]], ['ngE', [8807, 824]], ['nge', [8817]], ['ngeq', [8817]], ['ngeqq', [8807, 824]], ['ngeqslant', [10878, 824]], ['nges', [10878, 824]], ['nGg', [8921, 824]], ['ngsim', [8821]], ['nGt', [8811, 8402]], ['ngt', [8815]], ['ngtr', [8815]], ['nGtv', [8811, 824]], ['nharr', [8622]], ['nhArr', [8654]], ['nhpar', [10994]], ['ni', [8715]], ['nis', [8956]], ['nisd', [8954]], ['niv', [8715]], ['NJcy', [1034]], ['njcy', [1114]], ['nlarr', [8602]], ['nlArr', [8653]], ['nldr', [8229]], ['nlE', [8806, 824]], ['nle', [8816]], ['nleftarrow', [8602]], ['nLeftarrow', [8653]], ['nleftrightarrow', [8622]], ['nLeftrightarrow', [8654]], ['nleq', [8816]], ['nleqq', [8806, 824]], ['nleqslant', [10877, 824]], ['nles', [10877, 824]], ['nless', [8814]], ['nLl', [8920, 824]], ['nlsim', [8820]], ['nLt', [8810, 8402]], ['nlt', [8814]], ['nltri', [8938]], ['nltrie', [8940]], ['nLtv', [8810, 824]], ['nmid', [8740]], ['NoBreak', [8288]], ['NonBreakingSpace', [160]], ['nopf', [120159]], ['Nopf', [8469]], ['Not', [10988]], ['not', [172]], ['NotCongruent', [8802]], ['NotCupCap', [8813]], ['NotDoubleVerticalBar', [8742]], ['NotElement', [8713]], ['NotEqual', [8800]], ['NotEqualTilde', [8770, 824]], ['NotExists', [8708]], ['NotGreater', [8815]], ['NotGreaterEqual', [8817]], ['NotGreaterFullEqual', [8807, 824]], ['NotGreaterGreater', [8811, 824]], ['NotGreaterLess', [8825]], ['NotGreaterSlantEqual', [10878, 824]], ['NotGreaterTilde', [8821]], ['NotHumpDownHump', [8782, 824]], ['NotHumpEqual', [8783, 824]], ['notin', [8713]], ['notindot', [8949, 824]], ['notinE', [8953, 824]], ['notinva', [8713]], ['notinvb', [8951]], ['notinvc', [8950]], ['NotLeftTriangleBar', [10703, 824]], ['NotLeftTriangle', [8938]], ['NotLeftTriangleEqual', [8940]], ['NotLess', [8814]], ['NotLessEqual', [8816]], ['NotLessGreater', [8824]], ['NotLessLess', [8810, 824]], ['NotLessSlantEqual', [10877, 824]], ['NotLessTilde', [8820]], ['NotNestedGreaterGreater', [10914, 824]], ['NotNestedLessLess', [10913, 824]], ['notni', [8716]], ['notniva', [8716]], ['notnivb', [8958]], ['notnivc', [8957]], ['NotPrecedes', [8832]], ['NotPrecedesEqual', [10927, 824]], ['NotPrecedesSlantEqual', [8928]], ['NotReverseElement', [8716]], ['NotRightTriangleBar', [10704, 824]], ['NotRightTriangle', [8939]], ['NotRightTriangleEqual', [8941]], ['NotSquareSubset', [8847, 824]], ['NotSquareSubsetEqual', [8930]], ['NotSquareSuperset', [8848, 824]], ['NotSquareSupersetEqual', [8931]], ['NotSubset', [8834, 8402]], ['NotSubsetEqual', [8840]], ['NotSucceeds', [8833]], ['NotSucceedsEqual', [10928, 824]], ['NotSucceedsSlantEqual', [8929]], ['NotSucceedsTilde', [8831, 824]], ['NotSuperset', [8835, 8402]], ['NotSupersetEqual', [8841]], ['NotTilde', [8769]], ['NotTildeEqual', [8772]], ['NotTildeFullEqual', [8775]], ['NotTildeTilde', [8777]], ['NotVerticalBar', [8740]], ['nparallel', [8742]], ['npar', [8742]], ['nparsl', [11005, 8421]], ['npart', [8706, 824]], ['npolint', [10772]], ['npr', [8832]], ['nprcue', [8928]], ['nprec', [8832]], ['npreceq', [10927, 824]], ['npre', [10927, 824]], ['nrarrc', [10547, 824]], ['nrarr', [8603]], ['nrArr', [8655]], ['nrarrw', [8605, 824]], ['nrightarrow', [8603]], ['nRightarrow', [8655]], ['nrtri', [8939]], ['nrtrie', [8941]], ['nsc', [8833]], ['nsccue', [8929]], ['nsce', [10928, 824]], ['Nscr', [119977]], ['nscr', [120003]], ['nshortmid', [8740]], ['nshortparallel', [8742]], ['nsim', [8769]], ['nsime', [8772]], ['nsimeq', [8772]], ['nsmid', [8740]], ['nspar', [8742]], ['nsqsube', [8930]], ['nsqsupe', [8931]], ['nsub', [8836]], ['nsubE', [10949, 824]], ['nsube', [8840]], ['nsubset', [8834, 8402]], ['nsubseteq', [8840]], ['nsubseteqq', [10949, 824]], ['nsucc', [8833]], ['nsucceq', [10928, 824]], ['nsup', [8837]], ['nsupE', [10950, 824]], ['nsupe', [8841]], ['nsupset', [8835, 8402]], ['nsupseteq', [8841]], ['nsupseteqq', [10950, 824]], ['ntgl', [8825]], ['Ntilde', [209]], ['ntilde', [241]], ['ntlg', [8824]], ['ntriangleleft', [8938]], ['ntrianglelefteq', [8940]], ['ntriangleright', [8939]], ['ntrianglerighteq', [8941]], ['Nu', [925]], ['nu', [957]], ['num', [35]], ['numero', [8470]], ['numsp', [8199]], ['nvap', [8781, 8402]], ['nvdash', [8876]], ['nvDash', [8877]], ['nVdash', [8878]], ['nVDash', [8879]], ['nvge', [8805, 8402]], ['nvgt', [62, 8402]], ['nvHarr', [10500]], ['nvinfin', [10718]], ['nvlArr', [10498]], ['nvle', [8804, 8402]], ['nvlt', [60, 8402]], ['nvltrie', [8884, 8402]], ['nvrArr', [10499]], ['nvrtrie', [8885, 8402]], ['nvsim', [8764, 8402]], ['nwarhk', [10531]], ['nwarr', [8598]], ['nwArr', [8662]], ['nwarrow', [8598]], ['nwnear', [10535]], ['Oacute', [211]], ['oacute', [243]], ['oast', [8859]], ['Ocirc', [212]], ['ocirc', [244]], ['ocir', [8858]], ['Ocy', [1054]], ['ocy', [1086]], ['odash', [8861]], ['Odblac', [336]], ['odblac', [337]], ['odiv', [10808]], ['odot', [8857]], ['odsold', [10684]], ['OElig', [338]], ['oelig', [339]], ['ofcir', [10687]], ['Ofr', [120082]], ['ofr', [120108]], ['ogon', [731]], ['Ograve', [210]], ['ograve', [242]], ['ogt', [10689]], ['ohbar', [10677]], ['ohm', [937]], ['oint', [8750]], ['olarr', [8634]], ['olcir', [10686]], ['olcross', [10683]], ['oline', [8254]], ['olt', [10688]], ['Omacr', [332]], ['omacr', [333]], ['Omega', [937]], ['omega', [969]], ['Omicron', [927]], ['omicron', [959]], ['omid', [10678]], ['ominus', [8854]], ['Oopf', [120134]], ['oopf', [120160]], ['opar', [10679]], ['OpenCurlyDoubleQuote', [8220]], ['OpenCurlyQuote', [8216]], ['operp', [10681]], ['oplus', [8853]], ['orarr', [8635]], ['Or', [10836]], ['or', [8744]], ['ord', [10845]], ['order', [8500]], ['orderof', [8500]], ['ordf', [170]], ['ordm', [186]], ['origof', [8886]], ['oror', [10838]], ['orslope', [10839]], ['orv', [10843]], ['oS', [9416]], ['Oscr', [119978]], ['oscr', [8500]], ['Oslash', [216]], ['oslash', [248]], ['osol', [8856]], ['Otilde', [213]], ['otilde', [245]], ['otimesas', [10806]], ['Otimes', [10807]], ['otimes', [8855]], ['Ouml', [214]], ['ouml', [246]], ['ovbar', [9021]], ['OverBar', [8254]], ['OverBrace', [9182]], ['OverBracket', [9140]], ['OverParenthesis', [9180]], ['para', [182]], ['parallel', [8741]], ['par', [8741]], ['parsim', [10995]], ['parsl', [11005]], ['part', [8706]], ['PartialD', [8706]], ['Pcy', [1055]], ['pcy', [1087]], ['percnt', [37]], ['period', [46]], ['permil', [8240]], ['perp', [8869]], ['pertenk', [8241]], ['Pfr', [120083]], ['pfr', [120109]], ['Phi', [934]], ['phi', [966]], ['phiv', [981]], ['phmmat', [8499]], ['phone', [9742]], ['Pi', [928]], ['pi', [960]], ['pitchfork', [8916]], ['piv', [982]], ['planck', [8463]], ['planckh', [8462]], ['plankv', [8463]], ['plusacir', [10787]], ['plusb', [8862]], ['pluscir', [10786]], ['plus', [43]], ['plusdo', [8724]], ['plusdu', [10789]], ['pluse', [10866]], ['PlusMinus', [177]], ['plusmn', [177]], ['plussim', [10790]], ['plustwo', [10791]], ['pm', [177]], ['Poincareplane', [8460]], ['pointint', [10773]], ['popf', [120161]], ['Popf', [8473]], ['pound', [163]], ['prap', [10935]], ['Pr', [10939]], ['pr', [8826]], ['prcue', [8828]], ['precapprox', [10935]], ['prec', [8826]], ['preccurlyeq', [8828]], ['Precedes', [8826]], ['PrecedesEqual', [10927]], ['PrecedesSlantEqual', [8828]], ['PrecedesTilde', [8830]], ['preceq', [10927]], ['precnapprox', [10937]], ['precneqq', [10933]], ['precnsim', [8936]], ['pre', [10927]], ['prE', [10931]], ['precsim', [8830]], ['prime', [8242]], ['Prime', [8243]], ['primes', [8473]], ['prnap', [10937]], ['prnE', [10933]], ['prnsim', [8936]], ['prod', [8719]], ['Product', [8719]], ['profalar', [9006]], ['profline', [8978]], ['profsurf', [8979]], ['prop', [8733]], ['Proportional', [8733]], ['Proportion', [8759]], ['propto', [8733]], ['prsim', [8830]], ['prurel', [8880]], ['Pscr', [119979]], ['pscr', [120005]], ['Psi', [936]], ['psi', [968]], ['puncsp', [8200]], ['Qfr', [120084]], ['qfr', [120110]], ['qint', [10764]], ['qopf', [120162]], ['Qopf', [8474]], ['qprime', [8279]], ['Qscr', [119980]], ['qscr', [120006]], ['quaternions', [8461]], ['quatint', [10774]], ['quest', [63]], ['questeq', [8799]], ['quot', [34]], ['QUOT', [34]], ['rAarr', [8667]], ['race', [8765, 817]], ['Racute', [340]], ['racute', [341]], ['radic', [8730]], ['raemptyv', [10675]], ['rang', [10217]], ['Rang', [10219]], ['rangd', [10642]], ['range', [10661]], ['rangle', [10217]], ['raquo', [187]], ['rarrap', [10613]], ['rarrb', [8677]], ['rarrbfs', [10528]], ['rarrc', [10547]], ['rarr', [8594]], ['Rarr', [8608]], ['rArr', [8658]], ['rarrfs', [10526]], ['rarrhk', [8618]], ['rarrlp', [8620]], ['rarrpl', [10565]], ['rarrsim', [10612]], ['Rarrtl', [10518]], ['rarrtl', [8611]], ['rarrw', [8605]], ['ratail', [10522]], ['rAtail', [10524]], ['ratio', [8758]], ['rationals', [8474]], ['rbarr', [10509]], ['rBarr', [10511]], ['RBarr', [10512]], ['rbbrk', [10099]], ['rbrace', [125]], ['rbrack', [93]], ['rbrke', [10636]], ['rbrksld', [10638]], ['rbrkslu', [10640]], ['Rcaron', [344]], ['rcaron', [345]], ['Rcedil', [342]], ['rcedil', [343]], ['rceil', [8969]], ['rcub', [125]], ['Rcy', [1056]], ['rcy', [1088]], ['rdca', [10551]], ['rdldhar', [10601]], ['rdquo', [8221]], ['rdquor', [8221]], ['CloseCurlyDoubleQuote', [8221]], ['rdsh', [8627]], ['real', [8476]], ['realine', [8475]], ['realpart', [8476]], ['reals', [8477]], ['Re', [8476]], ['rect', [9645]], ['reg', [174]], ['REG', [174]], ['ReverseElement', [8715]], ['ReverseEquilibrium', [8651]], ['ReverseUpEquilibrium', [10607]], ['rfisht', [10621]], ['rfloor', [8971]], ['rfr', [120111]], ['Rfr', [8476]], ['rHar', [10596]], ['rhard', [8641]], ['rharu', [8640]], ['rharul', [10604]], ['Rho', [929]], ['rho', [961]], ['rhov', [1009]], ['RightAngleBracket', [10217]], ['RightArrowBar', [8677]], ['rightarrow', [8594]], ['RightArrow', [8594]], ['Rightarrow', [8658]], ['RightArrowLeftArrow', [8644]], ['rightarrowtail', [8611]], ['RightCeiling', [8969]], ['RightDoubleBracket', [10215]], ['RightDownTeeVector', [10589]], ['RightDownVectorBar', [10581]], ['RightDownVector', [8642]], ['RightFloor', [8971]], ['rightharpoondown', [8641]], ['rightharpoonup', [8640]], ['rightleftarrows', [8644]], ['rightleftharpoons', [8652]], ['rightrightarrows', [8649]], ['rightsquigarrow', [8605]], ['RightTeeArrow', [8614]], ['RightTee', [8866]], ['RightTeeVector', [10587]], ['rightthreetimes', [8908]], ['RightTriangleBar', [10704]], ['RightTriangle', [8883]], ['RightTriangleEqual', [8885]], ['RightUpDownVector', [10575]], ['RightUpTeeVector', [10588]], ['RightUpVectorBar', [10580]], ['RightUpVector', [8638]], ['RightVectorBar', [10579]], ['RightVector', [8640]], ['ring', [730]], ['risingdotseq', [8787]], ['rlarr', [8644]], ['rlhar', [8652]], ['rlm', [8207]], ['rmoustache', [9137]], ['rmoust', [9137]], ['rnmid', [10990]], ['roang', [10221]], ['roarr', [8702]], ['robrk', [10215]], ['ropar', [10630]], ['ropf', [120163]], ['Ropf', [8477]], ['roplus', [10798]], ['rotimes', [10805]], ['RoundImplies', [10608]], ['rpar', [41]], ['rpargt', [10644]], ['rppolint', [10770]], ['rrarr', [8649]], ['Rrightarrow', [8667]], ['rsaquo', [8250]], ['rscr', [120007]], ['Rscr', [8475]], ['rsh', [8625]], ['Rsh', [8625]], ['rsqb', [93]], ['rsquo', [8217]], ['rsquor', [8217]], ['CloseCurlyQuote', [8217]], ['rthree', [8908]], ['rtimes', [8906]], ['rtri', [9657]], ['rtrie', [8885]], ['rtrif', [9656]], ['rtriltri', [10702]], ['RuleDelayed', [10740]], ['ruluhar', [10600]], ['rx', [8478]], ['Sacute', [346]], ['sacute', [347]], ['sbquo', [8218]], ['scap', [10936]], ['Scaron', [352]], ['scaron', [353]], ['Sc', [10940]], ['sc', [8827]], ['sccue', [8829]], ['sce', [10928]], ['scE', [10932]], ['Scedil', [350]], ['scedil', [351]], ['Scirc', [348]], ['scirc', [349]], ['scnap', [10938]], ['scnE', [10934]], ['scnsim', [8937]], ['scpolint', [10771]], ['scsim', [8831]], ['Scy', [1057]], ['scy', [1089]], ['sdotb', [8865]], ['sdot', [8901]], ['sdote', [10854]], ['searhk', [10533]], ['searr', [8600]], ['seArr', [8664]], ['searrow', [8600]], ['sect', [167]], ['semi', [59]], ['seswar', [10537]], ['setminus', [8726]], ['setmn', [8726]], ['sext', [10038]], ['Sfr', [120086]], ['sfr', [120112]], ['sfrown', [8994]], ['sharp', [9839]], ['SHCHcy', [1065]], ['shchcy', [1097]], ['SHcy', [1064]], ['shcy', [1096]], ['ShortDownArrow', [8595]], ['ShortLeftArrow', [8592]], ['shortmid', [8739]], ['shortparallel', [8741]], ['ShortRightArrow', [8594]], ['ShortUpArrow', [8593]], ['shy', [173]], ['Sigma', [931]], ['sigma', [963]], ['sigmaf', [962]], ['sigmav', [962]], ['sim', [8764]], ['simdot', [10858]], ['sime', [8771]], ['simeq', [8771]], ['simg', [10910]], ['simgE', [10912]], ['siml', [10909]], ['simlE', [10911]], ['simne', [8774]], ['simplus', [10788]], ['simrarr', [10610]], ['slarr', [8592]], ['SmallCircle', [8728]], ['smallsetminus', [8726]], ['smashp', [10803]], ['smeparsl', [10724]], ['smid', [8739]], ['smile', [8995]], ['smt', [10922]], ['smte', [10924]], ['smtes', [10924, 65024]], ['SOFTcy', [1068]], ['softcy', [1100]], ['solbar', [9023]], ['solb', [10692]], ['sol', [47]], ['Sopf', [120138]], ['sopf', [120164]], ['spades', [9824]], ['spadesuit', [9824]], ['spar', [8741]], ['sqcap', [8851]], ['sqcaps', [8851, 65024]], ['sqcup', [8852]], ['sqcups', [8852, 65024]], ['Sqrt', [8730]], ['sqsub', [8847]], ['sqsube', [8849]], ['sqsubset', [8847]], ['sqsubseteq', [8849]], ['sqsup', [8848]], ['sqsupe', [8850]], ['sqsupset', [8848]], ['sqsupseteq', [8850]], ['square', [9633]], ['Square', [9633]], ['SquareIntersection', [8851]], ['SquareSubset', [8847]], ['SquareSubsetEqual', [8849]], ['SquareSuperset', [8848]], ['SquareSupersetEqual', [8850]], ['SquareUnion', [8852]], ['squarf', [9642]], ['squ', [9633]], ['squf', [9642]], ['srarr', [8594]], ['Sscr', [119982]], ['sscr', [120008]], ['ssetmn', [8726]], ['ssmile', [8995]], ['sstarf', [8902]], ['Star', [8902]], ['star', [9734]], ['starf', [9733]], ['straightepsilon', [1013]], ['straightphi', [981]], ['strns', [175]], ['sub', [8834]], ['Sub', [8912]], ['subdot', [10941]], ['subE', [10949]], ['sube', [8838]], ['subedot', [10947]], ['submult', [10945]], ['subnE', [10955]], ['subne', [8842]], ['subplus', [10943]], ['subrarr', [10617]], ['subset', [8834]], ['Subset', [8912]], ['subseteq', [8838]], ['subseteqq', [10949]], ['SubsetEqual', [8838]], ['subsetneq', [8842]], ['subsetneqq', [10955]], ['subsim', [10951]], ['subsub', [10965]], ['subsup', [10963]], ['succapprox', [10936]], ['succ', [8827]], ['succcurlyeq', [8829]], ['Succeeds', [8827]], ['SucceedsEqual', [10928]], ['SucceedsSlantEqual', [8829]], ['SucceedsTilde', [8831]], ['succeq', [10928]], ['succnapprox', [10938]], ['succneqq', [10934]], ['succnsim', [8937]], ['succsim', [8831]], ['SuchThat', [8715]], ['sum', [8721]], ['Sum', [8721]], ['sung', [9834]], ['sup1', [185]], ['sup2', [178]], ['sup3', [179]], ['sup', [8835]], ['Sup', [8913]], ['supdot', [10942]], ['supdsub', [10968]], ['supE', [10950]], ['supe', [8839]], ['supedot', [10948]], ['Superset', [8835]], ['SupersetEqual', [8839]], ['suphsol', [10185]], ['suphsub', [10967]], ['suplarr', [10619]], ['supmult', [10946]], ['supnE', [10956]], ['supne', [8843]], ['supplus', [10944]], ['supset', [8835]], ['Supset', [8913]], ['supseteq', [8839]], ['supseteqq', [10950]], ['supsetneq', [8843]], ['supsetneqq', [10956]], ['supsim', [10952]], ['supsub', [10964]], ['supsup', [10966]], ['swarhk', [10534]], ['swarr', [8601]], ['swArr', [8665]], ['swarrow', [8601]], ['swnwar', [10538]], ['szlig', [223]], ['Tab', [9]], ['target', [8982]], ['Tau', [932]], ['tau', [964]], ['tbrk', [9140]], ['Tcaron', [356]], ['tcaron', [357]], ['Tcedil', [354]], ['tcedil', [355]], ['Tcy', [1058]], ['tcy', [1090]], ['tdot', [8411]], ['telrec', [8981]], ['Tfr', [120087]], ['tfr', [120113]], ['there4', [8756]], ['therefore', [8756]], ['Therefore', [8756]], ['Theta', [920]], ['theta', [952]], ['thetasym', [977]], ['thetav', [977]], ['thickapprox', [8776]], ['thicksim', [8764]], ['ThickSpace', [8287, 8202]], ['ThinSpace', [8201]], ['thinsp', [8201]], ['thkap', [8776]], ['thksim', [8764]], ['THORN', [222]], ['thorn', [254]], ['tilde', [732]], ['Tilde', [8764]], ['TildeEqual', [8771]], ['TildeFullEqual', [8773]], ['TildeTilde', [8776]], ['timesbar', [10801]], ['timesb', [8864]], ['times', [215]], ['timesd', [10800]], ['tint', [8749]], ['toea', [10536]], ['topbot', [9014]], ['topcir', [10993]], ['top', [8868]], ['Topf', [120139]], ['topf', [120165]], ['topfork', [10970]], ['tosa', [10537]], ['tprime', [8244]], ['trade', [8482]], ['TRADE', [8482]], ['triangle', [9653]], ['triangledown', [9663]], ['triangleleft', [9667]], ['trianglelefteq', [8884]], ['triangleq', [8796]], ['triangleright', [9657]], ['trianglerighteq', [8885]], ['tridot', [9708]], ['trie', [8796]], ['triminus', [10810]], ['TripleDot', [8411]], ['triplus', [10809]], ['trisb', [10701]], ['tritime', [10811]], ['trpezium', [9186]], ['Tscr', [119983]], ['tscr', [120009]], ['TScy', [1062]], ['tscy', [1094]], ['TSHcy', [1035]], ['tshcy', [1115]], ['Tstrok', [358]], ['tstrok', [359]], ['twixt', [8812]], ['twoheadleftarrow', [8606]], ['twoheadrightarrow', [8608]], ['Uacute', [218]], ['uacute', [250]], ['uarr', [8593]], ['Uarr', [8607]], ['uArr', [8657]], ['Uarrocir', [10569]], ['Ubrcy', [1038]], ['ubrcy', [1118]], ['Ubreve', [364]], ['ubreve', [365]], ['Ucirc', [219]], ['ucirc', [251]], ['Ucy', [1059]], ['ucy', [1091]], ['udarr', [8645]], ['Udblac', [368]], ['udblac', [369]], ['udhar', [10606]], ['ufisht', [10622]], ['Ufr', [120088]], ['ufr', [120114]], ['Ugrave', [217]], ['ugrave', [249]], ['uHar', [10595]], ['uharl', [8639]], ['uharr', [8638]], ['uhblk', [9600]], ['ulcorn', [8988]], ['ulcorner', [8988]], ['ulcrop', [8975]], ['ultri', [9720]], ['Umacr', [362]], ['umacr', [363]], ['uml', [168]], ['UnderBar', [95]], ['UnderBrace', [9183]], ['UnderBracket', [9141]], ['UnderParenthesis', [9181]], ['Union', [8899]], ['UnionPlus', [8846]], ['Uogon', [370]], ['uogon', [371]], ['Uopf', [120140]], ['uopf', [120166]], ['UpArrowBar', [10514]], ['uparrow', [8593]], ['UpArrow', [8593]], ['Uparrow', [8657]], ['UpArrowDownArrow', [8645]], ['updownarrow', [8597]], ['UpDownArrow', [8597]], ['Updownarrow', [8661]], ['UpEquilibrium', [10606]], ['upharpoonleft', [8639]], ['upharpoonright', [8638]], ['uplus', [8846]], ['UpperLeftArrow', [8598]], ['UpperRightArrow', [8599]], ['upsi', [965]], ['Upsi', [978]], ['upsih', [978]], ['Upsilon', [933]], ['upsilon', [965]], ['UpTeeArrow', [8613]], ['UpTee', [8869]], ['upuparrows', [8648]], ['urcorn', [8989]], ['urcorner', [8989]], ['urcrop', [8974]], ['Uring', [366]], ['uring', [367]], ['urtri', [9721]], ['Uscr', [119984]], ['uscr', [120010]], ['utdot', [8944]], ['Utilde', [360]], ['utilde', [361]], ['utri', [9653]], ['utrif', [9652]], ['uuarr', [8648]], ['Uuml', [220]], ['uuml', [252]], ['uwangle', [10663]], ['vangrt', [10652]], ['varepsilon', [1013]], ['varkappa', [1008]], ['varnothing', [8709]], ['varphi', [981]], ['varpi', [982]], ['varpropto', [8733]], ['varr', [8597]], ['vArr', [8661]], ['varrho', [1009]], ['varsigma', [962]], ['varsubsetneq', [8842, 65024]], ['varsubsetneqq', [10955, 65024]], ['varsupsetneq', [8843, 65024]], ['varsupsetneqq', [10956, 65024]], ['vartheta', [977]], ['vartriangleleft', [8882]], ['vartriangleright', [8883]], ['vBar', [10984]], ['Vbar', [10987]], ['vBarv', [10985]], ['Vcy', [1042]], ['vcy', [1074]], ['vdash', [8866]], ['vDash', [8872]], ['Vdash', [8873]], ['VDash', [8875]], ['Vdashl', [10982]], ['veebar', [8891]], ['vee', [8744]], ['Vee', [8897]], ['veeeq', [8794]], ['vellip', [8942]], ['verbar', [124]], ['Verbar', [8214]], ['vert', [124]], ['Vert', [8214]], ['VerticalBar', [8739]], ['VerticalLine', [124]], ['VerticalSeparator', [10072]], ['VerticalTilde', [8768]], ['VeryThinSpace', [8202]], ['Vfr', [120089]], ['vfr', [120115]], ['vltri', [8882]], ['vnsub', [8834, 8402]], ['vnsup', [8835, 8402]], ['Vopf', [120141]], ['vopf', [120167]], ['vprop', [8733]], ['vrtri', [8883]], ['Vscr', [119985]], ['vscr', [120011]], ['vsubnE', [10955, 65024]], ['vsubne', [8842, 65024]], ['vsupnE', [10956, 65024]], ['vsupne', [8843, 65024]], ['Vvdash', [8874]], ['vzigzag', [10650]], ['Wcirc', [372]], ['wcirc', [373]], ['wedbar', [10847]], ['wedge', [8743]], ['Wedge', [8896]], ['wedgeq', [8793]], ['weierp', [8472]], ['Wfr', [120090]], ['wfr', [120116]], ['Wopf', [120142]], ['wopf', [120168]], ['wp', [8472]], ['wr', [8768]], ['wreath', [8768]], ['Wscr', [119986]], ['wscr', [120012]], ['xcap', [8898]], ['xcirc', [9711]], ['xcup', [8899]], ['xdtri', [9661]], ['Xfr', [120091]], ['xfr', [120117]], ['xharr', [10231]], ['xhArr', [10234]], ['Xi', [926]], ['xi', [958]], ['xlarr', [10229]], ['xlArr', [10232]], ['xmap', [10236]], ['xnis', [8955]], ['xodot', [10752]], ['Xopf', [120143]], ['xopf', [120169]], ['xoplus', [10753]], ['xotime', [10754]], ['xrarr', [10230]], ['xrArr', [10233]], ['Xscr', [119987]], ['xscr', [120013]], ['xsqcup', [10758]], ['xuplus', [10756]], ['xutri', [9651]], ['xvee', [8897]], ['xwedge', [8896]], ['Yacute', [221]], ['yacute', [253]], ['YAcy', [1071]], ['yacy', [1103]], ['Ycirc', [374]], ['ycirc', [375]], ['Ycy', [1067]], ['ycy', [1099]], ['yen', [165]], ['Yfr', [120092]], ['yfr', [120118]], ['YIcy', [1031]], ['yicy', [1111]], ['Yopf', [120144]], ['yopf', [120170]], ['Yscr', [119988]], ['yscr', [120014]], ['YUcy', [1070]], ['yucy', [1102]], ['yuml', [255]], ['Yuml', [376]], ['Zacute', [377]], ['zacute', [378]], ['Zcaron', [381]], ['zcaron', [382]], ['Zcy', [1047]], ['zcy', [1079]], ['Zdot', [379]], ['zdot', [380]], ['zeetrf', [8488]], ['ZeroWidthSpace', [8203]], ['Zeta', [918]], ['zeta', [950]], ['zfr', [120119]], ['Zfr', [8488]], ['ZHcy', [1046]], ['zhcy', [1078]], ['zigrarr', [8669]], ['zopf', [120171]], ['Zopf', [8484]], ['Zscr', [119989]], ['zscr', [120015]], ['zwj', [8205]], ['zwnj', [8204]]];
+
+var alphaIndex = {};
+var charIndex = {};
+
+createIndexes(alphaIndex, charIndex);
+
+/**
+ * @constructor
+ */
+function Html5Entities() {}
+
+/**
+ * @param {String} str
+ * @returns {String}
+ */
+Html5Entities.prototype.decode = function(str) {
+    if (!str || !str.length) {
+        return '';
+    }
+    return str.replace(/&(#?[\w\d]+);?/g, function(s, entity) {
+        var chr;
+        if (entity.charAt(0) === "#") {
+            var code = entity.charAt(1) === 'x' ?
+                parseInt(entity.substr(2).toLowerCase(), 16) :
+                parseInt(entity.substr(1));
+
+            if (!(isNaN(code) || code < -32768 || code > 65535)) {
+                chr = String.fromCharCode(code);
+            }
+        } else {
+            chr = alphaIndex[entity];
+        }
+        return chr || s;
+    });
+};
+
+/**
+ * @param {String} str
+ * @returns {String}
+ */
+ Html5Entities.decode = function(str) {
+    return new Html5Entities().decode(str);
+ };
+
+/**
+ * @param {String} str
+ * @returns {String}
+ */
+Html5Entities.prototype.encode = function(str) {
+    if (!str || !str.length) {
+        return '';
+    }
+    var strLength = str.length;
+    var result = '';
+    var i = 0;
+    while (i < strLength) {
+        var charInfo = charIndex[str.charCodeAt(i)];
+        if (charInfo) {
+            var alpha = charInfo[str.charCodeAt(i + 1)];
+            if (alpha) {
+                i++;
+            } else {
+                alpha = charInfo[''];
+            }
+            if (alpha) {
+                result += "&" + alpha + ";";
+                i++;
+                continue;
+            }
+        }
+        result += str.charAt(i);
+        i++;
+    }
+    return result;
+};
+
+/**
+ * @param {String} str
+ * @returns {String}
+ */
+ Html5Entities.encode = function(str) {
+    return new Html5Entities().encode(str);
+ };
+
+/**
+ * @param {String} str
+ * @returns {String}
+ */
+Html5Entities.prototype.encodeNonUTF = function(str) {
+    if (!str || !str.length) {
+        return '';
+    }
+    var strLength = str.length;
+    var result = '';
+    var i = 0;
+    while (i < strLength) {
+        var c = str.charCodeAt(i);
+        var charInfo = charIndex[c];
+        if (charInfo) {
+            var alpha = charInfo[str.charCodeAt(i + 1)];
+            if (alpha) {
+                i++;
+            } else {
+                alpha = charInfo[''];
+            }
+            if (alpha) {
+                result += "&" + alpha + ";";
+                i++;
+                continue;
+            }
+        }
+        if (c < 32 || c > 126) {
+            result += '&#' + c + ';';
+        } else {
+            result += str.charAt(i);
+        }
+        i++;
+    }
+    return result;
+};
+
+/**
+ * @param {String} str
+ * @returns {String}
+ */
+ Html5Entities.encodeNonUTF = function(str) {
+    return new Html5Entities().encodeNonUTF(str);
+ };
+
+/**
+ * @param {String} str
+ * @returns {String}
+ */
+Html5Entities.prototype.encodeNonASCII = function(str) {
+    if (!str || !str.length) {
+        return '';
+    }
+    var strLength = str.length;
+    var result = '';
+    var i = 0;
+    while (i < strLength) {
+        var c = str.charCodeAt(i);
+        if (c <= 255) {
+            result += str[i++];
+            continue;
+        }
+        result += '&#' + c + ';';
+        i++
+    }
+    return result;
+};
+
+/**
+ * @param {String} str
+ * @returns {String}
+ */
+ Html5Entities.encodeNonASCII = function(str) {
+    return new Html5Entities().encodeNonASCII(str);
+ };
+
+/**
+ * @param {Object} alphaIndex Passed by reference.
+ * @param {Object} charIndex Passed by reference.
+ */
+function createIndexes(alphaIndex, charIndex) {
+    var i = ENTITIES.length;
+    var _results = [];
+    while (i--) {
+        var e = ENTITIES[i];
+        var alpha = e[0];
+        var chars = e[1];
+        var chr = chars[0];
+        var addChar = (chr < 32 || chr > 126) || chr === 62 || chr === 60 || chr === 38 || chr === 34 || chr === 39;
+        var charInfo;
+        if (addChar) {
+            charInfo = charIndex[chr] = charIndex[chr] || {};
+        }
+        if (chars[1]) {
+            var chr2 = chars[1];
+            alphaIndex[alpha] = String.fromCharCode(chr) + String.fromCharCode(chr2);
+            _results.push(addChar && (charInfo[chr2] = alpha));
+        } else {
+            alphaIndex[alpha] = String.fromCharCode(chr);
+            _results.push(addChar && (charInfo[''] = alpha));
+        }
+    }
+}
+
+module.exports = Html5Entities;
+
+
+/***/ }),
+
+/***/ 43:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* WEBPACK VAR INJECTION */(function(process) {/* harmony export (immutable) */ __webpack_exports__["bootstrap"] = bootstrap;
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "starting", function() { return starting; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_polyfills__ = __webpack_require__(54);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_aurelia_pal__ = __webpack_require__(0);
+
+
+
+var bootstrapPromises = [];
+var startResolve = void 0;
+
+var startPromise = new Promise(function (resolve) {
+  return startResolve = resolve;
+});
+var host = __WEBPACK_IMPORTED_MODULE_1_aurelia_pal__["a" /* PLATFORM */].global;
+var isNodeLike = typeof process !== 'undefined' && !process.browser;
+
+function ready() {
+  if (!host.document || host.document.readyState === 'complete') {
+    return Promise.resolve();
+  }
+
+  return new Promise(function (resolve) {
+    host.document.addEventListener('DOMContentLoaded', completed);
+    host.addEventListener('load', completed);
+
+    function completed() {
+      host.document.removeEventListener('DOMContentLoaded', completed);
+      host.removeEventListener('load', completed);
+      resolve();
+    }
+  });
+}
+
+function createLoader() {
+  if (__WEBPACK_IMPORTED_MODULE_1_aurelia_pal__["a" /* PLATFORM */].Loader) {
+    return Promise.resolve(new __WEBPACK_IMPORTED_MODULE_1_aurelia_pal__["a" /* PLATFORM */].Loader());
+  }
+
+  if (false) {
+    if (typeof __webpack_require__ !== 'undefined') {
+      var m = __webpack_require__(require.resolve('aurelia-loader-webpack'));
+      return Promise.resolve(new m.WebpackLoader());
+    }
+
+    if (host.System && typeof host.System.config === 'function') {
+      return host.System.normalize('aurelia-bootstrapper').then(function (bsn) {
+        return host.System.normalize('aurelia-loader-default', bsn);
+      }).then(function (loaderName) {
+        return host.System.import(loaderName).then(function (m) {
+          return new m.DefaultLoader();
+        });
+      });
+    }
+
+    if (typeof host.require === 'function' && typeof host.require.version === 'string') {
+      return new Promise(function (resolve, reject) {
+        return host.require(['aurelia-loader-default'], function (m) {
+          return resolve(new m.DefaultLoader());
+        }, reject);
+      });
+    }
+
+    if (isNodeLike && typeof module !== 'undefined' && typeof module.require !== 'undefined') {
+      var _m = module.require('aurelia-loader-nodejs');
+      return Promise.resolve(new _m.NodeJsLoader());
+    }
+  }
+
+  return Promise.reject('No PLATFORM.Loader is defined and there is neither a System API (ES6) or a Require API (AMD) globally available to load your app.');
+}
+
+function initializePal(loader) {
+  var type = void 0;
+
+  var isRenderer = isNodeLike && (process.type === 'renderer' || process.versions['node-webkit']);
+
+  if (isNodeLike && !isRenderer) {
+    type = 'nodejs';
+  } else if (typeof window !== 'undefined') {
+    type = 'browser';
+  } else if (typeof self !== 'undefined') {
+    type = 'worker';
+  } else {
+    throw new Error('Could not determine platform implementation to load.');
+  }
+
+  return loader.loadModule('aurelia-pal-' + type).then(function (palModule) {
+    return type === 'nodejs' && !__WEBPACK_IMPORTED_MODULE_1_aurelia_pal__["b" /* isInitialized */] && palModule.globalize() || palModule.initialize();
+  });
+}
+
+function preparePlatform(loader) {
+  var map = function map(moduleId, relativeTo) {
+    return loader.normalize(moduleId, relativeTo).then(function (normalized) {
+      loader.map(moduleId, normalized);
+      return normalized;
+    });
+  };
+
+  return initializePal(loader).then(function () {
+    return loader.normalize('aurelia-bootstrapper');
+  }).then(function (bootstrapperName) {
+    var frameworkPromise = map('aurelia-framework', bootstrapperName);
+
+    return Promise.all([frameworkPromise, frameworkPromise.then(function (frameworkName) {
+      return map('aurelia-dependency-injection', frameworkName);
+    }), map('aurelia-router', bootstrapperName), map('aurelia-logging-console', bootstrapperName)]);
+  }).then(function (_ref) {
+    var frameworkName = _ref[0];
+    return loader.loadModule(frameworkName);
+  }).then(function (fx) {
+    return startResolve(function () {
+      return new fx.Aurelia(loader);
+    });
+  });
+}
+
+function config(appHost, configModuleId, aurelia) {
+  aurelia.host = appHost;
+  aurelia.configModuleId = configModuleId || null;
+
+  if (configModuleId) {
+    return aurelia.loader.loadModule(configModuleId).then(function (customConfig) {
+      if (!customConfig.configure) {
+        throw new Error('Cannot initialize module \'' + configModuleId + '\' without a configure function.');
+      }
+
+      return customConfig.configure(aurelia);
+    });
+  }
+
+  aurelia.use.standardConfiguration().developmentLogging();
+
+  return aurelia.start().then(function () {
+    return aurelia.setRoot();
+  });
+}
+
+function run() {
+  return ready().then(createLoader).then(preparePlatform).then(function () {
+    var appHosts = host.document.querySelectorAll('[aurelia-app],[data-aurelia-app]');
+    for (var i = 0, ii = appHosts.length; i < ii; ++i) {
+      var appHost = appHosts[i];
+      var moduleId = appHost.getAttribute('aurelia-app') || appHost.getAttribute('data-aurelia-app');
+      bootstrap(config.bind(null, appHost, moduleId));
+    }
+
+    var toConsole = console.error.bind(console);
+    var bootstraps = bootstrapPromises.map(function (p) {
+      return p.catch(toConsole);
+    });
+    bootstrapPromises = null;
+    return Promise.all(bootstraps);
+  });
+}
+
+function bootstrap(configure) {
+  var p = startPromise.then(function (factory) {
+    return configure(factory());
+  });
+  if (bootstrapPromises) bootstrapPromises.push(p);
+  return p;
+}
+
+var starting = run();
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(80)))
+
+/***/ }),
+
+/***/ 44:
 /***/ (function(module, exports, __webpack_require__) {
 
 // This file contains an empty module that does nothing.
@@ -15991,7 +17618,7 @@ function signalBindings(name) {
 
 /***/ }),
 
-/***/ 31:
+/***/ 45:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -16023,7 +17650,7 @@ var Loader;
 
 Object.defineProperty(__WEBPACK_IMPORTED_MODULE_0_aurelia_pal__["a" /* PLATFORM */], "Loader", {
   get: function() {
-    return Loader || (Loader = __webpack_require__(39).WebpackLoader);
+    return Loader || (Loader = __webpack_require__(53).WebpackLoader);
   },
   set: function(value) {
     Loader = value;
@@ -16033,7 +17660,7 @@ Object.defineProperty(__WEBPACK_IMPORTED_MODULE_0_aurelia_pal__["a" /* PLATFORM 
 
 /***/ }),
 
-/***/ 32:
+/***/ 46:
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(__resourceQuery, module) {/*eslint-env browser*/
@@ -16050,7 +17677,7 @@ var options = {
   autoConnect: true
 };
 if (true) {
-  var querystring = __webpack_require__(52);
+  var querystring = __webpack_require__(69);
   var overrides = querystring.parse(__resourceQuery.slice(1));
   setOverrides(overrides);
 }
@@ -16184,11 +17811,11 @@ if (typeof window !== 'undefined') {
 }
 
 function createReporter() {
-  var strip = __webpack_require__(53);
+  var strip = __webpack_require__(70);
 
   var overlay;
   if (typeof document !== 'undefined' && options.overlay) {
-    overlay = __webpack_require__(54);
+    overlay = __webpack_require__(73);
   }
 
   var styles = {
@@ -16241,7 +17868,7 @@ function createReporter() {
   };
 }
 
-var processUpdate = __webpack_require__(55);
+var processUpdate = __webpack_require__(74);
 
 var customHandler;
 var subscribeAllHandler;
@@ -16307,11 +17934,11 @@ if (module) {
   };
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, "?path=__webpack_hmr&dynamicPublicPath=true", __webpack_require__(56)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, "?path=__webpack_hmr&dynamicPublicPath=true", __webpack_require__(75)(module)))
 
 /***/ }),
 
-/***/ 33:
+/***/ 47:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16495,7 +18122,7 @@ ansiHTML.reset()
 
 /***/ }),
 
-/***/ 34:
+/***/ 48:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16507,7 +18134,7 @@ module.exports = function () {
 
 /***/ }),
 
-/***/ 35:
+/***/ 49:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -16631,738 +18258,7 @@ function _createCSSResource(address) {
 
 /***/ }),
 
-/***/ 36:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* unused harmony export recreateView */
-/* unused harmony export cleanupView */
-/* harmony export (immutable) */ __webpack_exports__["b"] = rerenderController;
-/* harmony export (immutable) */ __webpack_exports__["a"] = rerenderMatchingSlotChildren;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_templating__ = __webpack_require__(1);
-
-function recreateView(viewFactory, oldViewContainer) {
-    var parentContainer = oldViewContainer.parent || oldViewContainer;
-    var targetInstruction = oldViewContainer.get(__WEBPACK_IMPORTED_MODULE_0_aurelia_templating__["n" /* TargetInstruction */]);
-    // const targetInstruction = container.get(TargetInstruction) as TargetInstruction;
-    var factoryCreateInstruction = targetInstruction.elementInstruction || { partReplacements: null };
-    // let factoryCreateInstruction = ({partReplacements: null} as BehaviorInstruction);
-    // console.log(`new element instruction`, targetInstruction, factoryCreateInstruction);
-    var newContainer = parentContainer.createChild();
-    // const newContainer = oldViewContainer;
-    var newView = viewFactory.create(newContainer, factoryCreateInstruction);
-    newView._isUserControlled = true;
-    return newView;
-}
-function cleanupView(view) {
-    var firstChild = view.firstChild;
-    var lastChild = view.lastChild;
-    var nextSibling = lastChild.nextSibling;
-    var parent = firstChild.parentElement;
-    var bindingContext = view.bindingContext, overrideContext = view.overrideContext, container = view.container;
-    view.removeNodes();
-    var wasAttached = view.isAttached;
-    if (wasAttached) {
-        view.detached();
-    }
-    var wasBound = view.isBound;
-    if (wasBound) {
-        view.unbind();
-    }
-    view._invalidView = true;
-    return { nextSibling: nextSibling, parent: parent, wasBound: wasBound, wasAttached: wasAttached, bindingContext: bindingContext, overrideContext: overrideContext, container: container };
-}
-function rerenderController(e, type, newViewFactory) {
-    var oldView = e[type];
-    if (!oldView) {
-        // view was removed from the controller in a previous run, ignore
-        return;
-    }
-    if (oldView._invalidView) {
-        // previously re-rendered, ensure controller is set and skip
-        if (oldView._replacementView) {
-            e[type] = oldView._replacementView;
-        }
-        return;
-    }
-    var _a = cleanupView(oldView), nextSibling = _a.nextSibling, parent = _a.parent, wasBound = _a.wasBound, wasAttached = _a.wasAttached, bindingContext = _a.bindingContext, overrideContext = _a.overrideContext, oldViewContainer = _a.container;
-    // create & add view:
-    var newView = oldView._replacementView = e[type] = recreateView(newViewFactory || oldView.viewFactory, oldViewContainer);
-    if (!newView.isBound && wasBound) {
-        newView.bind(bindingContext, overrideContext);
-    }
-    if (nextSibling) {
-        newView.insertNodesBefore(nextSibling);
-    }
-    else {
-        newView.appendNodesTo(parent);
-    }
-    if (!newView.isAttached && wasAttached) {
-        newView.attached();
-    }
-}
-function rerenderMatchingSlotChildren(slot, newViewFactory, originalFactoryTemplate, onlyViews) {
-    var previousChildren = slot.children.slice();
-    var viewsToReplace = previousChildren.filter(function (view) { return (onlyViews && onlyViews.indexOf(view) >= 0) || (view.viewFactory && view.viewFactory.template === originalFactoryTemplate); });
-    var bindingContexts = new Map();
-    var overrideContexts = new Map();
-    var controllers = new Map();
-    viewsToReplace.forEach(function (oldView) {
-        // store contexts because they'll be removed when unbound:
-        bindingContexts.set(oldView, oldView.bindingContext);
-        overrideContexts.set(oldView, oldView.overrideContext);
-        controllers.set(oldView, oldView.controller);
-        if (oldView.isBound) {
-            oldView.unbind();
-        }
-        oldView._invalidView = true;
-    });
-    slot.removeMany(viewsToReplace, false, true);
-    // recreate removed Views in the same place:
-    previousChildren.forEach(function (oldView, index) {
-        if (!oldView._invalidView) {
-            // don't do anything to non-matching Views
-            return;
-        }
-        var bindingContext = bindingContexts.get(oldView);
-        var overrideContext = overrideContexts.get(oldView);
-        var controller = controllers.get(oldView);
-        var view = recreateView(newViewFactory || oldView.viewFactory, oldView.container);
-        // setup _replacementView in case the same view is looped over again
-        oldView._replacementView = view;
-        if (controller) {
-            controller.view = view;
-        }
-        if (!view.isBound) {
-            view.bind(bindingContext, overrideContext);
-        }
-        // indicies should match up and grow as we iterate up
-        slot.insert(index, view);
-    });
-}
-
-
-/***/ }),
-
-/***/ 37:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = traverseController;
-/* unused harmony export traverseBehaviorResource */
-/* unused harmony export traverseViewFactory */
-/* unused harmony export traverseViewResources */
-/* unused harmony export traverseBehaviorInstruction */
-/* unused harmony export traverseViewModel */
-/* unused harmony export traverseRouter */
-/* unused harmony export traverseRouterView */
-/* unused harmony export traverseView */
-/* unused harmony export traverseOverrideContext */
-/* unused harmony export traverseViewSlot */
-var __assign = (this && this.__assign) || Object.assign || function(t) {
-    for (var s, i = 1, n = arguments.length; i < n; i++) {
-        s = arguments[i];
-        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-            t[p] = s[p];
-    }
-    return t;
-};
-/**
- *  traverse interesting places in Controller:
- * - behavior.target (class of ViewModel)
- * - behavior.viewFactory (traverse ViewFactory)
- * - behavior.attributes[array] (?)
- *
- * - viewFactory.instructions[ALL-obj].providers[ALL-arr] (original functions/classes, not instances, things like If)
- * - viewFactory.instructions[ALL-obj].viewFactory
- *
- * - viewFactory.resources (ViewResources)
- *      .bindingBehaviors[name] (instances, can fix up .constructor is class)
- *      .valueConverters[name] (instances, can fix up .constructor is class)
- *
- * - boundProperties[array] ??
- * - container //how can we replace instances in container?
- * - container.children[array<ViewSlot>]?
- * - container
- *      .viewModel? (instance)
- *      .viewResources (ViewResources)
- *
- * - instruction (BehaviorInstruction)
- *      .viewFactory
- *      .viewModel (instance)
- *
- * - scope (View)
- *      .bindingContext (instance)
- *      .children[array<ViewSlot>]
- *      .controller (Controller)
- *      .controllers[array<Controller>]
- *      .overrideContext
- *         .bindingContext? (Instance)
- *         .parentOverrideContext
- *               .bindingContext? (and so on...)
- *      .resources (ViewResources)
- *      .viewFactory (ViewFactory)
- * - view (View)
- * - viewModel (instance or RouterView:)
- *      .overrideContext
- *      .router.viewPorts[ALL-obj]. (RouterView)
- *               .overrideContext
- *               .owningView (View)
- *               .view (View)
- *               .viewSlot (ViewSlot)
- *                     .children[array<View>]
- *                     .bindingContext (instance)
- *                     .overrideContext
- **/
-function traverseController(classOrFunction, controller, info) {
-    var matches = [];
-    if (!controller || info.previouslyTraversed.has(controller))
-        return matches;
-    info.previouslyTraversed.add(controller);
-    matches.push.apply(matches, traverseBehaviorResource(classOrFunction, controller.behavior, __assign({}, info, { parentController: controller, immediateParent: controller, propertyInParent: 'behavior' })).concat(traverseBehaviorInstruction(classOrFunction, controller.instruction, __assign({}, info, { parentController: controller, immediateParent: controller, propertyInParent: 'instruction' })), traverseView(classOrFunction, controller.scope, __assign({}, info, { parentController: controller, immediateParent: controller, propertyInParent: 'scope' })), traverseView(classOrFunction, controller.view, __assign({}, info, { parentController: controller, immediateParent: controller, propertyInParent: 'view' })), traverseViewModel(classOrFunction, controller.viewModel, __assign({}, info, { parentController: controller, immediateParent: controller, propertyInParent: 'viewModel' }))));
-    return matches;
-}
-function traverseBehaviorResource(classOrFunction, behavior, info) {
-    var matches = [];
-    if (!behavior || info.previouslyTraversed.has(behavior))
-        return matches;
-    info.previouslyTraversed.add(behavior);
-    if (behavior.target === classOrFunction) {
-        matches.push(__assign({}, info, { immediateParent: behavior, propertyInParent: 'target' }));
-    }
-    matches.push.apply(matches, traverseViewFactory(classOrFunction, behavior.viewFactory, __assign({}, info, { immediateParent: behavior, propertyInParent: 'viewFactory' })));
-    return matches;
-}
-function traverseViewFactory(classOrFunction, viewFactory, info) {
-    var matches = [];
-    if (!viewFactory || info.previouslyTraversed.has(viewFactory))
-        return matches;
-    info.previouslyTraversed.add(viewFactory);
-    if (viewFactory.instructions) {
-        Object.keys(viewFactory.instructions).forEach(function (instructionKey) {
-            var instruction = viewFactory.instructions[instructionKey];
-            matches.push.apply(matches, traverseViewFactory(classOrFunction, instruction.viewFactory, __assign({}, info, { immediateParent: instruction, propertyInParent: 'viewFactory' })));
-            if (instruction.providers && instruction.providers.length) {
-                instruction.providers.forEach(function (providerKey, index) {
-                    if (providerKey === classOrFunction) {
-                        matches.push(__assign({}, info, { immediateParent: instruction.providers, propertyInParent: index }));
-                    }
-                });
-            }
-        });
-    }
-    if (viewFactory.resources) {
-        matches.push.apply(matches, traverseViewResources(classOrFunction, viewFactory.resources, __assign({}, info, { immediateParent: viewFactory, propertyInParent: 'resources' })));
-    }
-    return matches;
-}
-function traverseViewResources(classOrFunction, viewResources, info) {
-    var matches = [];
-    if (!viewResources || info.previouslyTraversed.has(viewResources))
-        return matches;
-    info.previouslyTraversed.add(viewResources);
-    ['bindingBehaviors', 'valueConverters'].forEach(function (type) {
-        var viewResourceInstances = viewResources[type];
-        if (viewResourceInstances) {
-            Object.keys(viewResourceInstances).forEach(function (key) {
-                var instance = viewResourceInstances[key];
-                if (instance && instance.constructor === classOrFunction) {
-                    matches.push(__assign({}, info, { immediateParent: viewResourceInstances, propertyInParent: key, instance: true }));
-                }
-            });
-        }
-    });
-    matches.push.apply(matches, traverseViewResources(classOrFunction, viewResources.parent, __assign({}, info, { immediateParent: viewResources, propertyInParent: 'parent' })));
-    return matches;
-}
-function traverseBehaviorInstruction(classOrFunction, behaviorInstruction, info) {
-    var matches = [];
-    if (!behaviorInstruction || info.previouslyTraversed.has(behaviorInstruction))
-        return matches;
-    info.previouslyTraversed.add(behaviorInstruction);
-    matches.push.apply(matches, traverseViewFactory(classOrFunction, behaviorInstruction.viewFactory, __assign({}, info, { immediateParent: behaviorInstruction, propertyInParent: 'viewFactory' })).concat(traverseViewModel(classOrFunction, behaviorInstruction.viewModel, __assign({}, info, { immediateParent: behaviorInstruction, propertyInParent: 'viewModel' }))));
-    return matches;
-}
-function traverseViewModel(classOrFunction, viewModel, info) {
-    var matches = [];
-    if (!viewModel)
-        return matches;
-    var duplicate = info.previouslyTraversed.has(viewModel);
-    info.previouslyTraversed.add(viewModel);
-    if (viewModel.constructor === classOrFunction) {
-        matches.push(__assign({}, info, { instance: true, duplicate: duplicate }));
-        if (duplicate) {
-            return matches;
-        }
-    }
-    matches.push.apply(matches, traverseOverrideContext(classOrFunction, viewModel.overrideContext, __assign({}, info, { immediateParent: viewModel, propertyInParent: 'overrideContext' })).concat(traverseRouter(classOrFunction, viewModel.router, __assign({}, info, { immediateParent: viewModel, propertyInParent: 'router' }))));
-    return matches;
-}
-function traverseRouter(classOrFunction, router, info) {
-    var matches = [];
-    if (!router || info.previouslyTraversed.has(router))
-        return matches;
-    info.previouslyTraversed.add(router);
-    if (router.viewPorts) {
-        Object.keys(router.viewPorts).forEach(function (key) {
-            var viewPort = router.viewPorts[key]; // as RouterView;
-            matches.push.apply(// as RouterView;
-            matches, traverseRouterView(classOrFunction, viewPort, __assign({}, info, { immediateParent: router.viewPorts, propertyInParent: key })));
-        });
-    }
-    return matches;
-}
-function traverseRouterView(classOrFunction, routerView, info) {
-    var matches = [];
-    if (!routerView || info.previouslyTraversed.has(routerView))
-        return matches;
-    info.previouslyTraversed.add(routerView);
-    matches.push.apply(matches, traverseOverrideContext(classOrFunction, routerView.overrideContext, __assign({}, info, { immediateParent: routerView, propertyInParent: 'overrideContext' })).concat(traverseView(classOrFunction, routerView.owningView, __assign({}, info, { immediateParent: routerView, propertyInParent: 'owningView' })), traverseView(classOrFunction, routerView.view, __assign({}, info, { immediateParent: routerView, propertyInParent: 'view' })), traverseViewSlot(classOrFunction, routerView.viewSlot, __assign({}, info, { immediateParent: routerView, propertyInParent: 'viewSlot' }))));
-    return matches;
-}
-function traverseView(classOrFunction, view, info) {
-    var matches = [];
-    if (!view || info.previouslyTraversed.has(view))
-        return matches;
-    info.previouslyTraversed.add(view);
-    matches.push.apply(matches, traverseViewModel(classOrFunction, view.bindingContext, __assign({}, info, { relatedView: view, immediateParent: view, propertyInParent: 'bindingContext' })).concat(traverseController(classOrFunction, view.controller, __assign({}, info, { relatedView: view, immediateParent: view, propertyInParent: 'controller' })), traverseOverrideContext(classOrFunction, view.overrideContext, __assign({}, info, { relatedView: view, immediateParent: view, propertyInParent: 'overrideContext' })), traverseViewResources(classOrFunction, view.resources, __assign({}, info, { relatedView: view, immediateParent: view, propertyInParent: 'resources' })), traverseViewFactory(classOrFunction, view.viewFactory, __assign({}, info, { relatedView: view, immediateParent: view, propertyInParent: 'viewFactory' }))));
-    if (view.controllers && view.controllers.length) {
-        view.controllers.forEach(function (controller, index) {
-            matches.push.apply(matches, traverseController(classOrFunction, controller, __assign({}, info, { relatedView: view, immediateParent: view.controllers, propertyInParent: index })));
-        });
-    }
-    if (view.children && view.children.length) {
-        view.children.forEach(function (viewSlot, index) {
-            matches.push.apply(matches, traverseViewSlot(classOrFunction, viewSlot, __assign({}, info, { childOfViewSlot: viewSlot, relatedView: view, immediateParent: view.children, propertyInParent: index })));
-        });
-    }
-    return matches;
-}
-function traverseOverrideContext(classOrFunction, overrideContext, info) {
-    var matches = [];
-    if (!overrideContext || info.previouslyTraversed.has(overrideContext))
-        return matches;
-    info.previouslyTraversed.add(overrideContext);
-    matches.push.apply(matches, traverseViewModel(classOrFunction, overrideContext.bindingContext, __assign({}, info, { immediateParent: overrideContext, propertyInParent: 'bindingContext' })).concat(traverseOverrideContext(classOrFunction, overrideContext.parentOverrideContext, __assign({}, info, { immediateParent: overrideContext, propertyInParent: 'parentOverrideContext' }))));
-    return matches;
-}
-function traverseViewSlot(classOrFunction, viewSlot, info) {
-    var matches = [];
-    if (!viewSlot || info.previouslyTraversed.has(viewSlot))
-        return matches;
-    info.previouslyTraversed.add(viewSlot);
-    matches.push.apply(matches, traverseViewModel(classOrFunction, viewSlot.bindingContext, __assign({}, info, { immediateParent: viewSlot, propertyInParent: 'bindingContext' })).concat(traverseOverrideContext(classOrFunction, viewSlot.overrideContext, __assign({}, info, { immediateParent: viewSlot, propertyInParent: 'overrideContext' }))));
-    if (viewSlot.children && viewSlot.children.length) {
-        viewSlot.children.forEach(function (child, index) {
-            matches.push.apply(matches, traverseView(classOrFunction, child, __assign({}, info, { childOfViewSlot: viewSlot, relatedView: child, immediateParent: viewSlot.children, propertyInParent: index })));
-        });
-    }
-    return matches;
-}
-
-
-/***/ }),
-
-/***/ 38:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* unused harmony export getViewSlots */
-/* unused harmony export anyMatchingChildren */
-/* unused harmony export traverseControllerForTemplates */
-/* harmony export (immutable) */ __webpack_exports__["a"] = getElementsToRerender;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_templating__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__aurelia_hot_module_reload__ = __webpack_require__(15);
-
-
-function getViewSlots(view) {
-    if (view.children && view.children.length) {
-        return view.children.filter(function (viewSlot) {
-            return viewSlot instanceof __WEBPACK_IMPORTED_MODULE_0_aurelia_templating__["e" /* ViewSlot */] && viewSlot.children && viewSlot.children.length;
-        });
-    }
-    return [];
-}
-function anyMatchingChildren(viewSlot, matchingTemplate) {
-    return !!viewSlot.children.find(function (view) { return view.viewFactory && view.viewFactory.template === matchingTemplate; });
-}
-function traverseControllerForTemplates(auController, matchingTemplate) {
-    var matchingViewControllers = [];
-    var matchingScopeControllers = [];
-    var view = (auController.view);
-    var scope = (auController.scope);
-    var slotsWithMatchingViews = [];
-    if (view && view.viewFactory && view.viewFactory.template === matchingTemplate) {
-        matchingViewControllers = [auController]; // [view.controller] // whole View and all of its children will be rendered
-    }
-    else if (scope && scope.controller && scope.viewFactory && scope.viewFactory.template === matchingTemplate) {
-        matchingScopeControllers = [scope.controller];
-    }
-    else {
-        var viewViewSlots = view ? getViewSlots(view) : [];
-        var scopeViewSlots = scope ? getViewSlots(scope) : [];
-        slotsWithMatchingViews = Array.from(new Set(viewViewSlots.concat(scopeViewSlots))).filter(function (slot) { return anyMatchingChildren(slot, matchingTemplate); });
-    }
-    return {
-        matchingViewControllers: matchingViewControllers,
-        matchingScopeControllers: matchingScopeControllers,
-        slotsWithMatchingViews: slotsWithMatchingViews
-    };
-}
-function getElementsToRerender(template) {
-    // get visible elements to re-render:
-    var auElements = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__aurelia_hot_module_reload__["getAuElements"])();
-    var controllers = auElements.filter(function (el) {
-        /* NOTE: viewless components like blur-image do not have el.au.controller set */
-        return el.au && el.au.controller && (el.au.controller.view || el.au.controller.scope);
-    }).map(function (el) { return el.au.controller; });
-    var viewControllers = new Set();
-    var scopeControllers = new Set();
-    var slots = new Set();
-    controllers
-        .forEach(function (controller) {
-        var _a = traverseControllerForTemplates(controller, template), matchingViewControllers = _a.matchingViewControllers, matchingScopeControllers = _a.matchingScopeControllers, slotsWithMatchingViews = _a.slotsWithMatchingViews;
-        matchingViewControllers.forEach(function (controller) { return viewControllers.add(controller); });
-        matchingScopeControllers.forEach(function (controller) { return scopeControllers.add(controller); });
-        slotsWithMatchingViews.forEach(function (slot) { return slots.add(slot); });
-    });
-    var toRender = { viewControllers: viewControllers, scopeControllers: scopeControllers, slots: slots };
-    return toRender;
-}
-
-
-/***/ }),
-
-/***/ 39:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TextTemplateLoader", function() { return TextTemplateLoader; });
-/* harmony export (immutable) */ __webpack_exports__["ensureOriginOnExports"] = ensureOriginOnExports;
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "WebpackLoader", function() { return WebpackLoader; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_metadata__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_aurelia_loader__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_aurelia_pal__ = __webpack_require__(0);
-var __extends = (this && this.__extends) || function (d, b) {
-    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
-    function __() { this.constructor = d; }
-    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-};
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-var __generator = (this && this.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t;
-    return { next: verb(0), "throw": verb(1), "return": verb(2) };
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
-            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [0, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
-            }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
-    }
-};
-
-
-
-/**
-* An implementation of the TemplateLoader interface implemented with text-based loading.
-*/
-var TextTemplateLoader = (function () {
-    function TextTemplateLoader() {
-    }
-    /**
-    * Loads a template.
-    * @param loader The loader that is requesting the template load.
-    * @param entry The TemplateRegistryEntry to load and populate with a template.
-    * @return A promise which resolves when the TemplateRegistryEntry is loaded with a template.
-    */
-    TextTemplateLoader.prototype.loadTemplate = function (loader, entry) {
-        return __awaiter(this, void 0, void 0, function () {
-            var text;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, loader.loadText(entry.address)];
-                    case 1:
-                        text = _a.sent();
-                        entry.template = __WEBPACK_IMPORTED_MODULE_2_aurelia_pal__["c" /* DOM */].createTemplateFromMarkup(text);
-                        return [2 /*return*/];
-                }
-            });
-        });
-    };
-    return TextTemplateLoader;
-}());
-
-function ensureOriginOnExports(moduleExports, moduleId) {
-    var target = moduleExports;
-    var key;
-    var exportedValue;
-    if (target.__useDefault) {
-        target = target.default;
-    }
-    __WEBPACK_IMPORTED_MODULE_0_aurelia_metadata__["c" /* Origin */].set(target, new __WEBPACK_IMPORTED_MODULE_0_aurelia_metadata__["c" /* Origin */](moduleId, 'default'));
-    if (typeof target === 'object') {
-        for (key in target) {
-            exportedValue = target[key];
-            if (typeof exportedValue === 'function') {
-                __WEBPACK_IMPORTED_MODULE_0_aurelia_metadata__["c" /* Origin */].set(exportedValue, new __WEBPACK_IMPORTED_MODULE_0_aurelia_metadata__["c" /* Origin */](moduleId, key));
-            }
-        }
-    }
-    return moduleExports;
-}
-/**
-* A default implementation of the Loader abstraction which works with webpack (extended common-js style).
-*/
-var WebpackLoader = (function (_super) {
-    __extends(WebpackLoader, _super);
-    function WebpackLoader() {
-        var _this = _super.call(this) || this;
-        _this.moduleRegistry = Object.create(null);
-        _this.loaderPlugins = Object.create(null);
-        _this.modulesBeingLoaded = new Map();
-        _this.useTemplateLoader(new TextTemplateLoader());
-        _this.addPlugin('template-registry-entry', {
-            fetch: function (moduleId) { return __awaiter(_this, void 0, void 0, function () {
-                var _this = this;
-                var HmrContext, entry;
-                return __generator(this, function (_a) {
-                    switch (_a.label) {
-                        case 0:
-                            // HMR:
-                            if (true) {
-                                if (!this.hmrContext) {
-                                    HmrContext = __webpack_require__(15).HmrContext;
-                                    this.hmrContext = new HmrContext(this);
-                                }
-                                module.hot.accept(moduleId, function () { return __awaiter(_this, void 0, void 0, function () {
-                                    return __generator(this, function (_a) {
-                                        switch (_a.label) {
-                                            case 0: return [4 /*yield*/, this.hmrContext.handleViewChange(moduleId)];
-                                            case 1:
-                                                _a.sent();
-                                                return [2 /*return*/];
-                                        }
-                                    });
-                                }); });
-                            }
-                            entry = this.getOrCreateTemplateRegistryEntry(moduleId);
-                            if (!!entry.templateIsLoaded) return [3 /*break*/, 2];
-                            return [4 /*yield*/, this.templateLoader.loadTemplate(this, entry)];
-                        case 1:
-                            _a.sent();
-                            _a.label = 2;
-                        case 2: return [2 /*return*/, entry];
-                    }
-                });
-            }); }
-        });
-        __WEBPACK_IMPORTED_MODULE_2_aurelia_pal__["a" /* PLATFORM */].eachModule = function (callback) {
-            var registry = __webpack_require__.c;
-            var cachedModuleIds = Object.getOwnPropertyNames(registry);
-            cachedModuleIds
-                .forEach(function (moduleId) {
-                var moduleExports = registry[moduleId].exports;
-                if (typeof moduleExports === 'object') {
-                    callback(moduleId, moduleExports);
-                }
-            });
-        };
-        return _this;
-    }
-    WebpackLoader.prototype._import = function (address, defaultHMR) {
-        if (defaultHMR === void 0) { defaultHMR = true; }
-        return __awaiter(this, void 0, void 0, function () {
-            var _this = this;
-            var addressParts, moduleId, loaderPlugin, plugin_1, asyncModuleId, callback;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        addressParts = address.split('!');
-                        moduleId = addressParts.splice(addressParts.length - 1, 1)[0];
-                        loaderPlugin = addressParts.length === 1 ? addressParts[0] : null;
-                        if (!loaderPlugin) return [3 /*break*/, 2];
-                        plugin_1 = this.loaderPlugins[loaderPlugin];
-                        if (!plugin_1) {
-                            throw new Error("Plugin " + loaderPlugin + " is not registered in the loader.");
-                        }
-                        if (module.hot && plugin_1.hot) {
-                            module.hot.accept(moduleId, function () { return plugin_1.hot(moduleId); });
-                        }
-                        return [4 /*yield*/, plugin_1.fetch(moduleId)];
-                    case 1: return [2 /*return*/, _a.sent()];
-                    case 2:
-                        if (__webpack_require__.m[moduleId]) {
-                            if (defaultHMR && module.hot && this.hmrContext) {
-                                module.hot.accept(moduleId, function () { return _this.hmrContext.handleModuleChange(moduleId, module.hot); });
-                            }
-                            return [2 /*return*/, __webpack_require__(moduleId)];
-                        }
-                        asyncModuleId = "async!" + moduleId;
-                        if (!__webpack_require__.m[asyncModuleId]) return [3 /*break*/, 4];
-                        if (defaultHMR && module.hot && this.hmrContext) {
-                            module.hot.accept(moduleId, function () { return _this.hmrContext.handleModuleChange(moduleId, module.hot); });
-                            module.hot.accept(asyncModuleId, function () { });
-                        }
-                        callback = __webpack_require__(asyncModuleId);
-                        return [4 /*yield*/, new Promise(callback)];
-                    case 3: return [2 /*return*/, _a.sent()];
-                    case 4: throw new Error("Unable to find module with ID: " + moduleId);
-                }
-            });
-        });
-    };
-    /**
-    * Maps a module id to a source.
-    * @param id The module id.
-    * @param source The source to map the module to.
-    */
-    WebpackLoader.prototype.map = function (id, source) { };
-    /**
-    * Normalizes a module id.
-    * @param moduleId The module id to normalize.
-    * @param relativeTo What the module id should be normalized relative to.
-    * @return The normalized module id.
-    */
-    WebpackLoader.prototype.normalizeSync = function (moduleId, relativeTo) {
-        return moduleId;
-    };
-    /**
-    * Normalizes a module id.
-    * @param moduleId The module id to normalize.
-    * @param relativeTo What the module id should be normalized relative to.
-    * @return The normalized module id.
-    */
-    WebpackLoader.prototype.normalize = function (moduleId, relativeTo) {
-        return Promise.resolve(moduleId);
-    };
-    /**
-    * Instructs the loader to use a specific TemplateLoader instance for loading templates
-    * @param templateLoader The instance of TemplateLoader to use for loading templates.
-    */
-    WebpackLoader.prototype.useTemplateLoader = function (templateLoader) {
-        this.templateLoader = templateLoader;
-    };
-    /**
-    * Loads a collection of modules.
-    * @param ids The set of module ids to load.
-    * @return A Promise for an array of loaded modules.
-    */
-    WebpackLoader.prototype.loadAllModules = function (ids) {
-        var _this = this;
-        return Promise.all(ids.map(function (id) { return _this.loadModule(id); }));
-    };
-    /**
-    * Loads a module.
-    * @param moduleId The module ID to load.
-    * @return A Promise for the loaded module.
-    */
-    WebpackLoader.prototype.loadModule = function (moduleId, defaultHMR) {
-        if (defaultHMR === void 0) { defaultHMR = true; }
-        return __awaiter(this, void 0, void 0, function () {
-            var existing, beingLoaded, moduleExports;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        existing = this.moduleRegistry[moduleId];
-                        if (existing) {
-                            return [2 /*return*/, existing];
-                        }
-                        beingLoaded = this.modulesBeingLoaded.get(moduleId);
-                        if (beingLoaded) {
-                            return [2 /*return*/, beingLoaded];
-                        }
-                        beingLoaded = this._import(moduleId, defaultHMR);
-                        this.modulesBeingLoaded.set(moduleId, beingLoaded);
-                        return [4 /*yield*/, beingLoaded];
-                    case 1:
-                        moduleExports = _a.sent();
-                        this.moduleRegistry[moduleId] = ensureOriginOnExports(moduleExports, moduleId);
-                        this.modulesBeingLoaded.delete(moduleId);
-                        return [2 /*return*/, moduleExports];
-                }
-            });
-        });
-    };
-    /**
-    * Loads a template.
-    * @param url The url of the template to load.
-    * @return A Promise for a TemplateRegistryEntry containing the template.
-    */
-    WebpackLoader.prototype.loadTemplate = function (url) {
-        return this.loadModule(this.applyPluginToUrl(url, 'template-registry-entry'), false);
-    };
-    /**
-    * Loads a text-based resource.
-    * @param url The url of the text file to load.
-    * @return A Promise for text content.
-    */
-    WebpackLoader.prototype.loadText = function (url) {
-        return __awaiter(this, void 0, void 0, function () {
-            var result;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.loadModule(url, false)];
-                    case 1:
-                        result = _a.sent();
-                        if (result instanceof Array && result[0] instanceof Array && result.hasOwnProperty('toString')) {
-                            // we're dealing with a file loaded using the css-loader:
-                            return [2 /*return*/, result.toString()];
-                        }
-                        return [2 /*return*/, result];
-                }
-            });
-        });
-    };
-    /**
-    * Alters a module id so that it includes a plugin loader.
-    * @param url The url of the module to load.
-    * @param pluginName The plugin to apply to the module id.
-    * @return The plugin-based module id.
-    */
-    WebpackLoader.prototype.applyPluginToUrl = function (url, pluginName) {
-        return pluginName + "!" + url;
-    };
-    /**
-    * Registers a plugin with the loader.
-    * @param pluginName The name of the plugin.
-    * @param implementation The plugin implementation.
-    */
-    WebpackLoader.prototype.addPlugin = function (pluginName, implementation) {
-        this.loaderPlugins[pluginName] = implementation;
-    };
-    return WebpackLoader;
-}(__WEBPACK_IMPORTED_MODULE_1_aurelia_loader__["a" /* Loader */]));
-
-__WEBPACK_IMPORTED_MODULE_2_aurelia_pal__["a" /* PLATFORM */].Loader = WebpackLoader;
-
-
-/***/ }),
-
-/***/ 4:
+/***/ 5:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -17633,7 +18529,738 @@ protocol.create = function (name, options) {
 
 /***/ }),
 
-/***/ 40:
+/***/ 50:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* unused harmony export recreateView */
+/* unused harmony export cleanupView */
+/* harmony export (immutable) */ __webpack_exports__["b"] = rerenderController;
+/* harmony export (immutable) */ __webpack_exports__["a"] = rerenderMatchingSlotChildren;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_templating__ = __webpack_require__(1);
+
+function recreateView(viewFactory, oldViewContainer) {
+    var parentContainer = oldViewContainer.parent || oldViewContainer;
+    var targetInstruction = oldViewContainer.get(__WEBPACK_IMPORTED_MODULE_0_aurelia_templating__["n" /* TargetInstruction */]);
+    // const targetInstruction = container.get(TargetInstruction) as TargetInstruction;
+    var factoryCreateInstruction = targetInstruction.elementInstruction || { partReplacements: null };
+    // let factoryCreateInstruction = ({partReplacements: null} as BehaviorInstruction);
+    // console.log(`new element instruction`, targetInstruction, factoryCreateInstruction);
+    var newContainer = parentContainer.createChild();
+    // const newContainer = oldViewContainer;
+    var newView = viewFactory.create(newContainer, factoryCreateInstruction);
+    newView._isUserControlled = true;
+    return newView;
+}
+function cleanupView(view) {
+    var firstChild = view.firstChild;
+    var lastChild = view.lastChild;
+    var nextSibling = lastChild.nextSibling;
+    var parent = firstChild.parentElement;
+    var bindingContext = view.bindingContext, overrideContext = view.overrideContext, container = view.container;
+    view.removeNodes();
+    var wasAttached = view.isAttached;
+    if (wasAttached) {
+        view.detached();
+    }
+    var wasBound = view.isBound;
+    if (wasBound) {
+        view.unbind();
+    }
+    view._invalidView = true;
+    return { nextSibling: nextSibling, parent: parent, wasBound: wasBound, wasAttached: wasAttached, bindingContext: bindingContext, overrideContext: overrideContext, container: container };
+}
+function rerenderController(e, type, newViewFactory) {
+    var oldView = e[type];
+    if (!oldView) {
+        // view was removed from the controller in a previous run, ignore
+        return;
+    }
+    if (oldView._invalidView) {
+        // previously re-rendered, ensure controller is set and skip
+        if (oldView._replacementView) {
+            e[type] = oldView._replacementView;
+        }
+        return;
+    }
+    var _a = cleanupView(oldView), nextSibling = _a.nextSibling, parent = _a.parent, wasBound = _a.wasBound, wasAttached = _a.wasAttached, bindingContext = _a.bindingContext, overrideContext = _a.overrideContext, oldViewContainer = _a.container;
+    // create & add view:
+    var newView = oldView._replacementView = e[type] = recreateView(newViewFactory || oldView.viewFactory, oldViewContainer);
+    if (!newView.isBound && wasBound) {
+        newView.bind(bindingContext, overrideContext);
+    }
+    if (nextSibling) {
+        newView.insertNodesBefore(nextSibling);
+    }
+    else {
+        newView.appendNodesTo(parent);
+    }
+    if (!newView.isAttached && wasAttached) {
+        newView.attached();
+    }
+}
+function rerenderMatchingSlotChildren(slot, newViewFactory, originalFactoryTemplate, onlyViews) {
+    var previousChildren = slot.children.slice();
+    var viewsToReplace = previousChildren.filter(function (view) { return (onlyViews && onlyViews.indexOf(view) >= 0) || (view.viewFactory && view.viewFactory.template === originalFactoryTemplate); });
+    var bindingContexts = new Map();
+    var overrideContexts = new Map();
+    var controllers = new Map();
+    viewsToReplace.forEach(function (oldView) {
+        // store contexts because they'll be removed when unbound:
+        bindingContexts.set(oldView, oldView.bindingContext);
+        overrideContexts.set(oldView, oldView.overrideContext);
+        controllers.set(oldView, oldView.controller);
+        if (oldView.isBound) {
+            oldView.unbind();
+        }
+        oldView._invalidView = true;
+    });
+    slot.removeMany(viewsToReplace, false, true);
+    // recreate removed Views in the same place:
+    previousChildren.forEach(function (oldView, index) {
+        if (!oldView._invalidView) {
+            // don't do anything to non-matching Views
+            return;
+        }
+        var bindingContext = bindingContexts.get(oldView);
+        var overrideContext = overrideContexts.get(oldView);
+        var controller = controllers.get(oldView);
+        var view = recreateView(newViewFactory || oldView.viewFactory, oldView.container);
+        // setup _replacementView in case the same view is looped over again
+        oldView._replacementView = view;
+        if (controller) {
+            controller.view = view;
+        }
+        if (!view.isBound) {
+            view.bind(bindingContext, overrideContext);
+        }
+        // indicies should match up and grow as we iterate up
+        slot.insert(index, view);
+    });
+}
+
+
+/***/ }),
+
+/***/ 51:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = traverseController;
+/* unused harmony export traverseBehaviorResource */
+/* unused harmony export traverseViewFactory */
+/* unused harmony export traverseViewResources */
+/* unused harmony export traverseBehaviorInstruction */
+/* unused harmony export traverseViewModel */
+/* unused harmony export traverseRouter */
+/* unused harmony export traverseRouterView */
+/* unused harmony export traverseView */
+/* unused harmony export traverseOverrideContext */
+/* unused harmony export traverseViewSlot */
+var __assign = (this && this.__assign) || Object.assign || function(t) {
+    for (var s, i = 1, n = arguments.length; i < n; i++) {
+        s = arguments[i];
+        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+            t[p] = s[p];
+    }
+    return t;
+};
+/**
+ *  traverse interesting places in Controller:
+ * - behavior.target (class of ViewModel)
+ * - behavior.viewFactory (traverse ViewFactory)
+ * - behavior.attributes[array] (?)
+ *
+ * - viewFactory.instructions[ALL-obj].providers[ALL-arr] (original functions/classes, not instances, things like If)
+ * - viewFactory.instructions[ALL-obj].viewFactory
+ *
+ * - viewFactory.resources (ViewResources)
+ *      .bindingBehaviors[name] (instances, can fix up .constructor is class)
+ *      .valueConverters[name] (instances, can fix up .constructor is class)
+ *
+ * - boundProperties[array] ??
+ * - container //how can we replace instances in container?
+ * - container.children[array<ViewSlot>]?
+ * - container
+ *      .viewModel? (instance)
+ *      .viewResources (ViewResources)
+ *
+ * - instruction (BehaviorInstruction)
+ *      .viewFactory
+ *      .viewModel (instance)
+ *
+ * - scope (View)
+ *      .bindingContext (instance)
+ *      .children[array<ViewSlot>]
+ *      .controller (Controller)
+ *      .controllers[array<Controller>]
+ *      .overrideContext
+ *         .bindingContext? (Instance)
+ *         .parentOverrideContext
+ *               .bindingContext? (and so on...)
+ *      .resources (ViewResources)
+ *      .viewFactory (ViewFactory)
+ * - view (View)
+ * - viewModel (instance or RouterView:)
+ *      .overrideContext
+ *      .router.viewPorts[ALL-obj]. (RouterView)
+ *               .overrideContext
+ *               .owningView (View)
+ *               .view (View)
+ *               .viewSlot (ViewSlot)
+ *                     .children[array<View>]
+ *                     .bindingContext (instance)
+ *                     .overrideContext
+ **/
+function traverseController(classOrFunction, controller, info) {
+    var matches = [];
+    if (!controller || info.previouslyTraversed.has(controller))
+        return matches;
+    info.previouslyTraversed.add(controller);
+    matches.push.apply(matches, traverseBehaviorResource(classOrFunction, controller.behavior, __assign({}, info, { parentController: controller, immediateParent: controller, propertyInParent: 'behavior' })).concat(traverseBehaviorInstruction(classOrFunction, controller.instruction, __assign({}, info, { parentController: controller, immediateParent: controller, propertyInParent: 'instruction' })), traverseView(classOrFunction, controller.scope, __assign({}, info, { parentController: controller, immediateParent: controller, propertyInParent: 'scope' })), traverseView(classOrFunction, controller.view, __assign({}, info, { parentController: controller, immediateParent: controller, propertyInParent: 'view' })), traverseViewModel(classOrFunction, controller.viewModel, __assign({}, info, { parentController: controller, immediateParent: controller, propertyInParent: 'viewModel' }))));
+    return matches;
+}
+function traverseBehaviorResource(classOrFunction, behavior, info) {
+    var matches = [];
+    if (!behavior || info.previouslyTraversed.has(behavior))
+        return matches;
+    info.previouslyTraversed.add(behavior);
+    if (behavior.target === classOrFunction) {
+        matches.push(__assign({}, info, { immediateParent: behavior, propertyInParent: 'target' }));
+    }
+    matches.push.apply(matches, traverseViewFactory(classOrFunction, behavior.viewFactory, __assign({}, info, { immediateParent: behavior, propertyInParent: 'viewFactory' })));
+    return matches;
+}
+function traverseViewFactory(classOrFunction, viewFactory, info) {
+    var matches = [];
+    if (!viewFactory || info.previouslyTraversed.has(viewFactory))
+        return matches;
+    info.previouslyTraversed.add(viewFactory);
+    if (viewFactory.instructions) {
+        Object.keys(viewFactory.instructions).forEach(function (instructionKey) {
+            var instruction = viewFactory.instructions[instructionKey];
+            matches.push.apply(matches, traverseViewFactory(classOrFunction, instruction.viewFactory, __assign({}, info, { immediateParent: instruction, propertyInParent: 'viewFactory' })));
+            if (instruction.providers && instruction.providers.length) {
+                instruction.providers.forEach(function (providerKey, index) {
+                    if (providerKey === classOrFunction) {
+                        matches.push(__assign({}, info, { immediateParent: instruction.providers, propertyInParent: index }));
+                    }
+                });
+            }
+        });
+    }
+    if (viewFactory.resources) {
+        matches.push.apply(matches, traverseViewResources(classOrFunction, viewFactory.resources, __assign({}, info, { immediateParent: viewFactory, propertyInParent: 'resources' })));
+    }
+    return matches;
+}
+function traverseViewResources(classOrFunction, viewResources, info) {
+    var matches = [];
+    if (!viewResources || info.previouslyTraversed.has(viewResources))
+        return matches;
+    info.previouslyTraversed.add(viewResources);
+    ['bindingBehaviors', 'valueConverters'].forEach(function (type) {
+        var viewResourceInstances = viewResources[type];
+        if (viewResourceInstances) {
+            Object.keys(viewResourceInstances).forEach(function (key) {
+                var instance = viewResourceInstances[key];
+                if (instance && instance.constructor === classOrFunction) {
+                    matches.push(__assign({}, info, { immediateParent: viewResourceInstances, propertyInParent: key, instance: true }));
+                }
+            });
+        }
+    });
+    matches.push.apply(matches, traverseViewResources(classOrFunction, viewResources.parent, __assign({}, info, { immediateParent: viewResources, propertyInParent: 'parent' })));
+    return matches;
+}
+function traverseBehaviorInstruction(classOrFunction, behaviorInstruction, info) {
+    var matches = [];
+    if (!behaviorInstruction || info.previouslyTraversed.has(behaviorInstruction))
+        return matches;
+    info.previouslyTraversed.add(behaviorInstruction);
+    matches.push.apply(matches, traverseViewFactory(classOrFunction, behaviorInstruction.viewFactory, __assign({}, info, { immediateParent: behaviorInstruction, propertyInParent: 'viewFactory' })).concat(traverseViewModel(classOrFunction, behaviorInstruction.viewModel, __assign({}, info, { immediateParent: behaviorInstruction, propertyInParent: 'viewModel' }))));
+    return matches;
+}
+function traverseViewModel(classOrFunction, viewModel, info) {
+    var matches = [];
+    if (!viewModel)
+        return matches;
+    var duplicate = info.previouslyTraversed.has(viewModel);
+    info.previouslyTraversed.add(viewModel);
+    if (viewModel.constructor === classOrFunction) {
+        matches.push(__assign({}, info, { instance: true, duplicate: duplicate }));
+        if (duplicate) {
+            return matches;
+        }
+    }
+    matches.push.apply(matches, traverseOverrideContext(classOrFunction, viewModel.overrideContext, __assign({}, info, { immediateParent: viewModel, propertyInParent: 'overrideContext' })).concat(traverseRouter(classOrFunction, viewModel.router, __assign({}, info, { immediateParent: viewModel, propertyInParent: 'router' }))));
+    return matches;
+}
+function traverseRouter(classOrFunction, router, info) {
+    var matches = [];
+    if (!router || info.previouslyTraversed.has(router))
+        return matches;
+    info.previouslyTraversed.add(router);
+    if (router.viewPorts) {
+        Object.keys(router.viewPorts).forEach(function (key) {
+            var viewPort = router.viewPorts[key]; // as RouterView;
+            matches.push.apply(// as RouterView;
+            matches, traverseRouterView(classOrFunction, viewPort, __assign({}, info, { immediateParent: router.viewPorts, propertyInParent: key })));
+        });
+    }
+    return matches;
+}
+function traverseRouterView(classOrFunction, routerView, info) {
+    var matches = [];
+    if (!routerView || info.previouslyTraversed.has(routerView))
+        return matches;
+    info.previouslyTraversed.add(routerView);
+    matches.push.apply(matches, traverseOverrideContext(classOrFunction, routerView.overrideContext, __assign({}, info, { immediateParent: routerView, propertyInParent: 'overrideContext' })).concat(traverseView(classOrFunction, routerView.owningView, __assign({}, info, { immediateParent: routerView, propertyInParent: 'owningView' })), traverseView(classOrFunction, routerView.view, __assign({}, info, { immediateParent: routerView, propertyInParent: 'view' })), traverseViewSlot(classOrFunction, routerView.viewSlot, __assign({}, info, { immediateParent: routerView, propertyInParent: 'viewSlot' }))));
+    return matches;
+}
+function traverseView(classOrFunction, view, info) {
+    var matches = [];
+    if (!view || info.previouslyTraversed.has(view))
+        return matches;
+    info.previouslyTraversed.add(view);
+    matches.push.apply(matches, traverseViewModel(classOrFunction, view.bindingContext, __assign({}, info, { relatedView: view, immediateParent: view, propertyInParent: 'bindingContext' })).concat(traverseController(classOrFunction, view.controller, __assign({}, info, { relatedView: view, immediateParent: view, propertyInParent: 'controller' })), traverseOverrideContext(classOrFunction, view.overrideContext, __assign({}, info, { relatedView: view, immediateParent: view, propertyInParent: 'overrideContext' })), traverseViewResources(classOrFunction, view.resources, __assign({}, info, { relatedView: view, immediateParent: view, propertyInParent: 'resources' })), traverseViewFactory(classOrFunction, view.viewFactory, __assign({}, info, { relatedView: view, immediateParent: view, propertyInParent: 'viewFactory' }))));
+    if (view.controllers && view.controllers.length) {
+        view.controllers.forEach(function (controller, index) {
+            matches.push.apply(matches, traverseController(classOrFunction, controller, __assign({}, info, { relatedView: view, immediateParent: view.controllers, propertyInParent: index })));
+        });
+    }
+    if (view.children && view.children.length) {
+        view.children.forEach(function (viewSlot, index) {
+            matches.push.apply(matches, traverseViewSlot(classOrFunction, viewSlot, __assign({}, info, { childOfViewSlot: viewSlot, relatedView: view, immediateParent: view.children, propertyInParent: index })));
+        });
+    }
+    return matches;
+}
+function traverseOverrideContext(classOrFunction, overrideContext, info) {
+    var matches = [];
+    if (!overrideContext || info.previouslyTraversed.has(overrideContext))
+        return matches;
+    info.previouslyTraversed.add(overrideContext);
+    matches.push.apply(matches, traverseViewModel(classOrFunction, overrideContext.bindingContext, __assign({}, info, { immediateParent: overrideContext, propertyInParent: 'bindingContext' })).concat(traverseOverrideContext(classOrFunction, overrideContext.parentOverrideContext, __assign({}, info, { immediateParent: overrideContext, propertyInParent: 'parentOverrideContext' }))));
+    return matches;
+}
+function traverseViewSlot(classOrFunction, viewSlot, info) {
+    var matches = [];
+    if (!viewSlot || info.previouslyTraversed.has(viewSlot))
+        return matches;
+    info.previouslyTraversed.add(viewSlot);
+    matches.push.apply(matches, traverseViewModel(classOrFunction, viewSlot.bindingContext, __assign({}, info, { immediateParent: viewSlot, propertyInParent: 'bindingContext' })).concat(traverseOverrideContext(classOrFunction, viewSlot.overrideContext, __assign({}, info, { immediateParent: viewSlot, propertyInParent: 'overrideContext' }))));
+    if (viewSlot.children && viewSlot.children.length) {
+        viewSlot.children.forEach(function (child, index) {
+            matches.push.apply(matches, traverseView(classOrFunction, child, __assign({}, info, { childOfViewSlot: viewSlot, relatedView: child, immediateParent: viewSlot.children, propertyInParent: index })));
+        });
+    }
+    return matches;
+}
+
+
+/***/ }),
+
+/***/ 52:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* unused harmony export getViewSlots */
+/* unused harmony export anyMatchingChildren */
+/* unused harmony export traverseControllerForTemplates */
+/* harmony export (immutable) */ __webpack_exports__["a"] = getElementsToRerender;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_templating__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__aurelia_hot_module_reload__ = __webpack_require__(23);
+
+
+function getViewSlots(view) {
+    if (view.children && view.children.length) {
+        return view.children.filter(function (viewSlot) {
+            return viewSlot instanceof __WEBPACK_IMPORTED_MODULE_0_aurelia_templating__["e" /* ViewSlot */] && viewSlot.children && viewSlot.children.length;
+        });
+    }
+    return [];
+}
+function anyMatchingChildren(viewSlot, matchingTemplate) {
+    return !!viewSlot.children.find(function (view) { return view.viewFactory && view.viewFactory.template === matchingTemplate; });
+}
+function traverseControllerForTemplates(auController, matchingTemplate) {
+    var matchingViewControllers = [];
+    var matchingScopeControllers = [];
+    var view = (auController.view);
+    var scope = (auController.scope);
+    var slotsWithMatchingViews = [];
+    if (view && view.viewFactory && view.viewFactory.template === matchingTemplate) {
+        matchingViewControllers = [auController]; // [view.controller] // whole View and all of its children will be rendered
+    }
+    else if (scope && scope.controller && scope.viewFactory && scope.viewFactory.template === matchingTemplate) {
+        matchingScopeControllers = [scope.controller];
+    }
+    else {
+        var viewViewSlots = view ? getViewSlots(view) : [];
+        var scopeViewSlots = scope ? getViewSlots(scope) : [];
+        slotsWithMatchingViews = Array.from(new Set(viewViewSlots.concat(scopeViewSlots))).filter(function (slot) { return anyMatchingChildren(slot, matchingTemplate); });
+    }
+    return {
+        matchingViewControllers: matchingViewControllers,
+        matchingScopeControllers: matchingScopeControllers,
+        slotsWithMatchingViews: slotsWithMatchingViews
+    };
+}
+function getElementsToRerender(template) {
+    // get visible elements to re-render:
+    var auElements = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__aurelia_hot_module_reload__["getAuElements"])();
+    var controllers = auElements.filter(function (el) {
+        /* NOTE: viewless components like blur-image do not have el.au.controller set */
+        return el.au && el.au.controller && (el.au.controller.view || el.au.controller.scope);
+    }).map(function (el) { return el.au.controller; });
+    var viewControllers = new Set();
+    var scopeControllers = new Set();
+    var slots = new Set();
+    controllers
+        .forEach(function (controller) {
+        var _a = traverseControllerForTemplates(controller, template), matchingViewControllers = _a.matchingViewControllers, matchingScopeControllers = _a.matchingScopeControllers, slotsWithMatchingViews = _a.slotsWithMatchingViews;
+        matchingViewControllers.forEach(function (controller) { return viewControllers.add(controller); });
+        matchingScopeControllers.forEach(function (controller) { return scopeControllers.add(controller); });
+        slotsWithMatchingViews.forEach(function (slot) { return slots.add(slot); });
+    });
+    var toRender = { viewControllers: viewControllers, scopeControllers: scopeControllers, slots: slots };
+    return toRender;
+}
+
+
+/***/ }),
+
+/***/ 53:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TextTemplateLoader", function() { return TextTemplateLoader; });
+/* harmony export (immutable) */ __webpack_exports__["ensureOriginOnExports"] = ensureOriginOnExports;
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "WebpackLoader", function() { return WebpackLoader; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_metadata__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_aurelia_loader__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_aurelia_pal__ = __webpack_require__(0);
+var __extends = (this && this.__extends) || function (d, b) {
+    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+};
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t;
+    return { next: verb(0), "throw": verb(1), "return": verb(2) };
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [0, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+
+
+
+/**
+* An implementation of the TemplateLoader interface implemented with text-based loading.
+*/
+var TextTemplateLoader = (function () {
+    function TextTemplateLoader() {
+    }
+    /**
+    * Loads a template.
+    * @param loader The loader that is requesting the template load.
+    * @param entry The TemplateRegistryEntry to load and populate with a template.
+    * @return A promise which resolves when the TemplateRegistryEntry is loaded with a template.
+    */
+    TextTemplateLoader.prototype.loadTemplate = function (loader, entry) {
+        return __awaiter(this, void 0, void 0, function () {
+            var text;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, loader.loadText(entry.address)];
+                    case 1:
+                        text = _a.sent();
+                        entry.template = __WEBPACK_IMPORTED_MODULE_2_aurelia_pal__["c" /* DOM */].createTemplateFromMarkup(text);
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    return TextTemplateLoader;
+}());
+
+function ensureOriginOnExports(moduleExports, moduleId) {
+    var target = moduleExports;
+    var key;
+    var exportedValue;
+    if (target.__useDefault) {
+        target = target.default;
+    }
+    __WEBPACK_IMPORTED_MODULE_0_aurelia_metadata__["c" /* Origin */].set(target, new __WEBPACK_IMPORTED_MODULE_0_aurelia_metadata__["c" /* Origin */](moduleId, 'default'));
+    if (typeof target === 'object') {
+        for (key in target) {
+            exportedValue = target[key];
+            if (typeof exportedValue === 'function') {
+                __WEBPACK_IMPORTED_MODULE_0_aurelia_metadata__["c" /* Origin */].set(exportedValue, new __WEBPACK_IMPORTED_MODULE_0_aurelia_metadata__["c" /* Origin */](moduleId, key));
+            }
+        }
+    }
+    return moduleExports;
+}
+/**
+* A default implementation of the Loader abstraction which works with webpack (extended common-js style).
+*/
+var WebpackLoader = (function (_super) {
+    __extends(WebpackLoader, _super);
+    function WebpackLoader() {
+        var _this = _super.call(this) || this;
+        _this.moduleRegistry = Object.create(null);
+        _this.loaderPlugins = Object.create(null);
+        _this.modulesBeingLoaded = new Map();
+        _this.useTemplateLoader(new TextTemplateLoader());
+        _this.addPlugin('template-registry-entry', {
+            fetch: function (moduleId) { return __awaiter(_this, void 0, void 0, function () {
+                var _this = this;
+                var HmrContext, entry;
+                return __generator(this, function (_a) {
+                    switch (_a.label) {
+                        case 0:
+                            // HMR:
+                            if (true) {
+                                if (!this.hmrContext) {
+                                    HmrContext = __webpack_require__(23).HmrContext;
+                                    this.hmrContext = new HmrContext(this);
+                                }
+                                module.hot.accept(moduleId, function () { return __awaiter(_this, void 0, void 0, function () {
+                                    return __generator(this, function (_a) {
+                                        switch (_a.label) {
+                                            case 0: return [4 /*yield*/, this.hmrContext.handleViewChange(moduleId)];
+                                            case 1:
+                                                _a.sent();
+                                                return [2 /*return*/];
+                                        }
+                                    });
+                                }); });
+                            }
+                            entry = this.getOrCreateTemplateRegistryEntry(moduleId);
+                            if (!!entry.templateIsLoaded) return [3 /*break*/, 2];
+                            return [4 /*yield*/, this.templateLoader.loadTemplate(this, entry)];
+                        case 1:
+                            _a.sent();
+                            _a.label = 2;
+                        case 2: return [2 /*return*/, entry];
+                    }
+                });
+            }); }
+        });
+        __WEBPACK_IMPORTED_MODULE_2_aurelia_pal__["a" /* PLATFORM */].eachModule = function (callback) {
+            var registry = __webpack_require__.c;
+            var cachedModuleIds = Object.getOwnPropertyNames(registry);
+            cachedModuleIds
+                .forEach(function (moduleId) {
+                var moduleExports = registry[moduleId].exports;
+                if (typeof moduleExports === 'object') {
+                    callback(moduleId, moduleExports);
+                }
+            });
+        };
+        return _this;
+    }
+    WebpackLoader.prototype._import = function (address, defaultHMR) {
+        if (defaultHMR === void 0) { defaultHMR = true; }
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            var addressParts, moduleId, loaderPlugin, plugin_1, asyncModuleId, callback;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        addressParts = address.split('!');
+                        moduleId = addressParts.splice(addressParts.length - 1, 1)[0];
+                        loaderPlugin = addressParts.length === 1 ? addressParts[0] : null;
+                        if (!loaderPlugin) return [3 /*break*/, 2];
+                        plugin_1 = this.loaderPlugins[loaderPlugin];
+                        if (!plugin_1) {
+                            throw new Error("Plugin " + loaderPlugin + " is not registered in the loader.");
+                        }
+                        if (module.hot && plugin_1.hot) {
+                            module.hot.accept(moduleId, function () { return plugin_1.hot(moduleId); });
+                        }
+                        return [4 /*yield*/, plugin_1.fetch(moduleId)];
+                    case 1: return [2 /*return*/, _a.sent()];
+                    case 2:
+                        if (__webpack_require__.m[moduleId]) {
+                            if (defaultHMR && module.hot && this.hmrContext) {
+                                module.hot.accept(moduleId, function () { return _this.hmrContext.handleModuleChange(moduleId, module.hot); });
+                            }
+                            return [2 /*return*/, __webpack_require__(moduleId)];
+                        }
+                        asyncModuleId = "async!" + moduleId;
+                        if (!__webpack_require__.m[asyncModuleId]) return [3 /*break*/, 4];
+                        if (defaultHMR && module.hot && this.hmrContext) {
+                            module.hot.accept(moduleId, function () { return _this.hmrContext.handleModuleChange(moduleId, module.hot); });
+                            module.hot.accept(asyncModuleId, function () { });
+                        }
+                        callback = __webpack_require__(asyncModuleId);
+                        return [4 /*yield*/, new Promise(callback)];
+                    case 3: return [2 /*return*/, _a.sent()];
+                    case 4: throw new Error("Unable to find module with ID: " + moduleId);
+                }
+            });
+        });
+    };
+    /**
+    * Maps a module id to a source.
+    * @param id The module id.
+    * @param source The source to map the module to.
+    */
+    WebpackLoader.prototype.map = function (id, source) { };
+    /**
+    * Normalizes a module id.
+    * @param moduleId The module id to normalize.
+    * @param relativeTo What the module id should be normalized relative to.
+    * @return The normalized module id.
+    */
+    WebpackLoader.prototype.normalizeSync = function (moduleId, relativeTo) {
+        return moduleId;
+    };
+    /**
+    * Normalizes a module id.
+    * @param moduleId The module id to normalize.
+    * @param relativeTo What the module id should be normalized relative to.
+    * @return The normalized module id.
+    */
+    WebpackLoader.prototype.normalize = function (moduleId, relativeTo) {
+        return Promise.resolve(moduleId);
+    };
+    /**
+    * Instructs the loader to use a specific TemplateLoader instance for loading templates
+    * @param templateLoader The instance of TemplateLoader to use for loading templates.
+    */
+    WebpackLoader.prototype.useTemplateLoader = function (templateLoader) {
+        this.templateLoader = templateLoader;
+    };
+    /**
+    * Loads a collection of modules.
+    * @param ids The set of module ids to load.
+    * @return A Promise for an array of loaded modules.
+    */
+    WebpackLoader.prototype.loadAllModules = function (ids) {
+        var _this = this;
+        return Promise.all(ids.map(function (id) { return _this.loadModule(id); }));
+    };
+    /**
+    * Loads a module.
+    * @param moduleId The module ID to load.
+    * @return A Promise for the loaded module.
+    */
+    WebpackLoader.prototype.loadModule = function (moduleId, defaultHMR) {
+        if (defaultHMR === void 0) { defaultHMR = true; }
+        return __awaiter(this, void 0, void 0, function () {
+            var existing, beingLoaded, moduleExports;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        existing = this.moduleRegistry[moduleId];
+                        if (existing) {
+                            return [2 /*return*/, existing];
+                        }
+                        beingLoaded = this.modulesBeingLoaded.get(moduleId);
+                        if (beingLoaded) {
+                            return [2 /*return*/, beingLoaded];
+                        }
+                        beingLoaded = this._import(moduleId, defaultHMR);
+                        this.modulesBeingLoaded.set(moduleId, beingLoaded);
+                        return [4 /*yield*/, beingLoaded];
+                    case 1:
+                        moduleExports = _a.sent();
+                        this.moduleRegistry[moduleId] = ensureOriginOnExports(moduleExports, moduleId);
+                        this.modulesBeingLoaded.delete(moduleId);
+                        return [2 /*return*/, moduleExports];
+                }
+            });
+        });
+    };
+    /**
+    * Loads a template.
+    * @param url The url of the template to load.
+    * @return A Promise for a TemplateRegistryEntry containing the template.
+    */
+    WebpackLoader.prototype.loadTemplate = function (url) {
+        return this.loadModule(this.applyPluginToUrl(url, 'template-registry-entry'), false);
+    };
+    /**
+    * Loads a text-based resource.
+    * @param url The url of the text file to load.
+    * @return A Promise for text content.
+    */
+    WebpackLoader.prototype.loadText = function (url) {
+        return __awaiter(this, void 0, void 0, function () {
+            var result;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.loadModule(url, false)];
+                    case 1:
+                        result = _a.sent();
+                        if (result instanceof Array && result[0] instanceof Array && result.hasOwnProperty('toString')) {
+                            // we're dealing with a file loaded using the css-loader:
+                            return [2 /*return*/, result.toString()];
+                        }
+                        return [2 /*return*/, result];
+                }
+            });
+        });
+    };
+    /**
+    * Alters a module id so that it includes a plugin loader.
+    * @param url The url of the module to load.
+    * @param pluginName The plugin to apply to the module id.
+    * @return The plugin-based module id.
+    */
+    WebpackLoader.prototype.applyPluginToUrl = function (url, pluginName) {
+        return pluginName + "!" + url;
+    };
+    /**
+    * Registers a plugin with the loader.
+    * @param pluginName The name of the plugin.
+    * @param implementation The plugin implementation.
+    */
+    WebpackLoader.prototype.addPlugin = function (pluginName, implementation) {
+        this.loaderPlugins[pluginName] = implementation;
+    };
+    return WebpackLoader;
+}(__WEBPACK_IMPORTED_MODULE_1_aurelia_loader__["a" /* Loader */]));
+
+__WEBPACK_IMPORTED_MODULE_2_aurelia_pal__["a" /* PLATFORM */].Loader = WebpackLoader;
+
+
+/***/ }),
+
+/***/ 54:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -18482,7 +20109,7 @@ if (typeof FEATURE_NO_ESNEXT === 'undefined') {
 
 /***/ }),
 
-/***/ 41:
+/***/ 55:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -19003,7 +20630,7 @@ function addSegment(currentState, segment) {
 
 /***/ }),
 
-/***/ 42:
+/***/ 56:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -19123,7 +20750,7 @@ function _createCSSResource(address) {
 
 /***/ }),
 
-/***/ 43:
+/***/ 57:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -19155,14 +20782,14 @@ function _createDynamicElement(name, viewUrl, bindableNames) {
 
 /***/ }),
 
-/***/ 44:
+/***/ 58:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* unused harmony export getElementName */
 /* harmony export (immutable) */ __webpack_exports__["a"] = configure;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_templating__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__dynamic_element__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__dynamic_element__ = __webpack_require__(57);
 
 
 
@@ -19200,16 +20827,16 @@ function configure(config) {
 
 /***/ }),
 
-/***/ 45:
+/***/ 59:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TemplatingRouteLoader; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_dependency_injection__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_aurelia_templating__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_aurelia_router__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_aurelia_router__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_aurelia_path__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_aurelia_metadata__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_aurelia_metadata__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__router_view__ = __webpack_require__("aurelia-templating-router/router-view");
 var _dec, _class;
 
@@ -19291,20 +20918,454 @@ function createDynamicClass(moduleId) {
 
 /***/ }),
 
-/***/ 46:
+/***/ 6:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = relativeToFile;
+/* harmony export (immutable) */ __webpack_exports__["b"] = join;
+/* harmony export (immutable) */ __webpack_exports__["c"] = buildQueryString;
+/* harmony export (immutable) */ __webpack_exports__["d"] = parseQueryString;
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
+
+function trimDots(ary) {
+  for (var i = 0; i < ary.length; ++i) {
+    var part = ary[i];
+    if (part === '.') {
+      ary.splice(i, 1);
+      i -= 1;
+    } else if (part === '..') {
+      if (i === 0 || i === 1 && ary[2] === '..' || ary[i - 1] === '..') {
+        continue;
+      } else if (i > 0) {
+        ary.splice(i - 1, 2);
+        i -= 2;
+      }
+    }
+  }
+}
+
+function relativeToFile(name, file) {
+  var fileParts = file && file.split('/');
+  var nameParts = name.trim().split('/');
+
+  if (nameParts[0].charAt(0) === '.' && fileParts) {
+    var normalizedBaseParts = fileParts.slice(0, fileParts.length - 1);
+    nameParts.unshift.apply(nameParts, normalizedBaseParts);
+  }
+
+  trimDots(nameParts);
+
+  return nameParts.join('/');
+}
+
+function join(path1, path2) {
+  if (!path1) {
+    return path2;
+  }
+
+  if (!path2) {
+    return path1;
+  }
+
+  var schemeMatch = path1.match(/^([^/]*?:)\//);
+  var scheme = schemeMatch && schemeMatch.length > 0 ? schemeMatch[1] : '';
+  path1 = path1.substr(scheme.length);
+
+  var urlPrefix = void 0;
+  if (path1.indexOf('///') === 0 && scheme === 'file:') {
+    urlPrefix = '///';
+  } else if (path1.indexOf('//') === 0) {
+    urlPrefix = '//';
+  } else if (path1.indexOf('/') === 0) {
+    urlPrefix = '/';
+  } else {
+    urlPrefix = '';
+  }
+
+  var trailingSlash = path2.slice(-1) === '/' ? '/' : '';
+
+  var url1 = path1.split('/');
+  var url2 = path2.split('/');
+  var url3 = [];
+
+  for (var i = 0, ii = url1.length; i < ii; ++i) {
+    if (url1[i] === '..') {
+      url3.pop();
+    } else if (url1[i] === '.' || url1[i] === '') {
+      continue;
+    } else {
+      url3.push(url1[i]);
+    }
+  }
+
+  for (var _i = 0, _ii = url2.length; _i < _ii; ++_i) {
+    if (url2[_i] === '..') {
+      url3.pop();
+    } else if (url2[_i] === '.' || url2[_i] === '') {
+      continue;
+    } else {
+      url3.push(url2[_i]);
+    }
+  }
+
+  return scheme + urlPrefix + url3.join('/') + trailingSlash;
+}
+
+var encode = encodeURIComponent;
+var encodeKey = function encodeKey(k) {
+  return encode(k).replace('%24', '$');
+};
+
+function buildParam(key, value, traditional) {
+  var result = [];
+  if (value === null || value === undefined) {
+    return result;
+  }
+  if (Array.isArray(value)) {
+    for (var i = 0, l = value.length; i < l; i++) {
+      if (traditional) {
+        result.push(encodeKey(key) + '=' + encode(value[i]));
+      } else {
+        var arrayKey = key + '[' + (_typeof(value[i]) === 'object' && value[i] !== null ? i : '') + ']';
+        result = result.concat(buildParam(arrayKey, value[i]));
+      }
+    }
+  } else if ((typeof value === 'undefined' ? 'undefined' : _typeof(value)) === 'object' && !traditional) {
+    for (var propertyName in value) {
+      result = result.concat(buildParam(key + '[' + propertyName + ']', value[propertyName]));
+    }
+  } else {
+    result.push(encodeKey(key) + '=' + encode(value));
+  }
+  return result;
+}
+
+function buildQueryString(params, traditional) {
+  var pairs = [];
+  var keys = Object.keys(params || {}).sort();
+  for (var i = 0, len = keys.length; i < len; i++) {
+    var key = keys[i];
+    pairs = pairs.concat(buildParam(key, params[key], traditional));
+  }
+
+  if (pairs.length === 0) {
+    return '';
+  }
+
+  return pairs.join('&');
+}
+
+function processScalarParam(existedParam, value) {
+  if (Array.isArray(existedParam)) {
+    existedParam.push(value);
+    return existedParam;
+  }
+  if (existedParam !== undefined) {
+    return [existedParam, value];
+  }
+
+  return value;
+}
+
+function parseComplexParam(queryParams, keys, value) {
+  var currentParams = queryParams;
+  var keysLastIndex = keys.length - 1;
+  for (var j = 0; j <= keysLastIndex; j++) {
+    var key = keys[j] === '' ? currentParams.length : keys[j];
+    if (j < keysLastIndex) {
+      var prevValue = !currentParams[key] || _typeof(currentParams[key]) === 'object' ? currentParams[key] : [currentParams[key]];
+      currentParams = currentParams[key] = prevValue || (isNaN(keys[j + 1]) ? {} : []);
+    } else {
+      currentParams = currentParams[key] = value;
+    }
+  }
+}
+
+function parseQueryString(queryString) {
+  var queryParams = {};
+  if (!queryString || typeof queryString !== 'string') {
+    return queryParams;
+  }
+
+  var query = queryString;
+  if (query.charAt(0) === '?') {
+    query = query.substr(1);
+  }
+
+  var pairs = query.replace(/\+/g, ' ').split('&');
+  for (var i = 0; i < pairs.length; i++) {
+    var pair = pairs[i].split('=');
+    var key = decodeURIComponent(pair[0]);
+    if (!key) {
+      continue;
+    }
+
+    var keys = key.split('][');
+    var keysLastIndex = keys.length - 1;
+
+    if (/\[/.test(keys[0]) && /\]$/.test(keys[keysLastIndex])) {
+      keys[keysLastIndex] = keys[keysLastIndex].replace(/\]$/, '');
+      keys = keys.shift().split('[').concat(keys);
+      keysLastIndex = keys.length - 1;
+    } else {
+      keysLastIndex = 0;
+    }
+
+    if (pair.length >= 2) {
+      var value = pair[1] ? decodeURIComponent(pair[1]) : '';
+      if (keysLastIndex) {
+        parseComplexParam(queryParams, keys, value);
+      } else {
+        queryParams[key] = processScalarParam(queryParams[key], value);
+      }
+    } else {
+      queryParams[key] = true;
+    }
+  }
+  return queryParams;
+}
+
+/***/ }),
+
+/***/ 60:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ExpressionVisitor; });
+// tslint:disable:no-empty
+var ExpressionVisitor = (function () {
+    function ExpressionVisitor() {
+    }
+    ExpressionVisitor.prototype.visitChain = function (chain) {
+        this.visitArgs(chain.expressions);
+    };
+    ExpressionVisitor.prototype.visitBindingBehavior = function (behavior) {
+        behavior.expression.accept(this);
+        this.visitArgs(behavior.args);
+    };
+    ExpressionVisitor.prototype.visitValueConverter = function (converter) {
+        converter.expression.accept(this);
+        this.visitArgs(converter.args);
+    };
+    ExpressionVisitor.prototype.visitAssign = function (assign) {
+        assign.target.accept(this);
+        assign.value.accept(this);
+    };
+    ExpressionVisitor.prototype.visitConditional = function (conditional) {
+        conditional.condition.accept(this);
+        conditional.yes.accept(this);
+        conditional.no.accept(this);
+    };
+    ExpressionVisitor.prototype.visitAccessThis = function (access) {
+        access.ancestor = access.ancestor;
+    };
+    ExpressionVisitor.prototype.visitAccessScope = function (access) {
+        access.name = access.name;
+    };
+    ExpressionVisitor.prototype.visitAccessMember = function (access) {
+        access.object.accept(this);
+    };
+    ExpressionVisitor.prototype.visitAccessKeyed = function (access) {
+        access.object.accept(this);
+        access.key.accept(this);
+    };
+    ExpressionVisitor.prototype.visitCallScope = function (call) {
+        this.visitArgs(call.args);
+    };
+    ExpressionVisitor.prototype.visitCallFunction = function (call) {
+        call.func.accept(this);
+        this.visitArgs(call.args);
+    };
+    ExpressionVisitor.prototype.visitCallMember = function (call) {
+        call.object.accept(this);
+        this.visitArgs(call.args);
+    };
+    ExpressionVisitor.prototype.visitPrefix = function (prefix) {
+        prefix.expression.accept(this);
+    };
+    ExpressionVisitor.prototype.visitBinary = function (binary) {
+        binary.left.accept(this);
+        binary.right.accept(this);
+    };
+    ExpressionVisitor.prototype.visitLiteralPrimitive = function (literal) {
+        literal.value = literal.value;
+    };
+    ExpressionVisitor.prototype.visitLiteralArray = function (literal) {
+        this.visitArgs(literal.elements);
+    };
+    ExpressionVisitor.prototype.visitLiteralObject = function (literal) {
+        this.visitArgs(literal.values);
+    };
+    ExpressionVisitor.prototype.visitLiteralString = function (literal) {
+        literal.value = literal.value;
+    };
+    ExpressionVisitor.prototype.visitArgs = function (args) {
+        for (var i = 0; i < args.length; i++) {
+            args[i].accept(this);
+        }
+    };
+    return ExpressionVisitor;
+}());
+
+
+
+/***/ }),
+
+/***/ 61:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ValidateBindingBehaviorBase; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_dependency_injection__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__validation_controller__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__validate_trigger__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__get_target_dom_element__ = __webpack_require__(35);
+
+
+
+
+/**
+ * Binding behavior. Indicates the bound property should be validated.
+ */
+var ValidateBindingBehaviorBase = (function () {
+    function ValidateBindingBehaviorBase(taskQueue) {
+        this.taskQueue = taskQueue;
+    }
+    ValidateBindingBehaviorBase.prototype.bind = function (binding, source, rulesOrController, rules) {
+        var _this = this;
+        // identify the target element.
+        var target = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3__get_target_dom_element__["a" /* getTargetDOMElement */])(binding, source);
+        // locate the controller.
+        var controller;
+        if (rulesOrController instanceof __WEBPACK_IMPORTED_MODULE_1__validation_controller__["a" /* ValidationController */]) {
+            controller = rulesOrController;
+        }
+        else {
+            controller = source.container.get(__WEBPACK_IMPORTED_MODULE_0_aurelia_dependency_injection__["d" /* Optional */].of(__WEBPACK_IMPORTED_MODULE_1__validation_controller__["a" /* ValidationController */]));
+            rules = rulesOrController;
+        }
+        if (controller === null) {
+            throw new Error("A ValidationController has not been registered.");
+        }
+        controller.registerBinding(binding, target, rules);
+        binding.validationController = controller;
+        var trigger = this.getValidateTrigger(controller);
+        // tslint:disable-next-line:no-bitwise
+        if (trigger & __WEBPACK_IMPORTED_MODULE_2__validate_trigger__["a" /* validateTrigger */].change) {
+            binding.standardUpdateSource = binding.updateSource;
+            // tslint:disable-next-line:only-arrow-functions
+            // tslint:disable-next-line:space-before-function-paren
+            binding.updateSource = function (value) {
+                this.standardUpdateSource(value);
+                this.validationController.validateBinding(this);
+            };
+        }
+        // tslint:disable-next-line:no-bitwise
+        if (trigger & __WEBPACK_IMPORTED_MODULE_2__validate_trigger__["a" /* validateTrigger */].blur) {
+            binding.validateBlurHandler = function () {
+                _this.taskQueue.queueMicroTask(function () { return controller.validateBinding(binding); });
+            };
+            binding.validateTarget = target;
+            target.addEventListener('blur', binding.validateBlurHandler);
+        }
+        if (trigger !== __WEBPACK_IMPORTED_MODULE_2__validate_trigger__["a" /* validateTrigger */].manual) {
+            binding.standardUpdateTarget = binding.updateTarget;
+            // tslint:disable-next-line:only-arrow-functions
+            // tslint:disable-next-line:space-before-function-paren
+            binding.updateTarget = function (value) {
+                this.standardUpdateTarget(value);
+                this.validationController.resetBinding(this);
+            };
+        }
+    };
+    ValidateBindingBehaviorBase.prototype.unbind = function (binding) {
+        // reset the binding to it's original state.
+        if (binding.standardUpdateSource) {
+            binding.updateSource = binding.standardUpdateSource;
+            binding.standardUpdateSource = null;
+        }
+        if (binding.standardUpdateTarget) {
+            binding.updateTarget = binding.standardUpdateTarget;
+            binding.standardUpdateTarget = null;
+        }
+        if (binding.validateBlurHandler) {
+            binding.validateTarget.removeEventListener('blur', binding.validateBlurHandler);
+            binding.validateBlurHandler = null;
+            binding.validateTarget = null;
+        }
+        binding.validationController.unregisterBinding(binding);
+        binding.validationController = null;
+    };
+    return ValidateBindingBehaviorBase;
+}());
+
+
+
+/***/ }),
+
+/***/ 62:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ValidationControllerFactory; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__validation_controller__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__validator__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__property_accessor_parser__ = __webpack_require__(14);
+
+
+
+/**
+ * Creates ValidationController instances.
+ */
+var ValidationControllerFactory = (function () {
+    function ValidationControllerFactory(container) {
+        this.container = container;
+    }
+    ValidationControllerFactory.get = function (container) {
+        return new ValidationControllerFactory(container);
+    };
+    /**
+     * Creates a new controller instance.
+     */
+    ValidationControllerFactory.prototype.create = function (validator) {
+        if (!validator) {
+            validator = this.container.get(__WEBPACK_IMPORTED_MODULE_1__validator__["a" /* Validator */]);
+        }
+        var propertyParser = this.container.get(__WEBPACK_IMPORTED_MODULE_2__property_accessor_parser__["a" /* PropertyAccessorParser */]);
+        return new __WEBPACK_IMPORTED_MODULE_0__validation_controller__["a" /* ValidationController */](validator, propertyParser);
+    };
+    /**
+     * Creates a new controller and registers it in the current element's container so that it's
+     * available to the validate binding behavior and renderers.
+     */
+    ValidationControllerFactory.prototype.createForCurrentScope = function (validator) {
+        var controller = this.create(validator);
+        this.container.registerInstance(__WEBPACK_IMPORTED_MODULE_0__validation_controller__["a" /* ValidationController */], controller);
+        return controller;
+    };
+    return ValidationControllerFactory;
+}());
+
+ValidationControllerFactory['protocol:aurelia:resolver'] = true;
+
+
+/***/ }),
+
+/***/ 63:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
-  XmlEntities: __webpack_require__(48),
-  Html4Entities: __webpack_require__(47),
-  Html5Entities: __webpack_require__(28),
-  AllHtmlEntities: __webpack_require__(28)
+  XmlEntities: __webpack_require__(65),
+  Html4Entities: __webpack_require__(64),
+  Html5Entities: __webpack_require__(42),
+  AllHtmlEntities: __webpack_require__(42)
 };
 
 
 /***/ }),
 
-/***/ 47:
+/***/ 64:
 /***/ (function(module, exports) {
 
 var HTML_ALPHA = ['apos', 'nbsp', 'iexcl', 'cent', 'pound', 'curren', 'yen', 'brvbar', 'sect', 'uml', 'copy', 'ordf', 'laquo', 'not', 'shy', 'reg', 'macr', 'deg', 'plusmn', 'sup2', 'sup3', 'acute', 'micro', 'para', 'middot', 'cedil', 'sup1', 'ordm', 'raquo', 'frac14', 'frac12', 'frac34', 'iquest', 'Agrave', 'Aacute', 'Acirc', 'Atilde', 'Auml', 'Aring', 'Aelig', 'Ccedil', 'Egrave', 'Eacute', 'Ecirc', 'Euml', 'Igrave', 'Iacute', 'Icirc', 'Iuml', 'ETH', 'Ntilde', 'Ograve', 'Oacute', 'Ocirc', 'Otilde', 'Ouml', 'times', 'Oslash', 'Ugrave', 'Uacute', 'Ucirc', 'Uuml', 'Yacute', 'THORN', 'szlig', 'agrave', 'aacute', 'acirc', 'atilde', 'auml', 'aring', 'aelig', 'ccedil', 'egrave', 'eacute', 'ecirc', 'euml', 'igrave', 'iacute', 'icirc', 'iuml', 'eth', 'ntilde', 'ograve', 'oacute', 'ocirc', 'otilde', 'ouml', 'divide', 'oslash', 'ugrave', 'uacute', 'ucirc', 'uuml', 'yacute', 'thorn', 'yuml', 'quot', 'amp', 'lt', 'gt', 'OElig', 'oelig', 'Scaron', 'scaron', 'Yuml', 'circ', 'tilde', 'ensp', 'emsp', 'thinsp', 'zwnj', 'zwj', 'lrm', 'rlm', 'ndash', 'mdash', 'lsquo', 'rsquo', 'sbquo', 'ldquo', 'rdquo', 'bdquo', 'dagger', 'Dagger', 'permil', 'lsaquo', 'rsaquo', 'euro', 'fnof', 'Alpha', 'Beta', 'Gamma', 'Delta', 'Epsilon', 'Zeta', 'Eta', 'Theta', 'Iota', 'Kappa', 'Lambda', 'Mu', 'Nu', 'Xi', 'Omicron', 'Pi', 'Rho', 'Sigma', 'Tau', 'Upsilon', 'Phi', 'Chi', 'Psi', 'Omega', 'alpha', 'beta', 'gamma', 'delta', 'epsilon', 'zeta', 'eta', 'theta', 'iota', 'kappa', 'lambda', 'mu', 'nu', 'xi', 'omicron', 'pi', 'rho', 'sigmaf', 'sigma', 'tau', 'upsilon', 'phi', 'chi', 'psi', 'omega', 'thetasym', 'upsih', 'piv', 'bull', 'hellip', 'prime', 'Prime', 'oline', 'frasl', 'weierp', 'image', 'real', 'trade', 'alefsym', 'larr', 'uarr', 'rarr', 'darr', 'harr', 'crarr', 'lArr', 'uArr', 'rArr', 'dArr', 'hArr', 'forall', 'part', 'exist', 'empty', 'nabla', 'isin', 'notin', 'ni', 'prod', 'sum', 'minus', 'lowast', 'radic', 'prop', 'infin', 'ang', 'and', 'or', 'cap', 'cup', 'int', 'there4', 'sim', 'cong', 'asymp', 'ne', 'equiv', 'le', 'ge', 'sub', 'sup', 'nsub', 'sube', 'supe', 'oplus', 'otimes', 'perp', 'sdot', 'lceil', 'rceil', 'lfloor', 'rfloor', 'lang', 'rang', 'loz', 'spades', 'clubs', 'hearts', 'diams'];
@@ -19458,7 +21519,7 @@ module.exports = Html4Entities;
 
 /***/ }),
 
-/***/ 48:
+/***/ 65:
 /***/ (function(module, exports) {
 
 var ALPHA_INDEX = {
@@ -19620,133 +21681,20 @@ module.exports = XmlEntities;
 
 /***/ }),
 
-/***/ 49:
+/***/ 66:
 /***/ (function(module, exports, __webpack_require__) {
 
 // the whatwg-fetch polyfill installs the fetch() function
 // on the global object (window or self)
 //
 // Return that as the export for use in Webpack, Browserify etc.
-__webpack_require__(57);
+__webpack_require__(76);
 module.exports = self.fetch.bind(self);
 
 
 /***/ }),
 
-/***/ 5:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "logLevel", function() { return logLevel; });
-/* harmony export (immutable) */ __webpack_exports__["getLogger"] = getLogger;
-/* harmony export (immutable) */ __webpack_exports__["addAppender"] = addAppender;
-/* harmony export (immutable) */ __webpack_exports__["removeAppender"] = removeAppender;
-/* harmony export (immutable) */ __webpack_exports__["setLevel"] = setLevel;
-/* harmony export (immutable) */ __webpack_exports__["getLevel"] = getLevel;
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Logger", function() { return Logger; });
-
-
-var logLevel = {
-  none: 0,
-  error: 1,
-  warn: 2,
-  info: 3,
-  debug: 4
-};
-
-var loggers = {};
-var appenders = [];
-var globalDefaultLevel = logLevel.none;
-
-function appendArgs() {
-  return [this].concat(Array.prototype.slice.call(arguments));
-}
-
-function logFactory(level) {
-  var threshold = logLevel[level];
-  return function () {
-    if (this.level < threshold) {
-      return;
-    }
-
-    var args = appendArgs.apply(this, arguments);
-    var i = appenders.length;
-    while (i--) {
-      var _appenders$i;
-
-      (_appenders$i = appenders[i])[level].apply(_appenders$i, args);
-    }
-  };
-}
-
-function connectLoggers() {
-  var proto = Logger.prototype;
-  proto.debug = logFactory('debug');
-  proto.info = logFactory('info');
-  proto.warn = logFactory('warn');
-  proto.error = logFactory('error');
-}
-
-function getLogger(id) {
-  return loggers[id] || new Logger(id);
-}
-
-function addAppender(appender) {
-  if (appenders.push(appender) === 1) {
-    connectLoggers();
-  }
-}
-
-function removeAppender(appender) {
-  appenders = appenders.filter(function (a) {
-    return a !== appender;
-  });
-}
-
-function setLevel(level) {
-  globalDefaultLevel = level;
-  for (var key in loggers) {
-    loggers[key].setLevel(level);
-  }
-}
-
-function getLevel() {
-  return globalDefaultLevel;
-}
-
-var Logger = function () {
-  function Logger(id) {
-    
-
-    var cached = loggers[id];
-    if (cached) {
-      return cached;
-    }
-
-    loggers[id] = this;
-    this.id = id;
-    this.level = globalDefaultLevel;
-  }
-
-  Logger.prototype.debug = function debug(message) {};
-
-  Logger.prototype.info = function info(message) {};
-
-  Logger.prototype.warn = function warn(message) {};
-
-  Logger.prototype.error = function error(message) {};
-
-  Logger.prototype.setLevel = function setLevel(level) {
-    this.level = level;
-  };
-
-  return Logger;
-}();
-
-/***/ }),
-
-/***/ 50:
+/***/ 67:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19838,7 +21786,7 @@ var isArray = Array.isArray || function (xs) {
 
 /***/ }),
 
-/***/ 51:
+/***/ 68:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19931,24 +21879,167 @@ var objectKeys = Object.keys || function (obj) {
 
 /***/ }),
 
-/***/ 52:
+/***/ 69:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-exports.decode = exports.parse = __webpack_require__(50);
-exports.encode = exports.stringify = __webpack_require__(51);
+exports.decode = exports.parse = __webpack_require__(67);
+exports.encode = exports.stringify = __webpack_require__(68);
 
 
 /***/ }),
 
-/***/ 53:
+/***/ 7:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* unused harmony export TemplateDependency */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return TemplateRegistryEntry; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Loader; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_path__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_aurelia_metadata__ = __webpack_require__(5);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+
+
+
+
+
+var TemplateDependency = function TemplateDependency(src, name) {
+  
+
+  this.src = src;
+  this.name = name;
+};
+
+var TemplateRegistryEntry = function () {
+  function TemplateRegistryEntry(address) {
+    
+
+    this.templateIsLoaded = false;
+    this.factoryIsReady = false;
+    this.resources = null;
+    this.dependencies = null;
+
+    this.address = address;
+    this.onReady = null;
+    this._template = null;
+    this._factory = null;
+  }
+
+  TemplateRegistryEntry.prototype.addDependency = function addDependency(src, name) {
+    var finalSrc = typeof src === 'string' ? __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_aurelia_path__["a" /* relativeToFile */])(src, this.address) : __WEBPACK_IMPORTED_MODULE_1_aurelia_metadata__["c" /* Origin */].get(src).moduleId;
+
+    this.dependencies.push(new TemplateDependency(finalSrc, name));
+  };
+
+  _createClass(TemplateRegistryEntry, [{
+    key: 'template',
+    get: function get() {
+      return this._template;
+    },
+    set: function set(value) {
+      var address = this.address;
+      var requires = void 0;
+      var current = void 0;
+      var src = void 0;
+      var dependencies = void 0;
+
+      this._template = value;
+      this.templateIsLoaded = true;
+
+      requires = value.content.querySelectorAll('require');
+      dependencies = this.dependencies = new Array(requires.length);
+
+      for (var i = 0, ii = requires.length; i < ii; ++i) {
+        current = requires[i];
+        src = current.getAttribute('from');
+
+        if (!src) {
+          throw new Error('<require> element in ' + address + ' has no "from" attribute.');
+        }
+
+        dependencies[i] = new TemplateDependency(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_aurelia_path__["a" /* relativeToFile */])(src, address), current.getAttribute('as'));
+
+        if (current.parentNode) {
+          current.parentNode.removeChild(current);
+        }
+      }
+    }
+  }, {
+    key: 'factory',
+    get: function get() {
+      return this._factory;
+    },
+    set: function set(value) {
+      this._factory = value;
+      this.factoryIsReady = true;
+    }
+  }]);
+
+  return TemplateRegistryEntry;
+}();
+
+var Loader = function () {
+  function Loader() {
+    
+
+    this.templateRegistry = {};
+  }
+
+  Loader.prototype.map = function map(id, source) {
+    throw new Error('Loaders must implement map(id, source).');
+  };
+
+  Loader.prototype.normalizeSync = function normalizeSync(moduleId, relativeTo) {
+    throw new Error('Loaders must implement normalizeSync(moduleId, relativeTo).');
+  };
+
+  Loader.prototype.normalize = function normalize(moduleId, relativeTo) {
+    throw new Error('Loaders must implement normalize(moduleId: string, relativeTo: string): Promise<string>.');
+  };
+
+  Loader.prototype.loadModule = function loadModule(id) {
+    throw new Error('Loaders must implement loadModule(id).');
+  };
+
+  Loader.prototype.loadAllModules = function loadAllModules(ids) {
+    throw new Error('Loader must implement loadAllModules(ids).');
+  };
+
+  Loader.prototype.loadTemplate = function loadTemplate(url) {
+    throw new Error('Loader must implement loadTemplate(url).');
+  };
+
+  Loader.prototype.loadText = function loadText(url) {
+    throw new Error('Loader must implement loadText(url).');
+  };
+
+  Loader.prototype.applyPluginToUrl = function applyPluginToUrl(url, pluginName) {
+    throw new Error('Loader must implement applyPluginToUrl(url, pluginName).');
+  };
+
+  Loader.prototype.addPlugin = function addPlugin(pluginName, implementation) {
+    throw new Error('Loader must implement addPlugin(pluginName, implementation).');
+  };
+
+  Loader.prototype.getOrCreateTemplateRegistryEntry = function getOrCreateTemplateRegistryEntry(address) {
+    return this.templateRegistry[address] || (this.templateRegistry[address] = new TemplateRegistryEntry(address));
+  };
+
+  return Loader;
+}();
+
+/***/ }),
+
+/***/ 70:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var ansiRegex = __webpack_require__(34)();
+var ansiRegex = __webpack_require__(48)();
 
 module.exports = function (str) {
 	return typeof str === 'string' ? str.replace(ansiRegex, '') : str;
@@ -19957,7 +22048,119 @@ module.exports = function (str) {
 
 /***/ }),
 
-/***/ 54:
+/***/ 71:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TokenService; });
+var TokenService = /** @class */ (function () {
+    function TokenService() {
+        this.TOKEN_KEY = "jwt";
+    }
+    TokenService.prototype.saveJWT = function (jwt) {
+        this.tokenJson = JSON.stringify(jwt);
+        try {
+            localStorage.setItem(this.TOKEN_KEY, this.tokenJson);
+        }
+        catch (Error) {
+            return false;
+        }
+        return true;
+    };
+    TokenService.prototype.getJWT = function () {
+        this.tokenJson = localStorage.getItem(this.TOKEN_KEY);
+        if (this.tokenJson) {
+            var token = JSON.parse(this.tokenJson);
+            return token;
+        }
+        else {
+            return null;
+        }
+    };
+    TokenService.prototype.clearJWT = function () {
+        try {
+            localStorage.removeItem(this.TOKEN_KEY);
+        }
+        catch (Error) {
+            return false;
+        }
+        return true;
+    };
+    return TokenService;
+}());
+
+
+
+/***/ }),
+
+/***/ 72:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BootstrapFormRenderer; });
+var BootstrapFormRenderer = /** @class */ (function () {
+    function BootstrapFormRenderer() {
+    }
+    BootstrapFormRenderer.prototype.render = function (instruction) {
+        for (var _i = 0, _a = instruction.unrender; _i < _a.length; _i++) {
+            var _b = _a[_i], result = _b.result, elements = _b.elements;
+            for (var _c = 0, elements_1 = elements; _c < elements_1.length; _c++) {
+                var element = elements_1[_c];
+                this.remove(element, result);
+            }
+        }
+        for (var _d = 0, _e = instruction.render; _d < _e.length; _d++) {
+            var _f = _e[_d], result = _f.result, elements = _f.elements;
+            for (var _g = 0, elements_2 = elements; _g < elements_2.length; _g++) {
+                var element = elements_2[_g];
+                this.add(element, result);
+            }
+        }
+    };
+    BootstrapFormRenderer.prototype.add = function (element, result) {
+        if (result.valid) {
+            return;
+        }
+        var formGroup = element.closest(".form-group");
+        if (!formGroup) {
+            return;
+        }
+        // add the has-error class to the enclosing form-group div
+        formGroup.classList.add("has-error");
+        // add help-block
+        var message = document.createElement("span");
+        message.className = "help-block validation-message";
+        message.textContent = result.message;
+        message.id = "validation-message-" + result.id;
+        formGroup.appendChild(message);
+    };
+    BootstrapFormRenderer.prototype.remove = function (element, result) {
+        if (result.valid) {
+            return;
+        }
+        var formGroup = element.closest(".form-group");
+        if (!formGroup) {
+            return;
+        }
+        // remove help-block
+        var message = formGroup.querySelector("#validation-message-" + result.id);
+        if (message) {
+            formGroup.removeChild(message);
+            // remove the has-error class from the enclosing form-group div
+            if (formGroup.querySelectorAll(".help-block.validation-message").length ===
+                0) {
+                formGroup.classList.remove("has-error");
+            }
+        }
+    };
+    return BootstrapFormRenderer;
+}());
+
+
+
+/***/ }),
+
+/***/ 73:
 /***/ (function(module, exports, __webpack_require__) {
 
 /*eslint-env browser*/
@@ -19986,7 +22189,7 @@ for (var key in styles) {
   clientOverlay.style[key] = styles[key];
 }
 
-var ansiHTML = __webpack_require__(33);
+var ansiHTML = __webpack_require__(47);
 var colors = {
   reset: ['transparent', 'transparent'],
   black: '181818',
@@ -20001,7 +22204,7 @@ var colors = {
 };
 ansiHTML.setColors(colors);
 
-var Entities = __webpack_require__(46).AllHtmlEntities;
+var Entities = __webpack_require__(63).AllHtmlEntities;
 var entities = new Entities();
 
 exports.showProblems =
@@ -20043,7 +22246,7 @@ function problemType (type) {
 
 /***/ }),
 
-/***/ 55:
+/***/ 74:
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -20196,7 +22399,7 @@ module.exports = function(hash, moduleMap, options) {
 
 /***/ }),
 
-/***/ 56:
+/***/ 75:
 /***/ (function(module, exports) {
 
 module.exports = function(module) {
@@ -20225,7 +22428,7 @@ module.exports = function(module) {
 
 /***/ }),
 
-/***/ 57:
+/***/ 76:
 /***/ (function(module, exports) {
 
 (function(self) {
@@ -20693,513 +22896,28 @@ module.exports = function(module) {
 
 /***/ }),
 
-/***/ 58:
+/***/ 77:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(10))(28);
+module.exports = (__webpack_require__(13))(28);
 
 /***/ }),
 
-/***/ 59:
+/***/ 78:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(10))(38);
+module.exports = (__webpack_require__(13))(38);
 
 /***/ }),
 
-/***/ 6:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = relativeToFile;
-/* harmony export (immutable) */ __webpack_exports__["b"] = join;
-/* harmony export (immutable) */ __webpack_exports__["c"] = buildQueryString;
-/* harmony export (immutable) */ __webpack_exports__["d"] = parseQueryString;
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
-
-function trimDots(ary) {
-  for (var i = 0; i < ary.length; ++i) {
-    var part = ary[i];
-    if (part === '.') {
-      ary.splice(i, 1);
-      i -= 1;
-    } else if (part === '..') {
-      if (i === 0 || i === 1 && ary[2] === '..' || ary[i - 1] === '..') {
-        continue;
-      } else if (i > 0) {
-        ary.splice(i - 1, 2);
-        i -= 2;
-      }
-    }
-  }
-}
-
-function relativeToFile(name, file) {
-  var fileParts = file && file.split('/');
-  var nameParts = name.trim().split('/');
-
-  if (nameParts[0].charAt(0) === '.' && fileParts) {
-    var normalizedBaseParts = fileParts.slice(0, fileParts.length - 1);
-    nameParts.unshift.apply(nameParts, normalizedBaseParts);
-  }
-
-  trimDots(nameParts);
-
-  return nameParts.join('/');
-}
-
-function join(path1, path2) {
-  if (!path1) {
-    return path2;
-  }
-
-  if (!path2) {
-    return path1;
-  }
-
-  var schemeMatch = path1.match(/^([^/]*?:)\//);
-  var scheme = schemeMatch && schemeMatch.length > 0 ? schemeMatch[1] : '';
-  path1 = path1.substr(scheme.length);
-
-  var urlPrefix = void 0;
-  if (path1.indexOf('///') === 0 && scheme === 'file:') {
-    urlPrefix = '///';
-  } else if (path1.indexOf('//') === 0) {
-    urlPrefix = '//';
-  } else if (path1.indexOf('/') === 0) {
-    urlPrefix = '/';
-  } else {
-    urlPrefix = '';
-  }
-
-  var trailingSlash = path2.slice(-1) === '/' ? '/' : '';
-
-  var url1 = path1.split('/');
-  var url2 = path2.split('/');
-  var url3 = [];
-
-  for (var i = 0, ii = url1.length; i < ii; ++i) {
-    if (url1[i] === '..') {
-      url3.pop();
-    } else if (url1[i] === '.' || url1[i] === '') {
-      continue;
-    } else {
-      url3.push(url1[i]);
-    }
-  }
-
-  for (var _i = 0, _ii = url2.length; _i < _ii; ++_i) {
-    if (url2[_i] === '..') {
-      url3.pop();
-    } else if (url2[_i] === '.' || url2[_i] === '') {
-      continue;
-    } else {
-      url3.push(url2[_i]);
-    }
-  }
-
-  return scheme + urlPrefix + url3.join('/') + trailingSlash;
-}
-
-var encode = encodeURIComponent;
-var encodeKey = function encodeKey(k) {
-  return encode(k).replace('%24', '$');
-};
-
-function buildParam(key, value, traditional) {
-  var result = [];
-  if (value === null || value === undefined) {
-    return result;
-  }
-  if (Array.isArray(value)) {
-    for (var i = 0, l = value.length; i < l; i++) {
-      if (traditional) {
-        result.push(encodeKey(key) + '=' + encode(value[i]));
-      } else {
-        var arrayKey = key + '[' + (_typeof(value[i]) === 'object' && value[i] !== null ? i : '') + ']';
-        result = result.concat(buildParam(arrayKey, value[i]));
-      }
-    }
-  } else if ((typeof value === 'undefined' ? 'undefined' : _typeof(value)) === 'object' && !traditional) {
-    for (var propertyName in value) {
-      result = result.concat(buildParam(key + '[' + propertyName + ']', value[propertyName]));
-    }
-  } else {
-    result.push(encodeKey(key) + '=' + encode(value));
-  }
-  return result;
-}
-
-function buildQueryString(params, traditional) {
-  var pairs = [];
-  var keys = Object.keys(params || {}).sort();
-  for (var i = 0, len = keys.length; i < len; i++) {
-    var key = keys[i];
-    pairs = pairs.concat(buildParam(key, params[key], traditional));
-  }
-
-  if (pairs.length === 0) {
-    return '';
-  }
-
-  return pairs.join('&');
-}
-
-function processScalarParam(existedParam, value) {
-  if (Array.isArray(existedParam)) {
-    existedParam.push(value);
-    return existedParam;
-  }
-  if (existedParam !== undefined) {
-    return [existedParam, value];
-  }
-
-  return value;
-}
-
-function parseComplexParam(queryParams, keys, value) {
-  var currentParams = queryParams;
-  var keysLastIndex = keys.length - 1;
-  for (var j = 0; j <= keysLastIndex; j++) {
-    var key = keys[j] === '' ? currentParams.length : keys[j];
-    if (j < keysLastIndex) {
-      var prevValue = !currentParams[key] || _typeof(currentParams[key]) === 'object' ? currentParams[key] : [currentParams[key]];
-      currentParams = currentParams[key] = prevValue || (isNaN(keys[j + 1]) ? {} : []);
-    } else {
-      currentParams = currentParams[key] = value;
-    }
-  }
-}
-
-function parseQueryString(queryString) {
-  var queryParams = {};
-  if (!queryString || typeof queryString !== 'string') {
-    return queryParams;
-  }
-
-  var query = queryString;
-  if (query.charAt(0) === '?') {
-    query = query.substr(1);
-  }
-
-  var pairs = query.replace(/\+/g, ' ').split('&');
-  for (var i = 0; i < pairs.length; i++) {
-    var pair = pairs[i].split('=');
-    var key = decodeURIComponent(pair[0]);
-    if (!key) {
-      continue;
-    }
-
-    var keys = key.split('][');
-    var keysLastIndex = keys.length - 1;
-
-    if (/\[/.test(keys[0]) && /\]$/.test(keys[keysLastIndex])) {
-      keys[keysLastIndex] = keys[keysLastIndex].replace(/\]$/, '');
-      keys = keys.shift().split('[').concat(keys);
-      keysLastIndex = keys.length - 1;
-    } else {
-      keysLastIndex = 0;
-    }
-
-    if (pair.length >= 2) {
-      var value = pair[1] ? decodeURIComponent(pair[1]) : '';
-      if (keysLastIndex) {
-        parseComplexParam(queryParams, keys, value);
-      } else {
-        queryParams[key] = processScalarParam(queryParams[key], value);
-      }
-    } else {
-      queryParams[key] = true;
-    }
-  }
-  return queryParams;
-}
-
-/***/ }),
-
-/***/ 60:
+/***/ 79:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(10))(39);
-
-/***/ }),
-
-/***/ 61:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = (__webpack_require__(10))(74);
-
-/***/ }),
-
-/***/ 62:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = (__webpack_require__(10))(76);
-
-/***/ }),
-
-/***/ 63:
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(30);
-__webpack_require__(31);
-__webpack_require__(32);
-module.exports = __webpack_require__(29);
-
-
-/***/ }),
-
-/***/ 7:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* unused harmony export TemplateDependency */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return TemplateRegistryEntry; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Loader; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_path__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_aurelia_metadata__ = __webpack_require__(4);
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-
-
-
-
-
-var TemplateDependency = function TemplateDependency(src, name) {
-  
-
-  this.src = src;
-  this.name = name;
-};
-
-var TemplateRegistryEntry = function () {
-  function TemplateRegistryEntry(address) {
-    
-
-    this.templateIsLoaded = false;
-    this.factoryIsReady = false;
-    this.resources = null;
-    this.dependencies = null;
-
-    this.address = address;
-    this.onReady = null;
-    this._template = null;
-    this._factory = null;
-  }
-
-  TemplateRegistryEntry.prototype.addDependency = function addDependency(src, name) {
-    var finalSrc = typeof src === 'string' ? __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_aurelia_path__["a" /* relativeToFile */])(src, this.address) : __WEBPACK_IMPORTED_MODULE_1_aurelia_metadata__["c" /* Origin */].get(src).moduleId;
-
-    this.dependencies.push(new TemplateDependency(finalSrc, name));
-  };
-
-  _createClass(TemplateRegistryEntry, [{
-    key: 'template',
-    get: function get() {
-      return this._template;
-    },
-    set: function set(value) {
-      var address = this.address;
-      var requires = void 0;
-      var current = void 0;
-      var src = void 0;
-      var dependencies = void 0;
-
-      this._template = value;
-      this.templateIsLoaded = true;
-
-      requires = value.content.querySelectorAll('require');
-      dependencies = this.dependencies = new Array(requires.length);
-
-      for (var i = 0, ii = requires.length; i < ii; ++i) {
-        current = requires[i];
-        src = current.getAttribute('from');
-
-        if (!src) {
-          throw new Error('<require> element in ' + address + ' has no "from" attribute.');
-        }
-
-        dependencies[i] = new TemplateDependency(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_aurelia_path__["a" /* relativeToFile */])(src, address), current.getAttribute('as'));
-
-        if (current.parentNode) {
-          current.parentNode.removeChild(current);
-        }
-      }
-    }
-  }, {
-    key: 'factory',
-    get: function get() {
-      return this._factory;
-    },
-    set: function set(value) {
-      this._factory = value;
-      this.factoryIsReady = true;
-    }
-  }]);
-
-  return TemplateRegistryEntry;
-}();
-
-var Loader = function () {
-  function Loader() {
-    
-
-    this.templateRegistry = {};
-  }
-
-  Loader.prototype.map = function map(id, source) {
-    throw new Error('Loaders must implement map(id, source).');
-  };
-
-  Loader.prototype.normalizeSync = function normalizeSync(moduleId, relativeTo) {
-    throw new Error('Loaders must implement normalizeSync(moduleId, relativeTo).');
-  };
-
-  Loader.prototype.normalize = function normalize(moduleId, relativeTo) {
-    throw new Error('Loaders must implement normalize(moduleId: string, relativeTo: string): Promise<string>.');
-  };
-
-  Loader.prototype.loadModule = function loadModule(id) {
-    throw new Error('Loaders must implement loadModule(id).');
-  };
-
-  Loader.prototype.loadAllModules = function loadAllModules(ids) {
-    throw new Error('Loader must implement loadAllModules(ids).');
-  };
-
-  Loader.prototype.loadTemplate = function loadTemplate(url) {
-    throw new Error('Loader must implement loadTemplate(url).');
-  };
-
-  Loader.prototype.loadText = function loadText(url) {
-    throw new Error('Loader must implement loadText(url).');
-  };
-
-  Loader.prototype.applyPluginToUrl = function applyPluginToUrl(url, pluginName) {
-    throw new Error('Loader must implement applyPluginToUrl(url, pluginName).');
-  };
-
-  Loader.prototype.addPlugin = function addPlugin(pluginName, implementation) {
-    throw new Error('Loader must implement addPlugin(pluginName, implementation).');
-  };
-
-  Loader.prototype.getOrCreateTemplateRegistryEntry = function getOrCreateTemplateRegistryEntry(address) {
-    return this.templateRegistry[address] || (this.templateRegistry[address] = new TemplateRegistryEntry(address));
-  };
-
-  return Loader;
-}();
+module.exports = (__webpack_require__(13))(39);
 
 /***/ }),
 
 /***/ 8:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (immutable) */ __webpack_exports__["f"] = updateOverrideContexts;
-/* harmony export (immutable) */ __webpack_exports__["e"] = createFullOverrideContext;
-/* harmony export (immutable) */ __webpack_exports__["h"] = updateOverrideContext;
-/* harmony export (immutable) */ __webpack_exports__["a"] = getItemsSourceExpression;
-/* harmony export (immutable) */ __webpack_exports__["c"] = unwrapExpression;
-/* harmony export (immutable) */ __webpack_exports__["b"] = isOneTime;
-/* harmony export (immutable) */ __webpack_exports__["d"] = updateOneTimeBinding;
-/* harmony export (immutable) */ __webpack_exports__["g"] = indexOf;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_binding__ = __webpack_require__(3);
-
-
-var oneTime = __WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["f" /* bindingMode */].oneTime;
-
-function updateOverrideContexts(views, startIndex) {
-  var length = views.length;
-
-  if (startIndex > 0) {
-    startIndex = startIndex - 1;
-  }
-
-  for (; startIndex < length; ++startIndex) {
-    updateOverrideContext(views[startIndex].overrideContext, startIndex, length);
-  }
-}
-
-function createFullOverrideContext(repeat, data, index, length, key) {
-  var bindingContext = {};
-  var overrideContext = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["b" /* createOverrideContext */])(bindingContext, repeat.scope.overrideContext);
-
-  if (typeof key !== 'undefined') {
-    bindingContext[repeat.key] = key;
-    bindingContext[repeat.value] = data;
-  } else {
-    bindingContext[repeat.local] = data;
-  }
-  updateOverrideContext(overrideContext, index, length);
-  return overrideContext;
-}
-
-function updateOverrideContext(overrideContext, index, length) {
-  var first = index === 0;
-  var last = index === length - 1;
-  var even = index % 2 === 0;
-
-  overrideContext.$index = index;
-  overrideContext.$first = first;
-  overrideContext.$last = last;
-  overrideContext.$middle = !(first || last);
-  overrideContext.$odd = !even;
-  overrideContext.$even = even;
-}
-
-function getItemsSourceExpression(instruction, attrName) {
-  return instruction.behaviorInstructions.filter(function (bi) {
-    return bi.originalAttrName === attrName;
-  })[0].attributes.items.sourceExpression;
-}
-
-function unwrapExpression(expression) {
-  var unwrapped = false;
-  while (expression instanceof __WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["i" /* BindingBehavior */]) {
-    expression = expression.expression;
-  }
-  while (expression instanceof __WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["j" /* ValueConverter */]) {
-    expression = expression.expression;
-    unwrapped = true;
-  }
-  return unwrapped ? expression : null;
-}
-
-function isOneTime(expression) {
-  while (expression instanceof __WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["i" /* BindingBehavior */]) {
-    if (expression.name === 'oneTime') {
-      return true;
-    }
-    expression = expression.expression;
-  }
-  return false;
-}
-
-function updateOneTimeBinding(binding) {
-  if (binding.call && binding.mode === oneTime) {
-    binding.call(__WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["k" /* sourceContext */]);
-  } else if (binding.updateOneTimeBindings) {
-    binding.updateOneTimeBindings();
-  }
-}
-
-function indexOf(array, item, matcher, startIndex) {
-  if (!matcher) {
-    return array.indexOf(item);
-  }
-  var length = array.length;
-  for (var index = startIndex || 0; index < length; index++) {
-    if (matcher(array[index], item)) {
-      return index;
-    }
-  }
-  return -1;
-}
-
-/***/ }),
-
-/***/ 9:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -21396,7 +23114,139 @@ function filterFlushStack(stack) {
 
   return index < 0 ? stack : stack.substr(0, index);
 }
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(62).setImmediate))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(81).setImmediate))
+
+/***/ }),
+
+/***/ 80:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = (__webpack_require__(13))(74);
+
+/***/ }),
+
+/***/ 81:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = (__webpack_require__(13))(76);
+
+/***/ }),
+
+/***/ 82:
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(44);
+__webpack_require__(45);
+__webpack_require__(46);
+module.exports = __webpack_require__(43);
+
+
+/***/ }),
+
+/***/ 9:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["f"] = updateOverrideContexts;
+/* harmony export (immutable) */ __webpack_exports__["e"] = createFullOverrideContext;
+/* harmony export (immutable) */ __webpack_exports__["h"] = updateOverrideContext;
+/* harmony export (immutable) */ __webpack_exports__["a"] = getItemsSourceExpression;
+/* harmony export (immutable) */ __webpack_exports__["c"] = unwrapExpression;
+/* harmony export (immutable) */ __webpack_exports__["b"] = isOneTime;
+/* harmony export (immutable) */ __webpack_exports__["d"] = updateOneTimeBinding;
+/* harmony export (immutable) */ __webpack_exports__["g"] = indexOf;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_binding__ = __webpack_require__(3);
+
+
+var oneTime = __WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["f" /* bindingMode */].oneTime;
+
+function updateOverrideContexts(views, startIndex) {
+  var length = views.length;
+
+  if (startIndex > 0) {
+    startIndex = startIndex - 1;
+  }
+
+  for (; startIndex < length; ++startIndex) {
+    updateOverrideContext(views[startIndex].overrideContext, startIndex, length);
+  }
+}
+
+function createFullOverrideContext(repeat, data, index, length, key) {
+  var bindingContext = {};
+  var overrideContext = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["b" /* createOverrideContext */])(bindingContext, repeat.scope.overrideContext);
+
+  if (typeof key !== 'undefined') {
+    bindingContext[repeat.key] = key;
+    bindingContext[repeat.value] = data;
+  } else {
+    bindingContext[repeat.local] = data;
+  }
+  updateOverrideContext(overrideContext, index, length);
+  return overrideContext;
+}
+
+function updateOverrideContext(overrideContext, index, length) {
+  var first = index === 0;
+  var last = index === length - 1;
+  var even = index % 2 === 0;
+
+  overrideContext.$index = index;
+  overrideContext.$first = first;
+  overrideContext.$last = last;
+  overrideContext.$middle = !(first || last);
+  overrideContext.$odd = !even;
+  overrideContext.$even = even;
+}
+
+function getItemsSourceExpression(instruction, attrName) {
+  return instruction.behaviorInstructions.filter(function (bi) {
+    return bi.originalAttrName === attrName;
+  })[0].attributes.items.sourceExpression;
+}
+
+function unwrapExpression(expression) {
+  var unwrapped = false;
+  while (expression instanceof __WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["i" /* BindingBehavior */]) {
+    expression = expression.expression;
+  }
+  while (expression instanceof __WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["j" /* ValueConverter */]) {
+    expression = expression.expression;
+    unwrapped = true;
+  }
+  return unwrapped ? expression : null;
+}
+
+function isOneTime(expression) {
+  while (expression instanceof __WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["i" /* BindingBehavior */]) {
+    if (expression.name === 'oneTime') {
+      return true;
+    }
+    expression = expression.expression;
+  }
+  return false;
+}
+
+function updateOneTimeBinding(binding) {
+  if (binding.call && binding.mode === oneTime) {
+    binding.call(__WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["k" /* sourceContext */]);
+  } else if (binding.updateOneTimeBindings) {
+    binding.updateOneTimeBindings();
+  }
+}
+
+function indexOf(array, item, matcher, startIndex) {
+  if (!matcher) {
+    return array.indexOf(item);
+  }
+  var length = array.length;
+  for (var index = startIndex || 0; index < length; index++) {
+    if (matcher(array[index], item)) {
+      return index;
+    }
+  }
+  return -1;
+}
 
 /***/ }),
 
@@ -21407,12 +23257,16 @@ function filterFlushStack(stack) {
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "App", function() { return App; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_framework__ = __webpack_require__("aurelia-framework");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_aurelia_router__ = __webpack_require__(10);
+
 
 var App = /** @class */ (function () {
     function App() {
     }
     App.prototype.configureRouter = function (config, router) {
+        this.router = router;
         config.title = 'Aurelia';
+        config.addAuthorizeStep(AuthorizeStep);
         config.map([{
                 route: ['', 'home'],
                 name: 'home',
@@ -21430,16 +23284,90 @@ var App = /** @class */ (function () {
             }, {
                 route: 'fetch-data',
                 name: 'fetchdata',
-                settings: { icon: 'th-list' },
+                settings: { icon: 'th-list', auth: true },
                 moduleId: '../website/fetchdata/fetchdata',
                 nav: true,
                 title: 'Fetch data'
-            }]);
-        this.router = router;
+            }, {
+                route: 'login',
+                name: 'login',
+                settings: { icon: 'user' },
+                moduleId: '../components/auth/login/login',
+                nav: true,
+                title: 'Login'
+            },
+        ]);
     };
     return App;
 }());
 
+var AuthorizeStep = /** @class */ (function () {
+    function AuthorizeStep() {
+    }
+    AuthorizeStep.prototype.run = function (navigationInstruction, next) {
+        if (navigationInstruction.getAllInstructions().some(function (i) { return i.config.settings.auth; })) {
+            var isLoggedIn = true;
+            console.log('It got here!');
+            if (!isLoggedIn) {
+                return next.cancel(new __WEBPACK_IMPORTED_MODULE_1_aurelia_router__["d" /* Redirect */]('login'));
+            }
+        }
+        return next();
+    };
+    return AuthorizeStep;
+}());
+//import { Aurelia, PLATFORM } from 'aurelia-framework';
+//import { Router, RouterConfiguration, NavigationInstruction, Redirect, Next } from 'aurelia-router';
+//export class App {
+//    router: Router;
+//    configureRouter(config: RouterConfiguration, router: Router) {
+//        config.title = 'Aurelia';
+//        config.addAuthorizeStep(AuthorizeStep);
+//        config.map([{
+//            route: [ '', 'home' ],
+//            name: 'home',
+//            settings: { icon: 'home' },
+//            moduleId: PLATFORM.moduleName('../website/home/home'),
+//            nav: true,
+//            title: 'Home'
+//        }, {
+//            route: 'counter',
+//            name: 'counter',
+//            settings: { icon: 'education' },
+//            moduleId: PLATFORM.moduleName('../website/counter/counter'),
+//            nav: true,
+//            title: 'Counter'
+//        }, {
+//            route: 'fetch-data',
+//            name: 'fetchdata',
+//            settings: { icon: 'th-list' },
+//            moduleId: PLATFORM.moduleName('../website/fetchdata/fetchdata'),
+//            nav: true,
+//            title: 'Fetch data'
+//        }, {
+//            route: 'login',
+//            name: 'login',
+//            settings: { icon: 'user' },
+//            moduleId: PLATFORM.moduleName('../components/auth/login/login'),
+//            nav: true,
+//            title: 'Login'
+//        },
+//        ]);
+//        this.router = router;
+//    }
+//}
+//class AuthorizeStep {
+//    run(navigationInstruction: NavigationInstruction, next: Next): Promise<any> {
+//        if (navigationInstruction.getAllInstructions().some(i => i.config.settings.auth)) {
+//            var isLoggedIn = false;
+//            console.log('It got here!');
+//            if (!isLoggedIn) {
+//                return next.cancel(new Redirect('login'));
+//            }
+//        }
+//        return next();
+//    }
+//}
 
 
 /***/ }),
@@ -21447,7 +23375,7 @@ var App = /** @class */ (function () {
 /***/ "app/app/app.css":
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(27)(undefined);
+exports = module.exports = __webpack_require__(41)(undefined);
 // imports
 
 
@@ -21466,10 +23394,88 @@ module.exports = "<template>\r\n    <require from=\"../navmenu/navmenu.html\"></
 
 /***/ }),
 
+/***/ "app/components/auth/login/login":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Login", function() { return Login; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_fetch_client__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_aurelia_framework__ = __webpack_require__("aurelia-framework");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_aurelia_validation__ = __webpack_require__("aurelia-validation");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__tokenService__ = __webpack_require__(71);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__utilities_bootstrapFormRenderer__ = __webpack_require__(72);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var Login = /** @class */ (function () {
+    function Login(tokenService, http, controllerFactory) {
+        this.tokenService = tokenService;
+        this.http = http;
+        this.controllerFactory = controllerFactory;
+        this.heading = "Login";
+        this.message = "";
+        this.username = "";
+        this.password = ""; // these are pubic fields available in your view unless you add 'private' in front of them
+        this.controller = controllerFactory.createForCurrentScope();
+        this.controller.addRenderer(new __WEBPACK_IMPORTED_MODULE_4__utilities_bootstrapFormRenderer__["a" /* BootstrapFormRenderer */]());
+    }
+    Login.prototype.submitLogin = function () {
+        var _a = this, username = _a.username, password = _a.password;
+        if (this.controller.validate()) {
+            console.log("submit login reached!");
+        }
+        ;
+        // if (!!username && !!password) {
+        //   // or your validations
+        //   
+        //   //this.tokenService.login({ username, password });
+        // }
+    };
+    Login = __decorate([
+        __WEBPACK_IMPORTED_MODULE_1_aurelia_framework__["b" /* autoinject */]
+        //@inject(NewInstance.of(ValidationController))
+        ,
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__tokenService__["a" /* TokenService */],
+            __WEBPACK_IMPORTED_MODULE_0_aurelia_fetch_client__["a" /* HttpClient */],
+            __WEBPACK_IMPORTED_MODULE_2_aurelia_validation__["ValidationControllerFactory"]])
+    ], Login);
+    return Login;
+}());
+
+__WEBPACK_IMPORTED_MODULE_2_aurelia_validation__["ValidationRules"].ensure(function (v) { return v.username; })
+    .displayName("User Name")
+    .required()
+    .ensure(function (v) { return v.password; })
+    .displayName("Password")
+    .required()
+    .on(Login);
+
+
+/***/ }),
+
+/***/ "app/components/auth/login/login.html":
+/***/ (function(module, exports) {
+
+module.exports = "<template>\r\n    <form role=\"form\" submit.delegate=\"submitLogin()\">\r\n        <div class=\"form-group\">\r\n            <label for=\"username\">User Name</label>\r\n            <input type=\"text\" value.bind=\"username & validate\" class=\"form-control\" id=\"username\" placeholder=\"User Name\">\r\n        </div>\r\n        <div class=\"form-group\">\r\n            <label for=\"password\">Password</label>\r\n            <input type=\"password\" value.bind=\"password & validate\" class=\"form-control\" id=\"password\" placeholder=\"Password\">\r\n        </div>\r\n        <button type=\"submit\" class=\"btn btn-default\">Login</button>\r\n    </form>\r\n    <hr>\r\n\r\n    <ul>\r\n        <li repeat.for=\"error of controller.errors\">\r\n            ${error.message}\r\n        </li>\r\n    </ul>\r\n</template>";
+
+/***/ }),
+
 /***/ "app/navmenu/navmenu.css":
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(27)(undefined);
+exports = module.exports = __webpack_require__(41)(undefined);
 // imports
 
 
@@ -21521,7 +23527,7 @@ module.exports = "<template>\r\n    <h1>Counter</h1>\r\n\r\n    <p>This is a sim
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Fetchdata", function() { return Fetchdata; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_fetch_client__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_fetch_client__ = __webpack_require__(16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_aurelia_framework__ = __webpack_require__("aurelia-framework");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -21544,7 +23550,7 @@ var Fetchdata = /** @class */ (function () {
         });
     }
     Fetchdata = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_aurelia_framework__["b" /* inject */])(__WEBPACK_IMPORTED_MODULE_0_aurelia_fetch_client__["a" /* HttpClient */]),
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_aurelia_framework__["c" /* inject */])(__WEBPACK_IMPORTED_MODULE_0_aurelia_fetch_client__["a" /* HttpClient */]),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0_aurelia_fetch_client__["a" /* HttpClient */]])
     ], Fetchdata);
     return Fetchdata;
@@ -21591,7 +23597,7 @@ module.exports = "<template>\r\n    <h1>Hello, world!</h1>\r\n    <p>Welcome to 
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return EventAggregator; });
 /* unused harmony export includeEventsIn */
 /* harmony export (immutable) */ __webpack_exports__["configure"] = configure;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_logging__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_logging__ = __webpack_require__(4);
 
 
 
@@ -21738,20 +23744,21 @@ function configure(config) {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Aurelia", function() { return Aurelia; });
 /* unused harmony export FrameworkConfiguration */
 /* unused harmony export LogManager */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_logging__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_logging__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_aurelia_dependency_injection__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_aurelia_loader__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_aurelia_templating__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_aurelia_pal__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_aurelia_path__ = __webpack_require__(6);
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_1_aurelia_dependency_injection__["b"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_1_aurelia_dependency_injection__["f"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_1_aurelia_dependency_injection__["b"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_aurelia_binding__ = __webpack_require__(3);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_aurelia_metadata__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_aurelia_metadata__ = __webpack_require__(5);
 /* unused harmony namespace reexport */
 /* unused harmony namespace reexport */
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_aurelia_task_queue__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_aurelia_task_queue__ = __webpack_require__(8);
 /* unused harmony namespace reexport */
 /* unused harmony namespace reexport */
 /* unused harmony namespace reexport */
@@ -22233,7 +24240,7 @@ var LogManager = __WEBPACK_IMPORTED_MODULE_0_aurelia_logging__;
 /* harmony export (immutable) */ __webpack_exports__["configure"] = configure;
 /* unused harmony export BrowserHistory */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_pal__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_aurelia_history__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_aurelia_history__ = __webpack_require__(22);
 var _class, _temp;
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -22552,7 +24559,7 @@ function createOrigin(protocol, hostname, port) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ConsoleAppender", function() { return ConsoleAppender; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_logging__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_logging__ = __webpack_require__(4);
 
 
 
@@ -23108,7 +25115,7 @@ function initialize() {
 /* unused harmony export SyntaxInterpreter */
 /* unused harmony export TemplatingBindingLanguage */
 /* harmony export (immutable) */ __webpack_exports__["configure"] = configure;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_logging__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_logging__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_aurelia_binding__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_aurelia_templating__ = __webpack_require__(1);
 var _class, _temp, _dec, _class2, _class3, _temp2, _class4, _temp3;
@@ -23787,27 +25794,27 @@ function configure(config) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__replaceable__ = __webpack_require__("aurelia-templating-resources/replaceable");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__focus__ = __webpack_require__("aurelia-templating-resources/focus");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_aurelia_templating__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__css_resource__ = __webpack_require__(42);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__html_sanitizer__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__css_resource__ = __webpack_require__(56);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__html_sanitizer__ = __webpack_require__(28);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__attr_binding_behavior__ = __webpack_require__("aurelia-templating-resources/attr-binding-behavior");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__binding_mode_behaviors__ = __webpack_require__("aurelia-templating-resources/binding-mode-behaviors");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__throttle_binding_behavior__ = __webpack_require__("aurelia-templating-resources/throttle-binding-behavior");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__debounce_binding_behavior__ = __webpack_require__("aurelia-templating-resources/debounce-binding-behavior");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__self_binding_behavior__ = __webpack_require__("aurelia-templating-resources/self-binding-behavior");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__signal_binding_behavior__ = __webpack_require__("aurelia-templating-resources/signal-binding-behavior");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__binding_signaler__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__binding_signaler__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__update_trigger_binding_behavior__ = __webpack_require__("aurelia-templating-resources/update-trigger-binding-behavior");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__abstract_repeater__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__repeat_strategy_locator__ = __webpack_require__(25);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__html_resource_plugin__ = __webpack_require__(44);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__null_repeat_strategy__ = __webpack_require__(23);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__array_repeat_strategy__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__map_repeat_strategy__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__set_repeat_strategy__ = __webpack_require__(26);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__number_repeat_strategy__ = __webpack_require__(24);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__repeat_utilities__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__analyze_view_factory__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__aurelia_hide_style__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__abstract_repeater__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__repeat_strategy_locator__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__html_resource_plugin__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__null_repeat_strategy__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__array_repeat_strategy__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__map_repeat_strategy__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__set_repeat_strategy__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__number_repeat_strategy__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__repeat_utilities__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__analyze_view_factory__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__aurelia_hide_style__ = __webpack_require__(17);
 /* unused harmony reexport Compose */
 /* unused harmony reexport If */
 /* unused harmony reexport Else */
@@ -23937,7 +25944,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "OneWayBindingBehavior", function() { return OneWayBindingBehavior; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TwoWayBindingBehavior", function() { return TwoWayBindingBehavior; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_binding__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_aurelia_metadata__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_aurelia_metadata__ = __webpack_require__(5);
 var _dec, _class, _dec2, _class2, _dec3, _class3;
 
 
@@ -23983,8 +25990,8 @@ var TwoWayBindingBehavior = (_dec3 = __webpack_require__.i(__WEBPACK_IMPORTED_MO
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Compose", function() { return Compose; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_dependency_injection__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_aurelia_logging__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_aurelia_task_queue__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_aurelia_logging__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_aurelia_task_queue__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_aurelia_templating__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_aurelia_pal__ = __webpack_require__(0);
 var _dec, _dec2, _class, _desc, _value, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4;
@@ -24270,7 +26277,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Else", function() { return Else; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_templating__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_aurelia_dependency_injection__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__if_core__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__if_core__ = __webpack_require__(29);
 var _dec, _dec2, _class;
 
 
@@ -24329,7 +26336,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_templating__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_aurelia_binding__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_aurelia_dependency_injection__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_aurelia_task_queue__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_aurelia_task_queue__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_aurelia_pal__ = __webpack_require__(0);
 var _dec, _dec2, _class;
 
@@ -24411,7 +26418,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_dependency_injection__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_aurelia_templating__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_aurelia_pal__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__aurelia_hide_style__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__aurelia_hide_style__ = __webpack_require__(17);
 var _dec, _dec2, _class;
 
 
@@ -24459,7 +26466,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "If", function() { return If; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_templating__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_aurelia_dependency_injection__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__if_core__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__if_core__ = __webpack_require__(29);
 var _dec, _dec2, _dec3, _class, _desc, _value, _class2, _descriptor, _descriptor2;
 
 function _initDefineProp(target, property, descriptor, context) {
@@ -24602,10 +26609,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_dependency_injection__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_aurelia_binding__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_aurelia_templating__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__repeat_strategy_locator__ = __webpack_require__(25);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__repeat_utilities__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__analyze_view_factory__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__abstract_repeater__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__repeat_strategy_locator__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__repeat_utilities__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__analyze_view_factory__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__abstract_repeater__ = __webpack_require__(24);
 var _dec, _dec2, _class, _desc, _value, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4;
 
 function _initDefineProp(target, property, descriptor, context) {
@@ -24953,7 +26960,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SanitizeHTMLValueConverter", function() { return SanitizeHTMLValueConverter; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_binding__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_aurelia_dependency_injection__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__html_sanitizer__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__html_sanitizer__ = __webpack_require__(28);
 var _dec, _dec2, _class;
 
 
@@ -25030,7 +27037,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_dependency_injection__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_aurelia_templating__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_aurelia_pal__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__aurelia_hide_style__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__aurelia_hide_style__ = __webpack_require__(17);
 var _dec, _dec2, _class;
 
 
@@ -25076,7 +27083,7 @@ var Show = (_dec = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_aurelia_tem
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SignalBindingBehavior", function() { return SignalBindingBehavior; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__binding_signaler__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__binding_signaler__ = __webpack_require__(27);
 
 
 
@@ -25329,8 +27336,8 @@ var With = (_dec = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_aurelia_tem
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "configure", function() { return configure; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_pal__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_aurelia_router__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__route_loader__ = __webpack_require__(45);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_aurelia_router__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__route_loader__ = __webpack_require__(59);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__router_view__ = __webpack_require__("aurelia-templating-router/router-view");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__route_href__ = __webpack_require__("aurelia-templating-router/route-href");
 /* unused harmony reexport TemplatingRouteLoader */
@@ -25360,9 +27367,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RouteHref", function() { return RouteHref; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_templating__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_aurelia_dependency_injection__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_aurelia_router__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_aurelia_router__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_aurelia_pal__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_aurelia_logging__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_aurelia_logging__ = __webpack_require__(4);
 var _dec, _dec2, _dec3, _dec4, _dec5, _class;
 
 
@@ -25437,8 +27444,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_dependency_injection__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_aurelia_binding__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_aurelia_templating__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_aurelia_router__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_aurelia_metadata__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_aurelia_router__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_aurelia_metadata__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_aurelia_pal__ = __webpack_require__(0);
 var _dec, _dec2, _class, _desc, _value, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4;
 
@@ -25672,34 +27679,404 @@ var RouterViewLocator = function () {
 
 /***/ }),
 
+/***/ "aurelia-validation":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AureliaValidationConfiguration", function() { return AureliaValidationConfiguration; });
+/* harmony export (immutable) */ __webpack_exports__["configure"] = configure;
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "getTargetDOMElement", function() { return __WEBPACK_IMPORTED_MODULE_0__get_target_dom_element__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__property_info__ = __webpack_require__(38);
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "getPropertyInfo", function() { return __WEBPACK_IMPORTED_MODULE_1__property_info__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__property_accessor_parser__ = __webpack_require__(14);
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "PropertyAccessorParser", function() { return __WEBPACK_IMPORTED_MODULE_2__property_accessor_parser__["a"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "getAccessorExpression", function() { return __WEBPACK_IMPORTED_MODULE_2__property_accessor_parser__["b"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__validate_binding_behavior__ = __webpack_require__("aurelia-validation/validate-binding-behavior");
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "ValidateBindingBehavior", function() { return __WEBPACK_IMPORTED_MODULE_3__validate_binding_behavior__["ValidateBindingBehavior"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "ValidateManuallyBindingBehavior", function() { return __WEBPACK_IMPORTED_MODULE_3__validate_binding_behavior__["ValidateManuallyBindingBehavior"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "ValidateOnBlurBindingBehavior", function() { return __WEBPACK_IMPORTED_MODULE_3__validate_binding_behavior__["ValidateOnBlurBindingBehavior"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "ValidateOnChangeBindingBehavior", function() { return __WEBPACK_IMPORTED_MODULE_3__validate_binding_behavior__["ValidateOnChangeBindingBehavior"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "ValidateOnChangeOrBlurBindingBehavior", function() { return __WEBPACK_IMPORTED_MODULE_3__validate_binding_behavior__["ValidateOnChangeOrBlurBindingBehavior"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__validate_event__ = __webpack_require__(40);
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "ValidateEvent", function() { return __WEBPACK_IMPORTED_MODULE_4__validate_event__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__validate_result__ = __webpack_require__(21);
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "ValidateResult", function() { return __WEBPACK_IMPORTED_MODULE_5__validate_result__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__validate_trigger__ = __webpack_require__(15);
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "validateTrigger", function() { return __WEBPACK_IMPORTED_MODULE_6__validate_trigger__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__validation_controller__ = __webpack_require__(11);
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "ValidationController", function() { return __WEBPACK_IMPORTED_MODULE_7__validation_controller__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__validation_controller_factory__ = __webpack_require__(62);
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "ValidationControllerFactory", function() { return __WEBPACK_IMPORTED_MODULE_8__validation_controller_factory__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__validation_errors_custom_attribute__ = __webpack_require__("aurelia-validation/validation-errors-custom-attribute");
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "ValidationErrorsCustomAttribute", function() { return __WEBPACK_IMPORTED_MODULE_9__validation_errors_custom_attribute__["ValidationErrorsCustomAttribute"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__validation_renderer_custom_attribute__ = __webpack_require__("aurelia-validation/validation-renderer-custom-attribute");
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "ValidationRendererCustomAttribute", function() { return __WEBPACK_IMPORTED_MODULE_10__validation_renderer_custom_attribute__["ValidationRendererCustomAttribute"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__validator__ = __webpack_require__(12);
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "Validator", function() { return __WEBPACK_IMPORTED_MODULE_11__validator__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__implementation_rules__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__get_target_dom_element__ = __webpack_require__(35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__implementation_standard_validator__ = __webpack_require__(36);
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "StandardValidator", function() { return __WEBPACK_IMPORTED_MODULE_13__implementation_standard_validator__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__implementation_validation_messages__ = __webpack_require__(20);
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "validationMessages", function() { return __WEBPACK_IMPORTED_MODULE_14__implementation_validation_messages__["a"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "ValidationMessageProvider", function() { return __WEBPACK_IMPORTED_MODULE_14__implementation_validation_messages__["b"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__implementation_validation_message_parser__ = __webpack_require__(19);
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "ValidationMessageParser", function() { return __WEBPACK_IMPORTED_MODULE_15__implementation_validation_message_parser__["a"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "MessageExpressionValidator", function() { return __WEBPACK_IMPORTED_MODULE_15__implementation_validation_message_parser__["b"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__implementation_validation_rules__ = __webpack_require__(37);
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "FluentRuleCustomizer", function() { return __WEBPACK_IMPORTED_MODULE_16__implementation_validation_rules__["a"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "FluentRules", function() { return __WEBPACK_IMPORTED_MODULE_16__implementation_validation_rules__["b"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "FluentEnsure", function() { return __WEBPACK_IMPORTED_MODULE_16__implementation_validation_rules__["c"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "ValidationRules", function() { return __WEBPACK_IMPORTED_MODULE_16__implementation_validation_rules__["d"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17_aurelia_pal__ = __webpack_require__(0);
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "Rules", function() { return __WEBPACK_IMPORTED_MODULE_12__implementation_rules__["a"]; });
+// Exports
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Configuration
+
+
+
+
+
+
+/**
+ * Aurelia Validation Configuration API
+ */
+var AureliaValidationConfiguration = (function () {
+    function AureliaValidationConfiguration() {
+        this.validatorType = __WEBPACK_IMPORTED_MODULE_13__implementation_standard_validator__["a" /* StandardValidator */];
+    }
+    /**
+     * Use a custom Validator implementation.
+     */
+    AureliaValidationConfiguration.prototype.customValidator = function (type) {
+        this.validatorType = type;
+    };
+    /**
+     * Applies the configuration.
+     */
+    AureliaValidationConfiguration.prototype.apply = function (container) {
+        var validator = container.get(this.validatorType);
+        container.registerInstance(__WEBPACK_IMPORTED_MODULE_11__validator__["a" /* Validator */], validator);
+    };
+    return AureliaValidationConfiguration;
+}());
+
+/**
+ * Configures the plugin.
+ */
+function configure(frameworkConfig, callback) {
+    // the fluent rule definition API needs the parser to translate messages
+    // to interpolation expressions.
+    var messageParser = frameworkConfig.container.get(__WEBPACK_IMPORTED_MODULE_15__implementation_validation_message_parser__["a" /* ValidationMessageParser */]);
+    var propertyParser = frameworkConfig.container.get(__WEBPACK_IMPORTED_MODULE_2__property_accessor_parser__["a" /* PropertyAccessorParser */]);
+    __WEBPACK_IMPORTED_MODULE_16__implementation_validation_rules__["d" /* ValidationRules */].initialize(messageParser, propertyParser);
+    // configure...
+    var config = new AureliaValidationConfiguration();
+    if (callback instanceof Function) {
+        callback(config);
+    }
+    config.apply(frameworkConfig.container);
+    // globalize the behaviors.
+    if (frameworkConfig.globalResources) {
+        frameworkConfig.globalResources('./validate-binding-behavior', './validation-errors-custom-attribute', './validation-renderer-custom-attribute');
+    }
+}
+
+
+/***/ }),
+
+/***/ "aurelia-validation/validate-binding-behavior":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ValidateBindingBehavior", function() { return ValidateBindingBehavior; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ValidateManuallyBindingBehavior", function() { return ValidateManuallyBindingBehavior; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ValidateOnBlurBindingBehavior", function() { return ValidateOnBlurBindingBehavior; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ValidateOnChangeBindingBehavior", function() { return ValidateOnChangeBindingBehavior; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ValidateOnChangeOrBlurBindingBehavior", function() { return ValidateOnChangeOrBlurBindingBehavior; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_task_queue__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__validate_trigger__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__validate_binding_behavior_base__ = __webpack_require__(61);
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+
+
+
+/**
+ * Binding behavior. Indicates the bound property should be validated
+ * when the validate trigger specified by the associated controller's
+ * validateTrigger property occurs.
+ */
+var ValidateBindingBehavior = (function (_super) {
+    __extends(ValidateBindingBehavior, _super);
+    function ValidateBindingBehavior() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    ValidateBindingBehavior.prototype.getValidateTrigger = function (controller) {
+        return controller.validateTrigger;
+    };
+    ValidateBindingBehavior.inject = [__WEBPACK_IMPORTED_MODULE_0_aurelia_task_queue__["a" /* TaskQueue */]];
+    return ValidateBindingBehavior;
+}(__WEBPACK_IMPORTED_MODULE_2__validate_binding_behavior_base__["a" /* ValidateBindingBehaviorBase */]));
+
+/**
+ * Binding behavior. Indicates the bound property will be validated
+ * manually, by calling controller.validate(). No automatic validation
+ * triggered by data-entry or blur will occur.
+ */
+var ValidateManuallyBindingBehavior = (function (_super) {
+    __extends(ValidateManuallyBindingBehavior, _super);
+    function ValidateManuallyBindingBehavior() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    ValidateManuallyBindingBehavior.prototype.getValidateTrigger = function () {
+        return __WEBPACK_IMPORTED_MODULE_1__validate_trigger__["a" /* validateTrigger */].manual;
+    };
+    ValidateManuallyBindingBehavior.inject = [__WEBPACK_IMPORTED_MODULE_0_aurelia_task_queue__["a" /* TaskQueue */]];
+    return ValidateManuallyBindingBehavior;
+}(__WEBPACK_IMPORTED_MODULE_2__validate_binding_behavior_base__["a" /* ValidateBindingBehaviorBase */]));
+
+/**
+ * Binding behavior. Indicates the bound property should be validated
+ * when the associated element blurs.
+ */
+var ValidateOnBlurBindingBehavior = (function (_super) {
+    __extends(ValidateOnBlurBindingBehavior, _super);
+    function ValidateOnBlurBindingBehavior() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    ValidateOnBlurBindingBehavior.prototype.getValidateTrigger = function () {
+        return __WEBPACK_IMPORTED_MODULE_1__validate_trigger__["a" /* validateTrigger */].blur;
+    };
+    ValidateOnBlurBindingBehavior.inject = [__WEBPACK_IMPORTED_MODULE_0_aurelia_task_queue__["a" /* TaskQueue */]];
+    return ValidateOnBlurBindingBehavior;
+}(__WEBPACK_IMPORTED_MODULE_2__validate_binding_behavior_base__["a" /* ValidateBindingBehaviorBase */]));
+
+/**
+ * Binding behavior. Indicates the bound property should be validated
+ * when the associated element is changed by the user, causing a change
+ * to the model.
+ */
+var ValidateOnChangeBindingBehavior = (function (_super) {
+    __extends(ValidateOnChangeBindingBehavior, _super);
+    function ValidateOnChangeBindingBehavior() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    ValidateOnChangeBindingBehavior.prototype.getValidateTrigger = function () {
+        return __WEBPACK_IMPORTED_MODULE_1__validate_trigger__["a" /* validateTrigger */].change;
+    };
+    ValidateOnChangeBindingBehavior.inject = [__WEBPACK_IMPORTED_MODULE_0_aurelia_task_queue__["a" /* TaskQueue */]];
+    return ValidateOnChangeBindingBehavior;
+}(__WEBPACK_IMPORTED_MODULE_2__validate_binding_behavior_base__["a" /* ValidateBindingBehaviorBase */]));
+
+/**
+ * Binding behavior. Indicates the bound property should be validated
+ * when the associated element blurs or is changed by the user, causing
+ * a change to the model.
+ */
+var ValidateOnChangeOrBlurBindingBehavior = (function (_super) {
+    __extends(ValidateOnChangeOrBlurBindingBehavior, _super);
+    function ValidateOnChangeOrBlurBindingBehavior() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    ValidateOnChangeOrBlurBindingBehavior.prototype.getValidateTrigger = function () {
+        return __WEBPACK_IMPORTED_MODULE_1__validate_trigger__["a" /* validateTrigger */].changeOrBlur;
+    };
+    ValidateOnChangeOrBlurBindingBehavior.inject = [__WEBPACK_IMPORTED_MODULE_0_aurelia_task_queue__["a" /* TaskQueue */]];
+    return ValidateOnChangeOrBlurBindingBehavior;
+}(__WEBPACK_IMPORTED_MODULE_2__validate_binding_behavior_base__["a" /* ValidateBindingBehaviorBase */]));
+
+
+
+/***/ }),
+
+/***/ "aurelia-validation/validation-errors-custom-attribute":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ValidationErrorsCustomAttribute", function() { return ValidationErrorsCustomAttribute; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_binding__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_aurelia_dependency_injection__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_aurelia_templating__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__validation_controller__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_aurelia_pal__ = __webpack_require__(0);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+
+var ValidationErrorsCustomAttribute = (function () {
+    function ValidationErrorsCustomAttribute(boundaryElement, controllerAccessor) {
+        this.boundaryElement = boundaryElement;
+        this.controllerAccessor = controllerAccessor;
+        this.controller = null;
+        this.errors = [];
+        this.errorsInternal = [];
+    }
+    ValidationErrorsCustomAttribute.prototype.sort = function () {
+        this.errorsInternal.sort(function (a, b) {
+            if (a.targets[0] === b.targets[0]) {
+                return 0;
+            }
+            // tslint:disable-next-line:no-bitwise
+            return a.targets[0].compareDocumentPosition(b.targets[0]) & 2 ? 1 : -1;
+        });
+    };
+    ValidationErrorsCustomAttribute.prototype.interestingElements = function (elements) {
+        var _this = this;
+        return elements.filter(function (e) { return _this.boundaryElement.contains(e); });
+    };
+    ValidationErrorsCustomAttribute.prototype.render = function (instruction) {
+        var _loop_1 = function (result) {
+            var index = this_1.errorsInternal.findIndex(function (x) { return x.error === result; });
+            if (index !== -1) {
+                this_1.errorsInternal.splice(index, 1);
+            }
+        };
+        var this_1 = this;
+        for (var _i = 0, _a = instruction.unrender; _i < _a.length; _i++) {
+            var result = _a[_i].result;
+            _loop_1(result);
+        }
+        for (var _b = 0, _c = instruction.render; _b < _c.length; _b++) {
+            var _d = _c[_b], result = _d.result, elements = _d.elements;
+            if (result.valid) {
+                continue;
+            }
+            var targets = this.interestingElements(elements);
+            if (targets.length) {
+                this.errorsInternal.push({ error: result, targets: targets });
+            }
+        }
+        this.sort();
+        this.errors = this.errorsInternal;
+    };
+    ValidationErrorsCustomAttribute.prototype.bind = function () {
+        if (!this.controller) {
+            this.controller = this.controllerAccessor();
+        }
+        // this will call render() with the side-effect of updating this.errors
+        this.controller.addRenderer(this);
+    };
+    ValidationErrorsCustomAttribute.prototype.unbind = function () {
+        if (this.controller) {
+            this.controller.removeRenderer(this);
+        }
+    };
+    ValidationErrorsCustomAttribute.inject = [__WEBPACK_IMPORTED_MODULE_4_aurelia_pal__["c" /* DOM */].Element, __WEBPACK_IMPORTED_MODULE_1_aurelia_dependency_injection__["e" /* Lazy */].of(__WEBPACK_IMPORTED_MODULE_3__validation_controller__["a" /* ValidationController */])];
+    __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["j" /* bindable */])({ defaultBindingMode: __WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["f" /* bindingMode */].oneWay })
+    ], ValidationErrorsCustomAttribute.prototype, "controller", void 0);
+    __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["j" /* bindable */])({ primaryProperty: true, defaultBindingMode: __WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["f" /* bindingMode */].twoWay })
+    ], ValidationErrorsCustomAttribute.prototype, "errors", void 0);
+    ValidationErrorsCustomAttribute = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_aurelia_templating__["k" /* customAttribute */])('validation-errors')
+    ], ValidationErrorsCustomAttribute);
+    return ValidationErrorsCustomAttribute;
+}());
+
+
+
+/***/ }),
+
+/***/ "aurelia-validation/validation-renderer-custom-attribute":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ValidationRendererCustomAttribute", function() { return ValidationRendererCustomAttribute; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__validation_controller__ = __webpack_require__(11);
+
+var ValidationRendererCustomAttribute = (function () {
+    function ValidationRendererCustomAttribute() {
+    }
+    ValidationRendererCustomAttribute.prototype.created = function (view) {
+        this.container = view.container;
+    };
+    ValidationRendererCustomAttribute.prototype.bind = function () {
+        this.controller = this.container.get(__WEBPACK_IMPORTED_MODULE_0__validation_controller__["a" /* ValidationController */]);
+        this.renderer = this.container.get(this.value);
+        this.controller.addRenderer(this.renderer);
+    };
+    ValidationRendererCustomAttribute.prototype.unbind = function () {
+        this.controller.removeRenderer(this.renderer);
+        this.controller = null;
+        this.renderer = null;
+    };
+    return ValidationRendererCustomAttribute;
+}());
+
+
+
+/***/ }),
+
 /***/ "boot":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["configure"] = configure;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_aurelia_framework__ = __webpack_require__("aurelia-framework");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_aurelia_fetch_client__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_bootstrap_dist_css_bootstrap_css__ = __webpack_require__(60);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_aurelia_fetch_client__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_bootstrap_dist_css_bootstrap_css__ = __webpack_require__(79);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_bootstrap_dist_css_bootstrap_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_bootstrap_dist_css_bootstrap_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_isomorphic_fetch__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_isomorphic_fetch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_isomorphic_fetch__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_bootstrap__ = __webpack_require__(59);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_bootstrap__ = __webpack_require__(78);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_bootstrap___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_bootstrap__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_isomorphic_fetch__ = __webpack_require__(66);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_isomorphic_fetch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_isomorphic_fetch__);
 
 
 
 
 
 function configure(aurelia) {
-    aurelia.use.standardConfiguration();
+    aurelia.use
+        .standardConfiguration()
+        .plugin('aurelia-validation');
     if (true) {
         aurelia.use.developmentLogging();
     }
     new __WEBPACK_IMPORTED_MODULE_2_aurelia_fetch_client__["a" /* HttpClient */]().configure(function (config) {
-        var baseUrl = document.getElementsByTagName('base')[0].href;
+        var baseUrl = document.getElementsByTagName("base")[0].href;
         config.withBaseUrl(baseUrl);
     });
-    aurelia.start().then(function () { return aurelia.setRoot('app/app/app'); });
+    aurelia
+        .start()
+        .then(function () { return aurelia.setRoot('app/app/app'); });
 }
 
 

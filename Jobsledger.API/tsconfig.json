@@ -10,7 +10,7 @@
     "strict": true,
     "lib": [ "es2015", "dom" ],
     "types": [ "webpack-env" ],
-    "noImplicitAny": true
+    "noImplicitAny": false
   },
   "exclude": [ "bin", "node_modules" ],
   "atom": { "rewriteTsconfig": false }

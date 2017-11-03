@@ -177,7 +177,7 @@ aurelia-api@^3.1.1:
     aurelia-path "^1.1.1"
     extend "^3.0.0"
 
-aurelia-binding@^1.0.0, aurelia-binding@^1.0.9, aurelia-binding@^1.3.0, aurelia-binding@^1.5.0:
+aurelia-binding@^1.0.0, aurelia-binding@^1.0.9, aurelia-binding@^1.2.1, aurelia-binding@^1.3.0, aurelia-binding@^1.5.0:
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/aurelia-binding/-/aurelia-binding-1.5.0.tgz#ac237141a226f5df906fe06b13bc0806fe065cb7"
   dependencies:
@@ -205,7 +205,7 @@ aurelia-bootstrapper@^2.0.1:
     aurelia-templating-resources "^1.0.0"
     aurelia-templating-router "^1.0.0"
 
-aurelia-dependency-injection@^1.0.0, aurelia-dependency-injection@^1.2.0:
+aurelia-dependency-injection@^1.0.0, aurelia-dependency-injection@^1.2.0, aurelia-dependency-injection@^1.3.1:
   version "1.3.2"
   resolved "https://registry.yarnpkg.com/aurelia-dependency-injection/-/aurelia-dependency-injection-1.3.2.tgz#5f9ca5dede6a1ccc72a0838c980df3dfe7918756"
   dependencies:
@@ -287,7 +287,7 @@ aurelia-logging-console@^1.0.0:
   dependencies:
     aurelia-logging "^1.0.0"
 
-aurelia-logging@^1.0.0:
+aurelia-logging@^1.0.0, aurelia-logging@^1.3.1:
   version "1.3.1"
   resolved "https://registry.yarnpkg.com/aurelia-logging/-/aurelia-logging-1.3.1.tgz#b34ae759372ba08740ab12233a89bad15487fe98"
 
@@ -323,7 +323,7 @@ aurelia-route-recognizer@^1.0.0:
   dependencies:
     aurelia-path "^1.0.0"
 
-aurelia-router@^1.0.1, aurelia-router@^1.2.1:
+aurelia-router@^1.0.1, aurelia-router@^1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/aurelia-router/-/aurelia-router-1.4.0.tgz#a6109dba2916065b9e1fa47fe3dce69d2fb5ff1d"
   dependencies:
@@ -334,7 +334,7 @@ aurelia-router@^1.0.1, aurelia-router@^1.2.1:
     aurelia-path "^1.0.0"
     aurelia-route-recognizer "^1.0.0"
 
-aurelia-task-queue@^1.0.0, aurelia-task-queue@^1.1.0:
+aurelia-task-queue@^1.0.0, aurelia-task-queue@^1.1.0, aurelia-task-queue@^1.2.0:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/aurelia-task-queue/-/aurelia-task-queue-1.2.1.tgz#2e25c7cd663b7e3074f1d99744eb2d14ec5ce594"
   dependencies:
@@ -375,7 +375,7 @@ aurelia-templating-router@^1.0.0:
     aurelia-router "^1.0.1"
     aurelia-templating "^1.5.0"
 
-aurelia-templating@^1.0.0, aurelia-templating@^1.1.2, aurelia-templating@^1.3.0, aurelia-templating@^1.5.0:
+aurelia-templating@^1.0.0, aurelia-templating@^1.1.2, aurelia-templating@^1.3.0, aurelia-templating@^1.4.2, aurelia-templating@^1.5.0:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/aurelia-templating/-/aurelia-templating-1.6.0.tgz#f2e47c694a02ce7eea2bcd631e795653c29be5b3"
   dependencies:
@@ -387,6 +387,17 @@ aurelia-templating@^1.0.0, aurelia-templating@^1.1.2, aurelia-templating@^1.3.0,
     aurelia-pal "^1.0.0"
     aurelia-path "^1.0.0"
     aurelia-task-queue "^1.1.0"
+
+aurelia-validation@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/aurelia-validation/-/aurelia-validation-1.1.2.tgz#22304ad65add4132dbc090d93faa04d5cc2c3ce9"
+  dependencies:
+    aurelia-binding "^1.2.1"
+    aurelia-dependency-injection "^1.3.1"
+    aurelia-logging "^1.3.1"
+    aurelia-pal "^1.3.0"
+    aurelia-task-queue "^1.2.0"
+    aurelia-templating "^1.4.2"
 
 aurelia-webpack-plugin@^2.0.0-rc.2:
   version "2.0.0-rc.5"
@@ -1163,6 +1174,10 @@ find-up@^1.0.0:
 flatten@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/flatten/-/flatten-1.0.2.tgz#dae46a9d78fbe25292258cc1e780a41d95c03782"
+
+font-awesome@^4.7.0:
+  version "4.7.0"
+  resolved "https://registry.yarnpkg.com/font-awesome/-/font-awesome-4.7.0.tgz#8fa8cf0411a1a31afd07b06d2902bb9fc815a133"
 
 for-in@^1.0.1:
   version "1.0.2"
