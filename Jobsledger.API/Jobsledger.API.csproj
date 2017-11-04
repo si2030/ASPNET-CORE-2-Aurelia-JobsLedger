@@ -6,7 +6,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="ClientApp\app\components\auth\NewFolder\**" />
+    <Content Remove="ClientApp\app\components\auth\NewFolder\**" />
+    <EmbeddedResource Remove="ClientApp\app\components\auth\NewFolder\**" />
+    <None Remove="ClientApp\app\components\auth\NewFolder\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="ClientApp\app\components\auth\isLoggedIn.ts" />
     <None Remove="ClientApp\app\components\auth\tokenService.ts" />
+    <None Remove="ClientApp\app\components\auth\userService.ts" />
   </ItemGroup>
 
   <ItemGroup>
@@ -17,7 +26,6 @@
   
   <ItemGroup>
     <Folder Include="ClientApp\app\components\auth\login\" />
-    <Folder Include="ClientApp\app\components\auth\NewFolder\" />
     <Folder Include="ClientApp\app\components\auth\register\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
@@ -43,7 +51,9 @@
     </ItemGroup>
   
     <ItemGroup>
+      <TypeScriptCompile Include="ClientApp\app\components\auth\isLoggedIn.ts" />
       <TypeScriptCompile Include="ClientApp\app\components\auth\tokenService.ts" />
+      <TypeScriptCompile Include="ClientApp\app\components\auth\userService.ts" />
     </ItemGroup>
 	
 	<Target Name="DebugRunWebpack" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('wwwroot\dist') ">

@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "37b9101fe9da01fe550f"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "8605737209ff373042ee"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -706,7 +706,7 @@
 /******/ 	__webpack_require__.h = function() { return hotCurrentHash; };
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return hotCreateRequire(82)(__webpack_require__.s = 82);
+/******/ 	return hotCreateRequire(84)(__webpack_require__.s = 84);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -816,7 +816,7 @@ function initializePAL(callback) {
 function reset() {
   isInitialized = false;
 }
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(77)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(79)))
 
 /***/ }),
 
@@ -894,7 +894,7 @@ function reset() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_aurelia_loader__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_aurelia_dependency_injection__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_aurelia_binding__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_aurelia_task_queue__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_aurelia_task_queue__ = __webpack_require__(9);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _class, _temp, _dec, _class2, _dec2, _class3, _dec3, _class4, _dec4, _class5, _dec5, _class6, _class7, _temp2, _dec6, _class8, _class9, _temp3, _class11, _dec7, _class13, _dec8, _class14, _class15, _temp4, _dec9, _class16, _dec10, _class17, _dec11, _class18;
@@ -5770,1857 +5770,105 @@ var TemplatingEngine = (_dec11 = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* unused harmony export _normalizeAbsolutePath */
-/* unused harmony export _createRootedPath */
-/* unused harmony export _resolveUrl */
-/* unused harmony export pipelineStatus */
-/* unused harmony export Pipeline */
-/* unused harmony export CommitChangesStep */
-/* unused harmony export NavigationInstruction */
-/* unused harmony export NavModel */
-/* unused harmony export isNavigationCommand */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return Redirect; });
-/* unused harmony export RedirectToRoute */
-/* unused harmony export RouterConfiguration */
-/* unused harmony export activationStrategy */
-/* unused harmony export BuildNavigationPlanStep */
-/* unused harmony export _buildNavigationPlan */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return Router; });
-/* unused harmony export CanDeactivatePreviousStep */
-/* unused harmony export CanActivateNextStep */
-/* unused harmony export DeactivatePreviousStep */
-/* unused harmony export ActivateNextStep */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RouteLoader; });
-/* unused harmony export LoadRouteStep */
-/* unused harmony export PipelineProvider */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return AppRouter; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_logging__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_aurelia_route_recognizer__ = __webpack_require__(55);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_aurelia_dependency_injection__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_aurelia_history__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_aurelia_event_aggregator__ = __webpack_require__("aurelia-event-aggregator");
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+/* harmony export (immutable) */ __webpack_exports__["f"] = updateOverrideContexts;
+/* harmony export (immutable) */ __webpack_exports__["e"] = createFullOverrideContext;
+/* harmony export (immutable) */ __webpack_exports__["h"] = updateOverrideContext;
+/* harmony export (immutable) */ __webpack_exports__["a"] = getItemsSourceExpression;
+/* harmony export (immutable) */ __webpack_exports__["c"] = unwrapExpression;
+/* harmony export (immutable) */ __webpack_exports__["b"] = isOneTime;
+/* harmony export (immutable) */ __webpack_exports__["d"] = updateOneTimeBinding;
+/* harmony export (immutable) */ __webpack_exports__["g"] = indexOf;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_binding__ = __webpack_require__(3);
 
 
+var oneTime = __WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["f" /* bindingMode */].oneTime;
 
+function updateOverrideContexts(views, startIndex) {
+  var length = views.length;
 
-
-
-
-
-
-function _normalizeAbsolutePath(path, hasPushState) {
-  var absolute = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
-
-  if (!hasPushState && path[0] !== '#') {
-    path = '#' + path;
+  if (startIndex > 0) {
+    startIndex = startIndex - 1;
   }
 
-  if (hasPushState && absolute) {
-    path = path.substring(1, path.length);
+  for (; startIndex < length; ++startIndex) {
+    updateOverrideContext(views[startIndex].overrideContext, startIndex, length);
   }
-
-  return path;
 }
 
-function _createRootedPath(fragment, baseUrl, hasPushState, absolute) {
-  if (isAbsoluteUrl.test(fragment)) {
-    return fragment;
+function createFullOverrideContext(repeat, data, index, length, key) {
+  var bindingContext = {};
+  var overrideContext = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["b" /* createOverrideContext */])(bindingContext, repeat.scope.overrideContext);
+
+  if (typeof key !== 'undefined') {
+    bindingContext[repeat.key] = key;
+    bindingContext[repeat.value] = data;
+  } else {
+    bindingContext[repeat.local] = data;
   }
-
-  var path = '';
-
-  if (baseUrl.length && baseUrl[0] !== '/') {
-    path += '/';
-  }
-
-  path += baseUrl;
-
-  if ((!path.length || path[path.length - 1] !== '/') && fragment[0] !== '/') {
-    path += '/';
-  }
-
-  if (path.length && path[path.length - 1] === '/' && fragment[0] === '/') {
-    path = path.substring(0, path.length - 1);
-  }
-
-  return _normalizeAbsolutePath(path + fragment, hasPushState, absolute);
+  updateOverrideContext(overrideContext, index, length);
+  return overrideContext;
 }
 
-function _resolveUrl(fragment, baseUrl, hasPushState) {
-  if (isRootedPath.test(fragment)) {
-    return _normalizeAbsolutePath(fragment, hasPushState);
-  }
+function updateOverrideContext(overrideContext, index, length) {
+  var first = index === 0;
+  var last = index === length - 1;
+  var even = index % 2 === 0;
 
-  return _createRootedPath(fragment, baseUrl, hasPushState);
+  overrideContext.$index = index;
+  overrideContext.$first = first;
+  overrideContext.$last = last;
+  overrideContext.$middle = !(first || last);
+  overrideContext.$odd = !even;
+  overrideContext.$even = even;
 }
 
-var isRootedPath = /^#?\//;
-var isAbsoluteUrl = /^([a-z][a-z0-9+\-.]*:)?\/\//i;
-
-var pipelineStatus = {
-  completed: 'completed',
-  canceled: 'canceled',
-  rejected: 'rejected',
-  running: 'running'
-};
-
-var Pipeline = function () {
-  function Pipeline() {
-    
-
-    this.steps = [];
-  }
-
-  Pipeline.prototype.addStep = function addStep(step) {
-    var run = void 0;
-
-    if (typeof step === 'function') {
-      run = step;
-    } else if (typeof step.getSteps === 'function') {
-      var steps = step.getSteps();
-      for (var i = 0, l = steps.length; i < l; i++) {
-        this.addStep(steps[i]);
-      }
-
-      return this;
-    } else {
-      run = step.run.bind(step);
-    }
-
-    this.steps.push(run);
-
-    return this;
-  };
-
-  Pipeline.prototype.run = function run(instruction) {
-    var index = -1;
-    var steps = this.steps;
-
-    function next() {
-      index++;
-
-      if (index < steps.length) {
-        var currentStep = steps[index];
-
-        try {
-          return currentStep(instruction, next);
-        } catch (e) {
-          return next.reject(e);
-        }
-      } else {
-        return next.complete();
-      }
-    }
-
-    next.complete = createCompletionHandler(next, pipelineStatus.completed);
-    next.cancel = createCompletionHandler(next, pipelineStatus.canceled);
-    next.reject = createCompletionHandler(next, pipelineStatus.rejected);
-
-    return next();
-  };
-
-  return Pipeline;
-}();
-
-function createCompletionHandler(next, status) {
-  return function (output) {
-    return Promise.resolve({ status: status, output: output, completed: status === pipelineStatus.completed });
-  };
+function getItemsSourceExpression(instruction, attrName) {
+  return instruction.behaviorInstructions.filter(function (bi) {
+    return bi.originalAttrName === attrName;
+  })[0].attributes.items.sourceExpression;
 }
 
-var CommitChangesStep = function () {
-  function CommitChangesStep() {
-    
+function unwrapExpression(expression) {
+  var unwrapped = false;
+  while (expression instanceof __WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["i" /* BindingBehavior */]) {
+    expression = expression.expression;
   }
-
-  CommitChangesStep.prototype.run = function run(navigationInstruction, next) {
-    return navigationInstruction._commitChanges(true).then(function () {
-      navigationInstruction._updateTitle();
-      return next();
-    });
-  };
-
-  return CommitChangesStep;
-}();
-
-var NavigationInstruction = function () {
-  function NavigationInstruction(init) {
-    
-
-    this.plan = null;
-    this.options = {};
-
-    Object.assign(this, init);
-
-    this.params = this.params || {};
-    this.viewPortInstructions = {};
-
-    var ancestorParams = [];
-    var current = this;
-    do {
-      var currentParams = Object.assign({}, current.params);
-      if (current.config && current.config.hasChildRouter) {
-        delete currentParams[current.getWildCardName()];
-      }
-
-      ancestorParams.unshift(currentParams);
-      current = current.parentInstruction;
-    } while (current);
-
-    var allParams = Object.assign.apply(Object, [{}, this.queryParams].concat(ancestorParams));
-    this.lifecycleArgs = [allParams, this.config, this];
+  while (expression instanceof __WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["j" /* ValueConverter */]) {
+    expression = expression.expression;
+    unwrapped = true;
   }
-
-  NavigationInstruction.prototype.getAllInstructions = function getAllInstructions() {
-    var instructions = [this];
-    for (var key in this.viewPortInstructions) {
-      var childInstruction = this.viewPortInstructions[key].childNavigationInstruction;
-      if (childInstruction) {
-        instructions.push.apply(instructions, childInstruction.getAllInstructions());
-      }
-    }
-
-    return instructions;
-  };
-
-  NavigationInstruction.prototype.getAllPreviousInstructions = function getAllPreviousInstructions() {
-    return this.getAllInstructions().map(function (c) {
-      return c.previousInstruction;
-    }).filter(function (c) {
-      return c;
-    });
-  };
-
-  NavigationInstruction.prototype.addViewPortInstruction = function addViewPortInstruction(viewPortName, strategy, moduleId, component) {
-    var config = Object.assign({}, this.lifecycleArgs[1], { currentViewPort: viewPortName });
-    var viewportInstruction = this.viewPortInstructions[viewPortName] = {
-      name: viewPortName,
-      strategy: strategy,
-      moduleId: moduleId,
-      component: component,
-      childRouter: component.childRouter,
-      lifecycleArgs: [].concat(this.lifecycleArgs[0], config, this.lifecycleArgs[2])
-    };
-
-    return viewportInstruction;
-  };
-
-  NavigationInstruction.prototype.getWildCardName = function getWildCardName() {
-    var wildcardIndex = this.config.route.lastIndexOf('*');
-    return this.config.route.substr(wildcardIndex + 1);
-  };
-
-  NavigationInstruction.prototype.getWildcardPath = function getWildcardPath() {
-    var wildcardName = this.getWildCardName();
-    var path = this.params[wildcardName] || '';
-
-    if (this.queryString) {
-      path += '?' + this.queryString;
-    }
-
-    return path;
-  };
-
-  NavigationInstruction.prototype.getBaseUrl = function getBaseUrl() {
-    var _this = this;
-
-    var fragment = decodeURI(this.fragment);
-
-    if (fragment === '') {
-      var nonEmptyRoute = this.router.routes.find(function (route) {
-        return route.name === _this.config.name && route.route !== '';
-      });
-      if (nonEmptyRoute) {
-        fragment = nonEmptyRoute.route;
-      }
-    }
-
-    if (!this.params) {
-      return encodeURI(fragment);
-    }
-
-    var wildcardName = this.getWildCardName();
-    var path = this.params[wildcardName] || '';
-
-    if (!path) {
-      return encodeURI(fragment);
-    }
-
-    return encodeURI(fragment.substr(0, fragment.lastIndexOf(path)));
-  };
-
-  NavigationInstruction.prototype._commitChanges = function _commitChanges(waitToSwap) {
-    var _this2 = this;
-
-    var router = this.router;
-    router.currentInstruction = this;
-
-    if (this.previousInstruction) {
-      this.previousInstruction.config.navModel.isActive = false;
-    }
-
-    this.config.navModel.isActive = true;
-
-    router._refreshBaseUrl();
-    router.refreshNavigation();
-
-    var loads = [];
-    var delaySwaps = [];
-
-    var _loop = function _loop(viewPortName) {
-      var viewPortInstruction = _this2.viewPortInstructions[viewPortName];
-      var viewPort = router.viewPorts[viewPortName];
-
-      if (!viewPort) {
-        throw new Error('There was no router-view found in the view for ' + viewPortInstruction.moduleId + '.');
-      }
-
-      if (viewPortInstruction.strategy === activationStrategy.replace) {
-        if (viewPortInstruction.childNavigationInstruction && viewPortInstruction.childNavigationInstruction.parentCatchHandler) {
-          loads.push(viewPortInstruction.childNavigationInstruction._commitChanges());
-        } else {
-          if (waitToSwap) {
-            delaySwaps.push({ viewPort: viewPort, viewPortInstruction: viewPortInstruction });
-          }
-          loads.push(viewPort.process(viewPortInstruction, waitToSwap).then(function (x) {
-            if (viewPortInstruction.childNavigationInstruction) {
-              return viewPortInstruction.childNavigationInstruction._commitChanges();
-            }
-
-            return undefined;
-          }));
-        }
-      } else {
-        if (viewPortInstruction.childNavigationInstruction) {
-          loads.push(viewPortInstruction.childNavigationInstruction._commitChanges(waitToSwap));
-        }
-      }
-    };
-
-    for (var viewPortName in this.viewPortInstructions) {
-      _loop(viewPortName);
-    }
-
-    return Promise.all(loads).then(function () {
-      delaySwaps.forEach(function (x) {
-        return x.viewPort.swap(x.viewPortInstruction);
-      });
-      return null;
-    }).then(function () {
-      return prune(_this2);
-    });
-  };
-
-  NavigationInstruction.prototype._updateTitle = function _updateTitle() {
-    var title = this._buildTitle();
-    if (title) {
-      this.router.history.setTitle(title);
-    }
-  };
-
-  NavigationInstruction.prototype._buildTitle = function _buildTitle() {
-    var separator = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : ' | ';
-
-    var title = '';
-    var childTitles = [];
-
-    if (this.config.navModel.title) {
-      title = this.router.transformTitle(this.config.navModel.title);
-    }
-
-    for (var viewPortName in this.viewPortInstructions) {
-      var _viewPortInstruction = this.viewPortInstructions[viewPortName];
-
-      if (_viewPortInstruction.childNavigationInstruction) {
-        var childTitle = _viewPortInstruction.childNavigationInstruction._buildTitle(separator);
-        if (childTitle) {
-          childTitles.push(childTitle);
-        }
-      }
-    }
-
-    if (childTitles.length) {
-      title = childTitles.join(separator) + (title ? separator : '') + title;
-    }
-
-    if (this.router.title) {
-      title += (title ? separator : '') + this.router.transformTitle(this.router.title);
-    }
-
-    return title;
-  };
-
-  return NavigationInstruction;
-}();
-
-function prune(instruction) {
-  instruction.previousInstruction = null;
-  instruction.plan = null;
+  return unwrapped ? expression : null;
 }
 
-var NavModel = function () {
-  function NavModel(router, relativeHref) {
-    
-
-    this.isActive = false;
-    this.title = null;
-    this.href = null;
-    this.relativeHref = null;
-    this.settings = {};
-    this.config = null;
-
-    this.router = router;
-    this.relativeHref = relativeHref;
-  }
-
-  NavModel.prototype.setTitle = function setTitle(title) {
-    this.title = title;
-
-    if (this.isActive) {
-      this.router.updateTitle();
-    }
-  };
-
-  return NavModel;
-}();
-
-function isNavigationCommand(obj) {
-  return obj && typeof obj.navigate === 'function';
-}
-
-var Redirect = function () {
-  function Redirect(url) {
-    var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
-
-    
-
-    this.url = url;
-    this.options = Object.assign({ trigger: true, replace: true }, options);
-    this.shouldContinueProcessing = false;
-  }
-
-  Redirect.prototype.setRouter = function setRouter(router) {
-    this.router = router;
-  };
-
-  Redirect.prototype.navigate = function navigate(appRouter) {
-    var navigatingRouter = this.options.useAppRouter ? appRouter : this.router || appRouter;
-    navigatingRouter.navigate(this.url, this.options);
-  };
-
-  return Redirect;
-}();
-
-var RedirectToRoute = function () {
-  function RedirectToRoute(route) {
-    var params = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
-    var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
-
-    
-
-    this.route = route;
-    this.params = params;
-    this.options = Object.assign({ trigger: true, replace: true }, options);
-    this.shouldContinueProcessing = false;
-  }
-
-  RedirectToRoute.prototype.setRouter = function setRouter(router) {
-    this.router = router;
-  };
-
-  RedirectToRoute.prototype.navigate = function navigate(appRouter) {
-    var navigatingRouter = this.options.useAppRouter ? appRouter : this.router || appRouter;
-    navigatingRouter.navigateToRoute(this.route, this.params, this.options);
-  };
-
-  return RedirectToRoute;
-}();
-
-var RouterConfiguration = function () {
-  function RouterConfiguration() {
-    
-
-    this.instructions = [];
-    this.options = {};
-    this.pipelineSteps = [];
-  }
-
-  RouterConfiguration.prototype.addPipelineStep = function addPipelineStep(name, step) {
-    this.pipelineSteps.push({ name: name, step: step });
-    return this;
-  };
-
-  RouterConfiguration.prototype.addAuthorizeStep = function addAuthorizeStep(step) {
-    return this.addPipelineStep('authorize', step);
-  };
-
-  RouterConfiguration.prototype.addPreActivateStep = function addPreActivateStep(step) {
-    return this.addPipelineStep('preActivate', step);
-  };
-
-  RouterConfiguration.prototype.addPreRenderStep = function addPreRenderStep(step) {
-    return this.addPipelineStep('preRender', step);
-  };
-
-  RouterConfiguration.prototype.addPostRenderStep = function addPostRenderStep(step) {
-    return this.addPipelineStep('postRender', step);
-  };
-
-  RouterConfiguration.prototype.fallbackRoute = function fallbackRoute(fragment) {
-    this._fallbackRoute = fragment;
-    return this;
-  };
-
-  RouterConfiguration.prototype.map = function map(route) {
-    if (Array.isArray(route)) {
-      route.forEach(this.map.bind(this));
-      return this;
-    }
-
-    return this.mapRoute(route);
-  };
-
-  RouterConfiguration.prototype.mapRoute = function mapRoute(config) {
-    this.instructions.push(function (router) {
-      var routeConfigs = [];
-
-      if (Array.isArray(config.route)) {
-        for (var i = 0, ii = config.route.length; i < ii; ++i) {
-          var _current = Object.assign({}, config);
-          _current.route = config.route[i];
-          routeConfigs.push(_current);
-        }
-      } else {
-        routeConfigs.push(Object.assign({}, config));
-      }
-
-      var navModel = void 0;
-      for (var _i = 0, _ii = routeConfigs.length; _i < _ii; ++_i) {
-        var _routeConfig = routeConfigs[_i];
-        _routeConfig.settings = _routeConfig.settings || {};
-        if (!navModel) {
-          navModel = router.createNavModel(_routeConfig);
-        }
-
-        router.addRoute(_routeConfig, navModel);
-      }
-    });
-
-    return this;
-  };
-
-  RouterConfiguration.prototype.mapUnknownRoutes = function mapUnknownRoutes(config) {
-    this.unknownRouteConfig = config;
-    return this;
-  };
-
-  RouterConfiguration.prototype.exportToRouter = function exportToRouter(router) {
-    var instructions = this.instructions;
-    for (var i = 0, ii = instructions.length; i < ii; ++i) {
-      instructions[i](router);
-    }
-
-    if (this.title) {
-      router.title = this.title;
-    }
-
-    if (this.unknownRouteConfig) {
-      router.handleUnknownRoutes(this.unknownRouteConfig);
-    }
-
-    if (this._fallbackRoute) {
-      router.fallbackRoute = this._fallbackRoute;
-    }
-
-    router.options = this.options;
-
-    var pipelineSteps = this.pipelineSteps;
-    if (pipelineSteps.length) {
-      if (!router.isRoot) {
-        throw new Error('Pipeline steps can only be added to the root router');
-      }
-
-      var pipelineProvider = router.pipelineProvider;
-      for (var _i2 = 0, _ii2 = pipelineSteps.length; _i2 < _ii2; ++_i2) {
-        var _pipelineSteps$_i = pipelineSteps[_i2],
-            _name = _pipelineSteps$_i.name,
-            step = _pipelineSteps$_i.step;
-
-        pipelineProvider.addStep(_name, step);
-      }
-    }
-  };
-
-  return RouterConfiguration;
-}();
-
-var activationStrategy = {
-  noChange: 'no-change',
-  invokeLifecycle: 'invoke-lifecycle',
-  replace: 'replace'
-};
-
-var BuildNavigationPlanStep = function () {
-  function BuildNavigationPlanStep() {
-    
-  }
-
-  BuildNavigationPlanStep.prototype.run = function run(navigationInstruction, next) {
-    return _buildNavigationPlan(navigationInstruction).then(function (plan) {
-      navigationInstruction.plan = plan;
-      return next();
-    }).catch(next.cancel);
-  };
-
-  return BuildNavigationPlanStep;
-}();
-
-function _buildNavigationPlan(instruction, forceLifecycleMinimum) {
-  var prev = instruction.previousInstruction;
-  var config = instruction.config;
-  var plan = {};
-
-  if ('redirect' in config) {
-    var redirectLocation = _resolveUrl(config.redirect, getInstructionBaseUrl(instruction));
-    if (instruction.queryString) {
-      redirectLocation += '?' + instruction.queryString;
-    }
-
-    return Promise.reject(new Redirect(redirectLocation));
-  }
-
-  if (prev) {
-    var newParams = hasDifferentParameterValues(prev, instruction);
-    var pending = [];
-
-    var _loop2 = function _loop2(viewPortName) {
-      var prevViewPortInstruction = prev.viewPortInstructions[viewPortName];
-      var nextViewPortConfig = config.viewPorts[viewPortName];
-
-      if (!nextViewPortConfig) throw new Error('Invalid Route Config: Configuration for viewPort "' + viewPortName + '" was not found for route: "' + instruction.config.route + '."');
-
-      var viewPortPlan = plan[viewPortName] = {
-        name: viewPortName,
-        config: nextViewPortConfig,
-        prevComponent: prevViewPortInstruction.component,
-        prevModuleId: prevViewPortInstruction.moduleId
-      };
-
-      if (prevViewPortInstruction.moduleId !== nextViewPortConfig.moduleId) {
-        viewPortPlan.strategy = activationStrategy.replace;
-      } else if ('determineActivationStrategy' in prevViewPortInstruction.component.viewModel) {
-        var _prevViewPortInstruct;
-
-        viewPortPlan.strategy = (_prevViewPortInstruct = prevViewPortInstruction.component.viewModel).determineActivationStrategy.apply(_prevViewPortInstruct, instruction.lifecycleArgs);
-      } else if (config.activationStrategy) {
-        viewPortPlan.strategy = config.activationStrategy;
-      } else if (newParams || forceLifecycleMinimum) {
-        viewPortPlan.strategy = activationStrategy.invokeLifecycle;
-      } else {
-        viewPortPlan.strategy = activationStrategy.noChange;
-      }
-
-      if (viewPortPlan.strategy !== activationStrategy.replace && prevViewPortInstruction.childRouter) {
-        var path = instruction.getWildcardPath();
-        var task = prevViewPortInstruction.childRouter._createNavigationInstruction(path, instruction).then(function (childInstruction) {
-          viewPortPlan.childNavigationInstruction = childInstruction;
-
-          return _buildNavigationPlan(childInstruction, viewPortPlan.strategy === activationStrategy.invokeLifecycle).then(function (childPlan) {
-            childInstruction.plan = childPlan;
-          });
-        });
-
-        pending.push(task);
-      }
-    };
-
-    for (var viewPortName in prev.viewPortInstructions) {
-      _loop2(viewPortName);
-    }
-
-    return Promise.all(pending).then(function () {
-      return plan;
-    });
-  }
-
-  for (var viewPortName in config.viewPorts) {
-    plan[viewPortName] = {
-      name: viewPortName,
-      strategy: activationStrategy.replace,
-      config: instruction.config.viewPorts[viewPortName]
-    };
-  }
-
-  return Promise.resolve(plan);
-}
-
-function hasDifferentParameterValues(prev, next) {
-  var prevParams = prev.params;
-  var nextParams = next.params;
-  var nextWildCardName = next.config.hasChildRouter ? next.getWildCardName() : null;
-
-  for (var key in nextParams) {
-    if (key === nextWildCardName) {
-      continue;
-    }
-
-    if (prevParams[key] !== nextParams[key]) {
+function isOneTime(expression) {
+  while (expression instanceof __WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["i" /* BindingBehavior */]) {
+    if (expression.name === 'oneTime') {
       return true;
     }
+    expression = expression.expression;
   }
-
-  for (var _key in prevParams) {
-    if (_key === nextWildCardName) {
-      continue;
-    }
-
-    if (prevParams[_key] !== nextParams[_key]) {
-      return true;
-    }
-  }
-
-  if (!next.options.compareQueryParams) {
-    return false;
-  }
-
-  var prevQueryParams = prev.queryParams;
-  var nextQueryParams = next.queryParams;
-  for (var _key2 in nextQueryParams) {
-    if (prevQueryParams[_key2] !== nextQueryParams[_key2]) {
-      return true;
-    }
-  }
-
-  for (var _key3 in prevQueryParams) {
-    if (prevQueryParams[_key3] !== nextQueryParams[_key3]) {
-      return true;
-    }
-  }
-
   return false;
 }
 
-function getInstructionBaseUrl(instruction) {
-  var instructionBaseUrlParts = [];
-  instruction = instruction.parentInstruction;
-
-  while (instruction) {
-    instructionBaseUrlParts.unshift(instruction.getBaseUrl());
-    instruction = instruction.parentInstruction;
-  }
-
-  instructionBaseUrlParts.unshift('/');
-  return instructionBaseUrlParts.join('');
-}
-
-var Router = function () {
-  function Router(container, history) {
-    var _this3 = this;
-
-    
-
-    this.parent = null;
-    this.options = {};
-
-    this.transformTitle = function (title) {
-      if (_this3.parent) {
-        return _this3.parent.transformTitle(title);
-      }
-      return title;
-    };
-
-    this.container = container;
-    this.history = history;
-    this.reset();
-  }
-
-  Router.prototype.reset = function reset() {
-    var _this4 = this;
-
-    this.viewPorts = {};
-    this.routes = [];
-    this.baseUrl = '';
-    this.isConfigured = false;
-    this.isNavigating = false;
-    this.isExplicitNavigation = false;
-    this.isExplicitNavigationBack = false;
-    this.navigation = [];
-    this.currentInstruction = null;
-    this._fallbackOrder = 100;
-    this._recognizer = new __WEBPACK_IMPORTED_MODULE_1_aurelia_route_recognizer__["a" /* RouteRecognizer */]();
-    this._childRecognizer = new __WEBPACK_IMPORTED_MODULE_1_aurelia_route_recognizer__["a" /* RouteRecognizer */]();
-    this._configuredPromise = new Promise(function (resolve) {
-      _this4._resolveConfiguredPromise = resolve;
-    });
-  };
-
-  Router.prototype.registerViewPort = function registerViewPort(viewPort, name) {
-    name = name || 'default';
-    this.viewPorts[name] = viewPort;
-  };
-
-  Router.prototype.ensureConfigured = function ensureConfigured() {
-    return this._configuredPromise;
-  };
-
-  Router.prototype.configure = function configure(callbackOrConfig) {
-    var _this5 = this;
-
-    this.isConfigured = true;
-
-    var result = callbackOrConfig;
-    var config = void 0;
-    if (typeof callbackOrConfig === 'function') {
-      config = new RouterConfiguration();
-      result = callbackOrConfig(config);
-    }
-
-    return Promise.resolve(result).then(function (c) {
-      if (c && c.exportToRouter) {
-        config = c;
-      }
-
-      config.exportToRouter(_this5);
-      _this5.isConfigured = true;
-      _this5._resolveConfiguredPromise();
-    });
-  };
-
-  Router.prototype.navigate = function navigate(fragment, options) {
-    if (!this.isConfigured && this.parent) {
-      return this.parent.navigate(fragment, options);
-    }
-
-    this.isExplicitNavigation = true;
-    return this.history.navigate(_resolveUrl(fragment, this.baseUrl, this.history._hasPushState), options);
-  };
-
-  Router.prototype.navigateToRoute = function navigateToRoute(route, params, options) {
-    var path = this.generate(route, params);
-    return this.navigate(path, options);
-  };
-
-  Router.prototype.navigateBack = function navigateBack() {
-    this.isExplicitNavigationBack = true;
-    this.history.navigateBack();
-  };
-
-  Router.prototype.createChild = function createChild(container) {
-    var childRouter = new Router(container || this.container.createChild(), this.history);
-    childRouter.parent = this;
-    return childRouter;
-  };
-
-  Router.prototype.generate = function generate(name, params) {
-    var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
-
-    var hasRoute = this._recognizer.hasRoute(name);
-    if ((!this.isConfigured || !hasRoute) && this.parent) {
-      return this.parent.generate(name, params);
-    }
-
-    if (!hasRoute) {
-      throw new Error('A route with name \'' + name + '\' could not be found. Check that `name: \'' + name + '\'` was specified in the route\'s config.');
-    }
-
-    var path = this._recognizer.generate(name, params);
-    var rootedPath = _createRootedPath(path, this.baseUrl, this.history._hasPushState, options.absolute);
-    return options.absolute ? '' + this.history.getAbsoluteRoot() + rootedPath : rootedPath;
-  };
-
-  Router.prototype.createNavModel = function createNavModel(config) {
-    var navModel = new NavModel(this, 'href' in config ? config.href : config.route);
-    navModel.title = config.title;
-    navModel.order = config.nav;
-    navModel.href = config.href;
-    navModel.settings = config.settings;
-    navModel.config = config;
-
-    return navModel;
-  };
-
-  Router.prototype.addRoute = function addRoute(config, navModel) {
-    validateRouteConfig(config, this.routes);
-
-    if (!('viewPorts' in config) && !config.navigationStrategy) {
-      config.viewPorts = {
-        'default': {
-          moduleId: config.moduleId,
-          view: config.view
-        }
-      };
-    }
-
-    if (!navModel) {
-      navModel = this.createNavModel(config);
-    }
-
-    this.routes.push(config);
-
-    var path = config.route;
-    if (path.charAt(0) === '/') {
-      path = path.substr(1);
-    }
-    var caseSensitive = config.caseSensitive === true;
-    var state = this._recognizer.add({ path: path, handler: config, caseSensitive: caseSensitive });
-
-    if (path) {
-      var _settings = config.settings;
-      delete config.settings;
-      var withChild = JSON.parse(JSON.stringify(config));
-      config.settings = _settings;
-      withChild.route = path + '/*childRoute';
-      withChild.hasChildRouter = true;
-      this._childRecognizer.add({
-        path: withChild.route,
-        handler: withChild,
-        caseSensitive: caseSensitive
-      });
-
-      withChild.navModel = navModel;
-      withChild.settings = config.settings;
-      withChild.navigationStrategy = config.navigationStrategy;
-    }
-
-    config.navModel = navModel;
-
-    if ((navModel.order || navModel.order === 0) && this.navigation.indexOf(navModel) === -1) {
-      if (!navModel.href && navModel.href !== '' && (state.types.dynamics || state.types.stars)) {
-        throw new Error('Invalid route config for "' + config.route + '" : dynamic routes must specify an "href:" to be included in the navigation model.');
-      }
-
-      if (typeof navModel.order !== 'number') {
-        navModel.order = ++this._fallbackOrder;
-      }
-
-      this.navigation.push(navModel);
-      this.navigation = this.navigation.sort(function (a, b) {
-        return a.order - b.order;
-      });
-    }
-  };
-
-  Router.prototype.hasRoute = function hasRoute(name) {
-    return !!(this._recognizer.hasRoute(name) || this.parent && this.parent.hasRoute(name));
-  };
-
-  Router.prototype.hasOwnRoute = function hasOwnRoute(name) {
-    return this._recognizer.hasRoute(name);
-  };
-
-  Router.prototype.handleUnknownRoutes = function handleUnknownRoutes(config) {
-    var _this6 = this;
-
-    if (!config) {
-      throw new Error('Invalid unknown route handler');
-    }
-
-    this.catchAllHandler = function (instruction) {
-      return _this6._createRouteConfig(config, instruction).then(function (c) {
-        instruction.config = c;
-        return instruction;
-      });
-    };
-  };
-
-  Router.prototype.updateTitle = function updateTitle() {
-    if (this.parent) {
-      return this.parent.updateTitle();
-    }
-
-    if (this.currentInstruction) {
-      this.currentInstruction._updateTitle();
-    }
-    return undefined;
-  };
-
-  Router.prototype.refreshNavigation = function refreshNavigation() {
-    var nav = this.navigation;
-
-    for (var i = 0, length = nav.length; i < length; i++) {
-      var _current2 = nav[i];
-      if (!_current2.config.href) {
-        _current2.href = _createRootedPath(_current2.relativeHref, this.baseUrl, this.history._hasPushState);
-      } else {
-        _current2.href = _normalizeAbsolutePath(_current2.config.href, this.history._hasPushState);
-      }
-    }
-  };
-
-  Router.prototype._refreshBaseUrl = function _refreshBaseUrl() {
-    if (this.parent) {
-      var baseUrl = this.parent.currentInstruction.getBaseUrl();
-      this.baseUrl = this.parent.baseUrl + baseUrl;
-    }
-  };
-
-  Router.prototype._createNavigationInstruction = function _createNavigationInstruction() {
-    var url = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
-    var parentInstruction = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
-
-    var fragment = url;
-    var queryString = '';
-
-    var queryIndex = url.indexOf('?');
-    if (queryIndex !== -1) {
-      fragment = url.substr(0, queryIndex);
-      queryString = url.substr(queryIndex + 1);
-    }
-
-    var results = this._recognizer.recognize(url);
-    if (!results || !results.length) {
-      results = this._childRecognizer.recognize(url);
-    }
-
-    var instructionInit = {
-      fragment: fragment,
-      queryString: queryString,
-      config: null,
-      parentInstruction: parentInstruction,
-      previousInstruction: this.currentInstruction,
-      router: this,
-      options: {
-        compareQueryParams: this.options.compareQueryParams
-      }
-    };
-
-    if (results && results.length) {
-      var first = results[0];
-      var _instruction = new NavigationInstruction(Object.assign({}, instructionInit, {
-        params: first.params,
-        queryParams: first.queryParams || results.queryParams,
-        config: first.config || first.handler
-      }));
-
-      if (typeof first.handler === 'function') {
-        return evaluateNavigationStrategy(_instruction, first.handler, first);
-      } else if (first.handler && typeof first.handler.navigationStrategy === 'function') {
-        return evaluateNavigationStrategy(_instruction, first.handler.navigationStrategy, first.handler);
-      }
-
-      return Promise.resolve(_instruction);
-    } else if (this.catchAllHandler) {
-      var _instruction2 = new NavigationInstruction(Object.assign({}, instructionInit, {
-        params: { path: fragment },
-        queryParams: results ? results.queryParams : {},
-        config: null }));
-
-      return evaluateNavigationStrategy(_instruction2, this.catchAllHandler);
-    } else if (this.parent) {
-      var _router = this._parentCatchAllHandler(this.parent);
-
-      if (_router) {
-        var newParentInstruction = this._findParentInstructionFromRouter(_router, parentInstruction);
-
-        var _instruction3 = new NavigationInstruction(Object.assign({}, instructionInit, {
-          params: { path: fragment },
-          queryParams: results ? results.queryParams : {},
-          router: _router,
-          parentInstruction: newParentInstruction,
-          parentCatchHandler: true,
-          config: null }));
-
-        return evaluateNavigationStrategy(_instruction3, _router.catchAllHandler);
-      }
-    }
-
-    return Promise.reject(new Error('Route not found: ' + url));
-  };
-
-  Router.prototype._findParentInstructionFromRouter = function _findParentInstructionFromRouter(router, instruction) {
-    if (instruction.router === router) {
-      instruction.fragment = router.baseUrl;
-      return instruction;
-    } else if (instruction.parentInstruction) {
-      return this._findParentInstructionFromRouter(router, instruction.parentInstruction);
-    }
-    return undefined;
-  };
-
-  Router.prototype._parentCatchAllHandler = function _parentCatchAllHandler(router) {
-    if (router.catchAllHandler) {
-      return router;
-    } else if (router.parent) {
-      return this._parentCatchAllHandler(router.parent);
-    }
-    return false;
-  };
-
-  Router.prototype._createRouteConfig = function _createRouteConfig(config, instruction) {
-    var _this7 = this;
-
-    return Promise.resolve(config).then(function (c) {
-      if (typeof c === 'string') {
-        return { moduleId: c };
-      } else if (typeof c === 'function') {
-        return c(instruction);
-      }
-
-      return c;
-    }).then(function (c) {
-      return typeof c === 'string' ? { moduleId: c } : c;
-    }).then(function (c) {
-      c.route = instruction.params.path;
-      validateRouteConfig(c, _this7.routes);
-
-      if (!c.navModel) {
-        c.navModel = _this7.createNavModel(c);
-      }
-
-      return c;
-    });
-  };
-
-  _createClass(Router, [{
-    key: 'isRoot',
-    get: function get() {
-      return !this.parent;
-    }
-  }]);
-
-  return Router;
-}();
-
-function validateRouteConfig(config, routes) {
-  if ((typeof config === 'undefined' ? 'undefined' : _typeof(config)) !== 'object') {
-    throw new Error('Invalid Route Config');
-  }
-
-  if (typeof config.route !== 'string') {
-    var _name2 = config.name || '(no name)';
-    throw new Error('Invalid Route Config for "' + _name2 + '": You must specify a "route:" pattern.');
-  }
-
-  if (!('redirect' in config || config.moduleId || config.navigationStrategy || config.viewPorts)) {
-    throw new Error('Invalid Route Config for "' + config.route + '": You must specify a "moduleId:", "redirect:", "navigationStrategy:", or "viewPorts:".');
+function updateOneTimeBinding(binding) {
+  if (binding.call && binding.mode === oneTime) {
+    binding.call(__WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["k" /* sourceContext */]);
+  } else if (binding.updateOneTimeBindings) {
+    binding.updateOneTimeBindings();
   }
 }
 
-function evaluateNavigationStrategy(instruction, evaluator, context) {
-  return Promise.resolve(evaluator.call(context, instruction)).then(function () {
-    if (!('viewPorts' in instruction.config)) {
-      instruction.config.viewPorts = {
-        'default': {
-          moduleId: instruction.config.moduleId
-        }
-      };
-    }
-
-    return instruction;
-  });
-}
-
-var CanDeactivatePreviousStep = function () {
-  function CanDeactivatePreviousStep() {
-    
+function indexOf(array, item, matcher, startIndex) {
+  if (!matcher) {
+    return array.indexOf(item);
   }
-
-  CanDeactivatePreviousStep.prototype.run = function run(navigationInstruction, next) {
-    return processDeactivatable(navigationInstruction, 'canDeactivate', next);
-  };
-
-  return CanDeactivatePreviousStep;
-}();
-
-var CanActivateNextStep = function () {
-  function CanActivateNextStep() {
-    
-  }
-
-  CanActivateNextStep.prototype.run = function run(navigationInstruction, next) {
-    return processActivatable(navigationInstruction, 'canActivate', next);
-  };
-
-  return CanActivateNextStep;
-}();
-
-var DeactivatePreviousStep = function () {
-  function DeactivatePreviousStep() {
-    
-  }
-
-  DeactivatePreviousStep.prototype.run = function run(navigationInstruction, next) {
-    return processDeactivatable(navigationInstruction, 'deactivate', next, true);
-  };
-
-  return DeactivatePreviousStep;
-}();
-
-var ActivateNextStep = function () {
-  function ActivateNextStep() {
-    
-  }
-
-  ActivateNextStep.prototype.run = function run(navigationInstruction, next) {
-    return processActivatable(navigationInstruction, 'activate', next, true);
-  };
-
-  return ActivateNextStep;
-}();
-
-function processDeactivatable(navigationInstruction, callbackName, next, ignoreResult) {
-  var plan = navigationInstruction.plan;
-  var infos = findDeactivatable(plan, callbackName);
-  var i = infos.length;
-
-  function inspect(val) {
-    if (ignoreResult || shouldContinue(val)) {
-      return iterate();
-    }
-
-    return next.cancel(val);
-  }
-
-  function iterate() {
-    if (i--) {
-      try {
-        var viewModel = infos[i];
-        var _result = viewModel[callbackName](navigationInstruction);
-        return processPotential(_result, inspect, next.cancel);
-      } catch (error) {
-        return next.cancel(error);
-      }
-    }
-
-    return next();
-  }
-
-  return iterate();
-}
-
-function findDeactivatable(plan, callbackName) {
-  var list = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : [];
-
-  for (var viewPortName in plan) {
-    var _viewPortPlan = plan[viewPortName];
-    var prevComponent = _viewPortPlan.prevComponent;
-
-    if ((_viewPortPlan.strategy === activationStrategy.invokeLifecycle || _viewPortPlan.strategy === activationStrategy.replace) && prevComponent) {
-      var viewModel = prevComponent.viewModel;
-
-      if (callbackName in viewModel) {
-        list.push(viewModel);
-      }
-    }
-
-    if (_viewPortPlan.strategy === activationStrategy.replace && prevComponent) {
-      addPreviousDeactivatable(prevComponent, callbackName, list);
-    } else if (_viewPortPlan.childNavigationInstruction) {
-      findDeactivatable(_viewPortPlan.childNavigationInstruction.plan, callbackName, list);
+  var length = array.length;
+  for (var index = startIndex || 0; index < length; index++) {
+    if (matcher(array[index], item)) {
+      return index;
     }
   }
-
-  return list;
-}
-
-function addPreviousDeactivatable(component, callbackName, list) {
-  var childRouter = component.childRouter;
-
-  if (childRouter && childRouter.currentInstruction) {
-    var viewPortInstructions = childRouter.currentInstruction.viewPortInstructions;
-
-    for (var viewPortName in viewPortInstructions) {
-      var _viewPortInstruction2 = viewPortInstructions[viewPortName];
-      var prevComponent = _viewPortInstruction2.component;
-      var prevViewModel = prevComponent.viewModel;
-
-      if (callbackName in prevViewModel) {
-        list.push(prevViewModel);
-      }
-
-      addPreviousDeactivatable(prevComponent, callbackName, list);
-    }
-  }
-}
-
-function processActivatable(navigationInstruction, callbackName, next, ignoreResult) {
-  var infos = findActivatable(navigationInstruction, callbackName);
-  var length = infos.length;
-  var i = -1;
-
-  function inspect(val, router) {
-    if (ignoreResult || shouldContinue(val, router)) {
-      return iterate();
-    }
-
-    return next.cancel(val);
-  }
-
-  function iterate() {
-    i++;
-
-    if (i < length) {
-      try {
-        var _current3$viewModel;
-
-        var _current3 = infos[i];
-        var _result2 = (_current3$viewModel = _current3.viewModel)[callbackName].apply(_current3$viewModel, _current3.lifecycleArgs);
-        return processPotential(_result2, function (val) {
-          return inspect(val, _current3.router);
-        }, next.cancel);
-      } catch (error) {
-        return next.cancel(error);
-      }
-    }
-
-    return next();
-  }
-
-  return iterate();
-}
-
-function findActivatable(navigationInstruction, callbackName) {
-  var list = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : [];
-  var router = arguments[3];
-
-  var plan = navigationInstruction.plan;
-
-  Object.keys(plan).filter(function (viewPortName) {
-    var viewPortPlan = plan[viewPortName];
-    var viewPortInstruction = navigationInstruction.viewPortInstructions[viewPortName];
-    var viewModel = viewPortInstruction.component.viewModel;
-
-    if ((viewPortPlan.strategy === activationStrategy.invokeLifecycle || viewPortPlan.strategy === activationStrategy.replace) && callbackName in viewModel) {
-      list.push({
-        viewModel: viewModel,
-        lifecycleArgs: viewPortInstruction.lifecycleArgs,
-        router: router
-      });
-    }
-
-    if (viewPortPlan.childNavigationInstruction) {
-      findActivatable(viewPortPlan.childNavigationInstruction, callbackName, list, viewPortInstruction.component.childRouter || router);
-    }
-  });
-
-  return list;
-}
-
-function shouldContinue(output, router) {
-  if (output instanceof Error) {
-    return false;
-  }
-
-  if (isNavigationCommand(output)) {
-    if (typeof output.setRouter === 'function') {
-      output.setRouter(router);
-    }
-
-    return !!output.shouldContinueProcessing;
-  }
-
-  if (output === undefined) {
-    return true;
-  }
-
-  return output;
-}
-
-var SafeSubscription = function () {
-  function SafeSubscription(subscriptionFunc) {
-    
-
-    this._subscribed = true;
-    this._subscription = subscriptionFunc(this);
-
-    if (!this._subscribed) this.unsubscribe();
-  }
-
-  SafeSubscription.prototype.unsubscribe = function unsubscribe() {
-    if (this._subscribed && this._subscription) this._subscription.unsubscribe();
-
-    this._subscribed = false;
-  };
-
-  _createClass(SafeSubscription, [{
-    key: 'subscribed',
-    get: function get() {
-      return this._subscribed;
-    }
-  }]);
-
-  return SafeSubscription;
-}();
-
-function processPotential(obj, resolve, reject) {
-  if (obj && typeof obj.then === 'function') {
-    return Promise.resolve(obj).then(resolve).catch(reject);
-  }
-
-  if (obj && typeof obj.subscribe === 'function') {
-    var obs = obj;
-    return new SafeSubscription(function (sub) {
-      return obs.subscribe({
-        next: function next() {
-          if (sub.subscribed) {
-            sub.unsubscribe();
-            resolve(obj);
-          }
-        },
-        error: function error(_error) {
-          if (sub.subscribed) {
-            sub.unsubscribe();
-            reject(_error);
-          }
-        },
-        complete: function complete() {
-          if (sub.subscribed) {
-            sub.unsubscribe();
-            resolve(obj);
-          }
-        }
-      });
-    });
-  }
-
-  try {
-    return resolve(obj);
-  } catch (error) {
-    return reject(error);
-  }
-}
-
-var RouteLoader = function () {
-  function RouteLoader() {
-    
-  }
-
-  RouteLoader.prototype.loadRoute = function loadRoute(router, config, navigationInstruction) {
-    throw Error('Route loaders must implement "loadRoute(router, config, navigationInstruction)".');
-  };
-
-  return RouteLoader;
-}();
-
-var LoadRouteStep = function () {
-  LoadRouteStep.inject = function inject() {
-    return [RouteLoader];
-  };
-
-  function LoadRouteStep(routeLoader) {
-    
-
-    this.routeLoader = routeLoader;
-  }
-
-  LoadRouteStep.prototype.run = function run(navigationInstruction, next) {
-    return loadNewRoute(this.routeLoader, navigationInstruction).then(next).catch(next.cancel);
-  };
-
-  return LoadRouteStep;
-}();
-
-function loadNewRoute(routeLoader, navigationInstruction) {
-  var toLoad = determineWhatToLoad(navigationInstruction);
-  var loadPromises = toLoad.map(function (current) {
-    return loadRoute(routeLoader, current.navigationInstruction, current.viewPortPlan);
-  });
-
-  return Promise.all(loadPromises);
-}
-
-function determineWhatToLoad(navigationInstruction) {
-  var toLoad = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : [];
-
-  var plan = navigationInstruction.plan;
-
-  for (var viewPortName in plan) {
-    var _viewPortPlan2 = plan[viewPortName];
-
-    if (_viewPortPlan2.strategy === activationStrategy.replace) {
-      toLoad.push({ viewPortPlan: _viewPortPlan2, navigationInstruction: navigationInstruction });
-
-      if (_viewPortPlan2.childNavigationInstruction) {
-        determineWhatToLoad(_viewPortPlan2.childNavigationInstruction, toLoad);
-      }
-    } else {
-      var _viewPortInstruction3 = navigationInstruction.addViewPortInstruction(viewPortName, _viewPortPlan2.strategy, _viewPortPlan2.prevModuleId, _viewPortPlan2.prevComponent);
-
-      if (_viewPortPlan2.childNavigationInstruction) {
-        _viewPortInstruction3.childNavigationInstruction = _viewPortPlan2.childNavigationInstruction;
-        determineWhatToLoad(_viewPortPlan2.childNavigationInstruction, toLoad);
-      }
-    }
-  }
-
-  return toLoad;
-}
-
-function loadRoute(routeLoader, navigationInstruction, viewPortPlan) {
-  var moduleId = viewPortPlan.config.moduleId;
-
-  return loadComponent(routeLoader, navigationInstruction, viewPortPlan.config).then(function (component) {
-    var viewPortInstruction = navigationInstruction.addViewPortInstruction(viewPortPlan.name, viewPortPlan.strategy, moduleId, component);
-
-    var childRouter = component.childRouter;
-    if (childRouter) {
-      var path = navigationInstruction.getWildcardPath();
-
-      return childRouter._createNavigationInstruction(path, navigationInstruction).then(function (childInstruction) {
-        viewPortPlan.childNavigationInstruction = childInstruction;
-
-        return _buildNavigationPlan(childInstruction).then(function (childPlan) {
-          childInstruction.plan = childPlan;
-          viewPortInstruction.childNavigationInstruction = childInstruction;
-
-          return loadNewRoute(routeLoader, childInstruction);
-        });
-      });
-    }
-
-    return undefined;
-  });
-}
-
-function loadComponent(routeLoader, navigationInstruction, config) {
-  var router = navigationInstruction.router;
-  var lifecycleArgs = navigationInstruction.lifecycleArgs;
-
-  return routeLoader.loadRoute(router, config, navigationInstruction).then(function (component) {
-    var viewModel = component.viewModel,
-        childContainer = component.childContainer;
-
-    component.router = router;
-    component.config = config;
-
-    if ('configureRouter' in viewModel) {
-      var childRouter = childContainer.getChildRouter();
-      component.childRouter = childRouter;
-
-      return childRouter.configure(function (c) {
-        return viewModel.configureRouter.apply(viewModel, [c, childRouter].concat(lifecycleArgs));
-      }).then(function () {
-        return component;
-      });
-    }
-
-    return component;
-  });
-}
-
-var PipelineSlot = function () {
-  function PipelineSlot(container, name, alias) {
-    
-
-    this.steps = [];
-
-    this.container = container;
-    this.slotName = name;
-    this.slotAlias = alias;
-  }
-
-  PipelineSlot.prototype.getSteps = function getSteps() {
-    var _this8 = this;
-
-    return this.steps.map(function (x) {
-      return _this8.container.get(x);
-    });
-  };
-
-  return PipelineSlot;
-}();
-
-var PipelineProvider = function () {
-  PipelineProvider.inject = function inject() {
-    return [__WEBPACK_IMPORTED_MODULE_2_aurelia_dependency_injection__["a" /* Container */]];
-  };
-
-  function PipelineProvider(container) {
-    
-
-    this.container = container;
-    this.steps = [BuildNavigationPlanStep, CanDeactivatePreviousStep, LoadRouteStep, this._createPipelineSlot('authorize'), CanActivateNextStep, this._createPipelineSlot('preActivate', 'modelbind'), DeactivatePreviousStep, ActivateNextStep, this._createPipelineSlot('preRender', 'precommit'), CommitChangesStep, this._createPipelineSlot('postRender', 'postcomplete')];
-  }
-
-  PipelineProvider.prototype.createPipeline = function createPipeline() {
-    var _this9 = this;
-
-    var pipeline = new Pipeline();
-    this.steps.forEach(function (step) {
-      return pipeline.addStep(_this9.container.get(step));
-    });
-    return pipeline;
-  };
-
-  PipelineProvider.prototype._findStep = function _findStep(name) {
-    return this.steps.find(function (x) {
-      return x.slotName === name || x.slotAlias === name;
-    });
-  };
-
-  PipelineProvider.prototype.addStep = function addStep(name, step) {
-    var found = this._findStep(name);
-    if (found) {
-      if (!found.steps.includes(step)) {
-        found.steps.push(step);
-      }
-    } else {
-      throw new Error('Invalid pipeline slot name: ' + name + '.');
-    }
-  };
-
-  PipelineProvider.prototype.removeStep = function removeStep(name, step) {
-    var slot = this._findStep(name);
-    if (slot) {
-      slot.steps.splice(slot.steps.indexOf(step), 1);
-    }
-  };
-
-  PipelineProvider.prototype._clearSteps = function _clearSteps() {
-    var name = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
-
-    var slot = this._findStep(name);
-    if (slot) {
-      slot.steps = [];
-    }
-  };
-
-  PipelineProvider.prototype.reset = function reset() {
-    this._clearSteps('authorize');
-    this._clearSteps('preActivate');
-    this._clearSteps('preRender');
-    this._clearSteps('postRender');
-  };
-
-  PipelineProvider.prototype._createPipelineSlot = function _createPipelineSlot(name, alias) {
-    return new PipelineSlot(this.container, name, alias);
-  };
-
-  return PipelineProvider;
-}();
-
-var logger = __WEBPACK_IMPORTED_MODULE_0_aurelia_logging__["getLogger"]('app-router');
-
-var AppRouter = function (_Router) {
-  _inherits(AppRouter, _Router);
-
-  AppRouter.inject = function inject() {
-    return [__WEBPACK_IMPORTED_MODULE_2_aurelia_dependency_injection__["a" /* Container */], __WEBPACK_IMPORTED_MODULE_3_aurelia_history__["a" /* History */], PipelineProvider, __WEBPACK_IMPORTED_MODULE_4_aurelia_event_aggregator__["b" /* EventAggregator */]];
-  };
-
-  function AppRouter(container, history, pipelineProvider, events) {
-    
-
-    var _this10 = _possibleConstructorReturn(this, _Router.call(this, container, history));
-
-    _this10.pipelineProvider = pipelineProvider;
-    _this10.events = events;
-    return _this10;
-  }
-
-  AppRouter.prototype.reset = function reset() {
-    _Router.prototype.reset.call(this);
-    this.maxInstructionCount = 10;
-    if (!this._queue) {
-      this._queue = [];
-    } else {
-      this._queue.length = 0;
-    }
-  };
-
-  AppRouter.prototype.loadUrl = function loadUrl(url) {
-    var _this11 = this;
-
-    return this._createNavigationInstruction(url).then(function (instruction) {
-      return _this11._queueInstruction(instruction);
-    }).catch(function (error) {
-      logger.error(error);
-      restorePreviousLocation(_this11);
-    });
-  };
-
-  AppRouter.prototype.registerViewPort = function registerViewPort(viewPort, name) {
-    var _this12 = this;
-
-    _Router.prototype.registerViewPort.call(this, viewPort, name);
-
-    if (!this.isActive) {
-      var viewModel = this._findViewModel(viewPort);
-      if ('configureRouter' in viewModel) {
-        if (!this.isConfigured) {
-          var resolveConfiguredPromise = this._resolveConfiguredPromise;
-          this._resolveConfiguredPromise = function () {};
-          return this.configure(function (config) {
-            return viewModel.configureRouter(config, _this12);
-          }).then(function () {
-            _this12.activate();
-            resolveConfiguredPromise();
-          });
-        }
-      } else {
-        this.activate();
-      }
-    } else {
-      this._dequeueInstruction();
-    }
-
-    return Promise.resolve();
-  };
-
-  AppRouter.prototype.activate = function activate(options) {
-    if (this.isActive) {
-      return;
-    }
-
-    this.isActive = true;
-    this.options = Object.assign({ routeHandler: this.loadUrl.bind(this) }, this.options, options);
-    this.history.activate(this.options);
-    this._dequeueInstruction();
-  };
-
-  AppRouter.prototype.deactivate = function deactivate() {
-    this.isActive = false;
-    this.history.deactivate();
-  };
-
-  AppRouter.prototype._queueInstruction = function _queueInstruction(instruction) {
-    var _this13 = this;
-
-    return new Promise(function (resolve) {
-      instruction.resolve = resolve;
-      _this13._queue.unshift(instruction);
-      _this13._dequeueInstruction();
-    });
-  };
-
-  AppRouter.prototype._dequeueInstruction = function _dequeueInstruction() {
-    var _this14 = this;
-
-    var instructionCount = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
-
-    return Promise.resolve().then(function () {
-      if (_this14.isNavigating && !instructionCount) {
-        return undefined;
-      }
-
-      var instruction = _this14._queue.shift();
-      _this14._queue.length = 0;
-
-      if (!instruction) {
-        return undefined;
-      }
-
-      _this14.isNavigating = true;
-      instruction.previousInstruction = _this14.currentInstruction;
-
-      if (!instructionCount) {
-        _this14.events.publish('router:navigation:processing', { instruction: instruction });
-      } else if (instructionCount === _this14.maxInstructionCount - 1) {
-        logger.error(instructionCount + 1 + ' navigation instructions have been attempted without success. Restoring last known good location.');
-        restorePreviousLocation(_this14);
-        return _this14._dequeueInstruction(instructionCount + 1);
-      } else if (instructionCount > _this14.maxInstructionCount) {
-        throw new Error('Maximum navigation attempts exceeded. Giving up.');
-      }
-
-      var pipeline = _this14.pipelineProvider.createPipeline();
-
-      return pipeline.run(instruction).then(function (result) {
-        return processResult(instruction, result, instructionCount, _this14);
-      }).catch(function (error) {
-        return { output: error instanceof Error ? error : new Error(error) };
-      }).then(function (result) {
-        return resolveInstruction(instruction, result, !!instructionCount, _this14);
-      });
-    });
-  };
-
-  AppRouter.prototype._findViewModel = function _findViewModel(viewPort) {
-    if (this.container.viewModel) {
-      return this.container.viewModel;
-    }
-
-    if (viewPort.container) {
-      var container = viewPort.container;
-
-      while (container) {
-        if (container.viewModel) {
-          this.container.viewModel = container.viewModel;
-          return container.viewModel;
-        }
-
-        container = container.parent;
-      }
-    }
-
-    return undefined;
-  };
-
-  return AppRouter;
-}(Router);
-
-function processResult(instruction, result, instructionCount, router) {
-  if (!(result && 'completed' in result && 'output' in result)) {
-    result = result || {};
-    result.output = new Error('Expected router pipeline to return a navigation result, but got [' + JSON.stringify(result) + '] instead.');
-  }
-
-  var finalResult = null;
-  if (isNavigationCommand(result.output)) {
-    result.output.navigate(router);
-  } else {
-    finalResult = result;
-
-    if (!result.completed) {
-      if (result.output instanceof Error) {
-        logger.error(result.output);
-      }
-
-      restorePreviousLocation(router);
-    }
-  }
-
-  return router._dequeueInstruction(instructionCount + 1).then(function (innerResult) {
-    return finalResult || innerResult || result;
-  });
-}
-
-function resolveInstruction(instruction, result, isInnerInstruction, router) {
-  instruction.resolve(result);
-
-  var eventArgs = { instruction: instruction, result: result };
-  if (!isInnerInstruction) {
-    router.isNavigating = false;
-    router.isExplicitNavigation = false;
-    router.isExplicitNavigationBack = false;
-
-    var eventName = void 0;
-
-    if (result.output instanceof Error) {
-      eventName = 'error';
-    } else if (!result.completed) {
-      eventName = 'canceled';
-    } else {
-      var _queryString = instruction.queryString ? '?' + instruction.queryString : '';
-      router.history.previousLocation = instruction.fragment + _queryString;
-      eventName = 'success';
-    }
-
-    router.events.publish('router:navigation:' + eventName, eventArgs);
-    router.events.publish('router:navigation:complete', eventArgs);
-  } else {
-    router.events.publish('router:navigation:child:complete', eventArgs);
-  }
-
-  return result;
-}
-
-function restorePreviousLocation(router) {
-  var previousLocation = router.history.previousLocation;
-  if (previousLocation) {
-    router.navigate(router.history.previousLocation, { trigger: false, replace: true });
-  } else if (router.fallbackRoute) {
-    router.navigate(router.fallbackRoute, { trigger: true, replace: true });
-  } else {
-    logger.error('Router navigation failed, and no previous location or fallbackRoute could be restored.');
-  }
+  return -1;
 }
 
 /***/ }),
@@ -7631,10 +5879,10 @@ function restorePreviousLocation(router) {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ValidationController; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__validator__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__validate_trigger__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__validate_trigger__ = __webpack_require__(16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__property_info__ = __webpack_require__(38);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__validate_result__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__property_accessor_parser__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__property_accessor_parser__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__validate_event__ = __webpack_require__(40);
 
 
@@ -8082,84 +6330,6 @@ module.exports = vendor_d43d8086b8d93a0fab09;
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PropertyAccessorParser; });
-/* harmony export (immutable) */ __webpack_exports__["b"] = getAccessorExpression;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_binding__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__util__ = __webpack_require__(39);
-
-
-var PropertyAccessorParser = (function () {
-    function PropertyAccessorParser(parser) {
-        this.parser = parser;
-    }
-    PropertyAccessorParser.prototype.parse = function (property) {
-        if (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__util__["a" /* isString */])(property)) {
-            return property;
-        }
-        var accessorText = getAccessorExpression(property.toString());
-        var accessor = this.parser.parse(accessorText);
-        if (accessor instanceof __WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["C" /* AccessScope */]
-            || accessor instanceof __WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["D" /* AccessMember */] && accessor.object instanceof __WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["C" /* AccessScope */]) {
-            return accessor.name;
-        }
-        throw new Error("Invalid property expression: \"" + accessor + "\"");
-    };
-    PropertyAccessorParser.inject = [__WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["v" /* Parser */]];
-    return PropertyAccessorParser;
-}());
-
-function getAccessorExpression(fn) {
-    /* tslint:disable:max-line-length */
-    var classic = /^function\s*\([$_\w\d]+\)\s*\{(?:\s*"use strict";)?\s*(?:[$_\w\d.['"\]+;]+)?\s*return\s+[$_\w\d]+\.([$_\w\d]+)\s*;?\s*\}$/;
-    /* tslint:enable:max-line-length */
-    var arrow = /^\(?[$_\w\d]+\)?\s*=>\s*[$_\w\d]+\.([$_\w\d]+)$/;
-    var match = classic.exec(fn) || arrow.exec(fn);
-    if (match === null) {
-        throw new Error("Unable to parse accessor function:\n" + fn);
-    }
-    return match[1];
-}
-
-
-/***/ }),
-
-/***/ 15:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return validateTrigger; });
-/**
- * Validation triggers.
- */
-var validateTrigger;
-(function (validateTrigger) {
-    /**
-     * Manual validation.  Use the controller's `validate()` and  `reset()` methods
-     * to validate all bindings.
-     */
-    validateTrigger[validateTrigger["manual"] = 0] = "manual";
-    /**
-     * Validate the binding when the binding's target element fires a DOM "blur" event.
-     */
-    validateTrigger[validateTrigger["blur"] = 1] = "blur";
-    /**
-     * Validate the binding when it updates the model due to a change in the view.
-     */
-    validateTrigger[validateTrigger["change"] = 2] = "change";
-    /**
-     * Validate the binding when the binding's target element fires a DOM "blur" event and
-     * when it updates the model due to a change in the view.
-     */
-    validateTrigger[validateTrigger["changeOrBlur"] = 3] = "changeOrBlur";
-})(validateTrigger || (validateTrigger = {}));
-
-
-/***/ }),
-
-/***/ 16:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 /* unused harmony export json */
 /* unused harmony export HttpClientConfiguration */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HttpClient; });
@@ -8410,6 +6580,84 @@ function thrower(x) {
 
 /***/ }),
 
+/***/ 15:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PropertyAccessorParser; });
+/* harmony export (immutable) */ __webpack_exports__["b"] = getAccessorExpression;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_binding__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__util__ = __webpack_require__(39);
+
+
+var PropertyAccessorParser = (function () {
+    function PropertyAccessorParser(parser) {
+        this.parser = parser;
+    }
+    PropertyAccessorParser.prototype.parse = function (property) {
+        if (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__util__["a" /* isString */])(property)) {
+            return property;
+        }
+        var accessorText = getAccessorExpression(property.toString());
+        var accessor = this.parser.parse(accessorText);
+        if (accessor instanceof __WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["C" /* AccessScope */]
+            || accessor instanceof __WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["D" /* AccessMember */] && accessor.object instanceof __WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["C" /* AccessScope */]) {
+            return accessor.name;
+        }
+        throw new Error("Invalid property expression: \"" + accessor + "\"");
+    };
+    PropertyAccessorParser.inject = [__WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["v" /* Parser */]];
+    return PropertyAccessorParser;
+}());
+
+function getAccessorExpression(fn) {
+    /* tslint:disable:max-line-length */
+    var classic = /^function\s*\([$_\w\d]+\)\s*\{(?:\s*"use strict";)?\s*(?:[$_\w\d.['"\]+;]+)?\s*return\s+[$_\w\d]+\.([$_\w\d]+)\s*;?\s*\}$/;
+    /* tslint:enable:max-line-length */
+    var arrow = /^\(?[$_\w\d]+\)?\s*=>\s*[$_\w\d]+\.([$_\w\d]+)$/;
+    var match = classic.exec(fn) || arrow.exec(fn);
+    if (match === null) {
+        throw new Error("Unable to parse accessor function:\n" + fn);
+    }
+    return match[1];
+}
+
+
+/***/ }),
+
+/***/ 16:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return validateTrigger; });
+/**
+ * Validation triggers.
+ */
+var validateTrigger;
+(function (validateTrigger) {
+    /**
+     * Manual validation.  Use the controller's `validate()` and  `reset()` methods
+     * to validate all bindings.
+     */
+    validateTrigger[validateTrigger["manual"] = 0] = "manual";
+    /**
+     * Validate the binding when the binding's target element fires a DOM "blur" event.
+     */
+    validateTrigger[validateTrigger["blur"] = 1] = "blur";
+    /**
+     * Validate the binding when it updates the model due to a change in the view.
+     */
+    validateTrigger[validateTrigger["change"] = 2] = "change";
+    /**
+     * Validate the binding when the binding's target element fires a DOM "blur" event and
+     * when it updates the model due to a change in the view.
+     */
+    validateTrigger[validateTrigger["changeOrBlur"] = 3] = "changeOrBlur";
+})(validateTrigger || (validateTrigger = {}));
+
+
+/***/ }),
+
 /***/ 17:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -8492,7 +6740,7 @@ var Rules = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_binding__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_aurelia_templating__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_aurelia_logging__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__expression_visitor__ = __webpack_require__(60);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__expression_visitor__ = __webpack_require__(61);
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -9525,10 +7773,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_aurelia_metadata__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_aurelia_templating__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_aurelia_dependency_injection__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__hmr_css_resource__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__view_model_traverse_controller__ = __webpack_require__(51);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__view_traverse_controller__ = __webpack_require__(52);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__render_utils__ = __webpack_require__(50);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__hmr_css_resource__ = __webpack_require__(50);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__view_model_traverse_controller__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__view_traverse_controller__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__render_utils__ = __webpack_require__(51);
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     return new (P || (P = Promise))(function (resolve, reject) {
         function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
@@ -9928,7 +8176,7 @@ function viewsRequireLifecycle(viewFactory) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ArrayRepeatStrategy; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__repeat_utilities__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__repeat_utilities__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_aurelia_binding__ = __webpack_require__(3);
 
 
@@ -10404,7 +8652,7 @@ var IfCore = function () {
 /* unused harmony export signalBindings */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_logging__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_aurelia_pal__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_aurelia_task_queue__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_aurelia_task_queue__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_aurelia_metadata__ = __webpack_require__(5);
 
 
@@ -15903,7 +14151,7 @@ function signalBindings(name) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MapRepeatStrategy; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__repeat_utilities__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__repeat_utilities__ = __webpack_require__(10);
 
 
 
@@ -16045,7 +14293,7 @@ var NullRepeatStrategy = function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NumberRepeatStrategy; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__repeat_utilities__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__repeat_utilities__ = __webpack_require__(10);
 
 
 
@@ -16176,7 +14424,7 @@ var RepeatStrategyLocator = function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SetRepeatStrategy; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__repeat_utilities__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__repeat_utilities__ = __webpack_require__(10);
 
 
 
@@ -17431,10 +15679,60 @@ module.exports = Html5Entities;
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TokenService; });
+var TokenService = /** @class */ (function () {
+    function TokenService() {
+        this.TOKEN_KEY = "jwt";
+        this.LOGGED_IN = "loggedIn";
+        this.USERNAME_KEY = "user_name";
+    }
+    TokenService.prototype.saveJWT = function (jwt) {
+        this.tokenJson = JSON.stringify(jwt);
+        try {
+            localStorage.setItem(this.TOKEN_KEY, this.tokenJson);
+            localStorage.setItem(this.LOGGED_IN, "true");
+        }
+        catch (Error) {
+            return false;
+        }
+        return true;
+    };
+    TokenService.prototype.getJWT = function () {
+        this.tokenJson = localStorage.getItem(this.TOKEN_KEY);
+        if (this.tokenJson) {
+            var token = JSON.parse(this.tokenJson);
+            return token;
+        }
+        else {
+            return null;
+        }
+    };
+    TokenService.prototype.clearJWT = function () {
+        try {
+            localStorage.removeItem(this.TOKEN_KEY);
+            localStorage.removeItem(this.LOGGED_IN);
+            localStorage.removeItem(this.USERNAME_KEY);
+        }
+        catch (Error) {
+            return false;
+        }
+        return true;
+    };
+    return TokenService;
+}());
+
+
+
+/***/ }),
+
+/***/ 44:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* WEBPACK VAR INJECTION */(function(process) {/* harmony export (immutable) */ __webpack_exports__["bootstrap"] = bootstrap;
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "starting", function() { return starting; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_polyfills__ = __webpack_require__(54);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_polyfills__ = __webpack_require__(55);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_aurelia_pal__ = __webpack_require__(0);
 
 
@@ -17597,11 +15895,11 @@ function bootstrap(configure) {
 }
 
 var starting = run();
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(80)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(82)))
 
 /***/ }),
 
-/***/ 44:
+/***/ 45:
 /***/ (function(module, exports, __webpack_require__) {
 
 // This file contains an empty module that does nothing.
@@ -17618,7 +15916,7 @@ var starting = run();
 
 /***/ }),
 
-/***/ 45:
+/***/ 46:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -17650,7 +15948,7 @@ var Loader;
 
 Object.defineProperty(__WEBPACK_IMPORTED_MODULE_0_aurelia_pal__["a" /* PLATFORM */], "Loader", {
   get: function() {
-    return Loader || (Loader = __webpack_require__(53).WebpackLoader);
+    return Loader || (Loader = __webpack_require__(54).WebpackLoader);
   },
   set: function(value) {
     Loader = value;
@@ -17660,7 +15958,7 @@ Object.defineProperty(__WEBPACK_IMPORTED_MODULE_0_aurelia_pal__["a" /* PLATFORM 
 
 /***/ }),
 
-/***/ 46:
+/***/ 47:
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(__resourceQuery, module) {/*eslint-env browser*/
@@ -17677,7 +15975,7 @@ var options = {
   autoConnect: true
 };
 if (true) {
-  var querystring = __webpack_require__(69);
+  var querystring = __webpack_require__(70);
   var overrides = querystring.parse(__resourceQuery.slice(1));
   setOverrides(overrides);
 }
@@ -17811,11 +16109,11 @@ if (typeof window !== 'undefined') {
 }
 
 function createReporter() {
-  var strip = __webpack_require__(70);
+  var strip = __webpack_require__(71);
 
   var overlay;
   if (typeof document !== 'undefined' && options.overlay) {
-    overlay = __webpack_require__(73);
+    overlay = __webpack_require__(75);
   }
 
   var styles = {
@@ -17868,7 +16166,7 @@ function createReporter() {
   };
 }
 
-var processUpdate = __webpack_require__(74);
+var processUpdate = __webpack_require__(76);
 
 var customHandler;
 var subscribeAllHandler;
@@ -17934,11 +16232,11 @@ if (module) {
   };
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, "?path=__webpack_hmr&dynamicPublicPath=true", __webpack_require__(75)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, "?path=__webpack_hmr&dynamicPublicPath=true", __webpack_require__(77)(module)))
 
 /***/ }),
 
-/***/ 47:
+/***/ 48:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18122,7 +16420,7 @@ ansiHTML.reset()
 
 /***/ }),
 
-/***/ 48:
+/***/ 49:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18130,130 +16428,6 @@ ansiHTML.reset()
 module.exports = function () {
 	return /[\u001b\u009b][[()#;?]*(?:[0-9]{1,4}(?:;[0-9]{0,4})*)?[0-9A-PRZcf-nqry=><]/g;
 };
-
-
-/***/ }),
-
-/***/ 49:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* unused harmony export cssUrlMatcher */
-/* unused harmony export fixupCSSUrls */
-/* unused harmony export CSSResource */
-/* unused harmony export CSSViewEngineHooks */
-/* harmony export (immutable) */ __webpack_exports__["a"] = _createCSSResource;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_templating__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_aurelia_loader__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_aurelia_path__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_aurelia_pal__ = __webpack_require__(0);
-var __extends = (this && this.__extends) || function (d, b) {
-    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
-    function __() { this.constructor = d; }
-    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-};
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-/*eslint new-cap:0, padded-blocks:0*/
-
-
-
-
-// this is almost the same as aurelia-templating-resources/css-resource
-// with the exception that it keeps track of the HTMLStyleElement that is being added
-var cssUrlMatcher = /url\((?!['"]data)([^)]+)\)/gi;
-function fixupCSSUrls(address, css) {
-    if (typeof css !== 'string') {
-        throw new Error("Failed loading required CSS file: " + address);
-    }
-    return css.replace(cssUrlMatcher, function (match, p1) {
-        var quote = p1.charAt(0);
-        if (quote === '\'' || quote === '"') {
-            p1 = p1.substr(1, p1.length - 2);
-        }
-        return 'url(\'' + __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_aurelia_path__["a" /* relativeToFile */])(p1, address) + '\')';
-    });
-}
-var CSSResource = (function () {
-    function CSSResource(address) {
-        this.injectedElement = null;
-        this.address = address;
-        this._scoped = null;
-        this._global = false;
-        this._alreadyGloballyInjected = false;
-    }
-    CSSResource.prototype.initialize = function (container, target) {
-        this._scoped = new target(this);
-    };
-    CSSResource.prototype.register = function (registry, name) {
-        if (name === 'scoped') {
-            registry.registerViewEngineHooks(this._scoped);
-        }
-        else {
-            this._global = true;
-        }
-    };
-    CSSResource.prototype.load = function (container) {
-        var _this = this;
-        return container.get(__WEBPACK_IMPORTED_MODULE_1_aurelia_loader__["a" /* Loader */])
-            .loadText(this.address)
-            .catch(function (err) { return null; })
-            .then(function (text) {
-            if (!text) {
-                return;
-            }
-            text = fixupCSSUrls(_this.address, text);
-            if (_this._scoped) {
-                _this._scoped.css = text;
-            }
-            if (_this._global) {
-                _this._alreadyGloballyInjected = true;
-                _this.injectedElement = __WEBPACK_IMPORTED_MODULE_3_aurelia_pal__["c" /* DOM */].injectStyles(text);
-            }
-        });
-    };
-    return CSSResource;
-}());
-
-var CSSViewEngineHooks = (function () {
-    function CSSViewEngineHooks(owner) {
-        this.injectedElements = [];
-        this.owner = owner;
-        this.css = null;
-    }
-    CSSViewEngineHooks.prototype.beforeCompile = function (content, resources, instruction) {
-        if (instruction.targetShadowDOM) {
-            this.injectedElements.push(__WEBPACK_IMPORTED_MODULE_3_aurelia_pal__["c" /* DOM */].injectStyles(this.css, content, true));
-        }
-        else if (__WEBPACK_IMPORTED_MODULE_3_aurelia_pal__["d" /* FEATURE */].scopedCSS) {
-            var styleNode = __WEBPACK_IMPORTED_MODULE_3_aurelia_pal__["c" /* DOM */].injectStyles(this.css, content, true);
-            styleNode.setAttribute('scoped', 'scoped');
-        }
-        else if (!this.owner._alreadyGloballyInjected) {
-            this.owner.injectedElement = __WEBPACK_IMPORTED_MODULE_3_aurelia_pal__["c" /* DOM */].injectStyles(this.css);
-            this.owner._alreadyGloballyInjected = true;
-        }
-    };
-    return CSSViewEngineHooks;
-}());
-
-function _createCSSResource(address) {
-    var ViewCSS = (function (_super) {
-        __extends(ViewCSS, _super);
-        function ViewCSS() {
-            return _super.apply(this, arguments) || this;
-        }
-        return ViewCSS;
-    }(CSSViewEngineHooks));
-    ViewCSS = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_aurelia_templating__["p" /* resource */])(new CSSResource(address))
-    ], ViewCSS);
-    return ViewCSS;
-}
 
 
 /***/ }),
@@ -18533,6 +16707,130 @@ protocol.create = function (name, options) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* unused harmony export cssUrlMatcher */
+/* unused harmony export fixupCSSUrls */
+/* unused harmony export CSSResource */
+/* unused harmony export CSSViewEngineHooks */
+/* harmony export (immutable) */ __webpack_exports__["a"] = _createCSSResource;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_templating__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_aurelia_loader__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_aurelia_path__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_aurelia_pal__ = __webpack_require__(0);
+var __extends = (this && this.__extends) || function (d, b) {
+    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+};
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+/*eslint new-cap:0, padded-blocks:0*/
+
+
+
+
+// this is almost the same as aurelia-templating-resources/css-resource
+// with the exception that it keeps track of the HTMLStyleElement that is being added
+var cssUrlMatcher = /url\((?!['"]data)([^)]+)\)/gi;
+function fixupCSSUrls(address, css) {
+    if (typeof css !== 'string') {
+        throw new Error("Failed loading required CSS file: " + address);
+    }
+    return css.replace(cssUrlMatcher, function (match, p1) {
+        var quote = p1.charAt(0);
+        if (quote === '\'' || quote === '"') {
+            p1 = p1.substr(1, p1.length - 2);
+        }
+        return 'url(\'' + __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_aurelia_path__["a" /* relativeToFile */])(p1, address) + '\')';
+    });
+}
+var CSSResource = (function () {
+    function CSSResource(address) {
+        this.injectedElement = null;
+        this.address = address;
+        this._scoped = null;
+        this._global = false;
+        this._alreadyGloballyInjected = false;
+    }
+    CSSResource.prototype.initialize = function (container, target) {
+        this._scoped = new target(this);
+    };
+    CSSResource.prototype.register = function (registry, name) {
+        if (name === 'scoped') {
+            registry.registerViewEngineHooks(this._scoped);
+        }
+        else {
+            this._global = true;
+        }
+    };
+    CSSResource.prototype.load = function (container) {
+        var _this = this;
+        return container.get(__WEBPACK_IMPORTED_MODULE_1_aurelia_loader__["a" /* Loader */])
+            .loadText(this.address)
+            .catch(function (err) { return null; })
+            .then(function (text) {
+            if (!text) {
+                return;
+            }
+            text = fixupCSSUrls(_this.address, text);
+            if (_this._scoped) {
+                _this._scoped.css = text;
+            }
+            if (_this._global) {
+                _this._alreadyGloballyInjected = true;
+                _this.injectedElement = __WEBPACK_IMPORTED_MODULE_3_aurelia_pal__["c" /* DOM */].injectStyles(text);
+            }
+        });
+    };
+    return CSSResource;
+}());
+
+var CSSViewEngineHooks = (function () {
+    function CSSViewEngineHooks(owner) {
+        this.injectedElements = [];
+        this.owner = owner;
+        this.css = null;
+    }
+    CSSViewEngineHooks.prototype.beforeCompile = function (content, resources, instruction) {
+        if (instruction.targetShadowDOM) {
+            this.injectedElements.push(__WEBPACK_IMPORTED_MODULE_3_aurelia_pal__["c" /* DOM */].injectStyles(this.css, content, true));
+        }
+        else if (__WEBPACK_IMPORTED_MODULE_3_aurelia_pal__["d" /* FEATURE */].scopedCSS) {
+            var styleNode = __WEBPACK_IMPORTED_MODULE_3_aurelia_pal__["c" /* DOM */].injectStyles(this.css, content, true);
+            styleNode.setAttribute('scoped', 'scoped');
+        }
+        else if (!this.owner._alreadyGloballyInjected) {
+            this.owner.injectedElement = __WEBPACK_IMPORTED_MODULE_3_aurelia_pal__["c" /* DOM */].injectStyles(this.css);
+            this.owner._alreadyGloballyInjected = true;
+        }
+    };
+    return CSSViewEngineHooks;
+}());
+
+function _createCSSResource(address) {
+    var ViewCSS = (function (_super) {
+        __extends(ViewCSS, _super);
+        function ViewCSS() {
+            return _super.apply(this, arguments) || this;
+        }
+        return ViewCSS;
+    }(CSSViewEngineHooks));
+    ViewCSS = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_aurelia_templating__["p" /* resource */])(new CSSResource(address))
+    ], ViewCSS);
+    return ViewCSS;
+}
+
+
+/***/ }),
+
+/***/ 51:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 /* unused harmony export recreateView */
 /* unused harmony export cleanupView */
 /* harmony export (immutable) */ __webpack_exports__["b"] = rerenderController;
@@ -18642,7 +16940,7 @@ function rerenderMatchingSlotChildren(slot, newViewFactory, originalFactoryTempl
 
 /***/ }),
 
-/***/ 51:
+/***/ 52:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -18861,7 +17159,7 @@ function traverseViewSlot(classOrFunction, viewSlot, info) {
 
 /***/ }),
 
-/***/ 52:
+/***/ 53:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -18931,7 +17229,7 @@ function getElementsToRerender(template) {
 
 /***/ }),
 
-/***/ 53:
+/***/ 54:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -19260,7 +17558,7 @@ __WEBPACK_IMPORTED_MODULE_2_aurelia_pal__["a" /* PLATFORM */].Loader = WebpackLo
 
 /***/ }),
 
-/***/ 54:
+/***/ 55:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -20109,7 +18407,7 @@ if (typeof FEATURE_NO_ESNEXT === 'undefined') {
 
 /***/ }),
 
-/***/ 55:
+/***/ 56:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -20630,7 +18928,7 @@ function addSegment(currentState, segment) {
 
 /***/ }),
 
-/***/ 56:
+/***/ 57:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -20750,7 +19048,7 @@ function _createCSSResource(address) {
 
 /***/ }),
 
-/***/ 57:
+/***/ 58:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -20782,14 +19080,14 @@ function _createDynamicElement(name, viewUrl, bindableNames) {
 
 /***/ }),
 
-/***/ 58:
+/***/ 59:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* unused harmony export getElementName */
 /* harmony export (immutable) */ __webpack_exports__["a"] = configure;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_templating__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__dynamic_element__ = __webpack_require__(57);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__dynamic_element__ = __webpack_require__(58);
 
 
 
@@ -20823,97 +19121,6 @@ function configure(config) {
       });
     }
   });
-}
-
-/***/ }),
-
-/***/ 59:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TemplatingRouteLoader; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_dependency_injection__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_aurelia_templating__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_aurelia_router__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_aurelia_path__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_aurelia_metadata__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__router_view__ = __webpack_require__("aurelia-templating-router/router-view");
-var _dec, _class;
-
-
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-
-
-
-
-
-
-
-var TemplatingRouteLoader = (_dec = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_aurelia_dependency_injection__["b" /* inject */])(__WEBPACK_IMPORTED_MODULE_1_aurelia_templating__["h" /* CompositionEngine */]), _dec(_class = function (_RouteLoader) {
-  _inherits(TemplatingRouteLoader, _RouteLoader);
-
-  function TemplatingRouteLoader(compositionEngine) {
-    
-
-    var _this = _possibleConstructorReturn(this, _RouteLoader.call(this));
-
-    _this.compositionEngine = compositionEngine;
-    return _this;
-  }
-
-  TemplatingRouteLoader.prototype.loadRoute = function loadRoute(router, config) {
-    var childContainer = router.container.createChild();
-
-    var viewModel = /\.html/.test(config.moduleId) ? createDynamicClass(config.moduleId) : __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3_aurelia_path__["a" /* relativeToFile */])(config.moduleId, __WEBPACK_IMPORTED_MODULE_4_aurelia_metadata__["c" /* Origin */].get(router.container.viewModel.constructor).moduleId);
-
-    var instruction = {
-      viewModel: viewModel,
-      childContainer: childContainer,
-      view: config.view || config.viewStrategy,
-      router: router
-    };
-
-    childContainer.registerSingleton(__WEBPACK_IMPORTED_MODULE_5__router_view__["RouterViewLocator"]);
-
-    childContainer.getChildRouter = function () {
-      var childRouter = void 0;
-
-      childContainer.registerHandler(__WEBPACK_IMPORTED_MODULE_2_aurelia_router__["b" /* Router */], function (c) {
-        return childRouter || (childRouter = router.createChild(childContainer));
-      });
-
-      return childContainer.get(__WEBPACK_IMPORTED_MODULE_2_aurelia_router__["b" /* Router */]);
-    };
-
-    return this.compositionEngine.ensureViewModel(instruction);
-  };
-
-  return TemplatingRouteLoader;
-}(__WEBPACK_IMPORTED_MODULE_2_aurelia_router__["a" /* RouteLoader */])) || _class);
-
-function createDynamicClass(moduleId) {
-  var _dec2, _dec3, _class2;
-
-  var name = /([^\/^\?]+)\.html/i.exec(moduleId)[1];
-
-  var DynamicClass = (_dec2 = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_aurelia_templating__["g" /* customElement */])(name), _dec3 = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_aurelia_templating__["q" /* useView */])(moduleId), _dec2(_class2 = _dec3(_class2 = function () {
-    function DynamicClass() {
-      
-    }
-
-    DynamicClass.prototype.bind = function bind(bindingContext) {
-      this.$parent = bindingContext;
-    };
-
-    return DynamicClass;
-  }()) || _class2) || _class2);
-
-
-  return DynamicClass;
 }
 
 /***/ }),
@@ -21132,6 +19339,97 @@ function parseQueryString(queryString) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TemplatingRouteLoader; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_dependency_injection__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_aurelia_templating__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_aurelia_router__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_aurelia_path__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_aurelia_metadata__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__router_view__ = __webpack_require__("aurelia-templating-router/router-view");
+var _dec, _class;
+
+
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+
+
+
+
+
+var TemplatingRouteLoader = (_dec = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_aurelia_dependency_injection__["b" /* inject */])(__WEBPACK_IMPORTED_MODULE_1_aurelia_templating__["h" /* CompositionEngine */]), _dec(_class = function (_RouteLoader) {
+  _inherits(TemplatingRouteLoader, _RouteLoader);
+
+  function TemplatingRouteLoader(compositionEngine) {
+    
+
+    var _this = _possibleConstructorReturn(this, _RouteLoader.call(this));
+
+    _this.compositionEngine = compositionEngine;
+    return _this;
+  }
+
+  TemplatingRouteLoader.prototype.loadRoute = function loadRoute(router, config) {
+    var childContainer = router.container.createChild();
+
+    var viewModel = /\.html/.test(config.moduleId) ? createDynamicClass(config.moduleId) : __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3_aurelia_path__["a" /* relativeToFile */])(config.moduleId, __WEBPACK_IMPORTED_MODULE_4_aurelia_metadata__["c" /* Origin */].get(router.container.viewModel.constructor).moduleId);
+
+    var instruction = {
+      viewModel: viewModel,
+      childContainer: childContainer,
+      view: config.view || config.viewStrategy,
+      router: router
+    };
+
+    childContainer.registerSingleton(__WEBPACK_IMPORTED_MODULE_5__router_view__["RouterViewLocator"]);
+
+    childContainer.getChildRouter = function () {
+      var childRouter = void 0;
+
+      childContainer.registerHandler(__WEBPACK_IMPORTED_MODULE_2_aurelia_router__["b" /* Router */], function (c) {
+        return childRouter || (childRouter = router.createChild(childContainer));
+      });
+
+      return childContainer.get(__WEBPACK_IMPORTED_MODULE_2_aurelia_router__["b" /* Router */]);
+    };
+
+    return this.compositionEngine.ensureViewModel(instruction);
+  };
+
+  return TemplatingRouteLoader;
+}(__WEBPACK_IMPORTED_MODULE_2_aurelia_router__["a" /* RouteLoader */])) || _class);
+
+function createDynamicClass(moduleId) {
+  var _dec2, _dec3, _class2;
+
+  var name = /([^\/^\?]+)\.html/i.exec(moduleId)[1];
+
+  var DynamicClass = (_dec2 = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_aurelia_templating__["g" /* customElement */])(name), _dec3 = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_aurelia_templating__["q" /* useView */])(moduleId), _dec2(_class2 = _dec3(_class2 = function () {
+    function DynamicClass() {
+      
+    }
+
+    DynamicClass.prototype.bind = function bind(bindingContext) {
+      this.$parent = bindingContext;
+    };
+
+    return DynamicClass;
+  }()) || _class2) || _class2);
+
+
+  return DynamicClass;
+}
+
+/***/ }),
+
+/***/ 61:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ExpressionVisitor; });
 // tslint:disable:no-empty
 var ExpressionVisitor = (function () {
@@ -21212,14 +19510,14 @@ var ExpressionVisitor = (function () {
 
 /***/ }),
 
-/***/ 61:
+/***/ 62:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ValidateBindingBehaviorBase; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_dependency_injection__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__validation_controller__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__validate_trigger__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__validate_trigger__ = __webpack_require__(16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__get_target_dom_element__ = __webpack_require__(35);
 
 
@@ -21304,14 +19602,14 @@ var ValidateBindingBehaviorBase = (function () {
 
 /***/ }),
 
-/***/ 62:
+/***/ 63:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ValidationControllerFactory; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__validation_controller__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__validator__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__property_accessor_parser__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__property_accessor_parser__ = __webpack_require__(15);
 
 
 
@@ -21352,12 +19650,12 @@ ValidationControllerFactory['protocol:aurelia:resolver'] = true;
 
 /***/ }),
 
-/***/ 63:
+/***/ 64:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
-  XmlEntities: __webpack_require__(65),
-  Html4Entities: __webpack_require__(64),
+  XmlEntities: __webpack_require__(66),
+  Html4Entities: __webpack_require__(65),
   Html5Entities: __webpack_require__(42),
   AllHtmlEntities: __webpack_require__(42)
 };
@@ -21365,7 +19663,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 64:
+/***/ 65:
 /***/ (function(module, exports) {
 
 var HTML_ALPHA = ['apos', 'nbsp', 'iexcl', 'cent', 'pound', 'curren', 'yen', 'brvbar', 'sect', 'uml', 'copy', 'ordf', 'laquo', 'not', 'shy', 'reg', 'macr', 'deg', 'plusmn', 'sup2', 'sup3', 'acute', 'micro', 'para', 'middot', 'cedil', 'sup1', 'ordm', 'raquo', 'frac14', 'frac12', 'frac34', 'iquest', 'Agrave', 'Aacute', 'Acirc', 'Atilde', 'Auml', 'Aring', 'Aelig', 'Ccedil', 'Egrave', 'Eacute', 'Ecirc', 'Euml', 'Igrave', 'Iacute', 'Icirc', 'Iuml', 'ETH', 'Ntilde', 'Ograve', 'Oacute', 'Ocirc', 'Otilde', 'Ouml', 'times', 'Oslash', 'Ugrave', 'Uacute', 'Ucirc', 'Uuml', 'Yacute', 'THORN', 'szlig', 'agrave', 'aacute', 'acirc', 'atilde', 'auml', 'aring', 'aelig', 'ccedil', 'egrave', 'eacute', 'ecirc', 'euml', 'igrave', 'iacute', 'icirc', 'iuml', 'eth', 'ntilde', 'ograve', 'oacute', 'ocirc', 'otilde', 'ouml', 'divide', 'oslash', 'ugrave', 'uacute', 'ucirc', 'uuml', 'yacute', 'thorn', 'yuml', 'quot', 'amp', 'lt', 'gt', 'OElig', 'oelig', 'Scaron', 'scaron', 'Yuml', 'circ', 'tilde', 'ensp', 'emsp', 'thinsp', 'zwnj', 'zwj', 'lrm', 'rlm', 'ndash', 'mdash', 'lsquo', 'rsquo', 'sbquo', 'ldquo', 'rdquo', 'bdquo', 'dagger', 'Dagger', 'permil', 'lsaquo', 'rsaquo', 'euro', 'fnof', 'Alpha', 'Beta', 'Gamma', 'Delta', 'Epsilon', 'Zeta', 'Eta', 'Theta', 'Iota', 'Kappa', 'Lambda', 'Mu', 'Nu', 'Xi', 'Omicron', 'Pi', 'Rho', 'Sigma', 'Tau', 'Upsilon', 'Phi', 'Chi', 'Psi', 'Omega', 'alpha', 'beta', 'gamma', 'delta', 'epsilon', 'zeta', 'eta', 'theta', 'iota', 'kappa', 'lambda', 'mu', 'nu', 'xi', 'omicron', 'pi', 'rho', 'sigmaf', 'sigma', 'tau', 'upsilon', 'phi', 'chi', 'psi', 'omega', 'thetasym', 'upsih', 'piv', 'bull', 'hellip', 'prime', 'Prime', 'oline', 'frasl', 'weierp', 'image', 'real', 'trade', 'alefsym', 'larr', 'uarr', 'rarr', 'darr', 'harr', 'crarr', 'lArr', 'uArr', 'rArr', 'dArr', 'hArr', 'forall', 'part', 'exist', 'empty', 'nabla', 'isin', 'notin', 'ni', 'prod', 'sum', 'minus', 'lowast', 'radic', 'prop', 'infin', 'ang', 'and', 'or', 'cap', 'cup', 'int', 'there4', 'sim', 'cong', 'asymp', 'ne', 'equiv', 'le', 'ge', 'sub', 'sup', 'nsub', 'sube', 'supe', 'oplus', 'otimes', 'perp', 'sdot', 'lceil', 'rceil', 'lfloor', 'rfloor', 'lang', 'rang', 'loz', 'spades', 'clubs', 'hearts', 'diams'];
@@ -21519,7 +19817,7 @@ module.exports = Html4Entities;
 
 /***/ }),
 
-/***/ 65:
+/***/ 66:
 /***/ (function(module, exports) {
 
 var ALPHA_INDEX = {
@@ -21681,20 +19979,20 @@ module.exports = XmlEntities;
 
 /***/ }),
 
-/***/ 66:
+/***/ 67:
 /***/ (function(module, exports, __webpack_require__) {
 
 // the whatwg-fetch polyfill installs the fetch() function
 // on the global object (window or self)
 //
 // Return that as the export for use in Webpack, Browserify etc.
-__webpack_require__(76);
+__webpack_require__(78);
 module.exports = self.fetch.bind(self);
 
 
 /***/ }),
 
-/***/ 67:
+/***/ 68:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21786,7 +20084,7 @@ var isArray = Array.isArray || function (xs) {
 
 /***/ }),
 
-/***/ 68:
+/***/ 69:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21875,18 +20173,6 @@ var objectKeys = Object.keys || function (obj) {
   }
   return res;
 };
-
-
-/***/ }),
-
-/***/ 69:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-exports.decode = exports.parse = __webpack_require__(67);
-exports.encode = exports.stringify = __webpack_require__(68);
 
 
 /***/ }),
@@ -22039,7 +20325,19 @@ var Loader = function () {
 
 "use strict";
 
-var ansiRegex = __webpack_require__(48)();
+
+exports.decode = exports.parse = __webpack_require__(68);
+exports.encode = exports.stringify = __webpack_require__(69);
+
+
+/***/ }),
+
+/***/ 71:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var ansiRegex = __webpack_require__(49)();
 
 module.exports = function (str) {
 	return typeof str === 'string' ? str.replace(ansiRegex, '') : str;
@@ -22048,52 +20346,107 @@ module.exports = function (str) {
 
 /***/ }),
 
-/***/ 71:
+/***/ 72:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TokenService; });
-var TokenService = /** @class */ (function () {
-    function TokenService() {
-        this.TOKEN_KEY = "jwt";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return IsLoggedIn; });
+var IsLoggedIn = /** @class */ (function () {
+    function IsLoggedIn() {
+        this.LOGGED_IN = "loggedIn";
     }
-    TokenService.prototype.saveJWT = function (jwt) {
-        this.tokenJson = JSON.stringify(jwt);
-        try {
-            localStorage.setItem(this.TOKEN_KEY, this.tokenJson);
+    IsLoggedIn.prototype.isAuthenticated = function () {
+        var authenticated = localStorage.getItem(this.LOGGED_IN);
+        console.log('LOGGEDIN - typeof: ', authenticated);
+        if (authenticated != null) {
+            return true;
         }
-        catch (Error) {
+        else
             return false;
-        }
-        return true;
     };
-    TokenService.prototype.getJWT = function () {
-        this.tokenJson = localStorage.getItem(this.TOKEN_KEY);
-        if (this.tokenJson) {
-            var token = JSON.parse(this.tokenJson);
-            return token;
-        }
-        else {
-            return null;
-        }
-    };
-    TokenService.prototype.clearJWT = function () {
-        try {
-            localStorage.removeItem(this.TOKEN_KEY);
-        }
-        catch (Error) {
-            return false;
-        }
-        return true;
-    };
-    return TokenService;
+    return IsLoggedIn;
 }());
 
 
 
 /***/ }),
 
-/***/ 72:
+/***/ 73:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UserService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_fetch_client__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_aurelia_framework__ = __webpack_require__("aurelia-framework");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__tokenService__ = __webpack_require__(43);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var UserService = /** @class */ (function () {
+    function UserService(tokenService, http) {
+        this.tokenService = tokenService;
+        this.http = http;
+        //private tokenService: TokenService;
+        this.USERNAME_KEY = "user_name";
+        this.tokenService = tokenService;
+    }
+    // Saves the username it aquired from the api saved to localstorage.
+    UserService.prototype.saveUserName = function () {
+        var _this = this;
+        var jwt = this.tokenService.getJWT();
+        if (!jwt) {
+            throw new Error("No JWT present");
+        }
+        var token = jwt.access_token;
+        var headers = new Headers({
+            Authorization: "bearer " + token,
+            "Content-Type": "application/json; charset=utf-8"
+        });
+        var task = fetch("/api/jwt/userName", {
+            method: "GET",
+            headers: headers
+        })
+            .then(function (response) { return response.json(); })
+            .then(function (data) {
+            try {
+                console.log("Data: ", data);
+                localStorage.setItem(_this.USERNAME_KEY, data.username);
+            }
+            catch (Error) { }
+        });
+    };
+    // Goes to localstorage and if the username is there returns it.
+    UserService.prototype.getUserName = function () {
+        this.usernameJson = localStorage.getItem(this.USERNAME_KEY);
+        if (this.usernameJson) {
+            var userName = JSON.parse(this.usernameJson);
+            return userName;
+        }
+        else {
+            return null;
+        }
+    };
+    UserService = __decorate([
+        __WEBPACK_IMPORTED_MODULE_1_aurelia_framework__["b" /* autoinject */],
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__tokenService__["a" /* TokenService */], __WEBPACK_IMPORTED_MODULE_0_aurelia_fetch_client__["a" /* HttpClient */]])
+    ], UserService);
+    return UserService;
+}());
+
+
+
+/***/ }),
+
+/***/ 74:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22160,7 +20513,7 @@ var BootstrapFormRenderer = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 73:
+/***/ 75:
 /***/ (function(module, exports, __webpack_require__) {
 
 /*eslint-env browser*/
@@ -22189,7 +20542,7 @@ for (var key in styles) {
   clientOverlay.style[key] = styles[key];
 }
 
-var ansiHTML = __webpack_require__(47);
+var ansiHTML = __webpack_require__(48);
 var colors = {
   reset: ['transparent', 'transparent'],
   black: '181818',
@@ -22204,7 +20557,7 @@ var colors = {
 };
 ansiHTML.setColors(colors);
 
-var Entities = __webpack_require__(63).AllHtmlEntities;
+var Entities = __webpack_require__(64).AllHtmlEntities;
 var entities = new Entities();
 
 exports.showProblems =
@@ -22246,7 +20599,7 @@ function problemType (type) {
 
 /***/ }),
 
-/***/ 74:
+/***/ 76:
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -22399,7 +20752,7 @@ module.exports = function(hash, moduleMap, options) {
 
 /***/ }),
 
-/***/ 75:
+/***/ 77:
 /***/ (function(module, exports) {
 
 module.exports = function(module) {
@@ -22428,7 +20781,7 @@ module.exports = function(module) {
 
 /***/ }),
 
-/***/ 76:
+/***/ 78:
 /***/ (function(module, exports) {
 
 (function(self) {
@@ -22896,28 +21249,1912 @@ module.exports = function(module) {
 
 /***/ }),
 
-/***/ 77:
+/***/ 79:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(13))(28);
 
 /***/ }),
 
-/***/ 78:
+/***/ 8:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* unused harmony export _normalizeAbsolutePath */
+/* unused harmony export _createRootedPath */
+/* unused harmony export _resolveUrl */
+/* unused harmony export pipelineStatus */
+/* unused harmony export Pipeline */
+/* unused harmony export CommitChangesStep */
+/* unused harmony export NavigationInstruction */
+/* unused harmony export NavModel */
+/* unused harmony export isNavigationCommand */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return Redirect; });
+/* unused harmony export RedirectToRoute */
+/* unused harmony export RouterConfiguration */
+/* unused harmony export activationStrategy */
+/* unused harmony export BuildNavigationPlanStep */
+/* unused harmony export _buildNavigationPlan */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return Router; });
+/* unused harmony export CanDeactivatePreviousStep */
+/* unused harmony export CanActivateNextStep */
+/* unused harmony export DeactivatePreviousStep */
+/* unused harmony export ActivateNextStep */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RouteLoader; });
+/* unused harmony export LoadRouteStep */
+/* unused harmony export PipelineProvider */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return AppRouter; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_logging__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_aurelia_route_recognizer__ = __webpack_require__(56);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_aurelia_dependency_injection__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_aurelia_history__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_aurelia_event_aggregator__ = __webpack_require__("aurelia-event-aggregator");
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+
+
+
+
+
+
+function _normalizeAbsolutePath(path, hasPushState) {
+  var absolute = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
+
+  if (!hasPushState && path[0] !== '#') {
+    path = '#' + path;
+  }
+
+  if (hasPushState && absolute) {
+    path = path.substring(1, path.length);
+  }
+
+  return path;
+}
+
+function _createRootedPath(fragment, baseUrl, hasPushState, absolute) {
+  if (isAbsoluteUrl.test(fragment)) {
+    return fragment;
+  }
+
+  var path = '';
+
+  if (baseUrl.length && baseUrl[0] !== '/') {
+    path += '/';
+  }
+
+  path += baseUrl;
+
+  if ((!path.length || path[path.length - 1] !== '/') && fragment[0] !== '/') {
+    path += '/';
+  }
+
+  if (path.length && path[path.length - 1] === '/' && fragment[0] === '/') {
+    path = path.substring(0, path.length - 1);
+  }
+
+  return _normalizeAbsolutePath(path + fragment, hasPushState, absolute);
+}
+
+function _resolveUrl(fragment, baseUrl, hasPushState) {
+  if (isRootedPath.test(fragment)) {
+    return _normalizeAbsolutePath(fragment, hasPushState);
+  }
+
+  return _createRootedPath(fragment, baseUrl, hasPushState);
+}
+
+var isRootedPath = /^#?\//;
+var isAbsoluteUrl = /^([a-z][a-z0-9+\-.]*:)?\/\//i;
+
+var pipelineStatus = {
+  completed: 'completed',
+  canceled: 'canceled',
+  rejected: 'rejected',
+  running: 'running'
+};
+
+var Pipeline = function () {
+  function Pipeline() {
+    
+
+    this.steps = [];
+  }
+
+  Pipeline.prototype.addStep = function addStep(step) {
+    var run = void 0;
+
+    if (typeof step === 'function') {
+      run = step;
+    } else if (typeof step.getSteps === 'function') {
+      var steps = step.getSteps();
+      for (var i = 0, l = steps.length; i < l; i++) {
+        this.addStep(steps[i]);
+      }
+
+      return this;
+    } else {
+      run = step.run.bind(step);
+    }
+
+    this.steps.push(run);
+
+    return this;
+  };
+
+  Pipeline.prototype.run = function run(instruction) {
+    var index = -1;
+    var steps = this.steps;
+
+    function next() {
+      index++;
+
+      if (index < steps.length) {
+        var currentStep = steps[index];
+
+        try {
+          return currentStep(instruction, next);
+        } catch (e) {
+          return next.reject(e);
+        }
+      } else {
+        return next.complete();
+      }
+    }
+
+    next.complete = createCompletionHandler(next, pipelineStatus.completed);
+    next.cancel = createCompletionHandler(next, pipelineStatus.canceled);
+    next.reject = createCompletionHandler(next, pipelineStatus.rejected);
+
+    return next();
+  };
+
+  return Pipeline;
+}();
+
+function createCompletionHandler(next, status) {
+  return function (output) {
+    return Promise.resolve({ status: status, output: output, completed: status === pipelineStatus.completed });
+  };
+}
+
+var CommitChangesStep = function () {
+  function CommitChangesStep() {
+    
+  }
+
+  CommitChangesStep.prototype.run = function run(navigationInstruction, next) {
+    return navigationInstruction._commitChanges(true).then(function () {
+      navigationInstruction._updateTitle();
+      return next();
+    });
+  };
+
+  return CommitChangesStep;
+}();
+
+var NavigationInstruction = function () {
+  function NavigationInstruction(init) {
+    
+
+    this.plan = null;
+    this.options = {};
+
+    Object.assign(this, init);
+
+    this.params = this.params || {};
+    this.viewPortInstructions = {};
+
+    var ancestorParams = [];
+    var current = this;
+    do {
+      var currentParams = Object.assign({}, current.params);
+      if (current.config && current.config.hasChildRouter) {
+        delete currentParams[current.getWildCardName()];
+      }
+
+      ancestorParams.unshift(currentParams);
+      current = current.parentInstruction;
+    } while (current);
+
+    var allParams = Object.assign.apply(Object, [{}, this.queryParams].concat(ancestorParams));
+    this.lifecycleArgs = [allParams, this.config, this];
+  }
+
+  NavigationInstruction.prototype.getAllInstructions = function getAllInstructions() {
+    var instructions = [this];
+    for (var key in this.viewPortInstructions) {
+      var childInstruction = this.viewPortInstructions[key].childNavigationInstruction;
+      if (childInstruction) {
+        instructions.push.apply(instructions, childInstruction.getAllInstructions());
+      }
+    }
+
+    return instructions;
+  };
+
+  NavigationInstruction.prototype.getAllPreviousInstructions = function getAllPreviousInstructions() {
+    return this.getAllInstructions().map(function (c) {
+      return c.previousInstruction;
+    }).filter(function (c) {
+      return c;
+    });
+  };
+
+  NavigationInstruction.prototype.addViewPortInstruction = function addViewPortInstruction(viewPortName, strategy, moduleId, component) {
+    var config = Object.assign({}, this.lifecycleArgs[1], { currentViewPort: viewPortName });
+    var viewportInstruction = this.viewPortInstructions[viewPortName] = {
+      name: viewPortName,
+      strategy: strategy,
+      moduleId: moduleId,
+      component: component,
+      childRouter: component.childRouter,
+      lifecycleArgs: [].concat(this.lifecycleArgs[0], config, this.lifecycleArgs[2])
+    };
+
+    return viewportInstruction;
+  };
+
+  NavigationInstruction.prototype.getWildCardName = function getWildCardName() {
+    var wildcardIndex = this.config.route.lastIndexOf('*');
+    return this.config.route.substr(wildcardIndex + 1);
+  };
+
+  NavigationInstruction.prototype.getWildcardPath = function getWildcardPath() {
+    var wildcardName = this.getWildCardName();
+    var path = this.params[wildcardName] || '';
+
+    if (this.queryString) {
+      path += '?' + this.queryString;
+    }
+
+    return path;
+  };
+
+  NavigationInstruction.prototype.getBaseUrl = function getBaseUrl() {
+    var _this = this;
+
+    var fragment = decodeURI(this.fragment);
+
+    if (fragment === '') {
+      var nonEmptyRoute = this.router.routes.find(function (route) {
+        return route.name === _this.config.name && route.route !== '';
+      });
+      if (nonEmptyRoute) {
+        fragment = nonEmptyRoute.route;
+      }
+    }
+
+    if (!this.params) {
+      return encodeURI(fragment);
+    }
+
+    var wildcardName = this.getWildCardName();
+    var path = this.params[wildcardName] || '';
+
+    if (!path) {
+      return encodeURI(fragment);
+    }
+
+    return encodeURI(fragment.substr(0, fragment.lastIndexOf(path)));
+  };
+
+  NavigationInstruction.prototype._commitChanges = function _commitChanges(waitToSwap) {
+    var _this2 = this;
+
+    var router = this.router;
+    router.currentInstruction = this;
+
+    if (this.previousInstruction) {
+      this.previousInstruction.config.navModel.isActive = false;
+    }
+
+    this.config.navModel.isActive = true;
+
+    router._refreshBaseUrl();
+    router.refreshNavigation();
+
+    var loads = [];
+    var delaySwaps = [];
+
+    var _loop = function _loop(viewPortName) {
+      var viewPortInstruction = _this2.viewPortInstructions[viewPortName];
+      var viewPort = router.viewPorts[viewPortName];
+
+      if (!viewPort) {
+        throw new Error('There was no router-view found in the view for ' + viewPortInstruction.moduleId + '.');
+      }
+
+      if (viewPortInstruction.strategy === activationStrategy.replace) {
+        if (viewPortInstruction.childNavigationInstruction && viewPortInstruction.childNavigationInstruction.parentCatchHandler) {
+          loads.push(viewPortInstruction.childNavigationInstruction._commitChanges());
+        } else {
+          if (waitToSwap) {
+            delaySwaps.push({ viewPort: viewPort, viewPortInstruction: viewPortInstruction });
+          }
+          loads.push(viewPort.process(viewPortInstruction, waitToSwap).then(function (x) {
+            if (viewPortInstruction.childNavigationInstruction) {
+              return viewPortInstruction.childNavigationInstruction._commitChanges();
+            }
+
+            return undefined;
+          }));
+        }
+      } else {
+        if (viewPortInstruction.childNavigationInstruction) {
+          loads.push(viewPortInstruction.childNavigationInstruction._commitChanges(waitToSwap));
+        }
+      }
+    };
+
+    for (var viewPortName in this.viewPortInstructions) {
+      _loop(viewPortName);
+    }
+
+    return Promise.all(loads).then(function () {
+      delaySwaps.forEach(function (x) {
+        return x.viewPort.swap(x.viewPortInstruction);
+      });
+      return null;
+    }).then(function () {
+      return prune(_this2);
+    });
+  };
+
+  NavigationInstruction.prototype._updateTitle = function _updateTitle() {
+    var title = this._buildTitle();
+    if (title) {
+      this.router.history.setTitle(title);
+    }
+  };
+
+  NavigationInstruction.prototype._buildTitle = function _buildTitle() {
+    var separator = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : ' | ';
+
+    var title = '';
+    var childTitles = [];
+
+    if (this.config.navModel.title) {
+      title = this.router.transformTitle(this.config.navModel.title);
+    }
+
+    for (var viewPortName in this.viewPortInstructions) {
+      var _viewPortInstruction = this.viewPortInstructions[viewPortName];
+
+      if (_viewPortInstruction.childNavigationInstruction) {
+        var childTitle = _viewPortInstruction.childNavigationInstruction._buildTitle(separator);
+        if (childTitle) {
+          childTitles.push(childTitle);
+        }
+      }
+    }
+
+    if (childTitles.length) {
+      title = childTitles.join(separator) + (title ? separator : '') + title;
+    }
+
+    if (this.router.title) {
+      title += (title ? separator : '') + this.router.transformTitle(this.router.title);
+    }
+
+    return title;
+  };
+
+  return NavigationInstruction;
+}();
+
+function prune(instruction) {
+  instruction.previousInstruction = null;
+  instruction.plan = null;
+}
+
+var NavModel = function () {
+  function NavModel(router, relativeHref) {
+    
+
+    this.isActive = false;
+    this.title = null;
+    this.href = null;
+    this.relativeHref = null;
+    this.settings = {};
+    this.config = null;
+
+    this.router = router;
+    this.relativeHref = relativeHref;
+  }
+
+  NavModel.prototype.setTitle = function setTitle(title) {
+    this.title = title;
+
+    if (this.isActive) {
+      this.router.updateTitle();
+    }
+  };
+
+  return NavModel;
+}();
+
+function isNavigationCommand(obj) {
+  return obj && typeof obj.navigate === 'function';
+}
+
+var Redirect = function () {
+  function Redirect(url) {
+    var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+
+    
+
+    this.url = url;
+    this.options = Object.assign({ trigger: true, replace: true }, options);
+    this.shouldContinueProcessing = false;
+  }
+
+  Redirect.prototype.setRouter = function setRouter(router) {
+    this.router = router;
+  };
+
+  Redirect.prototype.navigate = function navigate(appRouter) {
+    var navigatingRouter = this.options.useAppRouter ? appRouter : this.router || appRouter;
+    navigatingRouter.navigate(this.url, this.options);
+  };
+
+  return Redirect;
+}();
+
+var RedirectToRoute = function () {
+  function RedirectToRoute(route) {
+    var params = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+    var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+
+    
+
+    this.route = route;
+    this.params = params;
+    this.options = Object.assign({ trigger: true, replace: true }, options);
+    this.shouldContinueProcessing = false;
+  }
+
+  RedirectToRoute.prototype.setRouter = function setRouter(router) {
+    this.router = router;
+  };
+
+  RedirectToRoute.prototype.navigate = function navigate(appRouter) {
+    var navigatingRouter = this.options.useAppRouter ? appRouter : this.router || appRouter;
+    navigatingRouter.navigateToRoute(this.route, this.params, this.options);
+  };
+
+  return RedirectToRoute;
+}();
+
+var RouterConfiguration = function () {
+  function RouterConfiguration() {
+    
+
+    this.instructions = [];
+    this.options = {};
+    this.pipelineSteps = [];
+  }
+
+  RouterConfiguration.prototype.addPipelineStep = function addPipelineStep(name, step) {
+    this.pipelineSteps.push({ name: name, step: step });
+    return this;
+  };
+
+  RouterConfiguration.prototype.addAuthorizeStep = function addAuthorizeStep(step) {
+    return this.addPipelineStep('authorize', step);
+  };
+
+  RouterConfiguration.prototype.addPreActivateStep = function addPreActivateStep(step) {
+    return this.addPipelineStep('preActivate', step);
+  };
+
+  RouterConfiguration.prototype.addPreRenderStep = function addPreRenderStep(step) {
+    return this.addPipelineStep('preRender', step);
+  };
+
+  RouterConfiguration.prototype.addPostRenderStep = function addPostRenderStep(step) {
+    return this.addPipelineStep('postRender', step);
+  };
+
+  RouterConfiguration.prototype.fallbackRoute = function fallbackRoute(fragment) {
+    this._fallbackRoute = fragment;
+    return this;
+  };
+
+  RouterConfiguration.prototype.map = function map(route) {
+    if (Array.isArray(route)) {
+      route.forEach(this.map.bind(this));
+      return this;
+    }
+
+    return this.mapRoute(route);
+  };
+
+  RouterConfiguration.prototype.mapRoute = function mapRoute(config) {
+    this.instructions.push(function (router) {
+      var routeConfigs = [];
+
+      if (Array.isArray(config.route)) {
+        for (var i = 0, ii = config.route.length; i < ii; ++i) {
+          var _current = Object.assign({}, config);
+          _current.route = config.route[i];
+          routeConfigs.push(_current);
+        }
+      } else {
+        routeConfigs.push(Object.assign({}, config));
+      }
+
+      var navModel = void 0;
+      for (var _i = 0, _ii = routeConfigs.length; _i < _ii; ++_i) {
+        var _routeConfig = routeConfigs[_i];
+        _routeConfig.settings = _routeConfig.settings || {};
+        if (!navModel) {
+          navModel = router.createNavModel(_routeConfig);
+        }
+
+        router.addRoute(_routeConfig, navModel);
+      }
+    });
+
+    return this;
+  };
+
+  RouterConfiguration.prototype.mapUnknownRoutes = function mapUnknownRoutes(config) {
+    this.unknownRouteConfig = config;
+    return this;
+  };
+
+  RouterConfiguration.prototype.exportToRouter = function exportToRouter(router) {
+    var instructions = this.instructions;
+    for (var i = 0, ii = instructions.length; i < ii; ++i) {
+      instructions[i](router);
+    }
+
+    if (this.title) {
+      router.title = this.title;
+    }
+
+    if (this.unknownRouteConfig) {
+      router.handleUnknownRoutes(this.unknownRouteConfig);
+    }
+
+    if (this._fallbackRoute) {
+      router.fallbackRoute = this._fallbackRoute;
+    }
+
+    router.options = this.options;
+
+    var pipelineSteps = this.pipelineSteps;
+    if (pipelineSteps.length) {
+      if (!router.isRoot) {
+        throw new Error('Pipeline steps can only be added to the root router');
+      }
+
+      var pipelineProvider = router.pipelineProvider;
+      for (var _i2 = 0, _ii2 = pipelineSteps.length; _i2 < _ii2; ++_i2) {
+        var _pipelineSteps$_i = pipelineSteps[_i2],
+            _name = _pipelineSteps$_i.name,
+            step = _pipelineSteps$_i.step;
+
+        pipelineProvider.addStep(_name, step);
+      }
+    }
+  };
+
+  return RouterConfiguration;
+}();
+
+var activationStrategy = {
+  noChange: 'no-change',
+  invokeLifecycle: 'invoke-lifecycle',
+  replace: 'replace'
+};
+
+var BuildNavigationPlanStep = function () {
+  function BuildNavigationPlanStep() {
+    
+  }
+
+  BuildNavigationPlanStep.prototype.run = function run(navigationInstruction, next) {
+    return _buildNavigationPlan(navigationInstruction).then(function (plan) {
+      navigationInstruction.plan = plan;
+      return next();
+    }).catch(next.cancel);
+  };
+
+  return BuildNavigationPlanStep;
+}();
+
+function _buildNavigationPlan(instruction, forceLifecycleMinimum) {
+  var prev = instruction.previousInstruction;
+  var config = instruction.config;
+  var plan = {};
+
+  if ('redirect' in config) {
+    var redirectLocation = _resolveUrl(config.redirect, getInstructionBaseUrl(instruction));
+    if (instruction.queryString) {
+      redirectLocation += '?' + instruction.queryString;
+    }
+
+    return Promise.reject(new Redirect(redirectLocation));
+  }
+
+  if (prev) {
+    var newParams = hasDifferentParameterValues(prev, instruction);
+    var pending = [];
+
+    var _loop2 = function _loop2(viewPortName) {
+      var prevViewPortInstruction = prev.viewPortInstructions[viewPortName];
+      var nextViewPortConfig = config.viewPorts[viewPortName];
+
+      if (!nextViewPortConfig) throw new Error('Invalid Route Config: Configuration for viewPort "' + viewPortName + '" was not found for route: "' + instruction.config.route + '."');
+
+      var viewPortPlan = plan[viewPortName] = {
+        name: viewPortName,
+        config: nextViewPortConfig,
+        prevComponent: prevViewPortInstruction.component,
+        prevModuleId: prevViewPortInstruction.moduleId
+      };
+
+      if (prevViewPortInstruction.moduleId !== nextViewPortConfig.moduleId) {
+        viewPortPlan.strategy = activationStrategy.replace;
+      } else if ('determineActivationStrategy' in prevViewPortInstruction.component.viewModel) {
+        var _prevViewPortInstruct;
+
+        viewPortPlan.strategy = (_prevViewPortInstruct = prevViewPortInstruction.component.viewModel).determineActivationStrategy.apply(_prevViewPortInstruct, instruction.lifecycleArgs);
+      } else if (config.activationStrategy) {
+        viewPortPlan.strategy = config.activationStrategy;
+      } else if (newParams || forceLifecycleMinimum) {
+        viewPortPlan.strategy = activationStrategy.invokeLifecycle;
+      } else {
+        viewPortPlan.strategy = activationStrategy.noChange;
+      }
+
+      if (viewPortPlan.strategy !== activationStrategy.replace && prevViewPortInstruction.childRouter) {
+        var path = instruction.getWildcardPath();
+        var task = prevViewPortInstruction.childRouter._createNavigationInstruction(path, instruction).then(function (childInstruction) {
+          viewPortPlan.childNavigationInstruction = childInstruction;
+
+          return _buildNavigationPlan(childInstruction, viewPortPlan.strategy === activationStrategy.invokeLifecycle).then(function (childPlan) {
+            childInstruction.plan = childPlan;
+          });
+        });
+
+        pending.push(task);
+      }
+    };
+
+    for (var viewPortName in prev.viewPortInstructions) {
+      _loop2(viewPortName);
+    }
+
+    return Promise.all(pending).then(function () {
+      return plan;
+    });
+  }
+
+  for (var viewPortName in config.viewPorts) {
+    plan[viewPortName] = {
+      name: viewPortName,
+      strategy: activationStrategy.replace,
+      config: instruction.config.viewPorts[viewPortName]
+    };
+  }
+
+  return Promise.resolve(plan);
+}
+
+function hasDifferentParameterValues(prev, next) {
+  var prevParams = prev.params;
+  var nextParams = next.params;
+  var nextWildCardName = next.config.hasChildRouter ? next.getWildCardName() : null;
+
+  for (var key in nextParams) {
+    if (key === nextWildCardName) {
+      continue;
+    }
+
+    if (prevParams[key] !== nextParams[key]) {
+      return true;
+    }
+  }
+
+  for (var _key in prevParams) {
+    if (_key === nextWildCardName) {
+      continue;
+    }
+
+    if (prevParams[_key] !== nextParams[_key]) {
+      return true;
+    }
+  }
+
+  if (!next.options.compareQueryParams) {
+    return false;
+  }
+
+  var prevQueryParams = prev.queryParams;
+  var nextQueryParams = next.queryParams;
+  for (var _key2 in nextQueryParams) {
+    if (prevQueryParams[_key2] !== nextQueryParams[_key2]) {
+      return true;
+    }
+  }
+
+  for (var _key3 in prevQueryParams) {
+    if (prevQueryParams[_key3] !== nextQueryParams[_key3]) {
+      return true;
+    }
+  }
+
+  return false;
+}
+
+function getInstructionBaseUrl(instruction) {
+  var instructionBaseUrlParts = [];
+  instruction = instruction.parentInstruction;
+
+  while (instruction) {
+    instructionBaseUrlParts.unshift(instruction.getBaseUrl());
+    instruction = instruction.parentInstruction;
+  }
+
+  instructionBaseUrlParts.unshift('/');
+  return instructionBaseUrlParts.join('');
+}
+
+var Router = function () {
+  function Router(container, history) {
+    var _this3 = this;
+
+    
+
+    this.parent = null;
+    this.options = {};
+
+    this.transformTitle = function (title) {
+      if (_this3.parent) {
+        return _this3.parent.transformTitle(title);
+      }
+      return title;
+    };
+
+    this.container = container;
+    this.history = history;
+    this.reset();
+  }
+
+  Router.prototype.reset = function reset() {
+    var _this4 = this;
+
+    this.viewPorts = {};
+    this.routes = [];
+    this.baseUrl = '';
+    this.isConfigured = false;
+    this.isNavigating = false;
+    this.isExplicitNavigation = false;
+    this.isExplicitNavigationBack = false;
+    this.navigation = [];
+    this.currentInstruction = null;
+    this._fallbackOrder = 100;
+    this._recognizer = new __WEBPACK_IMPORTED_MODULE_1_aurelia_route_recognizer__["a" /* RouteRecognizer */]();
+    this._childRecognizer = new __WEBPACK_IMPORTED_MODULE_1_aurelia_route_recognizer__["a" /* RouteRecognizer */]();
+    this._configuredPromise = new Promise(function (resolve) {
+      _this4._resolveConfiguredPromise = resolve;
+    });
+  };
+
+  Router.prototype.registerViewPort = function registerViewPort(viewPort, name) {
+    name = name || 'default';
+    this.viewPorts[name] = viewPort;
+  };
+
+  Router.prototype.ensureConfigured = function ensureConfigured() {
+    return this._configuredPromise;
+  };
+
+  Router.prototype.configure = function configure(callbackOrConfig) {
+    var _this5 = this;
+
+    this.isConfigured = true;
+
+    var result = callbackOrConfig;
+    var config = void 0;
+    if (typeof callbackOrConfig === 'function') {
+      config = new RouterConfiguration();
+      result = callbackOrConfig(config);
+    }
+
+    return Promise.resolve(result).then(function (c) {
+      if (c && c.exportToRouter) {
+        config = c;
+      }
+
+      config.exportToRouter(_this5);
+      _this5.isConfigured = true;
+      _this5._resolveConfiguredPromise();
+    });
+  };
+
+  Router.prototype.navigate = function navigate(fragment, options) {
+    if (!this.isConfigured && this.parent) {
+      return this.parent.navigate(fragment, options);
+    }
+
+    this.isExplicitNavigation = true;
+    return this.history.navigate(_resolveUrl(fragment, this.baseUrl, this.history._hasPushState), options);
+  };
+
+  Router.prototype.navigateToRoute = function navigateToRoute(route, params, options) {
+    var path = this.generate(route, params);
+    return this.navigate(path, options);
+  };
+
+  Router.prototype.navigateBack = function navigateBack() {
+    this.isExplicitNavigationBack = true;
+    this.history.navigateBack();
+  };
+
+  Router.prototype.createChild = function createChild(container) {
+    var childRouter = new Router(container || this.container.createChild(), this.history);
+    childRouter.parent = this;
+    return childRouter;
+  };
+
+  Router.prototype.generate = function generate(name, params) {
+    var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+
+    var hasRoute = this._recognizer.hasRoute(name);
+    if ((!this.isConfigured || !hasRoute) && this.parent) {
+      return this.parent.generate(name, params);
+    }
+
+    if (!hasRoute) {
+      throw new Error('A route with name \'' + name + '\' could not be found. Check that `name: \'' + name + '\'` was specified in the route\'s config.');
+    }
+
+    var path = this._recognizer.generate(name, params);
+    var rootedPath = _createRootedPath(path, this.baseUrl, this.history._hasPushState, options.absolute);
+    return options.absolute ? '' + this.history.getAbsoluteRoot() + rootedPath : rootedPath;
+  };
+
+  Router.prototype.createNavModel = function createNavModel(config) {
+    var navModel = new NavModel(this, 'href' in config ? config.href : config.route);
+    navModel.title = config.title;
+    navModel.order = config.nav;
+    navModel.href = config.href;
+    navModel.settings = config.settings;
+    navModel.config = config;
+
+    return navModel;
+  };
+
+  Router.prototype.addRoute = function addRoute(config, navModel) {
+    validateRouteConfig(config, this.routes);
+
+    if (!('viewPorts' in config) && !config.navigationStrategy) {
+      config.viewPorts = {
+        'default': {
+          moduleId: config.moduleId,
+          view: config.view
+        }
+      };
+    }
+
+    if (!navModel) {
+      navModel = this.createNavModel(config);
+    }
+
+    this.routes.push(config);
+
+    var path = config.route;
+    if (path.charAt(0) === '/') {
+      path = path.substr(1);
+    }
+    var caseSensitive = config.caseSensitive === true;
+    var state = this._recognizer.add({ path: path, handler: config, caseSensitive: caseSensitive });
+
+    if (path) {
+      var _settings = config.settings;
+      delete config.settings;
+      var withChild = JSON.parse(JSON.stringify(config));
+      config.settings = _settings;
+      withChild.route = path + '/*childRoute';
+      withChild.hasChildRouter = true;
+      this._childRecognizer.add({
+        path: withChild.route,
+        handler: withChild,
+        caseSensitive: caseSensitive
+      });
+
+      withChild.navModel = navModel;
+      withChild.settings = config.settings;
+      withChild.navigationStrategy = config.navigationStrategy;
+    }
+
+    config.navModel = navModel;
+
+    if ((navModel.order || navModel.order === 0) && this.navigation.indexOf(navModel) === -1) {
+      if (!navModel.href && navModel.href !== '' && (state.types.dynamics || state.types.stars)) {
+        throw new Error('Invalid route config for "' + config.route + '" : dynamic routes must specify an "href:" to be included in the navigation model.');
+      }
+
+      if (typeof navModel.order !== 'number') {
+        navModel.order = ++this._fallbackOrder;
+      }
+
+      this.navigation.push(navModel);
+      this.navigation = this.navigation.sort(function (a, b) {
+        return a.order - b.order;
+      });
+    }
+  };
+
+  Router.prototype.hasRoute = function hasRoute(name) {
+    return !!(this._recognizer.hasRoute(name) || this.parent && this.parent.hasRoute(name));
+  };
+
+  Router.prototype.hasOwnRoute = function hasOwnRoute(name) {
+    return this._recognizer.hasRoute(name);
+  };
+
+  Router.prototype.handleUnknownRoutes = function handleUnknownRoutes(config) {
+    var _this6 = this;
+
+    if (!config) {
+      throw new Error('Invalid unknown route handler');
+    }
+
+    this.catchAllHandler = function (instruction) {
+      return _this6._createRouteConfig(config, instruction).then(function (c) {
+        instruction.config = c;
+        return instruction;
+      });
+    };
+  };
+
+  Router.prototype.updateTitle = function updateTitle() {
+    if (this.parent) {
+      return this.parent.updateTitle();
+    }
+
+    if (this.currentInstruction) {
+      this.currentInstruction._updateTitle();
+    }
+    return undefined;
+  };
+
+  Router.prototype.refreshNavigation = function refreshNavigation() {
+    var nav = this.navigation;
+
+    for (var i = 0, length = nav.length; i < length; i++) {
+      var _current2 = nav[i];
+      if (!_current2.config.href) {
+        _current2.href = _createRootedPath(_current2.relativeHref, this.baseUrl, this.history._hasPushState);
+      } else {
+        _current2.href = _normalizeAbsolutePath(_current2.config.href, this.history._hasPushState);
+      }
+    }
+  };
+
+  Router.prototype._refreshBaseUrl = function _refreshBaseUrl() {
+    if (this.parent) {
+      var baseUrl = this.parent.currentInstruction.getBaseUrl();
+      this.baseUrl = this.parent.baseUrl + baseUrl;
+    }
+  };
+
+  Router.prototype._createNavigationInstruction = function _createNavigationInstruction() {
+    var url = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
+    var parentInstruction = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
+
+    var fragment = url;
+    var queryString = '';
+
+    var queryIndex = url.indexOf('?');
+    if (queryIndex !== -1) {
+      fragment = url.substr(0, queryIndex);
+      queryString = url.substr(queryIndex + 1);
+    }
+
+    var results = this._recognizer.recognize(url);
+    if (!results || !results.length) {
+      results = this._childRecognizer.recognize(url);
+    }
+
+    var instructionInit = {
+      fragment: fragment,
+      queryString: queryString,
+      config: null,
+      parentInstruction: parentInstruction,
+      previousInstruction: this.currentInstruction,
+      router: this,
+      options: {
+        compareQueryParams: this.options.compareQueryParams
+      }
+    };
+
+    if (results && results.length) {
+      var first = results[0];
+      var _instruction = new NavigationInstruction(Object.assign({}, instructionInit, {
+        params: first.params,
+        queryParams: first.queryParams || results.queryParams,
+        config: first.config || first.handler
+      }));
+
+      if (typeof first.handler === 'function') {
+        return evaluateNavigationStrategy(_instruction, first.handler, first);
+      } else if (first.handler && typeof first.handler.navigationStrategy === 'function') {
+        return evaluateNavigationStrategy(_instruction, first.handler.navigationStrategy, first.handler);
+      }
+
+      return Promise.resolve(_instruction);
+    } else if (this.catchAllHandler) {
+      var _instruction2 = new NavigationInstruction(Object.assign({}, instructionInit, {
+        params: { path: fragment },
+        queryParams: results ? results.queryParams : {},
+        config: null }));
+
+      return evaluateNavigationStrategy(_instruction2, this.catchAllHandler);
+    } else if (this.parent) {
+      var _router = this._parentCatchAllHandler(this.parent);
+
+      if (_router) {
+        var newParentInstruction = this._findParentInstructionFromRouter(_router, parentInstruction);
+
+        var _instruction3 = new NavigationInstruction(Object.assign({}, instructionInit, {
+          params: { path: fragment },
+          queryParams: results ? results.queryParams : {},
+          router: _router,
+          parentInstruction: newParentInstruction,
+          parentCatchHandler: true,
+          config: null }));
+
+        return evaluateNavigationStrategy(_instruction3, _router.catchAllHandler);
+      }
+    }
+
+    return Promise.reject(new Error('Route not found: ' + url));
+  };
+
+  Router.prototype._findParentInstructionFromRouter = function _findParentInstructionFromRouter(router, instruction) {
+    if (instruction.router === router) {
+      instruction.fragment = router.baseUrl;
+      return instruction;
+    } else if (instruction.parentInstruction) {
+      return this._findParentInstructionFromRouter(router, instruction.parentInstruction);
+    }
+    return undefined;
+  };
+
+  Router.prototype._parentCatchAllHandler = function _parentCatchAllHandler(router) {
+    if (router.catchAllHandler) {
+      return router;
+    } else if (router.parent) {
+      return this._parentCatchAllHandler(router.parent);
+    }
+    return false;
+  };
+
+  Router.prototype._createRouteConfig = function _createRouteConfig(config, instruction) {
+    var _this7 = this;
+
+    return Promise.resolve(config).then(function (c) {
+      if (typeof c === 'string') {
+        return { moduleId: c };
+      } else if (typeof c === 'function') {
+        return c(instruction);
+      }
+
+      return c;
+    }).then(function (c) {
+      return typeof c === 'string' ? { moduleId: c } : c;
+    }).then(function (c) {
+      c.route = instruction.params.path;
+      validateRouteConfig(c, _this7.routes);
+
+      if (!c.navModel) {
+        c.navModel = _this7.createNavModel(c);
+      }
+
+      return c;
+    });
+  };
+
+  _createClass(Router, [{
+    key: 'isRoot',
+    get: function get() {
+      return !this.parent;
+    }
+  }]);
+
+  return Router;
+}();
+
+function validateRouteConfig(config, routes) {
+  if ((typeof config === 'undefined' ? 'undefined' : _typeof(config)) !== 'object') {
+    throw new Error('Invalid Route Config');
+  }
+
+  if (typeof config.route !== 'string') {
+    var _name2 = config.name || '(no name)';
+    throw new Error('Invalid Route Config for "' + _name2 + '": You must specify a "route:" pattern.');
+  }
+
+  if (!('redirect' in config || config.moduleId || config.navigationStrategy || config.viewPorts)) {
+    throw new Error('Invalid Route Config for "' + config.route + '": You must specify a "moduleId:", "redirect:", "navigationStrategy:", or "viewPorts:".');
+  }
+}
+
+function evaluateNavigationStrategy(instruction, evaluator, context) {
+  return Promise.resolve(evaluator.call(context, instruction)).then(function () {
+    if (!('viewPorts' in instruction.config)) {
+      instruction.config.viewPorts = {
+        'default': {
+          moduleId: instruction.config.moduleId
+        }
+      };
+    }
+
+    return instruction;
+  });
+}
+
+var CanDeactivatePreviousStep = function () {
+  function CanDeactivatePreviousStep() {
+    
+  }
+
+  CanDeactivatePreviousStep.prototype.run = function run(navigationInstruction, next) {
+    return processDeactivatable(navigationInstruction, 'canDeactivate', next);
+  };
+
+  return CanDeactivatePreviousStep;
+}();
+
+var CanActivateNextStep = function () {
+  function CanActivateNextStep() {
+    
+  }
+
+  CanActivateNextStep.prototype.run = function run(navigationInstruction, next) {
+    return processActivatable(navigationInstruction, 'canActivate', next);
+  };
+
+  return CanActivateNextStep;
+}();
+
+var DeactivatePreviousStep = function () {
+  function DeactivatePreviousStep() {
+    
+  }
+
+  DeactivatePreviousStep.prototype.run = function run(navigationInstruction, next) {
+    return processDeactivatable(navigationInstruction, 'deactivate', next, true);
+  };
+
+  return DeactivatePreviousStep;
+}();
+
+var ActivateNextStep = function () {
+  function ActivateNextStep() {
+    
+  }
+
+  ActivateNextStep.prototype.run = function run(navigationInstruction, next) {
+    return processActivatable(navigationInstruction, 'activate', next, true);
+  };
+
+  return ActivateNextStep;
+}();
+
+function processDeactivatable(navigationInstruction, callbackName, next, ignoreResult) {
+  var plan = navigationInstruction.plan;
+  var infos = findDeactivatable(plan, callbackName);
+  var i = infos.length;
+
+  function inspect(val) {
+    if (ignoreResult || shouldContinue(val)) {
+      return iterate();
+    }
+
+    return next.cancel(val);
+  }
+
+  function iterate() {
+    if (i--) {
+      try {
+        var viewModel = infos[i];
+        var _result = viewModel[callbackName](navigationInstruction);
+        return processPotential(_result, inspect, next.cancel);
+      } catch (error) {
+        return next.cancel(error);
+      }
+    }
+
+    return next();
+  }
+
+  return iterate();
+}
+
+function findDeactivatable(plan, callbackName) {
+  var list = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : [];
+
+  for (var viewPortName in plan) {
+    var _viewPortPlan = plan[viewPortName];
+    var prevComponent = _viewPortPlan.prevComponent;
+
+    if ((_viewPortPlan.strategy === activationStrategy.invokeLifecycle || _viewPortPlan.strategy === activationStrategy.replace) && prevComponent) {
+      var viewModel = prevComponent.viewModel;
+
+      if (callbackName in viewModel) {
+        list.push(viewModel);
+      }
+    }
+
+    if (_viewPortPlan.strategy === activationStrategy.replace && prevComponent) {
+      addPreviousDeactivatable(prevComponent, callbackName, list);
+    } else if (_viewPortPlan.childNavigationInstruction) {
+      findDeactivatable(_viewPortPlan.childNavigationInstruction.plan, callbackName, list);
+    }
+  }
+
+  return list;
+}
+
+function addPreviousDeactivatable(component, callbackName, list) {
+  var childRouter = component.childRouter;
+
+  if (childRouter && childRouter.currentInstruction) {
+    var viewPortInstructions = childRouter.currentInstruction.viewPortInstructions;
+
+    for (var viewPortName in viewPortInstructions) {
+      var _viewPortInstruction2 = viewPortInstructions[viewPortName];
+      var prevComponent = _viewPortInstruction2.component;
+      var prevViewModel = prevComponent.viewModel;
+
+      if (callbackName in prevViewModel) {
+        list.push(prevViewModel);
+      }
+
+      addPreviousDeactivatable(prevComponent, callbackName, list);
+    }
+  }
+}
+
+function processActivatable(navigationInstruction, callbackName, next, ignoreResult) {
+  var infos = findActivatable(navigationInstruction, callbackName);
+  var length = infos.length;
+  var i = -1;
+
+  function inspect(val, router) {
+    if (ignoreResult || shouldContinue(val, router)) {
+      return iterate();
+    }
+
+    return next.cancel(val);
+  }
+
+  function iterate() {
+    i++;
+
+    if (i < length) {
+      try {
+        var _current3$viewModel;
+
+        var _current3 = infos[i];
+        var _result2 = (_current3$viewModel = _current3.viewModel)[callbackName].apply(_current3$viewModel, _current3.lifecycleArgs);
+        return processPotential(_result2, function (val) {
+          return inspect(val, _current3.router);
+        }, next.cancel);
+      } catch (error) {
+        return next.cancel(error);
+      }
+    }
+
+    return next();
+  }
+
+  return iterate();
+}
+
+function findActivatable(navigationInstruction, callbackName) {
+  var list = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : [];
+  var router = arguments[3];
+
+  var plan = navigationInstruction.plan;
+
+  Object.keys(plan).filter(function (viewPortName) {
+    var viewPortPlan = plan[viewPortName];
+    var viewPortInstruction = navigationInstruction.viewPortInstructions[viewPortName];
+    var viewModel = viewPortInstruction.component.viewModel;
+
+    if ((viewPortPlan.strategy === activationStrategy.invokeLifecycle || viewPortPlan.strategy === activationStrategy.replace) && callbackName in viewModel) {
+      list.push({
+        viewModel: viewModel,
+        lifecycleArgs: viewPortInstruction.lifecycleArgs,
+        router: router
+      });
+    }
+
+    if (viewPortPlan.childNavigationInstruction) {
+      findActivatable(viewPortPlan.childNavigationInstruction, callbackName, list, viewPortInstruction.component.childRouter || router);
+    }
+  });
+
+  return list;
+}
+
+function shouldContinue(output, router) {
+  if (output instanceof Error) {
+    return false;
+  }
+
+  if (isNavigationCommand(output)) {
+    if (typeof output.setRouter === 'function') {
+      output.setRouter(router);
+    }
+
+    return !!output.shouldContinueProcessing;
+  }
+
+  if (output === undefined) {
+    return true;
+  }
+
+  return output;
+}
+
+var SafeSubscription = function () {
+  function SafeSubscription(subscriptionFunc) {
+    
+
+    this._subscribed = true;
+    this._subscription = subscriptionFunc(this);
+
+    if (!this._subscribed) this.unsubscribe();
+  }
+
+  SafeSubscription.prototype.unsubscribe = function unsubscribe() {
+    if (this._subscribed && this._subscription) this._subscription.unsubscribe();
+
+    this._subscribed = false;
+  };
+
+  _createClass(SafeSubscription, [{
+    key: 'subscribed',
+    get: function get() {
+      return this._subscribed;
+    }
+  }]);
+
+  return SafeSubscription;
+}();
+
+function processPotential(obj, resolve, reject) {
+  if (obj && typeof obj.then === 'function') {
+    return Promise.resolve(obj).then(resolve).catch(reject);
+  }
+
+  if (obj && typeof obj.subscribe === 'function') {
+    var obs = obj;
+    return new SafeSubscription(function (sub) {
+      return obs.subscribe({
+        next: function next() {
+          if (sub.subscribed) {
+            sub.unsubscribe();
+            resolve(obj);
+          }
+        },
+        error: function error(_error) {
+          if (sub.subscribed) {
+            sub.unsubscribe();
+            reject(_error);
+          }
+        },
+        complete: function complete() {
+          if (sub.subscribed) {
+            sub.unsubscribe();
+            resolve(obj);
+          }
+        }
+      });
+    });
+  }
+
+  try {
+    return resolve(obj);
+  } catch (error) {
+    return reject(error);
+  }
+}
+
+var RouteLoader = function () {
+  function RouteLoader() {
+    
+  }
+
+  RouteLoader.prototype.loadRoute = function loadRoute(router, config, navigationInstruction) {
+    throw Error('Route loaders must implement "loadRoute(router, config, navigationInstruction)".');
+  };
+
+  return RouteLoader;
+}();
+
+var LoadRouteStep = function () {
+  LoadRouteStep.inject = function inject() {
+    return [RouteLoader];
+  };
+
+  function LoadRouteStep(routeLoader) {
+    
+
+    this.routeLoader = routeLoader;
+  }
+
+  LoadRouteStep.prototype.run = function run(navigationInstruction, next) {
+    return loadNewRoute(this.routeLoader, navigationInstruction).then(next).catch(next.cancel);
+  };
+
+  return LoadRouteStep;
+}();
+
+function loadNewRoute(routeLoader, navigationInstruction) {
+  var toLoad = determineWhatToLoad(navigationInstruction);
+  var loadPromises = toLoad.map(function (current) {
+    return loadRoute(routeLoader, current.navigationInstruction, current.viewPortPlan);
+  });
+
+  return Promise.all(loadPromises);
+}
+
+function determineWhatToLoad(navigationInstruction) {
+  var toLoad = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : [];
+
+  var plan = navigationInstruction.plan;
+
+  for (var viewPortName in plan) {
+    var _viewPortPlan2 = plan[viewPortName];
+
+    if (_viewPortPlan2.strategy === activationStrategy.replace) {
+      toLoad.push({ viewPortPlan: _viewPortPlan2, navigationInstruction: navigationInstruction });
+
+      if (_viewPortPlan2.childNavigationInstruction) {
+        determineWhatToLoad(_viewPortPlan2.childNavigationInstruction, toLoad);
+      }
+    } else {
+      var _viewPortInstruction3 = navigationInstruction.addViewPortInstruction(viewPortName, _viewPortPlan2.strategy, _viewPortPlan2.prevModuleId, _viewPortPlan2.prevComponent);
+
+      if (_viewPortPlan2.childNavigationInstruction) {
+        _viewPortInstruction3.childNavigationInstruction = _viewPortPlan2.childNavigationInstruction;
+        determineWhatToLoad(_viewPortPlan2.childNavigationInstruction, toLoad);
+      }
+    }
+  }
+
+  return toLoad;
+}
+
+function loadRoute(routeLoader, navigationInstruction, viewPortPlan) {
+  var moduleId = viewPortPlan.config.moduleId;
+
+  return loadComponent(routeLoader, navigationInstruction, viewPortPlan.config).then(function (component) {
+    var viewPortInstruction = navigationInstruction.addViewPortInstruction(viewPortPlan.name, viewPortPlan.strategy, moduleId, component);
+
+    var childRouter = component.childRouter;
+    if (childRouter) {
+      var path = navigationInstruction.getWildcardPath();
+
+      return childRouter._createNavigationInstruction(path, navigationInstruction).then(function (childInstruction) {
+        viewPortPlan.childNavigationInstruction = childInstruction;
+
+        return _buildNavigationPlan(childInstruction).then(function (childPlan) {
+          childInstruction.plan = childPlan;
+          viewPortInstruction.childNavigationInstruction = childInstruction;
+
+          return loadNewRoute(routeLoader, childInstruction);
+        });
+      });
+    }
+
+    return undefined;
+  });
+}
+
+function loadComponent(routeLoader, navigationInstruction, config) {
+  var router = navigationInstruction.router;
+  var lifecycleArgs = navigationInstruction.lifecycleArgs;
+
+  return routeLoader.loadRoute(router, config, navigationInstruction).then(function (component) {
+    var viewModel = component.viewModel,
+        childContainer = component.childContainer;
+
+    component.router = router;
+    component.config = config;
+
+    if ('configureRouter' in viewModel) {
+      var childRouter = childContainer.getChildRouter();
+      component.childRouter = childRouter;
+
+      return childRouter.configure(function (c) {
+        return viewModel.configureRouter.apply(viewModel, [c, childRouter].concat(lifecycleArgs));
+      }).then(function () {
+        return component;
+      });
+    }
+
+    return component;
+  });
+}
+
+var PipelineSlot = function () {
+  function PipelineSlot(container, name, alias) {
+    
+
+    this.steps = [];
+
+    this.container = container;
+    this.slotName = name;
+    this.slotAlias = alias;
+  }
+
+  PipelineSlot.prototype.getSteps = function getSteps() {
+    var _this8 = this;
+
+    return this.steps.map(function (x) {
+      return _this8.container.get(x);
+    });
+  };
+
+  return PipelineSlot;
+}();
+
+var PipelineProvider = function () {
+  PipelineProvider.inject = function inject() {
+    return [__WEBPACK_IMPORTED_MODULE_2_aurelia_dependency_injection__["a" /* Container */]];
+  };
+
+  function PipelineProvider(container) {
+    
+
+    this.container = container;
+    this.steps = [BuildNavigationPlanStep, CanDeactivatePreviousStep, LoadRouteStep, this._createPipelineSlot('authorize'), CanActivateNextStep, this._createPipelineSlot('preActivate', 'modelbind'), DeactivatePreviousStep, ActivateNextStep, this._createPipelineSlot('preRender', 'precommit'), CommitChangesStep, this._createPipelineSlot('postRender', 'postcomplete')];
+  }
+
+  PipelineProvider.prototype.createPipeline = function createPipeline() {
+    var _this9 = this;
+
+    var pipeline = new Pipeline();
+    this.steps.forEach(function (step) {
+      return pipeline.addStep(_this9.container.get(step));
+    });
+    return pipeline;
+  };
+
+  PipelineProvider.prototype._findStep = function _findStep(name) {
+    return this.steps.find(function (x) {
+      return x.slotName === name || x.slotAlias === name;
+    });
+  };
+
+  PipelineProvider.prototype.addStep = function addStep(name, step) {
+    var found = this._findStep(name);
+    if (found) {
+      if (!found.steps.includes(step)) {
+        found.steps.push(step);
+      }
+    } else {
+      throw new Error('Invalid pipeline slot name: ' + name + '.');
+    }
+  };
+
+  PipelineProvider.prototype.removeStep = function removeStep(name, step) {
+    var slot = this._findStep(name);
+    if (slot) {
+      slot.steps.splice(slot.steps.indexOf(step), 1);
+    }
+  };
+
+  PipelineProvider.prototype._clearSteps = function _clearSteps() {
+    var name = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
+
+    var slot = this._findStep(name);
+    if (slot) {
+      slot.steps = [];
+    }
+  };
+
+  PipelineProvider.prototype.reset = function reset() {
+    this._clearSteps('authorize');
+    this._clearSteps('preActivate');
+    this._clearSteps('preRender');
+    this._clearSteps('postRender');
+  };
+
+  PipelineProvider.prototype._createPipelineSlot = function _createPipelineSlot(name, alias) {
+    return new PipelineSlot(this.container, name, alias);
+  };
+
+  return PipelineProvider;
+}();
+
+var logger = __WEBPACK_IMPORTED_MODULE_0_aurelia_logging__["getLogger"]('app-router');
+
+var AppRouter = function (_Router) {
+  _inherits(AppRouter, _Router);
+
+  AppRouter.inject = function inject() {
+    return [__WEBPACK_IMPORTED_MODULE_2_aurelia_dependency_injection__["a" /* Container */], __WEBPACK_IMPORTED_MODULE_3_aurelia_history__["a" /* History */], PipelineProvider, __WEBPACK_IMPORTED_MODULE_4_aurelia_event_aggregator__["b" /* EventAggregator */]];
+  };
+
+  function AppRouter(container, history, pipelineProvider, events) {
+    
+
+    var _this10 = _possibleConstructorReturn(this, _Router.call(this, container, history));
+
+    _this10.pipelineProvider = pipelineProvider;
+    _this10.events = events;
+    return _this10;
+  }
+
+  AppRouter.prototype.reset = function reset() {
+    _Router.prototype.reset.call(this);
+    this.maxInstructionCount = 10;
+    if (!this._queue) {
+      this._queue = [];
+    } else {
+      this._queue.length = 0;
+    }
+  };
+
+  AppRouter.prototype.loadUrl = function loadUrl(url) {
+    var _this11 = this;
+
+    return this._createNavigationInstruction(url).then(function (instruction) {
+      return _this11._queueInstruction(instruction);
+    }).catch(function (error) {
+      logger.error(error);
+      restorePreviousLocation(_this11);
+    });
+  };
+
+  AppRouter.prototype.registerViewPort = function registerViewPort(viewPort, name) {
+    var _this12 = this;
+
+    _Router.prototype.registerViewPort.call(this, viewPort, name);
+
+    if (!this.isActive) {
+      var viewModel = this._findViewModel(viewPort);
+      if ('configureRouter' in viewModel) {
+        if (!this.isConfigured) {
+          var resolveConfiguredPromise = this._resolveConfiguredPromise;
+          this._resolveConfiguredPromise = function () {};
+          return this.configure(function (config) {
+            return viewModel.configureRouter(config, _this12);
+          }).then(function () {
+            _this12.activate();
+            resolveConfiguredPromise();
+          });
+        }
+      } else {
+        this.activate();
+      }
+    } else {
+      this._dequeueInstruction();
+    }
+
+    return Promise.resolve();
+  };
+
+  AppRouter.prototype.activate = function activate(options) {
+    if (this.isActive) {
+      return;
+    }
+
+    this.isActive = true;
+    this.options = Object.assign({ routeHandler: this.loadUrl.bind(this) }, this.options, options);
+    this.history.activate(this.options);
+    this._dequeueInstruction();
+  };
+
+  AppRouter.prototype.deactivate = function deactivate() {
+    this.isActive = false;
+    this.history.deactivate();
+  };
+
+  AppRouter.prototype._queueInstruction = function _queueInstruction(instruction) {
+    var _this13 = this;
+
+    return new Promise(function (resolve) {
+      instruction.resolve = resolve;
+      _this13._queue.unshift(instruction);
+      _this13._dequeueInstruction();
+    });
+  };
+
+  AppRouter.prototype._dequeueInstruction = function _dequeueInstruction() {
+    var _this14 = this;
+
+    var instructionCount = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
+
+    return Promise.resolve().then(function () {
+      if (_this14.isNavigating && !instructionCount) {
+        return undefined;
+      }
+
+      var instruction = _this14._queue.shift();
+      _this14._queue.length = 0;
+
+      if (!instruction) {
+        return undefined;
+      }
+
+      _this14.isNavigating = true;
+      instruction.previousInstruction = _this14.currentInstruction;
+
+      if (!instructionCount) {
+        _this14.events.publish('router:navigation:processing', { instruction: instruction });
+      } else if (instructionCount === _this14.maxInstructionCount - 1) {
+        logger.error(instructionCount + 1 + ' navigation instructions have been attempted without success. Restoring last known good location.');
+        restorePreviousLocation(_this14);
+        return _this14._dequeueInstruction(instructionCount + 1);
+      } else if (instructionCount > _this14.maxInstructionCount) {
+        throw new Error('Maximum navigation attempts exceeded. Giving up.');
+      }
+
+      var pipeline = _this14.pipelineProvider.createPipeline();
+
+      return pipeline.run(instruction).then(function (result) {
+        return processResult(instruction, result, instructionCount, _this14);
+      }).catch(function (error) {
+        return { output: error instanceof Error ? error : new Error(error) };
+      }).then(function (result) {
+        return resolveInstruction(instruction, result, !!instructionCount, _this14);
+      });
+    });
+  };
+
+  AppRouter.prototype._findViewModel = function _findViewModel(viewPort) {
+    if (this.container.viewModel) {
+      return this.container.viewModel;
+    }
+
+    if (viewPort.container) {
+      var container = viewPort.container;
+
+      while (container) {
+        if (container.viewModel) {
+          this.container.viewModel = container.viewModel;
+          return container.viewModel;
+        }
+
+        container = container.parent;
+      }
+    }
+
+    return undefined;
+  };
+
+  return AppRouter;
+}(Router);
+
+function processResult(instruction, result, instructionCount, router) {
+  if (!(result && 'completed' in result && 'output' in result)) {
+    result = result || {};
+    result.output = new Error('Expected router pipeline to return a navigation result, but got [' + JSON.stringify(result) + '] instead.');
+  }
+
+  var finalResult = null;
+  if (isNavigationCommand(result.output)) {
+    result.output.navigate(router);
+  } else {
+    finalResult = result;
+
+    if (!result.completed) {
+      if (result.output instanceof Error) {
+        logger.error(result.output);
+      }
+
+      restorePreviousLocation(router);
+    }
+  }
+
+  return router._dequeueInstruction(instructionCount + 1).then(function (innerResult) {
+    return finalResult || innerResult || result;
+  });
+}
+
+function resolveInstruction(instruction, result, isInnerInstruction, router) {
+  instruction.resolve(result);
+
+  var eventArgs = { instruction: instruction, result: result };
+  if (!isInnerInstruction) {
+    router.isNavigating = false;
+    router.isExplicitNavigation = false;
+    router.isExplicitNavigationBack = false;
+
+    var eventName = void 0;
+
+    if (result.output instanceof Error) {
+      eventName = 'error';
+    } else if (!result.completed) {
+      eventName = 'canceled';
+    } else {
+      var _queryString = instruction.queryString ? '?' + instruction.queryString : '';
+      router.history.previousLocation = instruction.fragment + _queryString;
+      eventName = 'success';
+    }
+
+    router.events.publish('router:navigation:' + eventName, eventArgs);
+    router.events.publish('router:navigation:complete', eventArgs);
+  } else {
+    router.events.publish('router:navigation:child:complete', eventArgs);
+  }
+
+  return result;
+}
+
+function restorePreviousLocation(router) {
+  var previousLocation = router.history.previousLocation;
+  if (previousLocation) {
+    router.navigate(router.history.previousLocation, { trigger: false, replace: true });
+  } else if (router.fallbackRoute) {
+    router.navigate(router.fallbackRoute, { trigger: true, replace: true });
+  } else {
+    logger.error('Router navigation failed, and no previous location or fallbackRoute could be restored.');
+  }
+}
+
+/***/ }),
+
+/***/ 80:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(13))(38);
 
 /***/ }),
 
-/***/ 79:
+/***/ 81:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(13))(39);
 
 /***/ }),
 
-/***/ 8:
+/***/ 82:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = (__webpack_require__(13))(74);
+
+/***/ }),
+
+/***/ 83:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = (__webpack_require__(13))(76);
+
+/***/ }),
+
+/***/ 84:
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(45);
+__webpack_require__(46);
+__webpack_require__(47);
+module.exports = __webpack_require__(44);
+
+
+/***/ }),
+
+/***/ 9:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -23114,139 +23351,7 @@ function filterFlushStack(stack) {
 
   return index < 0 ? stack : stack.substr(0, index);
 }
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(81).setImmediate))
-
-/***/ }),
-
-/***/ 80:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = (__webpack_require__(13))(74);
-
-/***/ }),
-
-/***/ 81:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = (__webpack_require__(13))(76);
-
-/***/ }),
-
-/***/ 82:
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(44);
-__webpack_require__(45);
-__webpack_require__(46);
-module.exports = __webpack_require__(43);
-
-
-/***/ }),
-
-/***/ 9:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (immutable) */ __webpack_exports__["f"] = updateOverrideContexts;
-/* harmony export (immutable) */ __webpack_exports__["e"] = createFullOverrideContext;
-/* harmony export (immutable) */ __webpack_exports__["h"] = updateOverrideContext;
-/* harmony export (immutable) */ __webpack_exports__["a"] = getItemsSourceExpression;
-/* harmony export (immutable) */ __webpack_exports__["c"] = unwrapExpression;
-/* harmony export (immutable) */ __webpack_exports__["b"] = isOneTime;
-/* harmony export (immutable) */ __webpack_exports__["d"] = updateOneTimeBinding;
-/* harmony export (immutable) */ __webpack_exports__["g"] = indexOf;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_binding__ = __webpack_require__(3);
-
-
-var oneTime = __WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["f" /* bindingMode */].oneTime;
-
-function updateOverrideContexts(views, startIndex) {
-  var length = views.length;
-
-  if (startIndex > 0) {
-    startIndex = startIndex - 1;
-  }
-
-  for (; startIndex < length; ++startIndex) {
-    updateOverrideContext(views[startIndex].overrideContext, startIndex, length);
-  }
-}
-
-function createFullOverrideContext(repeat, data, index, length, key) {
-  var bindingContext = {};
-  var overrideContext = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["b" /* createOverrideContext */])(bindingContext, repeat.scope.overrideContext);
-
-  if (typeof key !== 'undefined') {
-    bindingContext[repeat.key] = key;
-    bindingContext[repeat.value] = data;
-  } else {
-    bindingContext[repeat.local] = data;
-  }
-  updateOverrideContext(overrideContext, index, length);
-  return overrideContext;
-}
-
-function updateOverrideContext(overrideContext, index, length) {
-  var first = index === 0;
-  var last = index === length - 1;
-  var even = index % 2 === 0;
-
-  overrideContext.$index = index;
-  overrideContext.$first = first;
-  overrideContext.$last = last;
-  overrideContext.$middle = !(first || last);
-  overrideContext.$odd = !even;
-  overrideContext.$even = even;
-}
-
-function getItemsSourceExpression(instruction, attrName) {
-  return instruction.behaviorInstructions.filter(function (bi) {
-    return bi.originalAttrName === attrName;
-  })[0].attributes.items.sourceExpression;
-}
-
-function unwrapExpression(expression) {
-  var unwrapped = false;
-  while (expression instanceof __WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["i" /* BindingBehavior */]) {
-    expression = expression.expression;
-  }
-  while (expression instanceof __WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["j" /* ValueConverter */]) {
-    expression = expression.expression;
-    unwrapped = true;
-  }
-  return unwrapped ? expression : null;
-}
-
-function isOneTime(expression) {
-  while (expression instanceof __WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["i" /* BindingBehavior */]) {
-    if (expression.name === 'oneTime') {
-      return true;
-    }
-    expression = expression.expression;
-  }
-  return false;
-}
-
-function updateOneTimeBinding(binding) {
-  if (binding.call && binding.mode === oneTime) {
-    binding.call(__WEBPACK_IMPORTED_MODULE_0_aurelia_binding__["k" /* sourceContext */]);
-  } else if (binding.updateOneTimeBindings) {
-    binding.updateOneTimeBindings();
-  }
-}
-
-function indexOf(array, item, matcher, startIndex) {
-  if (!matcher) {
-    return array.indexOf(item);
-  }
-  var length = array.length;
-  for (var index = startIndex || 0; index < length; index++) {
-    if (matcher(array[index], item)) {
-      return index;
-    }
-  }
-  return -1;
-}
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(83).setImmediate))
 
 /***/ }),
 
@@ -23257,7 +23362,18 @@ function indexOf(array, item, matcher, startIndex) {
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "App", function() { return App; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_framework__ = __webpack_require__("aurelia-framework");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_aurelia_router__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_aurelia_router__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_auth_isLoggedIn__ = __webpack_require__(72);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
 
 
 var App = /** @class */ (function () {
@@ -23266,7 +23382,6 @@ var App = /** @class */ (function () {
     App.prototype.configureRouter = function (config, router) {
         this.router = router;
         config.title = 'Aurelia';
-        config.addAuthorizeStep(AuthorizeStep);
         config.map([{
                 route: ['', 'home'],
                 name: 'home',
@@ -23297,23 +23412,33 @@ var App = /** @class */ (function () {
                 title: 'Login'
             },
         ]);
+        config.addAuthorizeStep(AuthorizeStep);
     };
+    App = __decorate([
+        __WEBPACK_IMPORTED_MODULE_0_aurelia_framework__["b" /* autoinject */]
+    ], App);
     return App;
 }());
 
 var AuthorizeStep = /** @class */ (function () {
-    function AuthorizeStep() {
+    function AuthorizeStep(testAuthentication) {
+        this.testAuthentication = testAuthentication;
     }
     AuthorizeStep.prototype.run = function (navigationInstruction, next) {
+        var isLoggedIn = false;
         if (navigationInstruction.getAllInstructions().some(function (i) { return i.config.settings.auth; })) {
-            var isLoggedIn = true;
-            console.log('It got here!');
+            isLoggedIn = this.testAuthentication.isAuthenticated();
+            console.log('testAuthentication: ', this.testAuthentication.isAuthenticated());
             if (!isLoggedIn) {
                 return next.cancel(new __WEBPACK_IMPORTED_MODULE_1_aurelia_router__["d" /* Redirect */]('login'));
             }
         }
         return next();
     };
+    AuthorizeStep = __decorate([
+        __WEBPACK_IMPORTED_MODULE_0_aurelia_framework__["b" /* autoinject */],
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__components_auth_isLoggedIn__["a" /* IsLoggedIn */]])
+    ], AuthorizeStep);
     return AuthorizeStep;
 }());
 //import { Aurelia, PLATFORM } from 'aurelia-framework';
@@ -23400,11 +23525,13 @@ module.exports = "<template>\r\n    <require from=\"../navmenu/navmenu.html\"></
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Login", function() { return Login; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_fetch_client__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_fetch_client__ = __webpack_require__(14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_aurelia_framework__ = __webpack_require__("aurelia-framework");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_aurelia_validation__ = __webpack_require__("aurelia-validation");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__tokenService__ = __webpack_require__(71);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__utilities_bootstrapFormRenderer__ = __webpack_require__(72);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_aurelia_router__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_aurelia_validation__ = __webpack_require__("aurelia-validation");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__tokenService__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__userService__ = __webpack_require__(73);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__utilities_bootstrapFormRenderer__ = __webpack_require__(74);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -23419,42 +23546,62 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
 var Login = /** @class */ (function () {
-    function Login(tokenService, http, controllerFactory) {
+    function Login(login, tokenService, userService, router, http, controllerFactory) {
+        this.login = login;
         this.tokenService = tokenService;
+        this.userService = userService;
+        this.router = router;
         this.http = http;
         this.controllerFactory = controllerFactory;
         this.heading = "Login";
         this.message = "";
         this.username = "";
         this.password = ""; // these are pubic fields available in your view unless you add 'private' in front of them
+        this.router = router;
         this.controller = controllerFactory.createForCurrentScope();
-        this.controller.addRenderer(new __WEBPACK_IMPORTED_MODULE_4__utilities_bootstrapFormRenderer__["a" /* BootstrapFormRenderer */]());
+        this.controller.addRenderer(new __WEBPACK_IMPORTED_MODULE_6__utilities_bootstrapFormRenderer__["a" /* BootstrapFormRenderer */]());
     }
     Login.prototype.submitLogin = function () {
-        var _a = this, username = _a.username, password = _a.password;
+        var _this = this;
         if (this.controller.validate()) {
-            console.log("submit login reached!");
+            // Lets do a fetch!
+            this.login.Username = this.username;
+            this.login.Password = this.password;
+            var task = fetch("/api/jwt", {
+                method: "POST",
+                body: JSON.stringify(this.login),
+                headers: {
+                    "Content-Type": "application/json;charset=UTF-8"
+                }
+            })
+                .then(function (response) { return response.json(); })
+                .then(function (data) {
+                _this.tokenService.saveJWT(data);
+                _this.userService.saveUserName();
+                _this.router.navigate("home");
+            })
+                .catch(function (error) {
+                _this.tokenService.clearJWT();
+            });
         }
-        ;
-        // if (!!username && !!password) {
-        //   // or your validations
-        //   
-        //   //this.tokenService.login({ username, password });
-        // }
     };
     Login = __decorate([
         __WEBPACK_IMPORTED_MODULE_1_aurelia_framework__["b" /* autoinject */]
         //@inject(NewInstance.of(ValidationController))
         ,
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__tokenService__["a" /* TokenService */],
+        __metadata("design:paramtypes", [Object, __WEBPACK_IMPORTED_MODULE_4__tokenService__["a" /* TokenService */],
+            __WEBPACK_IMPORTED_MODULE_5__userService__["a" /* UserService */],
+            __WEBPACK_IMPORTED_MODULE_2_aurelia_router__["b" /* Router */],
             __WEBPACK_IMPORTED_MODULE_0_aurelia_fetch_client__["a" /* HttpClient */],
-            __WEBPACK_IMPORTED_MODULE_2_aurelia_validation__["ValidationControllerFactory"]])
+            __WEBPACK_IMPORTED_MODULE_3_aurelia_validation__["ValidationControllerFactory"]])
     ], Login);
     return Login;
 }());
 
-__WEBPACK_IMPORTED_MODULE_2_aurelia_validation__["ValidationRules"].ensure(function (v) { return v.username; })
+__WEBPACK_IMPORTED_MODULE_3_aurelia_validation__["ValidationRules"].ensure(function (v) { return v.username; })
     .displayName("User Name")
     .required()
     .ensure(function (v) { return v.password; })
@@ -23527,7 +23674,7 @@ module.exports = "<template>\r\n    <h1>Counter</h1>\r\n\r\n    <p>This is a sim
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Fetchdata", function() { return Fetchdata; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_fetch_client__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_fetch_client__ = __webpack_require__(14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_aurelia_framework__ = __webpack_require__("aurelia-framework");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -23758,7 +23905,7 @@ function configure(config) {
 /* unused harmony namespace reexport */
 /* unused harmony namespace reexport */
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_aurelia_task_queue__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_aurelia_task_queue__ = __webpack_require__(9);
 /* unused harmony namespace reexport */
 /* unused harmony namespace reexport */
 /* unused harmony namespace reexport */
@@ -25794,7 +25941,7 @@ function configure(config) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__replaceable__ = __webpack_require__("aurelia-templating-resources/replaceable");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__focus__ = __webpack_require__("aurelia-templating-resources/focus");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_aurelia_templating__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__css_resource__ = __webpack_require__(56);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__css_resource__ = __webpack_require__(57);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__html_sanitizer__ = __webpack_require__(28);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__attr_binding_behavior__ = __webpack_require__("aurelia-templating-resources/attr-binding-behavior");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__binding_mode_behaviors__ = __webpack_require__("aurelia-templating-resources/binding-mode-behaviors");
@@ -25806,13 +25953,13 @@ function configure(config) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__update_trigger_binding_behavior__ = __webpack_require__("aurelia-templating-resources/update-trigger-binding-behavior");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__abstract_repeater__ = __webpack_require__(24);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__repeat_strategy_locator__ = __webpack_require__(33);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__html_resource_plugin__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__html_resource_plugin__ = __webpack_require__(59);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__null_repeat_strategy__ = __webpack_require__(31);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__array_repeat_strategy__ = __webpack_require__(26);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__map_repeat_strategy__ = __webpack_require__(30);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__set_repeat_strategy__ = __webpack_require__(34);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__number_repeat_strategy__ = __webpack_require__(32);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__repeat_utilities__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__repeat_utilities__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__analyze_view_factory__ = __webpack_require__(25);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__aurelia_hide_style__ = __webpack_require__(17);
 /* unused harmony reexport Compose */
@@ -25991,7 +26138,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Compose", function() { return Compose; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_dependency_injection__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_aurelia_logging__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_aurelia_task_queue__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_aurelia_task_queue__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_aurelia_templating__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_aurelia_pal__ = __webpack_require__(0);
 var _dec, _dec2, _class, _desc, _value, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4;
@@ -26336,7 +26483,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_templating__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_aurelia_binding__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_aurelia_dependency_injection__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_aurelia_task_queue__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_aurelia_task_queue__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_aurelia_pal__ = __webpack_require__(0);
 var _dec, _dec2, _class;
 
@@ -26610,7 +26757,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_aurelia_binding__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_aurelia_templating__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__repeat_strategy_locator__ = __webpack_require__(33);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__repeat_utilities__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__repeat_utilities__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__analyze_view_factory__ = __webpack_require__(25);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__abstract_repeater__ = __webpack_require__(24);
 var _dec, _dec2, _class, _desc, _value, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4;
@@ -27336,8 +27483,8 @@ var With = (_dec = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_aurelia_tem
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "configure", function() { return configure; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_pal__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_aurelia_router__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__route_loader__ = __webpack_require__(59);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_aurelia_router__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__route_loader__ = __webpack_require__(60);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__router_view__ = __webpack_require__("aurelia-templating-router/router-view");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__route_href__ = __webpack_require__("aurelia-templating-router/route-href");
 /* unused harmony reexport TemplatingRouteLoader */
@@ -27367,7 +27514,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RouteHref", function() { return RouteHref; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_templating__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_aurelia_dependency_injection__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_aurelia_router__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_aurelia_router__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_aurelia_pal__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_aurelia_logging__ = __webpack_require__(4);
 var _dec, _dec2, _dec3, _dec4, _dec5, _class;
@@ -27444,7 +27591,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_dependency_injection__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_aurelia_binding__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_aurelia_templating__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_aurelia_router__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_aurelia_router__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_aurelia_metadata__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_aurelia_pal__ = __webpack_require__(0);
 var _dec, _dec2, _class, _desc, _value, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4;
@@ -27689,7 +27836,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "getTargetDOMElement", function() { return __WEBPACK_IMPORTED_MODULE_0__get_target_dom_element__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__property_info__ = __webpack_require__(38);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "getPropertyInfo", function() { return __WEBPACK_IMPORTED_MODULE_1__property_info__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__property_accessor_parser__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__property_accessor_parser__ = __webpack_require__(15);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "PropertyAccessorParser", function() { return __WEBPACK_IMPORTED_MODULE_2__property_accessor_parser__["a"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "getAccessorExpression", function() { return __WEBPACK_IMPORTED_MODULE_2__property_accessor_parser__["b"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__validate_binding_behavior__ = __webpack_require__("aurelia-validation/validate-binding-behavior");
@@ -27702,11 +27849,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "ValidateEvent", function() { return __WEBPACK_IMPORTED_MODULE_4__validate_event__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__validate_result__ = __webpack_require__(21);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "ValidateResult", function() { return __WEBPACK_IMPORTED_MODULE_5__validate_result__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__validate_trigger__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__validate_trigger__ = __webpack_require__(16);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "validateTrigger", function() { return __WEBPACK_IMPORTED_MODULE_6__validate_trigger__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__validation_controller__ = __webpack_require__(11);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "ValidationController", function() { return __WEBPACK_IMPORTED_MODULE_7__validation_controller__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__validation_controller_factory__ = __webpack_require__(62);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__validation_controller_factory__ = __webpack_require__(63);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "ValidationControllerFactory", function() { return __WEBPACK_IMPORTED_MODULE_8__validation_controller_factory__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__validation_errors_custom_attribute__ = __webpack_require__("aurelia-validation/validation-errors-custom-attribute");
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "ValidationErrorsCustomAttribute", function() { return __WEBPACK_IMPORTED_MODULE_9__validation_errors_custom_attribute__["ValidationErrorsCustomAttribute"]; });
@@ -27813,9 +27960,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ValidateOnBlurBindingBehavior", function() { return ValidateOnBlurBindingBehavior; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ValidateOnChangeBindingBehavior", function() { return ValidateOnChangeBindingBehavior; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ValidateOnChangeOrBlurBindingBehavior", function() { return ValidateOnChangeOrBlurBindingBehavior; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_task_queue__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__validate_trigger__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__validate_binding_behavior_base__ = __webpack_require__(61);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_task_queue__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__validate_trigger__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__validate_binding_behavior_base__ = __webpack_require__(62);
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -28051,12 +28198,12 @@ var ValidationRendererCustomAttribute = (function () {
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["configure"] = configure;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_aurelia_framework__ = __webpack_require__("aurelia-framework");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_aurelia_fetch_client__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_bootstrap_dist_css_bootstrap_css__ = __webpack_require__(79);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_aurelia_fetch_client__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_bootstrap_dist_css_bootstrap_css__ = __webpack_require__(81);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_bootstrap_dist_css_bootstrap_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_bootstrap_dist_css_bootstrap_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_bootstrap__ = __webpack_require__(78);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_bootstrap__ = __webpack_require__(80);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_bootstrap___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_bootstrap__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_isomorphic_fetch__ = __webpack_require__(66);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_isomorphic_fetch__ = __webpack_require__(67);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_isomorphic_fetch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_isomorphic_fetch__);
 
 

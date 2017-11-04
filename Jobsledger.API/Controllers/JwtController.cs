@@ -13,9 +13,11 @@ using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Security.Principal;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace WebApiJwtAuthDemo.Controllers
@@ -57,31 +59,36 @@ namespace WebApiJwtAuthDemo.Controllers
 
         [HttpPost]
         [AllowAnonymous]
-        public async Task<IActionResult> Get([FromForm] LoginViewModel user)
+        public async Task<IActionResult> Get([FromBody] LoginViewModel model)
         {
-            MembershipContext _userContext = _membershipService.ValidateUser(user.UserName, user.Password);
+            MembershipContext _userContext = _membershipService.ValidateUser(model.Username, model.Password);
 
             if (_userContext.User == null)
             {
-                _logger.LogInformation($"Invalid username ({user.UserName}) or password ({user.Password})");
+                _logger.LogInformation($"Invalid username ({model.Username}) or password ({model.Password})");
                 return BadRequest("Invalid credentials");
             }
 
             //var claims = new[]
             var claims = new List<Claim>();
             {
-                new Claim(JwtRegisteredClaimNames.Sub, user.UserName);
+                new Claim(JwtRegisteredClaimNames.Sub, model.Username);
                 new Claim(JwtRegisteredClaimNames.Jti, await _jwtOptions.JtiGenerator());
                 new Claim(JwtRegisteredClaimNames.Iat,
                                                         ToUnixEpochDate(_jwtOptions.IssuedAt).ToString(),
                                                         ClaimValueTypes.Integer64);
-      };
+            };
 
+            // Add the roles.
             foreach (UserRole userRole in _userContext.User.UserRoles)
             {
-                Claim _claim = new Claim(ClaimTypes.Role, userRole.Role.Name);
-                claims.Add(_claim);
+                Claim RoleClaim = new Claim(ClaimTypes.Role, userRole.Role.Name);
+                claims.Add(RoleClaim);
             };
+
+            // Add the userName
+            Claim userClaim = new Claim(ClaimTypes.Name, _userContext.User.UserName);
+            claims.Add(userClaim);
 
 
             // Create the JWT security token and encode it.
@@ -99,18 +106,19 @@ namespace WebApiJwtAuthDemo.Controllers
             var response = new
             {
                 access_token = encodedJwt,
-                expires_in = (int)_jwtOptions.ValidFor.TotalSeconds
+                expires_in = (int)_jwtOptions.ValidFor.TotalSeconds,
             };
 
             var json = JsonConvert.SerializeObject(response, _serializerSettings);
             return new OkObjectResult(json);
         }
 
-        [Route("user")]
+        [Route("username")]
         [HttpGet]
         [Authorize]
         public IActionResult GetUser()
         {
+
             var identity = this.User.Identity as ClaimsIdentity;
             if (identity == null || !identity.IsAuthenticated)
             {
@@ -119,12 +127,12 @@ namespace WebApiJwtAuthDemo.Controllers
 
             var response = new
             {
-                username = identity.Name
+                // This is using an Identity custom extension method down the bottom.
+                username = identity.GetName()
             };
 
-            return Ok(response);
+            return new OkObjectResult(response);
         }
-
 
         [Route("register")]
         [HttpPost]
@@ -199,5 +207,16 @@ namespace WebApiJwtAuthDemo.Controllers
         private static long ToUnixEpochDate(DateTime date)
           => (long)Math.Round((date.ToUniversalTime() - new DateTimeOffset(1970, 1, 1, 0, 0, 0, TimeSpan.Zero)).TotalSeconds);
 
+    }
+}
+
+public static class IdentityExtensions
+{
+    public static string GetName(this IIdentity identity)
+    {
+        ClaimsIdentity claimsIdentity = identity as ClaimsIdentity;
+        Claim claim = claimsIdentity?.FindFirst(ClaimTypes.Name);
+
+        return claim?.Value ?? string.Empty;
     }
 }

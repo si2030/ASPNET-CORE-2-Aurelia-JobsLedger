@@ -9,35 +9,58 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 import { HttpClient } from "aurelia-fetch-client";
 import { autoinject } from "aurelia-framework";
+import { Router } from "aurelia-router";
 import { ValidationControllerFactory, ValidationRules } from "aurelia-validation";
 import { TokenService } from "../tokenService";
+import { UserService } from "../userService";
 import { BootstrapFormRenderer } from "../../../utilities/bootstrapFormRenderer";
 var Login = /** @class */ (function () {
-    function Login(tokenService, http, controllerFactory) {
+    function Login(login, tokenService, userService, router, http, controllerFactory) {
+        this.login = login;
         this.tokenService = tokenService;
+        this.userService = userService;
+        this.router = router;
         this.http = http;
         this.controllerFactory = controllerFactory;
         this.heading = "Login";
         this.message = "";
         this.username = "";
         this.password = ""; // these are pubic fields available in your view unless you add 'private' in front of them
+        this.router = router;
         this.controller = controllerFactory.createForCurrentScope();
         this.controller.addRenderer(new BootstrapFormRenderer());
     }
     Login.prototype.submitLogin = function () {
-        var _a = this, username = _a.username, password = _a.password;
-        this.controller.validate();
-        // if (!!username && !!password) {
-        //   // or your validations
-        //   console.log("submit login reached!");
-        //   //this.tokenService.login({ username, password });
-        // }
+        var _this = this;
+        if (this.controller.validate()) {
+            // Lets do a fetch!
+            this.login.Username = this.username;
+            this.login.Password = this.password;
+            var task = fetch("/api/jwt", {
+                method: "POST",
+                body: JSON.stringify(this.login),
+                headers: {
+                    "Content-Type": "application/json;charset=UTF-8"
+                }
+            })
+                .then(function (response) { return response.json(); })
+                .then(function (data) {
+                _this.tokenService.saveJWT(data);
+                _this.userService.saveUserName();
+                _this.router.navigate("home");
+            })
+                .catch(function (error) {
+                _this.tokenService.clearJWT();
+            });
+        }
     };
     Login = __decorate([
         autoinject
         //@inject(NewInstance.of(ValidationController))
         ,
-        __metadata("design:paramtypes", [TokenService,
+        __metadata("design:paramtypes", [Object, TokenService,
+            UserService,
+            Router,
             HttpClient,
             ValidationControllerFactory])
     ], Login);

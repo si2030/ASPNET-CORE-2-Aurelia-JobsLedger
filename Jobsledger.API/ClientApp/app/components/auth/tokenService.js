@@ -1,11 +1,14 @@
 var TokenService = /** @class */ (function () {
     function TokenService() {
         this.TOKEN_KEY = "jwt";
+        this.LOGGED_IN = "loggedIn";
+        this.USERNAME_KEY = "user_name";
     }
     TokenService.prototype.saveJWT = function (jwt) {
         this.tokenJson = JSON.stringify(jwt);
         try {
             localStorage.setItem(this.TOKEN_KEY, this.tokenJson);
+            localStorage.setItem(this.LOGGED_IN, "true");
         }
         catch (Error) {
             return false;
@@ -25,6 +28,8 @@ var TokenService = /** @class */ (function () {
     TokenService.prototype.clearJWT = function () {
         try {
             localStorage.removeItem(this.TOKEN_KEY);
+            localStorage.removeItem(this.LOGGED_IN);
+            localStorage.removeItem(this.USERNAME_KEY);
         }
         catch (Error) {
             return false;

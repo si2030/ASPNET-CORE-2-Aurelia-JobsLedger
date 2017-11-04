@@ -64,22 +64,22 @@ namespace Jobsledger.API.Options
     ///   claim is OPTIONAL.</remarks>
     public DateTime IssuedAt => DateTime.UtcNow;
 
-    /// <summary>
-    /// Set the timespan the token will be valid for (default is 5 min/300 seconds)
-    /// </summary>
-    public TimeSpan ValidFor { get; set; } = TimeSpan.FromMinutes(5);
+        /// <summary>
+        /// Set the timespan the token will be valid for (default is 5 min/300 seconds)
+        /// </summary>
+        public TimeSpan ValidFor { get; set; } = TimeSpan.FromMinutes((new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, 23, 59, 59) - DateTime.Now).TotalMinutes);
 
-    /// <summary>
-    /// "exp" (Expiration Time) Claim (returns IssuedAt + ValidFor)
-    /// </summary>
-    /// <remarks>The "exp" (expiration time) claim identifies the expiration time on
-    ///   or after which the JWT MUST NOT be accepted for processing.  The
-    ///   processing of the "exp" claim requires that the current date/time
-    ///   MUST be before the expiration date/time listed in the "exp" claim.
-    ///   Implementers MAY provide for some small leeway, usually no more than
-    ///   a few minutes, to account for clock skew.  Its value MUST be a number
-    ///   containing a NumericDate value.  Use of this claim is OPTIONAL.</remarks>
-    public DateTime Expiration => IssuedAt.Add(ValidFor);
+        /// <summary>
+        /// "exp" (Expiration Time) Claim (returns IssuedAt + ValidFor)
+        /// </summary>
+        /// <remarks>The "exp" (expiration time) claim identifies the expiration time on
+        ///   or after which the JWT MUST NOT be accepted for processing.  The
+        ///   processing of the "exp" claim requires that the current date/time
+        ///   MUST be before the expiration date/time listed in the "exp" claim.
+        ///   Implementers MAY provide for some small leeway, usually no more than
+        ///   a few minutes, to account for clock skew.  Its value MUST be a number
+        ///   containing a NumericDate value.  Use of this claim is OPTIONAL.</remarks>
+        public DateTime Expiration => IssuedAt.Add(ValidFor);
 
     /// <summary>
     /// "jti" (JWT ID) Claim (default ID is a GUID)

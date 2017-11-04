@@ -1,13 +1,15 @@
-import { Aurelia, PLATFORM } from 'aurelia-framework';
+import { Aurelia, PLATFORM, autoinject } from 'aurelia-framework';
 import { Redirect, NavigationInstruction, Router, RouterConfiguration, Next } from 'aurelia-router';
+import { IsLoggedIn } from '../components/auth/isLoggedIn'
 
+@autoinject
 export class App {
     public router: Router;
 
     configureRouter(config: RouterConfiguration, router: Router): void {
         this.router = router;
         config.title = 'Aurelia';
-        config.addAuthorizeStep(AuthorizeStep);
+
         config.map([{
             route: ['', 'home'],
             name: 'home',
@@ -38,14 +40,28 @@ export class App {
             title: 'Login'
         },
         ]);
+
+        config.addAuthorizeStep(AuthorizeStep);
+
     }
 }
 
+@autoinject
 class AuthorizeStep {
+    testAuthentication: IsLoggedIn;
+     
+
+    constructor(testAuthentication: IsLoggedIn) {
+        this.testAuthentication = testAuthentication;
+    }
+
     run(navigationInstruction: NavigationInstruction, next: Next): Promise<any> {
+        var isLoggedIn: boolean = false;
+
         if (navigationInstruction.getAllInstructions().some(i => i.config.settings.auth)) {
-            var isLoggedIn = true;
-            console.log('It got here!');
+            isLoggedIn = this.testAuthentication.isAuthenticated();
+            console.log('testAuthentication: ', this.testAuthentication.isAuthenticated());
+
           if (!isLoggedIn) {
                 return next.cancel(new Redirect('login'));
             }

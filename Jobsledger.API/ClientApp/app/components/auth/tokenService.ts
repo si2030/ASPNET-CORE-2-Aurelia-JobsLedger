@@ -1,13 +1,17 @@
 ﻿export class TokenService {
   private tokenJson: any;
   private TOKEN_KEY = "jwt";
+  private LOGGED_IN = "loggedIn";
+  private USERNAME_KEY = "user_name";
+
   constructor() {}
 
   saveJWT(jwt: any): boolean {
     this.tokenJson = JSON.stringify(jwt);
 
     try {
-      localStorage.setItem(this.TOKEN_KEY, this.tokenJson);
+        localStorage.setItem(this.TOKEN_KEY, this.tokenJson);
+        localStorage.setItem(this.LOGGED_IN, "true");
     } catch (Error) {
       return false;
     }
@@ -26,7 +30,9 @@
 
   clearJWT(): boolean {
     try {
-      localStorage.removeItem(this.TOKEN_KEY);
+        localStorage.removeItem(this.TOKEN_KEY);
+        localStorage.removeItem(this.LOGGED_IN);
+        localStorage.removeItem(this.USERNAME_KEY)
     } catch (Error) {
       return false;
     }
