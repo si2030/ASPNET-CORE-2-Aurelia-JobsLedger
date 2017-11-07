@@ -6,17 +6,19 @@ import { TokenService } from "./tokenService";
 export class UserService {
     //private tokenService: TokenService;
     private USERNAME_KEY = "user_name";
-    private usernameJson: any;
+    private username: string = "anonymous";
 
-    constructor(private tokenService: TokenService, private http: HttpClient) {
+    constructor(
+        private tokenService: TokenService,
+        private http: HttpClient) {
         this.tokenService = tokenService;
     }
 
-    // Saves the username it aquired from the api saved to localstorage.
-    saveUserName() {
+    // Saves the username it aquired from the api after saving it to localstorage.
+    saveUserName(): string {
         const jwt = this.tokenService.getJWT();
         if (!jwt) {
-            throw new Error("No JWT present");
+            return "anonymous";
         }
         const token = jwt.access_token;
 
@@ -32,20 +34,26 @@ export class UserService {
             .then(response => response.json())
             .then(data => {
                 try {
-                    console.log("Data: ", data);
+                    console.log("Data on userService.ts: ", data);
                     localStorage.setItem(this.USERNAME_KEY, data.username);
-                } catch (Error) { }
+
+                    return data.userName;
+
+                } catch (Error) { return null }
             });
+        return this.username;
     }
 
     // Goes to localstorage and if the username is there returns it.
-    getUserName(): any {
-        this.usernameJson = localStorage.getItem(this.USERNAME_KEY);
-        if (this.usernameJson) {
-            const userName = JSON.parse(this.usernameJson);
-            return userName;
+    getUserName(): string {
+        var username = localStorage.getItem(this.USERNAME_KEY);
+
+        console.log("username in userService.getusername: ", username)
+        if (username) {
+
+            return username;
         } else {
-            return null;
+            return "anonymous";
         }
     }
 }

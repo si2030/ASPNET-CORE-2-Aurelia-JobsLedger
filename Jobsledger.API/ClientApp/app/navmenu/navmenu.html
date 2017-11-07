@@ -12,11 +12,27 @@
                 <a class="navbar-brand" href="#/home">Jobsledger.API</a>
             </div>
             <div class="navbar-collapse collapse">
+
                 <ul class="nav navbar-nav">
-                    <li repeat.for = "row of router.navigation" class="${ row.isActive ? 'link-active' : '' }" >
-                        <a href.bind = "row.href">
-                            <span class="glyphicon glyphicon-${ row.settings.icon }"></span> ${ row.title }
+
+                    <li repeat.for="row of router.navigation" class="${ row.isActive ? 'link-active' : '' }">
+                        <a href.bind="row.href" if.bind="!row.settings.nav">${ row.title }</a>
+  
+                        <a href.bind="row.href" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"
+                           if.bind="row.settings.nav">
+                            ${row.title}
+                            <span class="caret"></span>
                         </a>
+
+                        <ul if.bind="row.settings.nav" class="dropdown-menu">
+                            <li repeat.for="menu of row.settings.nav">
+                                <a href.bind="menu.href">${menu.title}</a>
+                            </li>
+                        </ul>
+                        
+
+
+
                     </li>
                 </ul>
             </div>
