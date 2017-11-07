@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "3404d258765c417aa5f1"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "8605737209ff373042ee"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -6740,7 +6740,7 @@ var Rules = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_binding__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_aurelia_templating__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_aurelia_logging__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__expression_visitor__ = __webpack_require__(62);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__expression_visitor__ = __webpack_require__(61);
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -7773,10 +7773,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_aurelia_metadata__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_aurelia_templating__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_aurelia_dependency_injection__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__hmr_css_resource__ = __webpack_require__(51);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__view_model_traverse_controller__ = __webpack_require__(53);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__view_traverse_controller__ = __webpack_require__(54);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__render_utils__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__hmr_css_resource__ = __webpack_require__(50);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__view_model_traverse_controller__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__view_traverse_controller__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__render_utils__ = __webpack_require__(51);
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     return new (P || (P = Promise))(function (resolve, reject) {
         function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
@@ -8503,6 +8503,7 @@ var IfCore = function () {
     this.view.unbind();
 
     if (!this.viewFactory.isCaching) {
+      this.showing = false;
       return;
     }
 
@@ -8518,9 +8519,6 @@ var IfCore = function () {
 
   IfCore.prototype._show = function _show() {
     if (this.showing) {
-      if (!this.view.isBound) {
-        this.view.bind(this.bindingContext, this.overrideContext);
-      }
       return;
     }
 
@@ -15681,34 +15679,6 @@ module.exports = Html5Entities;
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoggedInService; });
-var LoggedInService = /** @class */ (function () {
-    function LoggedInService() {
-        this.LOGGED_IN = "loggedIn";
-        this.isLoggedIn = false;
-        this.userName = 'anonymous';
-    }
-    LoggedInService.prototype.isAuthenticated = function () {
-        var authenticated = localStorage.getItem(this.LOGGED_IN);
-        console.log("LOGGEDIN value HERE!: ", authenticated);
-        if (authenticated != null) {
-            return true;
-        }
-        else {
-            return false;
-        }
-    };
-    return LoggedInService;
-}());
-
-
-
-/***/ }),
-
-/***/ 44:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TokenService; });
 var TokenService = /** @class */ (function () {
     function TokenService() {
@@ -15755,14 +15725,14 @@ var TokenService = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 45:
+/***/ 44:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* WEBPACK VAR INJECTION */(function(process) {/* harmony export (immutable) */ __webpack_exports__["bootstrap"] = bootstrap;
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "starting", function() { return starting; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_polyfills__ = __webpack_require__(56);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_polyfills__ = __webpack_require__(55);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_aurelia_pal__ = __webpack_require__(0);
 
 
@@ -15929,7 +15899,7 @@ var starting = run();
 
 /***/ }),
 
-/***/ 46:
+/***/ 45:
 /***/ (function(module, exports, __webpack_require__) {
 
 // This file contains an empty module that does nothing.
@@ -15946,7 +15916,7 @@ var starting = run();
 
 /***/ }),
 
-/***/ 47:
+/***/ 46:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -15978,7 +15948,7 @@ var Loader;
 
 Object.defineProperty(__WEBPACK_IMPORTED_MODULE_0_aurelia_pal__["a" /* PLATFORM */], "Loader", {
   get: function() {
-    return Loader || (Loader = __webpack_require__(55).WebpackLoader);
+    return Loader || (Loader = __webpack_require__(54).WebpackLoader);
   },
   set: function(value) {
     Loader = value;
@@ -15988,7 +15958,7 @@ Object.defineProperty(__WEBPACK_IMPORTED_MODULE_0_aurelia_pal__["a" /* PLATFORM 
 
 /***/ }),
 
-/***/ 48:
+/***/ 47:
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(__resourceQuery, module) {/*eslint-env browser*/
@@ -16005,7 +15975,7 @@ var options = {
   autoConnect: true
 };
 if (true) {
-  var querystring = __webpack_require__(71);
+  var querystring = __webpack_require__(70);
   var overrides = querystring.parse(__resourceQuery.slice(1));
   setOverrides(overrides);
 }
@@ -16139,7 +16109,7 @@ if (typeof window !== 'undefined') {
 }
 
 function createReporter() {
-  var strip = __webpack_require__(72);
+  var strip = __webpack_require__(71);
 
   var overlay;
   if (typeof document !== 'undefined' && options.overlay) {
@@ -16266,7 +16236,7 @@ if (module) {
 
 /***/ }),
 
-/***/ 49:
+/***/ 48:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16446,6 +16416,18 @@ function _setTags (colors) {
 }
 
 ansiHTML.reset()
+
+
+/***/ }),
+
+/***/ 49:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+module.exports = function () {
+	return /[\u001b\u009b][[()#;?]*(?:[0-9]{1,4}(?:;[0-9]{0,4})*)?[0-9A-PRZcf-nqry=><]/g;
+};
 
 
 /***/ }),
@@ -16722,18 +16704,6 @@ protocol.create = function (name, options) {
 /***/ }),
 
 /***/ 50:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-module.exports = function () {
-	return /[\u001b\u009b][[()#;?]*(?:[0-9]{1,4}(?:;[0-9]{0,4})*)?[0-9A-PRZcf-nqry=><]/g;
-};
-
-
-/***/ }),
-
-/***/ 51:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -16857,7 +16827,7 @@ function _createCSSResource(address) {
 
 /***/ }),
 
-/***/ 52:
+/***/ 51:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -16970,7 +16940,7 @@ function rerenderMatchingSlotChildren(slot, newViewFactory, originalFactoryTempl
 
 /***/ }),
 
-/***/ 53:
+/***/ 52:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -17189,7 +17159,7 @@ function traverseViewSlot(classOrFunction, viewSlot, info) {
 
 /***/ }),
 
-/***/ 54:
+/***/ 53:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -17259,7 +17229,7 @@ function getElementsToRerender(template) {
 
 /***/ }),
 
-/***/ 55:
+/***/ 54:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -17588,7 +17558,7 @@ __WEBPACK_IMPORTED_MODULE_2_aurelia_pal__["a" /* PLATFORM */].Loader = WebpackLo
 
 /***/ }),
 
-/***/ 56:
+/***/ 55:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -18437,7 +18407,7 @@ if (typeof FEATURE_NO_ESNEXT === 'undefined') {
 
 /***/ }),
 
-/***/ 57:
+/***/ 56:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -18958,7 +18928,7 @@ function addSegment(currentState, segment) {
 
 /***/ }),
 
-/***/ 58:
+/***/ 57:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -19078,7 +19048,7 @@ function _createCSSResource(address) {
 
 /***/ }),
 
-/***/ 59:
+/***/ 58:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -19106,6 +19076,51 @@ function _createDynamicElement(name, viewUrl, bindableNames) {
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_aurelia_templating__["j" /* bindable */])(bindableNames[i])(DynamicElement);
   }
   return DynamicElement;
+}
+
+/***/ }),
+
+/***/ 59:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* unused harmony export getElementName */
+/* harmony export (immutable) */ __webpack_exports__["a"] = configure;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_templating__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__dynamic_element__ = __webpack_require__(58);
+
+
+
+function getElementName(address) {
+  return (/([^\/^\?]+)\.html/i.exec(address)[1].toLowerCase()
+  );
+}
+
+function configure(config) {
+  var viewEngine = config.container.get(__WEBPACK_IMPORTED_MODULE_0_aurelia_templating__["f" /* ViewEngine */]);
+  var loader = config.aurelia.loader;
+
+  viewEngine.addResourcePlugin('.html', {
+    'fetch': function fetch(address) {
+      return loader.loadTemplate(address).then(function (registryEntry) {
+        var _ref;
+
+        var bindable = registryEntry.template.getAttribute('bindable');
+        var elementName = getElementName(address);
+
+        if (bindable) {
+          bindable = bindable.split(',').map(function (x) {
+            return x.trim();
+          });
+          registryEntry.template.removeAttribute('bindable');
+        } else {
+          bindable = [];
+        }
+
+        return _ref = {}, _ref[elementName] = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__dynamic_element__["a" /* _createDynamicElement */])(elementName, address, bindable), _ref;
+      });
+    }
+  });
 }
 
 /***/ }),
@@ -19324,51 +19339,6 @@ function parseQueryString(queryString) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* unused harmony export getElementName */
-/* harmony export (immutable) */ __webpack_exports__["a"] = configure;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_templating__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__dynamic_element__ = __webpack_require__(59);
-
-
-
-function getElementName(address) {
-  return (/([^\/^\?]+)\.html/i.exec(address)[1].toLowerCase()
-  );
-}
-
-function configure(config) {
-  var viewEngine = config.container.get(__WEBPACK_IMPORTED_MODULE_0_aurelia_templating__["f" /* ViewEngine */]);
-  var loader = config.aurelia.loader;
-
-  viewEngine.addResourcePlugin('.html', {
-    'fetch': function fetch(address) {
-      return loader.loadTemplate(address).then(function (registryEntry) {
-        var _ref;
-
-        var bindable = registryEntry.template.getAttribute('bindable');
-        var elementName = getElementName(address);
-
-        if (bindable) {
-          bindable = bindable.split(',').map(function (x) {
-            return x.trim();
-          });
-          registryEntry.template.removeAttribute('bindable');
-        } else {
-          bindable = [];
-        }
-
-        return _ref = {}, _ref[elementName] = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__dynamic_element__["a" /* _createDynamicElement */])(elementName, address, bindable), _ref;
-      });
-    }
-  });
-}
-
-/***/ }),
-
-/***/ 61:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TemplatingRouteLoader; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_dependency_injection__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_aurelia_templating__ = __webpack_require__(1);
@@ -19456,7 +19426,7 @@ function createDynamicClass(moduleId) {
 
 /***/ }),
 
-/***/ 62:
+/***/ 61:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -19540,7 +19510,7 @@ var ExpressionVisitor = (function () {
 
 /***/ }),
 
-/***/ 63:
+/***/ 62:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -19632,7 +19602,7 @@ var ValidateBindingBehaviorBase = (function () {
 
 /***/ }),
 
-/***/ 64:
+/***/ 63:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -19680,12 +19650,12 @@ ValidationControllerFactory['protocol:aurelia:resolver'] = true;
 
 /***/ }),
 
-/***/ 65:
+/***/ 64:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
-  XmlEntities: __webpack_require__(67),
-  Html4Entities: __webpack_require__(66),
+  XmlEntities: __webpack_require__(66),
+  Html4Entities: __webpack_require__(65),
   Html5Entities: __webpack_require__(42),
   AllHtmlEntities: __webpack_require__(42)
 };
@@ -19693,7 +19663,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 66:
+/***/ 65:
 /***/ (function(module, exports) {
 
 var HTML_ALPHA = ['apos', 'nbsp', 'iexcl', 'cent', 'pound', 'curren', 'yen', 'brvbar', 'sect', 'uml', 'copy', 'ordf', 'laquo', 'not', 'shy', 'reg', 'macr', 'deg', 'plusmn', 'sup2', 'sup3', 'acute', 'micro', 'para', 'middot', 'cedil', 'sup1', 'ordm', 'raquo', 'frac14', 'frac12', 'frac34', 'iquest', 'Agrave', 'Aacute', 'Acirc', 'Atilde', 'Auml', 'Aring', 'Aelig', 'Ccedil', 'Egrave', 'Eacute', 'Ecirc', 'Euml', 'Igrave', 'Iacute', 'Icirc', 'Iuml', 'ETH', 'Ntilde', 'Ograve', 'Oacute', 'Ocirc', 'Otilde', 'Ouml', 'times', 'Oslash', 'Ugrave', 'Uacute', 'Ucirc', 'Uuml', 'Yacute', 'THORN', 'szlig', 'agrave', 'aacute', 'acirc', 'atilde', 'auml', 'aring', 'aelig', 'ccedil', 'egrave', 'eacute', 'ecirc', 'euml', 'igrave', 'iacute', 'icirc', 'iuml', 'eth', 'ntilde', 'ograve', 'oacute', 'ocirc', 'otilde', 'ouml', 'divide', 'oslash', 'ugrave', 'uacute', 'ucirc', 'uuml', 'yacute', 'thorn', 'yuml', 'quot', 'amp', 'lt', 'gt', 'OElig', 'oelig', 'Scaron', 'scaron', 'Yuml', 'circ', 'tilde', 'ensp', 'emsp', 'thinsp', 'zwnj', 'zwj', 'lrm', 'rlm', 'ndash', 'mdash', 'lsquo', 'rsquo', 'sbquo', 'ldquo', 'rdquo', 'bdquo', 'dagger', 'Dagger', 'permil', 'lsaquo', 'rsaquo', 'euro', 'fnof', 'Alpha', 'Beta', 'Gamma', 'Delta', 'Epsilon', 'Zeta', 'Eta', 'Theta', 'Iota', 'Kappa', 'Lambda', 'Mu', 'Nu', 'Xi', 'Omicron', 'Pi', 'Rho', 'Sigma', 'Tau', 'Upsilon', 'Phi', 'Chi', 'Psi', 'Omega', 'alpha', 'beta', 'gamma', 'delta', 'epsilon', 'zeta', 'eta', 'theta', 'iota', 'kappa', 'lambda', 'mu', 'nu', 'xi', 'omicron', 'pi', 'rho', 'sigmaf', 'sigma', 'tau', 'upsilon', 'phi', 'chi', 'psi', 'omega', 'thetasym', 'upsih', 'piv', 'bull', 'hellip', 'prime', 'Prime', 'oline', 'frasl', 'weierp', 'image', 'real', 'trade', 'alefsym', 'larr', 'uarr', 'rarr', 'darr', 'harr', 'crarr', 'lArr', 'uArr', 'rArr', 'dArr', 'hArr', 'forall', 'part', 'exist', 'empty', 'nabla', 'isin', 'notin', 'ni', 'prod', 'sum', 'minus', 'lowast', 'radic', 'prop', 'infin', 'ang', 'and', 'or', 'cap', 'cup', 'int', 'there4', 'sim', 'cong', 'asymp', 'ne', 'equiv', 'le', 'ge', 'sub', 'sup', 'nsub', 'sube', 'supe', 'oplus', 'otimes', 'perp', 'sdot', 'lceil', 'rceil', 'lfloor', 'rfloor', 'lang', 'rang', 'loz', 'spades', 'clubs', 'hearts', 'diams'];
@@ -19847,7 +19817,7 @@ module.exports = Html4Entities;
 
 /***/ }),
 
-/***/ 67:
+/***/ 66:
 /***/ (function(module, exports) {
 
 var ALPHA_INDEX = {
@@ -20009,7 +19979,7 @@ module.exports = XmlEntities;
 
 /***/ }),
 
-/***/ 68:
+/***/ 67:
 /***/ (function(module, exports, __webpack_require__) {
 
 // the whatwg-fetch polyfill installs the fetch() function
@@ -20022,7 +19992,7 @@ module.exports = self.fetch.bind(self);
 
 /***/ }),
 
-/***/ 69:
+/***/ 68:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20109,6 +20079,99 @@ module.exports = function(qs, sep, eq, options) {
 
 var isArray = Array.isArray || function (xs) {
   return Object.prototype.toString.call(xs) === '[object Array]';
+};
+
+
+/***/ }),
+
+/***/ 69:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+// Copyright Joyent, Inc. and other Node contributors.
+//
+// Permission is hereby granted, free of charge, to any person obtaining a
+// copy of this software and associated documentation files (the
+// "Software"), to deal in the Software without restriction, including
+// without limitation the rights to use, copy, modify, merge, publish,
+// distribute, sublicense, and/or sell copies of the Software, and to permit
+// persons to whom the Software is furnished to do so, subject to the
+// following conditions:
+//
+// The above copyright notice and this permission notice shall be included
+// in all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+// USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+
+
+var stringifyPrimitive = function(v) {
+  switch (typeof v) {
+    case 'string':
+      return v;
+
+    case 'boolean':
+      return v ? 'true' : 'false';
+
+    case 'number':
+      return isFinite(v) ? v : '';
+
+    default:
+      return '';
+  }
+};
+
+module.exports = function(obj, sep, eq, name) {
+  sep = sep || '&';
+  eq = eq || '=';
+  if (obj === null) {
+    obj = undefined;
+  }
+
+  if (typeof obj === 'object') {
+    return map(objectKeys(obj), function(k) {
+      var ks = encodeURIComponent(stringifyPrimitive(k)) + eq;
+      if (isArray(obj[k])) {
+        return map(obj[k], function(v) {
+          return ks + encodeURIComponent(stringifyPrimitive(v));
+        }).join(sep);
+      } else {
+        return ks + encodeURIComponent(stringifyPrimitive(obj[k]));
+      }
+    }).join(sep);
+
+  }
+
+  if (!name) return '';
+  return encodeURIComponent(stringifyPrimitive(name)) + eq +
+         encodeURIComponent(stringifyPrimitive(obj));
+};
+
+var isArray = Array.isArray || function (xs) {
+  return Object.prototype.toString.call(xs) === '[object Array]';
+};
+
+function map (xs, f) {
+  if (xs.map) return xs.map(f);
+  var res = [];
+  for (var i = 0; i < xs.length; i++) {
+    res.push(f(xs[i], i));
+  }
+  return res;
+}
+
+var objectKeys = Object.keys || function (obj) {
+  var res = [];
+  for (var key in obj) {
+    if (Object.prototype.hasOwnProperty.call(obj, key)) res.push(key);
+  }
+  return res;
 };
 
 
@@ -20261,91 +20324,10 @@ var Loader = function () {
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-// Copyright Joyent, Inc. and other Node contributors.
-//
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the
-// "Software"), to deal in the Software without restriction, including
-// without limitation the rights to use, copy, modify, merge, publish,
-// distribute, sublicense, and/or sell copies of the Software, and to permit
-// persons to whom the Software is furnished to do so, subject to the
-// following conditions:
-//
-// The above copyright notice and this permission notice shall be included
-// in all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
-// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
-// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
-// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
-// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
-// USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 
-
-var stringifyPrimitive = function(v) {
-  switch (typeof v) {
-    case 'string':
-      return v;
-
-    case 'boolean':
-      return v ? 'true' : 'false';
-
-    case 'number':
-      return isFinite(v) ? v : '';
-
-    default:
-      return '';
-  }
-};
-
-module.exports = function(obj, sep, eq, name) {
-  sep = sep || '&';
-  eq = eq || '=';
-  if (obj === null) {
-    obj = undefined;
-  }
-
-  if (typeof obj === 'object') {
-    return map(objectKeys(obj), function(k) {
-      var ks = encodeURIComponent(stringifyPrimitive(k)) + eq;
-      if (isArray(obj[k])) {
-        return map(obj[k], function(v) {
-          return ks + encodeURIComponent(stringifyPrimitive(v));
-        }).join(sep);
-      } else {
-        return ks + encodeURIComponent(stringifyPrimitive(obj[k]));
-      }
-    }).join(sep);
-
-  }
-
-  if (!name) return '';
-  return encodeURIComponent(stringifyPrimitive(name)) + eq +
-         encodeURIComponent(stringifyPrimitive(obj));
-};
-
-var isArray = Array.isArray || function (xs) {
-  return Object.prototype.toString.call(xs) === '[object Array]';
-};
-
-function map (xs, f) {
-  if (xs.map) return xs.map(f);
-  var res = [];
-  for (var i = 0; i < xs.length; i++) {
-    res.push(f(xs[i], i));
-  }
-  return res;
-}
-
-var objectKeys = Object.keys || function (obj) {
-  var res = [];
-  for (var key in obj) {
-    if (Object.prototype.hasOwnProperty.call(obj, key)) res.push(key);
-  }
-  return res;
-};
+exports.decode = exports.parse = __webpack_require__(68);
+exports.encode = exports.stringify = __webpack_require__(69);
 
 
 /***/ }),
@@ -20355,23 +20337,36 @@ var objectKeys = Object.keys || function (obj) {
 
 "use strict";
 
+var ansiRegex = __webpack_require__(49)();
 
-exports.decode = exports.parse = __webpack_require__(69);
-exports.encode = exports.stringify = __webpack_require__(70);
+module.exports = function (str) {
+	return typeof str === 'string' ? str.replace(ansiRegex, '') : str;
+};
 
 
 /***/ }),
 
 /***/ 72:
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return IsLoggedIn; });
+var IsLoggedIn = /** @class */ (function () {
+    function IsLoggedIn() {
+        this.LOGGED_IN = "loggedIn";
+    }
+    IsLoggedIn.prototype.isAuthenticated = function () {
+        var authenticated = localStorage.getItem(this.LOGGED_IN);
+        console.log('LOGGEDIN - typeof: ', authenticated);
+        if (authenticated != null) {
+            return true;
+        }
+        else
+            return false;
+    };
+    return IsLoggedIn;
+}());
 
-var ansiRegex = __webpack_require__(50)();
-
-module.exports = function (str) {
-	return typeof str === 'string' ? str.replace(ansiRegex, '') : str;
-};
 
 
 /***/ }),
@@ -20383,7 +20378,7 @@ module.exports = function (str) {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UserService; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_fetch_client__ = __webpack_require__(14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_aurelia_framework__ = __webpack_require__("aurelia-framework");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__tokenService__ = __webpack_require__(44);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__tokenService__ = __webpack_require__(43);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -20402,15 +20397,14 @@ var UserService = /** @class */ (function () {
         this.http = http;
         //private tokenService: TokenService;
         this.USERNAME_KEY = "user_name";
-        this.username = "anonymous";
         this.tokenService = tokenService;
     }
-    // Saves the username it aquired from the api after saving it to localstorage.
+    // Saves the username it aquired from the api saved to localstorage.
     UserService.prototype.saveUserName = function () {
         var _this = this;
         var jwt = this.tokenService.getJWT();
         if (!jwt) {
-            return "anonymous";
+            throw new Error("No JWT present");
         }
         var token = jwt.access_token;
         var headers = new Headers({
@@ -20424,31 +20418,26 @@ var UserService = /** @class */ (function () {
             .then(function (response) { return response.json(); })
             .then(function (data) {
             try {
-                console.log("Data on userService.ts: ", data);
+                console.log("Data: ", data);
                 localStorage.setItem(_this.USERNAME_KEY, data.username);
-                return data.userName;
             }
-            catch (Error) {
-                return null;
-            }
+            catch (Error) { }
         });
-        return this.username;
     };
     // Goes to localstorage and if the username is there returns it.
     UserService.prototype.getUserName = function () {
-        var username = localStorage.getItem(this.USERNAME_KEY);
-        console.log("username in userService.getusername: ", username);
-        if (username) {
-            return username;
+        this.usernameJson = localStorage.getItem(this.USERNAME_KEY);
+        if (this.usernameJson) {
+            var userName = JSON.parse(this.usernameJson);
+            return userName;
         }
         else {
-            return "anonymous";
+            return null;
         }
     };
     UserService = __decorate([
         __WEBPACK_IMPORTED_MODULE_1_aurelia_framework__["b" /* autoinject */],
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__tokenService__["a" /* TokenService */],
-            __WEBPACK_IMPORTED_MODULE_0_aurelia_fetch_client__["a" /* HttpClient */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__tokenService__["a" /* TokenService */], __WEBPACK_IMPORTED_MODULE_0_aurelia_fetch_client__["a" /* HttpClient */]])
     ], UserService);
     return UserService;
 }());
@@ -20553,7 +20542,7 @@ for (var key in styles) {
   clientOverlay.style[key] = styles[key];
 }
 
-var ansiHTML = __webpack_require__(49);
+var ansiHTML = __webpack_require__(48);
 var colors = {
   reset: ['transparent', 'transparent'],
   black: '181818',
@@ -20568,7 +20557,7 @@ var colors = {
 };
 ansiHTML.setColors(colors);
 
-var Entities = __webpack_require__(65).AllHtmlEntities;
+var Entities = __webpack_require__(64).AllHtmlEntities;
 var entities = new Entities();
 
 exports.showProblems =
@@ -21296,7 +21285,7 @@ module.exports = (__webpack_require__(13))(28);
 /* unused harmony export PipelineProvider */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return AppRouter; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_logging__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_aurelia_route_recognizer__ = __webpack_require__(57);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_aurelia_route_recognizer__ = __webpack_require__(56);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_aurelia_dependency_injection__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_aurelia_history__ = __webpack_require__(22);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_aurelia_event_aggregator__ = __webpack_require__("aurelia-event-aggregator");
@@ -23157,10 +23146,10 @@ module.exports = (__webpack_require__(13))(76);
 /***/ 84:
 /***/ (function(module, exports, __webpack_require__) {
 
+__webpack_require__(45);
 __webpack_require__(46);
 __webpack_require__(47);
-__webpack_require__(48);
-module.exports = __webpack_require__(45);
+module.exports = __webpack_require__(44);
 
 
 /***/ }),
@@ -23374,7 +23363,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "App", function() { return App; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_framework__ = __webpack_require__("aurelia-framework");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_aurelia_router__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_auth_LoggedInService__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_auth_isLoggedIn__ = __webpack_require__(72);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -23392,53 +23381,36 @@ var App = /** @class */ (function () {
     }
     App.prototype.configureRouter = function (config, router) {
         this.router = router;
-        config.title = "Aurelia";
-        config.map([
-            {
-                route: ["", "home"],
-                name: "home",
-                settings: { icon: "home" },
+        config.title = 'Aurelia';
+        config.map([{
+                route: ['', 'home'],
+                name: 'home',
+                settings: { icon: 'home' },
                 moduleId: '../website/home/home',
                 nav: true,
-                title: "Home"
-            },
-            //{
-            //  route: "counter",
-            //  name: "counter",
-            //  settings: { icon: "education" },
-            //  moduleId: PLATFORM.moduleName("../website/counter/counter"),
-            //  nav: true,
-            //  title: "Counter"
-            //},
-            //{
-            //  route: "fetch-data",
-            //  name: "fetchdata",
-            //  settings: { icon: "th-list", auth: true },
-            //  moduleId: PLATFORM.moduleName("../website/fetchdata/fetchdata"),
-            //  nav: true,
-            //  title: "Fetch data"
-            //},
-            {
-                route: 'about', name: 'about', moduleId: '../website/home/home', title: 'About', nav: true, settings: {
-                    nav: [
-                        { href: '#about/services', title: 'Services' },
-                        { href: '#about/team', title: 'Team' },
-                        { href: '#about/contact', title: 'Contact' }
-                    ],
-                    auth: true,
-                }
-            },
-            { route: 'about/services', name: 'aboutServices', moduleId: '../website/fetchdata/fetchdata', },
-            { route: 'about/team', name: 'aboutTeam', moduleId: '../website/counter/counter', },
-            { route: 'about/contact', name: 'aboutContact', moduleId: '../components/auth/login/login', },
-            {
-                route: "login",
-                name: "login",
-                settings: { icon: "user", auth: true, },
+                title: 'Home'
+            }, {
+                route: 'counter',
+                name: 'counter',
+                settings: { icon: 'education' },
+                moduleId: '../website/counter/counter',
+                nav: true,
+                title: 'Counter'
+            }, {
+                route: 'fetch-data',
+                name: 'fetchdata',
+                settings: { icon: 'th-list', auth: true },
+                moduleId: '../website/fetchdata/fetchdata',
+                nav: true,
+                title: 'Fetch data'
+            }, {
+                route: 'login',
+                name: 'login',
+                settings: { icon: 'user' },
                 moduleId: '../components/auth/login/login',
                 nav: true,
-                title: "Login"
-            }
+                title: 'Login'
+            },
         ]);
         config.addAuthorizeStep(AuthorizeStep);
     };
@@ -23454,20 +23426,18 @@ var AuthorizeStep = /** @class */ (function () {
     }
     AuthorizeStep.prototype.run = function (navigationInstruction, next) {
         var isLoggedIn = false;
-        if (navigationInstruction
-            .getAllInstructions()
-            .some(function (i) { return i.config.settings.auth; })) {
+        if (navigationInstruction.getAllInstructions().some(function (i) { return i.config.settings.auth; })) {
             isLoggedIn = this.testAuthentication.isAuthenticated();
-            console.log("testAuthentication: ", this.testAuthentication.isAuthenticated());
+            console.log('testAuthentication: ', this.testAuthentication.isAuthenticated());
             if (!isLoggedIn) {
-                return next.cancel(new __WEBPACK_IMPORTED_MODULE_1_aurelia_router__["d" /* Redirect */]("login"));
+                return next.cancel(new __WEBPACK_IMPORTED_MODULE_1_aurelia_router__["d" /* Redirect */]('login'));
             }
         }
         return next();
     };
     AuthorizeStep = __decorate([
         __WEBPACK_IMPORTED_MODULE_0_aurelia_framework__["b" /* autoinject */],
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__components_auth_LoggedInService__["a" /* LoggedInService */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__components_auth_isLoggedIn__["a" /* IsLoggedIn */]])
     ], AuthorizeStep);
     return AuthorizeStep;
 }());
@@ -23559,10 +23529,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_aurelia_framework__ = __webpack_require__("aurelia-framework");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_aurelia_router__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_aurelia_validation__ = __webpack_require__("aurelia-validation");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__tokenService__ = __webpack_require__(44);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__tokenService__ = __webpack_require__(43);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__userService__ = __webpack_require__(73);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__utilities_bootstrapFormRenderer__ = __webpack_require__(74);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__LoggedInService__ = __webpack_require__(43);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -23579,11 +23548,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
 var Login = /** @class */ (function () {
-    function Login(login, loggedInService, tokenService, userService, router, http, controllerFactory) {
+    function Login(login, tokenService, userService, router, http, controllerFactory) {
         this.login = login;
-        this.loggedInService = loggedInService;
         this.tokenService = tokenService;
         this.userService = userService;
         this.router = router;
@@ -23594,18 +23561,8 @@ var Login = /** @class */ (function () {
         this.username = "";
         this.password = ""; // these are pubic fields available in your view unless you add 'private' in front of them
         this.router = router;
-        this.loggedInService = loggedInService;
         this.controller = controllerFactory.createForCurrentScope();
         this.controller.addRenderer(new __WEBPACK_IMPORTED_MODULE_6__utilities_bootstrapFormRenderer__["a" /* BootstrapFormRenderer */]());
-        // Check if user is logged in
-        if (this.loggedInService.isAuthenticated()) {
-            console.log('gets here!');
-            loggedInService.isLoggedIn = true;
-            loggedInService.userName = this.userService.getUserName();
-            console.log(" this.loggedInService.isLoggedIn IN constructor", this.loggedInService.isLoggedIn);
-            console.log(" this.loggedInService.userName IN constructor", this.loggedInService.userName);
-        }
-        ;
     }
     Login.prototype.submitLogin = function () {
         var _this = this;
@@ -23616,28 +23573,26 @@ var Login = /** @class */ (function () {
             var task = fetch("/api/jwt", {
                 method: "POST",
                 body: JSON.stringify(this.login),
-                headers: new Headers({ 'content-type': 'application/json' })
+                headers: {
+                    "Content-Type": "application/json;charset=UTF-8"
+                }
             })
                 .then(function (response) { return response.json(); })
                 .then(function (data) {
-                // First save the JWT and as well save it to loggedInService.
-                _this.loggedInService.isLoggedIn = _this.tokenService.saveJWT(data);
-                // Next go back to the api and get the username and save that to loggedInService also.
-                _this.loggedInService.userName = _this.userService.saveUserName();
-                // Finally redirect to home page.
+                _this.tokenService.saveJWT(data);
+                _this.userService.saveUserName();
                 _this.router.navigate("home");
             })
                 .catch(function (error) {
                 _this.tokenService.clearJWT();
             });
-            console.log(" this.loggedInService.isLoggedIn after FETCH", this.loggedInService.isLoggedIn);
-            console.log(" this.loggedInService.userName after FETCH", this.loggedInService.userName);
         }
     };
     Login = __decorate([
-        __WEBPACK_IMPORTED_MODULE_1_aurelia_framework__["b" /* autoinject */],
-        __metadata("design:paramtypes", [Object, __WEBPACK_IMPORTED_MODULE_7__LoggedInService__["a" /* LoggedInService */],
-            __WEBPACK_IMPORTED_MODULE_4__tokenService__["a" /* TokenService */],
+        __WEBPACK_IMPORTED_MODULE_1_aurelia_framework__["b" /* autoinject */]
+        //@inject(NewInstance.of(ValidationController))
+        ,
+        __metadata("design:paramtypes", [Object, __WEBPACK_IMPORTED_MODULE_4__tokenService__["a" /* TokenService */],
             __WEBPACK_IMPORTED_MODULE_5__userService__["a" /* UserService */],
             __WEBPACK_IMPORTED_MODULE_2_aurelia_router__["b" /* Router */],
             __WEBPACK_IMPORTED_MODULE_0_aurelia_fetch_client__["a" /* HttpClient */],
@@ -23682,7 +23637,7 @@ exports.push([module.i, "li .glyphicon {\r\n    margin-right: 10px;\r\n}\r\n\r\n
 /***/ "app/navmenu/navmenu.html":
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = "<template bindable=\"router\">\r\n    <require from=\"./navmenu.css\"></require>\r\n    <div class=\"main-nav\">\r\n        <div class=\"navbar navbar-inverse\">\r\n            <div class=\"navbar-header\">\r\n                <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\".navbar-collapse\">\r\n                    <span class=\"sr-only\">Toggle navigation</span>\r\n                    <span class=\"icon-bar\"></span>\r\n                    <span class=\"icon-bar\"></span>\r\n                    <span class=\"icon-bar\"></span>\r\n                </button>\r\n                <a class=\"navbar-brand\" href=\"#/home\">Jobsledger.API</a>\r\n            </div>\r\n            <div class=\"navbar-collapse collapse\">\r\n\r\n                <ul class=\"nav navbar-nav\">\r\n\r\n                    <li repeat.for=\"row of router.navigation\" class=\"${ row.isActive ? 'link-active' : '' }\">\r\n                        <a href.bind=\"row.href\" if.bind=\"!row.settings.nav\">${ row.title }</a>\r\n  \r\n                        <a href.bind=\"row.href\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\"\r\n                           if.bind=\"row.settings.nav\">\r\n                            ${row.title}\r\n                            <span class=\"caret\"></span>\r\n                        </a>\r\n\r\n                        <ul if.bind=\"row.settings.nav\" class=\"dropdown-menu\">\r\n                            <li repeat.for=\"menu of row.settings.nav\">\r\n                                <a href.bind=\"menu.href\">${menu.title}</a>\r\n                            </li>\r\n                        </ul>\r\n                        \r\n\r\n\r\n\r\n                    </li>\r\n                </ul>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</template>";
+module.exports = "<template bindable=\"router\">\r\n    <require from=\"./navmenu.css\"></require>\r\n    <div class=\"main-nav\">\r\n        <div class=\"navbar navbar-inverse\">\r\n            <div class=\"navbar-header\">\r\n                <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\".navbar-collapse\">\r\n                    <span class=\"sr-only\">Toggle navigation</span>\r\n                    <span class=\"icon-bar\"></span>\r\n                    <span class=\"icon-bar\"></span>\r\n                    <span class=\"icon-bar\"></span>\r\n                </button>\r\n                <a class=\"navbar-brand\" href=\"#/home\">Jobsledger.API</a>\r\n            </div>\r\n            <div class=\"navbar-collapse collapse\">\r\n                <ul class=\"nav navbar-nav\">\r\n                    <li repeat.for = \"row of router.navigation\" class=\"${ row.isActive ? 'link-active' : '' }\" >\r\n                        <a href.bind = \"row.href\">\r\n                            <span class=\"glyphicon glyphicon-${ row.settings.icon }\"></span> ${ row.title }\r\n                        </a>\r\n                    </li>\r\n                </ul>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</template>\r\n";
 
 /***/ }),
 
@@ -25986,7 +25941,7 @@ function configure(config) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__replaceable__ = __webpack_require__("aurelia-templating-resources/replaceable");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__focus__ = __webpack_require__("aurelia-templating-resources/focus");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_aurelia_templating__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__css_resource__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__css_resource__ = __webpack_require__(57);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__html_sanitizer__ = __webpack_require__(28);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__attr_binding_behavior__ = __webpack_require__("aurelia-templating-resources/attr-binding-behavior");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__binding_mode_behaviors__ = __webpack_require__("aurelia-templating-resources/binding-mode-behaviors");
@@ -25998,7 +25953,7 @@ function configure(config) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__update_trigger_binding_behavior__ = __webpack_require__("aurelia-templating-resources/update-trigger-binding-behavior");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__abstract_repeater__ = __webpack_require__(24);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__repeat_strategy_locator__ = __webpack_require__(33);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__html_resource_plugin__ = __webpack_require__(60);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__html_resource_plugin__ = __webpack_require__(59);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__null_repeat_strategy__ = __webpack_require__(31);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__array_repeat_strategy__ = __webpack_require__(26);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__map_repeat_strategy__ = __webpack_require__(30);
@@ -26497,9 +26452,7 @@ var Else = (_dec = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_aurelia_tem
   Else.prototype.bind = function bind(bindingContext, overrideContext) {
     _IfCore.prototype.bind.call(this, bindingContext, overrideContext);
 
-    if (this.ifVm.condition) {
-      this._hide();
-    } else {
+    if (!this.ifVm.condition) {
       this._show();
     }
   };
@@ -26735,8 +26688,6 @@ var If = (_dec = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_aurelia_templ
     _IfCore.prototype.bind.call(this, bindingContext, overrideContext);
     if (this.condition) {
       this._show();
-    } else {
-      this._hide();
     }
   };
 
@@ -27533,7 +27484,7 @@ var With = (_dec = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_aurelia_tem
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "configure", function() { return configure; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_pal__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_aurelia_router__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__route_loader__ = __webpack_require__(61);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__route_loader__ = __webpack_require__(60);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__router_view__ = __webpack_require__("aurelia-templating-router/router-view");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__route_href__ = __webpack_require__("aurelia-templating-router/route-href");
 /* unused harmony reexport TemplatingRouteLoader */
@@ -27902,7 +27853,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "validateTrigger", function() { return __WEBPACK_IMPORTED_MODULE_6__validate_trigger__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__validation_controller__ = __webpack_require__(11);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "ValidationController", function() { return __WEBPACK_IMPORTED_MODULE_7__validation_controller__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__validation_controller_factory__ = __webpack_require__(64);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__validation_controller_factory__ = __webpack_require__(63);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "ValidationControllerFactory", function() { return __WEBPACK_IMPORTED_MODULE_8__validation_controller_factory__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__validation_errors_custom_attribute__ = __webpack_require__("aurelia-validation/validation-errors-custom-attribute");
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "ValidationErrorsCustomAttribute", function() { return __WEBPACK_IMPORTED_MODULE_9__validation_errors_custom_attribute__["ValidationErrorsCustomAttribute"]; });
@@ -28011,7 +27962,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ValidateOnChangeOrBlurBindingBehavior", function() { return ValidateOnChangeOrBlurBindingBehavior; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_aurelia_task_queue__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__validate_trigger__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__validate_binding_behavior_base__ = __webpack_require__(63);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__validate_binding_behavior_base__ = __webpack_require__(62);
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -28252,7 +28203,7 @@ var ValidationRendererCustomAttribute = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_bootstrap_dist_css_bootstrap_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_bootstrap_dist_css_bootstrap_css__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_bootstrap__ = __webpack_require__(80);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_bootstrap___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_bootstrap__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_isomorphic_fetch__ = __webpack_require__(68);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_isomorphic_fetch__ = __webpack_require__(67);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_isomorphic_fetch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_isomorphic_fetch__);
 
 

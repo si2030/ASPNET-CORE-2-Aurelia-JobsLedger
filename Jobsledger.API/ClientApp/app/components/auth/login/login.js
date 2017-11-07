@@ -14,11 +14,9 @@ import { ValidationControllerFactory, ValidationRules } from "aurelia-validation
 import { TokenService } from "../tokenService";
 import { UserService } from "../userService";
 import { BootstrapFormRenderer } from "../../../utilities/bootstrapFormRenderer";
-import { LoggedInService } from "../LoggedInService";
 var Login = /** @class */ (function () {
-    function Login(login, loggedInService, tokenService, userService, router, http, controllerFactory) {
+    function Login(login, tokenService, userService, router, http, controllerFactory) {
         this.login = login;
-        this.loggedInService = loggedInService;
         this.tokenService = tokenService;
         this.userService = userService;
         this.router = router;
@@ -29,18 +27,8 @@ var Login = /** @class */ (function () {
         this.username = "";
         this.password = ""; // these are pubic fields available in your view unless you add 'private' in front of them
         this.router = router;
-        this.loggedInService = loggedInService;
         this.controller = controllerFactory.createForCurrentScope();
         this.controller.addRenderer(new BootstrapFormRenderer());
-        // Check if user is logged in
-        if (this.loggedInService.isAuthenticated()) {
-            console.log('gets here!');
-            loggedInService.isLoggedIn = true;
-            loggedInService.userName = this.userService.getUserName();
-            console.log(" this.loggedInService.isLoggedIn IN constructor", this.loggedInService.isLoggedIn);
-            console.log(" this.loggedInService.userName IN constructor", this.loggedInService.userName);
-        }
-        ;
     }
     Login.prototype.submitLogin = function () {
         var _this = this;
@@ -51,28 +39,26 @@ var Login = /** @class */ (function () {
             var task = fetch("/api/jwt", {
                 method: "POST",
                 body: JSON.stringify(this.login),
-                headers: new Headers({ 'content-type': 'application/json' })
+                headers: {
+                    "Content-Type": "application/json;charset=UTF-8"
+                }
             })
                 .then(function (response) { return response.json(); })
                 .then(function (data) {
-                // First save the JWT and as well save it to loggedInService.
-                _this.loggedInService.isLoggedIn = _this.tokenService.saveJWT(data);
-                // Next go back to the api and get the username and save that to loggedInService also.
-                _this.loggedInService.userName = _this.userService.saveUserName();
-                // Finally redirect to home page.
+                _this.tokenService.saveJWT(data);
+                _this.userService.saveUserName();
                 _this.router.navigate("home");
             })
                 .catch(function (error) {
                 _this.tokenService.clearJWT();
             });
-            console.log(" this.loggedInService.isLoggedIn after FETCH", this.loggedInService.isLoggedIn);
-            console.log(" this.loggedInService.userName after FETCH", this.loggedInService.userName);
         }
     };
     Login = __decorate([
-        autoinject,
-        __metadata("design:paramtypes", [Object, LoggedInService,
-            TokenService,
+        autoinject
+        //@inject(NewInstance.of(ValidationController))
+        ,
+        __metadata("design:paramtypes", [Object, TokenService,
             UserService,
             Router,
             HttpClient,

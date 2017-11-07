@@ -16,15 +16,14 @@ var UserService = /** @class */ (function () {
         this.http = http;
         //private tokenService: TokenService;
         this.USERNAME_KEY = "user_name";
-        this.username = "anonymous";
         this.tokenService = tokenService;
     }
-    // Saves the username it aquired from the api after saving it to localstorage.
+    // Saves the username it aquired from the api saved to localstorage.
     UserService.prototype.saveUserName = function () {
         var _this = this;
         var jwt = this.tokenService.getJWT();
         if (!jwt) {
-            return "anonymous";
+            throw new Error("No JWT present");
         }
         var token = jwt.access_token;
         var headers = new Headers({
@@ -38,31 +37,26 @@ var UserService = /** @class */ (function () {
             .then(function (response) { return response.json(); })
             .then(function (data) {
             try {
-                console.log("Data on userService.ts: ", data);
+                console.log("Data: ", data);
                 localStorage.setItem(_this.USERNAME_KEY, data.username);
-                return data.userName;
             }
-            catch (Error) {
-                return null;
-            }
+            catch (Error) { }
         });
-        return this.username;
     };
     // Goes to localstorage and if the username is there returns it.
     UserService.prototype.getUserName = function () {
-        var username = localStorage.getItem(this.USERNAME_KEY);
-        console.log("username in userService.getusername: ", username);
-        if (username) {
-            return username;
+        this.usernameJson = localStorage.getItem(this.USERNAME_KEY);
+        if (this.usernameJson) {
+            var userName = JSON.parse(this.usernameJson);
+            return userName;
         }
         else {
-            return "anonymous";
+            return null;
         }
     };
     UserService = __decorate([
         autoinject,
-        __metadata("design:paramtypes", [TokenService,
-            HttpClient])
+        __metadata("design:paramtypes", [TokenService, HttpClient])
     ], UserService);
     return UserService;
 }());
