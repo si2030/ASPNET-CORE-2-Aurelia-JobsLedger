@@ -39,9 +39,7 @@ var Login = /** @class */ (function () {
             var task = fetch("/api/jwt", {
                 method: "POST",
                 body: JSON.stringify(this.login),
-                headers: {
-                    "Content-Type": "application/json;charset=UTF-8"
-                }
+                headers: new Headers({ 'content-type': 'application/json' })
             })
                 .then(function (response) { return response.json(); })
                 .then(function (data) {

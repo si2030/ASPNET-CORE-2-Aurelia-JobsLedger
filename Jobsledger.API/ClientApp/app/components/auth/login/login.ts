@@ -42,9 +42,7 @@ export class Login {
       const task = fetch("/api/jwt", {
         method: "POST",
         body: JSON.stringify(this.login),
-        headers: {
-          "Content-Type": "application/json;charset=UTF-8"
-        }
+        headers: new Headers({ 'content-type': 'application/json' })
       })
         .then(response => response.json())
         .then(data => {

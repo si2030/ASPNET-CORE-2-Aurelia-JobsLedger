@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "8605737209ff373042ee"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "d887290289f9863c97e1"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -8503,7 +8503,6 @@ var IfCore = function () {
     this.view.unbind();
 
     if (!this.viewFactory.isCaching) {
-      this.showing = false;
       return;
     }
 
@@ -8519,6 +8518,9 @@ var IfCore = function () {
 
   IfCore.prototype._show = function _show() {
     if (this.showing) {
+      if (!this.view.isBound) {
+        this.view.bind(this.bindingContext, this.overrideContext);
+      }
       return;
     }
 
@@ -23381,36 +23383,53 @@ var App = /** @class */ (function () {
     }
     App.prototype.configureRouter = function (config, router) {
         this.router = router;
-        config.title = 'Aurelia';
-        config.map([{
-                route: ['', 'home'],
-                name: 'home',
-                settings: { icon: 'home' },
+        config.title = "Aurelia";
+        config.map([
+            {
+                route: ["", "home"],
+                name: "home",
+                settings: { icon: "home" },
                 moduleId: '../website/home/home',
                 nav: true,
-                title: 'Home'
-            }, {
-                route: 'counter',
-                name: 'counter',
-                settings: { icon: 'education' },
+                title: "Home"
+            },
+            {
+                route: "counter",
+                name: "counter",
+                settings: { icon: "education" },
                 moduleId: '../website/counter/counter',
                 nav: true,
-                title: 'Counter'
-            }, {
-                route: 'fetch-data',
-                name: 'fetchdata',
-                settings: { icon: 'th-list', auth: true },
-                moduleId: '../website/fetchdata/fetchdata',
-                nav: true,
-                title: 'Fetch data'
-            }, {
-                route: 'login',
-                name: 'login',
-                settings: { icon: 'user' },
+                title: "Counter"
+            },
+            //{
+            //  route: "fetch-data",
+            //  name: "fetchdata",
+            //  settings: { icon: "th-list", auth: true },
+            //  moduleId: PLATFORM.moduleName("../website/fetchdata/fetchdata"),
+            //  nav: true,
+            //  title: "Fetch data"
+            //},
+            {
+                route: 'about', name: 'about', moduleId: '../website/home/home', title: 'About', nav: true, settings: {
+                    nav: [
+                        { href: '#about/services', title: 'Services' },
+                        { href: '#about/team', title: 'Team' },
+                        { href: '#about/contact', title: 'Contact' }
+                    ],
+                    auth: true,
+                }
+            },
+            { route: 'about/services', name: 'aboutServices', moduleId: '../website/fetchdata/fetchdata', },
+            { route: 'about/team', name: 'aboutTeam', moduleId: '../website/counter/counter', },
+            { route: 'about/contact', name: 'aboutContact', moduleId: '../components/auth/login/login', },
+            {
+                route: "login",
+                name: "login",
+                settings: { icon: "user", auth: false, },
                 moduleId: '../components/auth/login/login',
                 nav: true,
-                title: 'Login'
-            },
+                title: "Login"
+            }
         ]);
         config.addAuthorizeStep(AuthorizeStep);
     };
@@ -23573,9 +23592,7 @@ var Login = /** @class */ (function () {
             var task = fetch("/api/jwt", {
                 method: "POST",
                 body: JSON.stringify(this.login),
-                headers: {
-                    "Content-Type": "application/json;charset=UTF-8"
-                }
+                headers: new Headers({ 'content-type': 'application/json' })
             })
                 .then(function (response) { return response.json(); })
                 .then(function (data) {
@@ -23637,7 +23654,7 @@ exports.push([module.i, "li .glyphicon {\r\n    margin-right: 10px;\r\n}\r\n\r\n
 /***/ "app/navmenu/navmenu.html":
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = "<template bindable=\"router\">\r\n    <require from=\"./navmenu.css\"></require>\r\n    <div class=\"main-nav\">\r\n        <div class=\"navbar navbar-inverse\">\r\n            <div class=\"navbar-header\">\r\n                <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\".navbar-collapse\">\r\n                    <span class=\"sr-only\">Toggle navigation</span>\r\n                    <span class=\"icon-bar\"></span>\r\n                    <span class=\"icon-bar\"></span>\r\n                    <span class=\"icon-bar\"></span>\r\n                </button>\r\n                <a class=\"navbar-brand\" href=\"#/home\">Jobsledger.API</a>\r\n            </div>\r\n            <div class=\"navbar-collapse collapse\">\r\n                <ul class=\"nav navbar-nav\">\r\n                    <li repeat.for = \"row of router.navigation\" class=\"${ row.isActive ? 'link-active' : '' }\" >\r\n                        <a href.bind = \"row.href\">\r\n                            <span class=\"glyphicon glyphicon-${ row.settings.icon }\"></span> ${ row.title }\r\n                        </a>\r\n                    </li>\r\n                </ul>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</template>\r\n";
+module.exports = "<template bindable=\"router\">\r\n    <require from=\"./navmenu.css\"></require>\r\n    <div class=\"main-nav\">\r\n        <div class=\"navbar navbar-inverse\">\r\n            <div class=\"navbar-header\">\r\n                <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\".navbar-collapse\">\r\n                    <span class=\"sr-only\">Toggle navigation</span>\r\n                    <span class=\"icon-bar\"></span>\r\n                    <span class=\"icon-bar\"></span>\r\n                    <span class=\"icon-bar\"></span>\r\n                </button>\r\n                <a class=\"navbar-brand\" href=\"#/home\">Jobsledger.API</a>\r\n            </div>\r\n            <div class=\"navbar-collapse collapse\">\r\n\r\n                <ul class=\"nav navbar-nav\">\r\n\r\n                    <li repeat.for=\"row of router.navigation\" class=\"${ row.isActive ? 'link-active' : '' }\">\r\n                        <a href.bind=\"row.href\" if.bind=\"!row.settings.nav\">${ row.title }</a>\r\n\r\n                        <a href.bind=\"row.href\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\"\r\n                           if.bind=\"row.settings.nav\">\r\n                            ${row.title}\r\n                            <span class=\"caret\"></span>\r\n                        </a>\r\n\r\n                        <ul if.bind=\"row.settings.nav\" class=\"dropdown-menu\">\r\n                            <li repeat.for=\"menu of row.settings.nav\">\r\n                                <a href.bind=\"menu.href\">${menu.title}</a>\r\n                            </li>\r\n                        </ul>\r\n                    </li>\r\n                </ul>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</template>\r\n";
 
 /***/ }),
 
@@ -26452,7 +26469,9 @@ var Else = (_dec = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_aurelia_tem
   Else.prototype.bind = function bind(bindingContext, overrideContext) {
     _IfCore.prototype.bind.call(this, bindingContext, overrideContext);
 
-    if (!this.ifVm.condition) {
+    if (this.ifVm.condition) {
+      this._hide();
+    } else {
       this._show();
     }
   };
@@ -26688,6 +26707,8 @@ var If = (_dec = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_aurelia_templ
     _IfCore.prototype.bind.call(this, bindingContext, overrideContext);
     if (this.condition) {
       this._show();
+    } else {
+      this._hide();
     }
   };
 

@@ -15,36 +15,53 @@ var App = /** @class */ (function () {
     }
     App.prototype.configureRouter = function (config, router) {
         this.router = router;
-        config.title = 'Aurelia';
-        config.map([{
-                route: ['', 'home'],
-                name: 'home',
-                settings: { icon: 'home' },
-                moduleId: PLATFORM.moduleName('../website/home/home'),
+        config.title = "Aurelia";
+        config.map([
+            {
+                route: ["", "home"],
+                name: "home",
+                settings: { icon: "home" },
+                moduleId: PLATFORM.moduleName("../website/home/home"),
                 nav: true,
-                title: 'Home'
-            }, {
-                route: 'counter',
-                name: 'counter',
-                settings: { icon: 'education' },
-                moduleId: PLATFORM.moduleName('../website/counter/counter'),
-                nav: true,
-                title: 'Counter'
-            }, {
-                route: 'fetch-data',
-                name: 'fetchdata',
-                settings: { icon: 'th-list', auth: true },
-                moduleId: PLATFORM.moduleName('../website/fetchdata/fetchdata'),
-                nav: true,
-                title: 'Fetch data'
-            }, {
-                route: 'login',
-                name: 'login',
-                settings: { icon: 'user' },
-                moduleId: PLATFORM.moduleName('../components/auth/login/login'),
-                nav: true,
-                title: 'Login'
+                title: "Home"
             },
+            {
+                route: "counter",
+                name: "counter",
+                settings: { icon: "education" },
+                moduleId: PLATFORM.moduleName("../website/counter/counter"),
+                nav: true,
+                title: "Counter"
+            },
+            //{
+            //  route: "fetch-data",
+            //  name: "fetchdata",
+            //  settings: { icon: "th-list", auth: true },
+            //  moduleId: PLATFORM.moduleName("../website/fetchdata/fetchdata"),
+            //  nav: true,
+            //  title: "Fetch data"
+            //},
+            {
+                route: 'about', name: 'about', moduleId: PLATFORM.moduleName("../website/home/home"), title: 'About', nav: true, settings: {
+                    nav: [
+                        { href: '#about/services', title: 'Services' },
+                        { href: '#about/team', title: 'Team' },
+                        { href: '#about/contact', title: 'Contact' }
+                    ],
+                    auth: true,
+                }
+            },
+            { route: 'about/services', name: 'aboutServices', moduleId: PLATFORM.moduleName("../website/fetchdata/fetchdata"), },
+            { route: 'about/team', name: 'aboutTeam', moduleId: PLATFORM.moduleName("../website/counter/counter"), },
+            { route: 'about/contact', name: 'aboutContact', moduleId: PLATFORM.moduleName("../components/auth/login/login"), },
+            {
+                route: "login",
+                name: "login",
+                settings: { icon: "user", auth: false, },
+                moduleId: PLATFORM.moduleName("../components/auth/login/login"),
+                nav: true,
+                title: "Login"
+            }
         ]);
         config.addAuthorizeStep(AuthorizeStep);
     };

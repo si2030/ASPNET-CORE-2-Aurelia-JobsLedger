@@ -14,6 +14,7 @@
 
   <ItemGroup>
     <None Remove="ClientApp\app\components\auth\isLoggedIn.ts" />
+    <None Remove="ClientApp\app\components\auth\LoggedInService.ts" />
     <None Remove="ClientApp\app\components\auth\tokenService.ts" />
     <None Remove="ClientApp\app\components\auth\userService.ts" />
   </ItemGroup>
@@ -52,6 +53,7 @@
   
     <ItemGroup>
       <TypeScriptCompile Include="ClientApp\app\components\auth\isLoggedIn.ts" />
+      <TypeScriptCompile Include="ClientApp\app\components\auth\LoggedInService.ts" />
       <TypeScriptCompile Include="ClientApp\app\components\auth\tokenService.ts" />
       <TypeScriptCompile Include="ClientApp\app\components\auth\userService.ts" />
     </ItemGroup>
