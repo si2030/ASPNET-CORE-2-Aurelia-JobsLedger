@@ -6,17 +6,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="ClientApp\app\components\auth\NewFolder\**" />
-    <Content Remove="ClientApp\app\components\auth\NewFolder\**" />
-    <EmbeddedResource Remove="ClientApp\app\components\auth\NewFolder\**" />
-    <None Remove="ClientApp\app\components\auth\NewFolder\**" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Remove="ClientApp\app\components\auth\isLoggedIn.ts" />
-    <None Remove="ClientApp\app\components\auth\LoggedInService.ts" />
+    <None Remove="ClientApp\auth\auth-service.ts" />
+    <None Remove="ClientApp\app\components\auth\logout.ts" />
     <None Remove="ClientApp\app\components\auth\tokenService.ts" />
     <None Remove="ClientApp\app\components\auth\userService.ts" />
+    <None Remove="ClientApp\public\public\public.ts" />
   </ItemGroup>
 
   <ItemGroup>
@@ -26,7 +20,6 @@
   </ItemGroup>
   
   <ItemGroup>
-    <Folder Include="ClientApp\app\components\auth\login\" />
     <Folder Include="ClientApp\app\components\auth\register\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
@@ -52,10 +45,10 @@
     </ItemGroup>
   
     <ItemGroup>
-      <TypeScriptCompile Include="ClientApp\app\components\auth\isLoggedIn.ts" />
-      <TypeScriptCompile Include="ClientApp\app\components\auth\LoggedInService.ts" />
-      <TypeScriptCompile Include="ClientApp\app\components\auth\tokenService.ts" />
-      <TypeScriptCompile Include="ClientApp\app\components\auth\userService.ts" />
+      <TypeScriptCompile Include="ClientApp\auth\auth-service.ts" />
+      <TypeScriptCompile Include="ClientApp\auth\tokenService.ts" />
+      <TypeScriptCompile Include="ClientApp\auth\user-Service.ts" />
+      <TypeScriptCompile Include="ClientApp\public\public\public.ts" />
     </ItemGroup>
 	
 	<Target Name="DebugRunWebpack" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('wwwroot\dist') ">

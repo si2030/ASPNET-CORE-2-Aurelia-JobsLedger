@@ -1,6 +1,6 @@
 var TokenService = /** @class */ (function () {
     function TokenService() {
-        this.TOKEN_KEY = "jwt";
+        this.TOKEN_KEY = "session";
         this.LOGGED_IN = "loggedIn";
         this.USERNAME_KEY = "user_name";
     }

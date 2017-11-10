@@ -1,0 +1,27 @@
+li .glyphicon {
+    margin-right: 10px;
+}
+
+/* Highlighting rules for nav menu items */
+li.au-target.link-active a,
+li.au-target.link-active a:hover,
+li.au-target.link-active a:focus {
+    background-color: #4189C7;
+    color: white;
+}
+
+/* Keep the nav menu independent of scrolling and on top of other items */
+.main-nav {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+
+
+@media (min-width: 768px) {
+ 
+}
+/* If a menu item's text is too long, truncate it */

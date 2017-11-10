@@ -8,62 +8,36 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 import { PLATFORM, autoinject } from 'aurelia-framework';
-import { Redirect } from 'aurelia-router';
-import { IsLoggedIn } from '../components/auth/isLoggedIn';
+import { AuthService } from '../../auth/auth-service';
+//import { test } from '../components/clients/clientList'
 var App = /** @class */ (function () {
     function App() {
     }
     App.prototype.configureRouter = function (config, router) {
         this.router = router;
         config.title = "Aurelia";
+        config.addAuthorizeStep(AuthorizeStep);
         config.map([
             {
-                route: ["", "home"],
-                name: "home",
-                settings: { icon: "home" },
-                moduleId: PLATFORM.moduleName("../website/home/home"),
+                route: ["", "scheduler"],
+                name: "scheduler",
+                settings: { icon: "scheduler" },
+                moduleId: PLATFORM.moduleName("../components/scheduler/scheduler"),
                 nav: true,
-                title: "Home"
+                title: "scheduler"
             },
             {
-                route: "counter",
-                name: "counter",
-                settings: { icon: "education" },
-                moduleId: PLATFORM.moduleName("../website/counter/counter"),
-                nav: true,
-                title: "Counter"
-            },
-            //{
-            //  route: "fetch-data",
-            //  name: "fetchdata",
-            //  settings: { icon: "th-list", auth: true },
-            //  moduleId: PLATFORM.moduleName("../website/fetchdata/fetchdata"),
-            //  nav: true,
-            //  title: "Fetch data"
-            //},
-            {
-                route: 'about', name: 'about', moduleId: PLATFORM.moduleName("../website/home/home"), title: 'About', nav: true, settings: {
+                route: 'clients', name: 'clients', moduleId: PLATFORM.moduleName("../components/clients/clientList/clientList"), title: 'Clients', nav: true, settings: {
                     nav: [
-                        { href: '#about/services', title: 'Services' },
-                        { href: '#about/team', title: 'Team' },
-                        { href: '#about/contact', title: 'Contact' }
+                        { href: '#clients/list', title: 'Client List' },
+                        { href: '#clients/Create', title: 'Create Client' },
                     ],
-                    auth: true,
+                    auth: true
                 }
             },
-            { route: 'about/services', name: 'aboutServices', moduleId: PLATFORM.moduleName("../website/fetchdata/fetchdata"), },
-            { route: 'about/team', name: 'aboutTeam', moduleId: PLATFORM.moduleName("../website/counter/counter"), },
-            { route: 'about/contact', name: 'aboutContact', moduleId: PLATFORM.moduleName("../components/auth/login/login"), },
-            {
-                route: "login",
-                name: "login",
-                settings: { icon: "user", auth: false, },
-                moduleId: PLATFORM.moduleName("../components/auth/login/login"),
-                nav: true,
-                title: "Login"
-            }
+            { route: 'clients/list', name: 'clientList', moduleId: PLATFORM.moduleName("../components/clients/clientList/clientList"), settings: { auth: true } },
+            { route: 'clients/create', name: 'aboutTeam', moduleId: PLATFORM.moduleName("../components/clients/clientCreate/clientCreate"), settings: { auth: true } },
         ]);
-        config.addAuthorizeStep(AuthorizeStep);
     };
     App = __decorate([
         autoinject
@@ -72,23 +46,29 @@ var App = /** @class */ (function () {
 }());
 export { App };
 var AuthorizeStep = /** @class */ (function () {
-    function AuthorizeStep(testAuthentication) {
-        this.testAuthentication = testAuthentication;
+    function AuthorizeStep(authService) {
+        this.authService = authService;
     }
     AuthorizeStep.prototype.run = function (navigationInstruction, next) {
         var isLoggedIn = false;
-        if (navigationInstruction.getAllInstructions().some(function (i) { return i.config.settings.auth; })) {
-            isLoggedIn = this.testAuthentication.isAuthenticated();
-            console.log('testAuthentication: ', this.testAuthentication.isAuthenticated());
-            if (!isLoggedIn) {
-                return next.cancel(new Redirect('login'));
-            }
+        console.log("testAuthentication: ", this.authService.isAuthenticated());
+        navigationInstruction
+            .getAllInstructions()
+            .some(function (i) { return i.config.settings.auth; });
+        if (navigationInstruction
+            .getAllInstructions()
+            .some(function (i) { return i.config.settings.auth; })) {
+            console.log("Navgation instruction", navigationInstruction);
+            isLoggedIn = this.authService.isAuthenticated();
+            //if (!isLoggedIn) {
+            //    return next.cancel(new Redirect("scheduler"));
+            //}
         }
         return next();
     };
     AuthorizeStep = __decorate([
         autoinject,
-        __metadata("design:paramtypes", [IsLoggedIn])
+        __metadata("design:paramtypes", [AuthService])
     ], AuthorizeStep);
     return AuthorizeStep;
 }());

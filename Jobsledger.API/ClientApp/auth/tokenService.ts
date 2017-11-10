@@ -1,6 +1,6 @@
 ﻿export class TokenService {
   private tokenJson: any;
-  private TOKEN_KEY = "jwt";
+  private TOKEN_KEY = "session";
   private LOGGED_IN = "loggedIn";
   private USERNAME_KEY = "user_name";
 

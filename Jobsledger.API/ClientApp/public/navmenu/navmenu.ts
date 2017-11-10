@@ -6,8 +6,8 @@ import { AuthService } from '../../auth/auth-service'
 @autoinject
 export class Navmenu {
 
-     public isLoggedIn: boolean = false;
-     public userName: string = 'anonymous';
+    public isLoggedIn: boolean = false;
+    public userName: string = 'anonymous';
 
     constructor(public authService: AuthService, public router: Router) {
         this.isLoggedIn = authService.isAuthenticated();

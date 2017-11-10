@@ -9,28 +9,27 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 import { HttpClient } from "aurelia-fetch-client";
 import { autoinject } from "aurelia-framework";
-import { TokenService } from "./tokenService";
+import { AuthService } from "./auth-service";
 var UserService = /** @class */ (function () {
-    function UserService(tokenService, http) {
-        this.tokenService = tokenService;
+    function UserService(authService, http) {
+        this.authService = authService;
         this.http = http;
-        //private tokenService: TokenService;
         this.USERNAME_KEY = "user_name";
-        this.tokenService = tokenService;
+        this.USERROLES_KEY = "user_roles";
     }
     // Saves the username it aquired from the api saved to localstorage.
-    UserService.prototype.saveUserName = function () {
+    UserService.prototype.saveUserDetail = function () {
         var _this = this;
-        var jwt = this.tokenService.getJWT();
-        if (!jwt) {
+        var session = this.authService.getIdentity();
+        if (!session) {
             throw new Error("No JWT present");
         }
-        var token = jwt.access_token;
+        var token = session.access_token;
         var headers = new Headers({
             Authorization: "bearer " + token,
             "Content-Type": "application/json; charset=utf-8"
         });
-        var task = fetch("/api/jwt/userName", {
+        var task = fetch("/api/jwt/userDetail", {
             method: "GET",
             headers: headers
         })
@@ -39,26 +38,16 @@ var UserService = /** @class */ (function () {
             try {
                 console.log("Data: ", data);
                 localStorage.setItem(_this.USERNAME_KEY, data.username);
+                localStorage.setItem(_this.USERROLES_KEY, JSON.stringify(data.roles));
             }
             catch (Error) { }
         });
     };
-    // Goes to localstorage and if the username is there returns it.
-    UserService.prototype.getUserName = function () {
-        this.usernameJson = localStorage.getItem(this.USERNAME_KEY);
-        if (this.usernameJson) {
-            var userName = JSON.parse(this.usernameJson);
-            return userName;
-        }
-        else {
-            return null;
-        }
-    };
     UserService = __decorate([
         autoinject,
-        __metadata("design:paramtypes", [TokenService, HttpClient])
+        __metadata("design:paramtypes", [AuthService, HttpClient])
     ], UserService);
     return UserService;
 }());
 export { UserService };
-//# sourceMappingURL=userService.js.map
+//# sourceMappingURL=user-Service.js.map

@@ -1,7 +1,8 @@
 import { Aurelia, PLATFORM, autoinject } from 'aurelia-framework';
 import { Redirect, NavigationInstruction, Router, RouterConfiguration, Next } from 'aurelia-router';
-import { IsLoggedIn } from '../components/auth/isLoggedIn'
 
+import { AuthService } from '../../auth/auth-service'
+//import { test } from '../components/clients/clientList'
 @autoinject
 export class App {
     public router: Router;
@@ -9,79 +10,71 @@ export class App {
     configureRouter(config: RouterConfiguration, router: Router): void {
         this.router = router;
         config.title = "Aurelia";
+        config.addAuthorizeStep(AuthorizeStep);
 
         config.map([
             {
-                route: ["", "home"],
-                name: "home",
-                settings: { icon: "home" },
-                moduleId: PLATFORM.moduleName("../website/home/home"),
+                route: ["", "scheduler"],
+                name: "scheduler",
+                settings: { icon: "scheduler" },
+                moduleId: PLATFORM.moduleName("../components/scheduler/scheduler"),
                 nav: true,
-                title: "Home"
+                title: "scheduler"
             },
+
+
             {
-                route: "counter",
-                name: "counter",
-                settings: { icon: "education" },
-                moduleId: PLATFORM.moduleName("../website/counter/counter"),
-                nav: true,
-                title: "Counter"
-            },
-            //{
-            //  route: "fetch-data",
-            //  name: "fetchdata",
-            //  settings: { icon: "th-list", auth: true },
-            //  moduleId: PLATFORM.moduleName("../website/fetchdata/fetchdata"),
-            //  nav: true,
-            //  title: "Fetch data"
-            //},
-            {
-                route: 'about', name: 'about', moduleId: PLATFORM.moduleName("../website/home/home"), title: 'About', nav: true, settings: {
+                route: 'clients', name: 'clients', moduleId: PLATFORM.moduleName("../components/clients/clientList/clientList"), title: 'Clients', nav: true, settings: {
                     nav: [
-                        { href: '#about/services', title: 'Services' },
-                        { href: '#about/team', title: 'Team' },
-                        { href: '#about/contact', title: 'Contact' }
+                        { href: '#clients/list', title: 'Client List' },
+                        { href: '#clients/Create', title: 'Create Client' },
                     ],
-                    auth: true,
+                    auth: true
                 }
             },
-            { route: 'about/services', name: 'aboutServices', moduleId: PLATFORM.moduleName("../website/fetchdata/fetchdata"), },
-            { route: 'about/team', name: 'aboutTeam', moduleId: PLATFORM.moduleName("../website/counter/counter"), },
-            { route: 'about/contact', name: 'aboutContact', moduleId: PLATFORM.moduleName("../components/auth/login/login"), },
+            { route: 'clients/list', name: 'clientList', moduleId: PLATFORM.moduleName("../components/clients/clientList/clientList"), settings: { auth: true } },
+            { route: 'clients/create', name: 'aboutTeam', moduleId: PLATFORM.moduleName("../components/clients/clientCreate/clientCreate"), settings: { auth: true } },
 
 
-            {
-                route: "login",
-                name: "login",
-                settings: { icon: "user", auth: false, },
-                moduleId: PLATFORM.moduleName("../components/auth/login/login"),
-                nav: true,
-                title: "Login"
-            }
+            //{
+            //    route: "logout",
+            //    name: "logout",
+            //    settings: { icon: "user", auth: false, },
+            //    moduleId: PLATFORM.moduleName("../components/auth/logout/logout"),
+            //    nav: true,
+            //    title: "Logout"
+            //}
         ]);
 
-        config.addAuthorizeStep(AuthorizeStep);
     }
 }
 
 @autoinject
 class AuthorizeStep {
-    testAuthentication: IsLoggedIn;
-     
+   
+    constructor(private authService: AuthService) {
 
-    constructor(testAuthentication: IsLoggedIn) {
-        this.testAuthentication = testAuthentication;
     }
 
     run(navigationInstruction: NavigationInstruction, next: Next): Promise<any> {
         var isLoggedIn: boolean = false;
+        console.log(
+            "testAuthentication: ",
+            this.authService.isAuthenticated());
 
-        if (navigationInstruction.getAllInstructions().some(i => i.config.settings.auth)) {
-            isLoggedIn = this.testAuthentication.isAuthenticated();
-            console.log('testAuthentication: ', this.testAuthentication.isAuthenticated());
+        navigationInstruction
+            .getAllInstructions()
+            .some(i => i.config.settings.auth);
+        if (
+            navigationInstruction
+                .getAllInstructions()
+                .some(i => i.config.settings.auth)
+        ) {
+        console.log("Navgation instruction", navigationInstruction)
+            isLoggedIn = this.authService.isAuthenticated();
 
-          if (!isLoggedIn) {
-                return next.cancel(new Redirect('login'));
+            if (!isLoggedIn) {
+                return next.cancel(new Redirect("scheduler"));
             }
         }
 

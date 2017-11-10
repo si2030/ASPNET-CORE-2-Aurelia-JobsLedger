@@ -11,14 +11,11 @@ import { HttpClient } from "aurelia-fetch-client";
 import { autoinject } from "aurelia-framework";
 import { Router } from "aurelia-router";
 import { ValidationControllerFactory, ValidationRules } from "aurelia-validation";
-import { TokenService } from "../tokenService";
-import { UserService } from "../userService";
 import { BootstrapFormRenderer } from "../../../utilities/bootstrapFormRenderer";
+import { AuthService } from "../../../auth/auth-service";
 var Login = /** @class */ (function () {
-    function Login(login, tokenService, userService, router, http, controllerFactory) {
-        this.login = login;
-        this.tokenService = tokenService;
-        this.userService = userService;
+    function Login(authService, router, http, controllerFactory) {
+        this.authService = authService;
         this.router = router;
         this.http = http;
         this.controllerFactory = controllerFactory;
@@ -31,33 +28,16 @@ var Login = /** @class */ (function () {
         this.controller.addRenderer(new BootstrapFormRenderer());
     }
     Login.prototype.submitLogin = function () {
-        var _this = this;
         if (this.controller.validate()) {
-            // Lets do a fetch!
-            this.login.Username = this.username;
-            this.login.Password = this.password;
-            var task = fetch("/api/jwt", {
-                method: "POST",
-                body: JSON.stringify(this.login),
-                headers: new Headers({ 'content-type': 'application/json' })
-            })
-                .then(function (response) { return response.json(); })
-                .then(function (data) {
-                _this.tokenService.saveJWT(data);
-                _this.userService.saveUserName();
-                _this.router.navigate("home");
-            })
-                .catch(function (error) {
-                _this.tokenService.clearJWT();
-            });
+            // "Fetch" JWT and save it to local storage. change root to "app".
+            this.authService.login(this.username, this.password);
         }
     };
     Login = __decorate([
         autoinject
         //@inject(NewInstance.of(ValidationController))
         ,
-        __metadata("design:paramtypes", [Object, TokenService,
-            UserService,
+        __metadata("design:paramtypes", [AuthService,
             Router,
             HttpClient,
             ValidationControllerFactory])

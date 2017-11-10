@@ -15,6 +15,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IdentityModel.Tokens.Jwt;
+using System.Linq;
 using System.Security.Claims;
 using System.Security.Principal;
 using System.Threading;
@@ -26,12 +27,12 @@ namespace WebApiJwtAuthDemo.Controllers
     public class JwtController : Controller
     {
         #region Variables
-        private readonly IMembershipService _membershipService;
-        private readonly IUserRepository _userRepository;
-        private readonly ILoggingRepository _loggingRepository;
-        private readonly ILogger _logger;
-        private readonly JwtIssuerOptions _jwtOptions;
-        private readonly JsonSerializerSettings _serializerSettings;
+        private readonly IMembershipService membershipService;
+        private readonly IUserRepository userRepository;
+        private readonly ILoggingRepository loggingRepository;
+        private readonly ILogger logger;
+        private readonly JwtIssuerOptions jwtOptions;
+        private readonly JsonSerializerSettings serializerSettings;
         #endregion
 
         public JwtController(IMembershipService membershipService,
@@ -42,16 +43,16 @@ namespace WebApiJwtAuthDemo.Controllers
                              )
 
         {
-            _membershipService = membershipService;
-            _userRepository = userRepository;
-            _loggingRepository = _errorRepository;
+            this.membershipService = membershipService;
+            this.userRepository = userRepository;
+            loggingRepository = _errorRepository;
 
-            _jwtOptions = jwtOptions.Value;
-            ThrowIfInvalidOptions(_jwtOptions);
+            this.jwtOptions = jwtOptions.Value;
+            ThrowIfInvalidOptions(this.jwtOptions);
 
-            _logger = loggerFactory.CreateLogger<JwtController>();
+            logger = loggerFactory.CreateLogger<JwtController>();
 
-            _serializerSettings = new JsonSerializerSettings
+            serializerSettings = new JsonSerializerSettings
             {
                 Formatting = Formatting.Indented
             };
@@ -61,11 +62,11 @@ namespace WebApiJwtAuthDemo.Controllers
         [AllowAnonymous]
         public async Task<IActionResult> Get([FromBody] LoginViewModel model)
         {
-            MembershipContext _userContext = _membershipService.ValidateUser(model.Username, model.Password);
+            MembershipContext _userContext = membershipService.ValidateUser(model.Username, model.Password);
 
             if (_userContext.User == null)
             {
-                _logger.LogInformation($"Invalid username ({model.Username}) or password ({model.Password})");
+                logger.LogInformation($"Invalid username ({model.Username}) or password ({model.Password})");
                 return BadRequest("Invalid credentials");
             }
 
@@ -73,9 +74,9 @@ namespace WebApiJwtAuthDemo.Controllers
             var claims = new List<Claim>();
             {
                 new Claim(JwtRegisteredClaimNames.Sub, model.Username);
-                new Claim(JwtRegisteredClaimNames.Jti, await _jwtOptions.JtiGenerator());
+                new Claim(JwtRegisteredClaimNames.Jti, await jwtOptions.JtiGenerator());
                 new Claim(JwtRegisteredClaimNames.Iat,
-                                                        ToUnixEpochDate(_jwtOptions.IssuedAt).ToString(),
+                                                        ToUnixEpochDate(jwtOptions.IssuedAt).ToString(),
                                                         ClaimValueTypes.Integer64);
             };
 
@@ -93,12 +94,12 @@ namespace WebApiJwtAuthDemo.Controllers
 
             // Create the JWT security token and encode it.
             var jwt = new JwtSecurityToken(
-                issuer: _jwtOptions.Issuer,
-                audience: _jwtOptions.Audience,
+                issuer: jwtOptions.Issuer,
+                audience: jwtOptions.Audience,
                 claims: claims,
-                notBefore: _jwtOptions.NotBefore,
-                expires: _jwtOptions.Expiration,
-                signingCredentials: _jwtOptions.SigningCredentials);
+                notBefore: jwtOptions.NotBefore,
+                expires: jwtOptions.Expiration,
+                signingCredentials: jwtOptions.SigningCredentials);
 
             var encodedJwt = new JwtSecurityTokenHandler().WriteToken(jwt);
 
@@ -106,17 +107,17 @@ namespace WebApiJwtAuthDemo.Controllers
             var response = new
             {
                 access_token = encodedJwt,
-                expires_in = (int)_jwtOptions.ValidFor.TotalSeconds,
+                expires_in = (int)jwtOptions.ValidFor.TotalSeconds,
             };
 
-            var json = JsonConvert.SerializeObject(response, _serializerSettings);
+            var json = JsonConvert.SerializeObject(response, serializerSettings);
             return new OkObjectResult(json);
         }
 
-        [Route("username")]
+        [Route("userdetail")]
         [HttpGet]
         [Authorize]
-        public IActionResult GetUser()
+        public IActionResult GetUserDetail()
         {
 
             var identity = this.User.Identity as ClaimsIdentity;
@@ -127,11 +128,14 @@ namespace WebApiJwtAuthDemo.Controllers
 
             var response = new
             {
-                // This is using an Identity custom extension method down the bottom.
-                username = identity.GetName()
-            };
+                // Both these use an Identity custom extension method down the bottom.
+                username = identity.GetName(),
 
-            return new OkObjectResult(response);
+                roles = identity.Roles()
+            };
+            var json = JsonConvert.SerializeObject(response, serializerSettings);
+
+            return new OkObjectResult(json);
         }
 
         [Route("register")]
@@ -146,7 +150,7 @@ namespace WebApiJwtAuthDemo.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    User _user = _membershipService.CreateUser(user.UserName, user.Email, user.Password, new int[] { 1 });
+                    User _user = membershipService.CreateUser(user.UserName, user.Email, user.Password, new int[] { 1 });
 
                     if (_user != null)
                     {
@@ -174,8 +178,8 @@ namespace WebApiJwtAuthDemo.Controllers
                     Message = ex.Message
                 };
 
-                _loggingRepository.Add(new Error() { Message = ex.Message, StackTrace = ex.StackTrace, DateCreated = DateTime.Now });
-                _loggingRepository.Commit();
+                loggingRepository.Add(new Error() { Message = ex.Message, StackTrace = ex.StackTrace, DateCreated = DateTime.Now });
+                loggingRepository.Commit();
             }
 
             _result = new ObjectResult(_registrationResult);
@@ -218,5 +222,13 @@ public static class IdentityExtensions
         Claim claim = claimsIdentity?.FindFirst(ClaimTypes.Name);
 
         return claim?.Value ?? string.Empty;
+    }
+
+    public static List<string> Roles(this ClaimsIdentity identity)
+    {
+        return identity.Claims
+                       .Where(c => c.Type == ClaimTypes.Role)
+                       .Select(c => c.Value)
+                       .ToList();
     }
 }
