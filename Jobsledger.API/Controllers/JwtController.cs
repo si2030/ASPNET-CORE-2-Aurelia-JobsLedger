@@ -80,7 +80,10 @@ namespace WebApiJwtAuthDemo.Controllers
                                                         ClaimValueTypes.Integer64);
             };
 
-            // Add the roles.
+            // Add the users role.
+
+
+
             foreach (UserRole userRole in _userContext.User.UserRoles)
             {
                 Claim RoleClaim = new Claim(ClaimTypes.Role, userRole.Role.Name);
@@ -106,13 +109,22 @@ namespace WebApiJwtAuthDemo.Controllers
             // Serialize and return the response
             var response = new
             {
-                access_token = encodedJwt,
-                expires_in = (int)jwtOptions.ValidFor.TotalSeconds,
+                access_token = encodedJwt
             };
 
             var json = JsonConvert.SerializeObject(response, serializerSettings);
             return new OkObjectResult(json);
         }
+
+        [Route("JWTStatus")]
+        [HttpGet]
+        [Authorize]
+        public IActionResult GetJWTStatus()
+        {
+            // It made it here so it was authenticated.
+            return new OkResult();
+        }
+
 
         [Route("userdetail")]
         [HttpGet]
@@ -131,7 +143,7 @@ namespace WebApiJwtAuthDemo.Controllers
                 // Both these use an Identity custom extension method down the bottom.
                 username = identity.GetName(),
 
-                roles = identity.Roles()
+                role = identity.Roles()  // Says roles as there is functionality to have more than one role in future.
             };
             var json = JsonConvert.SerializeObject(response, serializerSettings);
 

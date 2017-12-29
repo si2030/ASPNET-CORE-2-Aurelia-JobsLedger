@@ -1,151 +1,89 @@
-import { Aurelia, PLATFORM, autoinject } from 'aurelia-framework';
-import { Redirect, NavigationInstruction, Router, RouterConfiguration, Next } from 'aurelia-router';
+import { Aurelia, PLATFORM, autoinject } from "aurelia-framework";
+import {
+    Redirect,
+    NavigationInstruction,
+    Router,
+    RouterConfiguration,
+    Next,
+    PipelineProvider
+} from "aurelia-router";
+import { EventAggregator } from 'aurelia-event-aggregator';
 
-import { AuthService } from '../../auth/auth-service'
-//import { test } from '../components/clients/clientList'
+import { MessagePayload } from '../../services/messages/messages'
+import { AuthService } from "../../services/auth/auth-service";
+import { Menu } from './menu'
+
 @autoinject
 export class App {
     public router: Router;
+    private TOKEN_KEY = "session";
+
+    constructor(private menu: Menu, private authService: AuthService) { }
 
     configureRouter(config: RouterConfiguration, router: Router): void {
         this.router = router;
         config.title = "Aurelia";
         config.addAuthorizeStep(AuthorizeStep);
 
-        config.map([
-            {
-                route: ["", "scheduler"],
-                name: "scheduler",
-                settings: { icon: "scheduler" },
-                moduleId: PLATFORM.moduleName("../components/scheduler/scheduler"),
-                nav: true,
-                title: "scheduler"
-            },
+        config.map(this.menu.userMenu(this.authService.getUserName(), this.authService.getUserRole()));
 
+        //config.map(this.menu.menuList());
 
-            {
-                route: 'clients', name: 'clients', moduleId: PLATFORM.moduleName("../components/clients/clientList/clientList"), title: 'Clients', nav: true, settings: {
-                    nav: [
-                        { href: '#clients/list', title: 'Client List' },
-                        { href: '#clients/Create', title: 'Create Client' },
-                    ],
-                    auth: true
-                }
-            },
-            { route: 'clients/list', name: 'clientList', moduleId: PLATFORM.moduleName("../components/clients/clientList/clientList"), settings: { auth: true } },
-            { route: 'clients/create', name: 'aboutTeam', moduleId: PLATFORM.moduleName("../components/clients/clientCreate/clientCreate"), settings: { auth: true } },
-
-
-            //{
-            //    route: "logout",
-            //    name: "logout",
-            //    settings: { icon: "user", auth: false, },
-            //    moduleId: PLATFORM.moduleName("../components/auth/logout/logout"),
-            //    nav: true,
-            //    title: "Logout"
-            //}
-        ]);
-
+        config.mapUnknownRoutes("not-found");
     }
 }
 
 @autoinject
 class AuthorizeStep {
-   
-    constructor(private authService: AuthService) {
+    private endDate: any;
 
-    }
+    constructor(
+        private authService: AuthService,
+        private router: Router,
+        private aurelia: Aurelia,
+        private pipelineProvider: PipelineProvider,
+        private eventAggregator: EventAggregator
+    ) { }
 
     run(navigationInstruction: NavigationInstruction, next: Next): Promise<any> {
-        var isLoggedIn: boolean = false;
-        console.log(
-            "testAuthentication: ",
-            this.authService.isAuthenticated());
+        return Promise.resolve()
+            .then(() => this.eventAggregator.publish("messages", new MessagePayload("","","")))
+            .then(() => this.checkSessionExists(navigationInstruction, next))
+            .then(() => this.checkAuthentication(navigationInstruction, next))
+            .then(() => this.checkAuthorization(navigationInstruction, next))
+            .then(result => result || next());
 
-        navigationInstruction
-            .getAllInstructions()
-            .some(i => i.config.settings.auth);
-        if (
-            navigationInstruction
-                .getAllInstructions()
-                .some(i => i.config.settings.auth)
-        ) {
-        console.log("Navgation instruction", navigationInstruction)
-            isLoggedIn = this.authService.isAuthenticated();
-
-            if (!isLoggedIn) {
-                return next.cancel(new Redirect("scheduler"));
-            }
+    }
+    checkSessionExists(navigationInstruction: NavigationInstruction, next: Next) {
+        const session = this.authService.hasIdentity();
+        if (!session) {
+            this.authService.forceReturnToPublic()
         }
+    }
 
-        return next();
+    checkAuthentication(navigationInstruction: NavigationInstruction, next: Next) {
+        if (this.authService.hasTokenExpired()) {
+            this.saveCurrentLocation(navigationInstruction);
+            this.authService.forceReturnToPublic();
+        }
+    }
+
+    checkAuthorization(navigationInstruction: NavigationInstruction, next: Next) {
+        const usersRole = this.authService.getUserRole();
+
+        const requiredRoles = navigationInstruction
+            .getAllInstructions()
+            .map(i => i.config.settings.roles)[0];
+
+        const isUserPermited = requiredRoles ? requiredRoles.some(r => r === usersRole) : true;
+        if (!isUserPermited) {
+            // TODO MESSAGE USER THAT THIS IS NOT PERMITTED FOR THIS AUTH.
+            return next.cancel(new Redirect('scheduler'));
+        }
+    }
+
+    saveCurrentLocation(navigationInstruction: NavigationInstruction) {
+        const currentUrl = navigationInstruction.fragment + (navigationInstruction.queryString ? `?${navigationInstruction.queryString}` : '');
+        localStorage.setItem('origin', currentUrl);
     }
 }
-
-
-
-
-
-
-
-
-
-
-//import { Aurelia, PLATFORM } from 'aurelia-framework';
-//import { Router, RouterConfiguration, NavigationInstruction, Redirect, Next } from 'aurelia-router';
-
-//export class App {
-//    router: Router;
-
-//    configureRouter(config: RouterConfiguration, router: Router) {
-//        config.title = 'Aurelia';
-//        config.addAuthorizeStep(AuthorizeStep);
-//        config.map([{
-//            route: [ '', 'home' ],
-//            name: 'home',
-//            settings: { icon: 'home' },
-//            moduleId: PLATFORM.moduleName('../website/home/home'),
-//            nav: true,
-//            title: 'Home'
-//        }, {
-//            route: 'counter',
-//            name: 'counter',
-//            settings: { icon: 'education' },
-//            moduleId: PLATFORM.moduleName('../website/counter/counter'),
-//            nav: true,
-//            title: 'Counter'
-//        }, {
-//            route: 'fetch-data',
-//            name: 'fetchdata',
-//            settings: { icon: 'th-list' },
-//            moduleId: PLATFORM.moduleName('../website/fetchdata/fetchdata'),
-//            nav: true,
-//            title: 'Fetch data'
-//        }, {
-//            route: 'login',
-//            name: 'login',
-//            settings: { icon: 'user' },
-//            moduleId: PLATFORM.moduleName('../components/auth/login/login'),
-//            nav: true,
-//            title: 'Login'
-//        },
-//        ]);
-
-//        this.router = router;
-//    }
-//}
-
-//class AuthorizeStep {
-//    run(navigationInstruction: NavigationInstruction, next: Next): Promise<any> {
-//        if (navigationInstruction.getAllInstructions().some(i => i.config.settings.auth)) {
-//            var isLoggedIn = false;
-
-//            console.log('It got here!');
-//            if (!isLoggedIn) {
-//                return next.cancel(new Redirect('login'));
-//            }
-//        }
-
-//        return next();
-//    }
-//}

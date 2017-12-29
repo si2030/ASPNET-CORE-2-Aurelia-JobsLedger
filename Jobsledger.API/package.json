@@ -1,20 +1,25 @@
 {
   "dependencies": {
+    "aurelia-animator-css": "^1.0.4",
     "aurelia-api": "^3.1.1",
     "aurelia-bootstrapper": "^2.0.1",
+    "aurelia-event-aggregator": "^1.0.1",
     "aurelia-fetch-client": "^1.0.1",
-    "aurelia-framework": "^1.1.0",
+    "aurelia-framework": "^1.1.5",
     "aurelia-loader-webpack": "^2.0.0",
-    "aurelia-pal": "^1.3.0",
+    "aurelia-pal": "^1.4.0",
     "aurelia-router": "^1.4.0",
+    "aurelia-templating": "^1.6.0",
     "aurelia-validation": "^1.1.2",
     "bootstrap": "^3.3.7",
     "fetch": "^1.1.0",
     "font-awesome": "^4.7.0",
     "isomorphic-fetch": "^2.2.1",
-    "jquery": "^3.2.1"
+    "jquery": "^3.2.1",
+    "popper.js": "^1.12.9"
   },
   "devDependencies": {
+    "@types/jquery": "^3.2.16",
     "@types/webpack-env": "^1.13.0",
     "aspnet-webpack": "^2.0.1",
     "aurelia-webpack-plugin": "^2.0.0-rc.2",
@@ -23,6 +28,7 @@
     "file-loader": "^0.11.1",
     "html-loader": "^0.4.5",
     "json-loader": "^0.5.4",
+    "npm-install-webpack-plugin": "^4.0.5",
     "style-loader": "^0.16.1",
     "ts-loader": "^2.0.3",
     "typescript": "^2.2.2",

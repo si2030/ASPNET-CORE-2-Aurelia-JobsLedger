@@ -7,121 +7,85 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { PLATFORM, autoinject } from 'aurelia-framework';
-import { AuthService } from '../../auth/auth-service';
-//import { test } from '../components/clients/clientList'
+import { Aurelia, autoinject } from "aurelia-framework";
+import { Redirect, Router, PipelineProvider } from "aurelia-router";
+import { EventAggregator } from 'aurelia-event-aggregator';
+import { MessagePayload } from '../../services/messages/messages';
+import { AuthService } from "../../services/auth/auth-service";
+import { Menu } from './menu';
 var App = /** @class */ (function () {
-    function App() {
+    function App(menu, authService) {
+        this.menu = menu;
+        this.authService = authService;
+        this.TOKEN_KEY = "session";
     }
     App.prototype.configureRouter = function (config, router) {
         this.router = router;
         config.title = "Aurelia";
         config.addAuthorizeStep(AuthorizeStep);
-        config.map([
-            {
-                route: ["", "scheduler"],
-                name: "scheduler",
-                settings: { icon: "scheduler" },
-                moduleId: PLATFORM.moduleName("../components/scheduler/scheduler"),
-                nav: true,
-                title: "scheduler"
-            },
-            {
-                route: 'clients', name: 'clients', moduleId: PLATFORM.moduleName("../components/clients/clientList/clientList"), title: 'Clients', nav: true, settings: {
-                    nav: [
-                        { href: '#clients/list', title: 'Client List' },
-                        { href: '#clients/Create', title: 'Create Client' },
-                    ],
-                    auth: true
-                }
-            },
-            { route: 'clients/list', name: 'clientList', moduleId: PLATFORM.moduleName("../components/clients/clientList/clientList"), settings: { auth: true } },
-            { route: 'clients/create', name: 'aboutTeam', moduleId: PLATFORM.moduleName("../components/clients/clientCreate/clientCreate"), settings: { auth: true } },
-        ]);
+        config.map(this.menu.userMenu(this.authService.getUserName(), this.authService.getUserRole()));
+        //config.map(this.menu.menuList());
+        config.mapUnknownRoutes("not-found");
     };
     App = __decorate([
-        autoinject
+        autoinject,
+        __metadata("design:paramtypes", [Menu, AuthService])
     ], App);
     return App;
 }());
 export { App };
 var AuthorizeStep = /** @class */ (function () {
-    function AuthorizeStep(authService) {
+    function AuthorizeStep(authService, router, aurelia, pipelineProvider, eventAggregator) {
         this.authService = authService;
+        this.router = router;
+        this.aurelia = aurelia;
+        this.pipelineProvider = pipelineProvider;
+        this.eventAggregator = eventAggregator;
     }
     AuthorizeStep.prototype.run = function (navigationInstruction, next) {
-        var isLoggedIn = false;
-        console.log("testAuthentication: ", this.authService.isAuthenticated());
-        navigationInstruction
-            .getAllInstructions()
-            .some(function (i) { return i.config.settings.auth; });
-        if (navigationInstruction
-            .getAllInstructions()
-            .some(function (i) { return i.config.settings.auth; })) {
-            console.log("Navgation instruction", navigationInstruction);
-            isLoggedIn = this.authService.isAuthenticated();
-            //if (!isLoggedIn) {
-            //    return next.cancel(new Redirect("scheduler"));
-            //}
+        var _this = this;
+        return Promise.resolve()
+            .then(function () { return _this.eventAggregator.publish("messages", new MessagePayload("", "", "")); })
+            .then(function () { return _this.checkSessionExists(navigationInstruction, next); })
+            .then(function () { return _this.checkAuthentication(navigationInstruction, next); })
+            .then(function () { return _this.checkAuthorization(navigationInstruction, next); })
+            .then(function (result) { return result || next(); });
+    };
+    AuthorizeStep.prototype.checkSessionExists = function (navigationInstruction, next) {
+        var session = this.authService.hasIdentity();
+        if (!session) {
+            this.authService.forceReturnToPublic();
         }
-        return next();
+    };
+    AuthorizeStep.prototype.checkAuthentication = function (navigationInstruction, next) {
+        if (this.authService.hasTokenExpired()) {
+            this.saveCurrentLocation(navigationInstruction);
+            this.authService.forceReturnToPublic();
+        }
+    };
+    AuthorizeStep.prototype.checkAuthorization = function (navigationInstruction, next) {
+        var usersRole = this.authService.getUserRole();
+        var requiredRoles = navigationInstruction
+            .getAllInstructions()
+            .map(function (i) { return i.config.settings.roles; })[0];
+        var isUserPermited = requiredRoles ? requiredRoles.some(function (r) { return r === usersRole; }) : true;
+        if (!isUserPermited) {
+            // TODO MESSAGE USER THAT THIS IS NOT PERMITTED FOR THIS AUTH.
+            return next.cancel(new Redirect('scheduler'));
+        }
+    };
+    AuthorizeStep.prototype.saveCurrentLocation = function (navigationInstruction) {
+        var currentUrl = navigationInstruction.fragment + (navigationInstruction.queryString ? "?" + navigationInstruction.queryString : '');
+        localStorage.setItem('origin', currentUrl);
     };
     AuthorizeStep = __decorate([
         autoinject,
-        __metadata("design:paramtypes", [AuthService])
+        __metadata("design:paramtypes", [AuthService,
+            Router,
+            Aurelia,
+            PipelineProvider,
+            EventAggregator])
     ], AuthorizeStep);
     return AuthorizeStep;
 }());
-//import { Aurelia, PLATFORM } from 'aurelia-framework';
-//import { Router, RouterConfiguration, NavigationInstruction, Redirect, Next } from 'aurelia-router';
-//export class App {
-//    router: Router;
-//    configureRouter(config: RouterConfiguration, router: Router) {
-//        config.title = 'Aurelia';
-//        config.addAuthorizeStep(AuthorizeStep);
-//        config.map([{
-//            route: [ '', 'home' ],
-//            name: 'home',
-//            settings: { icon: 'home' },
-//            moduleId: PLATFORM.moduleName('../website/home/home'),
-//            nav: true,
-//            title: 'Home'
-//        }, {
-//            route: 'counter',
-//            name: 'counter',
-//            settings: { icon: 'education' },
-//            moduleId: PLATFORM.moduleName('../website/counter/counter'),
-//            nav: true,
-//            title: 'Counter'
-//        }, {
-//            route: 'fetch-data',
-//            name: 'fetchdata',
-//            settings: { icon: 'th-list' },
-//            moduleId: PLATFORM.moduleName('../website/fetchdata/fetchdata'),
-//            nav: true,
-//            title: 'Fetch data'
-//        }, {
-//            route: 'login',
-//            name: 'login',
-//            settings: { icon: 'user' },
-//            moduleId: PLATFORM.moduleName('../components/auth/login/login'),
-//            nav: true,
-//            title: 'Login'
-//        },
-//        ]);
-//        this.router = router;
-//    }
-//}
-//class AuthorizeStep {
-//    run(navigationInstruction: NavigationInstruction, next: Next): Promise<any> {
-//        if (navigationInstruction.getAllInstructions().some(i => i.config.settings.auth)) {
-//            var isLoggedIn = false;
-//            console.log('It got here!');
-//            if (!isLoggedIn) {
-//                return next.cancel(new Redirect('login'));
-//            }
-//        }
-//        return next();
-//    }
-//}
 //# sourceMappingURL=app.js.map

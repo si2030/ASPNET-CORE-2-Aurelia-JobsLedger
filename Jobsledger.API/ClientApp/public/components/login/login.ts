@@ -1,18 +1,18 @@
 import { HttpClient } from "aurelia-fetch-client";
-import { autoinject, inject, NewInstance } from "aurelia-framework";
+import { autoinject, inject, NewInstance, PLATFORM } from "aurelia-framework";
 import { Router } from "aurelia-router";
 import {
     ValidationControllerFactory,
     ValidationController,
     ValidationRules
 } from "aurelia-validation";
-import { BootstrapFormRenderer } from "../../../utilities/bootstrapFormRenderer";
+import { BootstrapFormRenderer } from "../../../services/bootstrapFormRenderer/bootstrapFormRenderer";
 
-import { AuthService } from "../../../auth/auth-service"
+import { AuthService } from "../../../services/auth/auth-service"
 
 @autoinject
-//@inject(NewInstance.of(ValidationController))
 export class Login {
+    [x: string]: any;
     controller: ValidationController;
     heading: string = "Login";
     message = "";
@@ -32,7 +32,6 @@ export class Login {
 
     submitLogin() {
         if (this.controller.validate()) {
-
             // "Fetch" JWT and save it to local storage. change root to "app".
             this.authService.login(this.username, this.password);
         }

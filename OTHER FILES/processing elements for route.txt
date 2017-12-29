@@ -1,0 +1,43 @@
+    public userMenu(userName: string, userRole: string): any {
+        return this.processElements(this.menuList(), userRole);       
+    }
+
+    processElements(elements: any, userRole: string) {
+        let testedElements = Array();
+        let navIncElements = {} as any;
+        for (const key of Object.keys(elements)) {
+            if (elements[key].settings.roles.includes(userRole)) {
+                if (elements[key].settings.nav) {
+                    navIncElements = this.processNavElements(elements[key], userRole);
+                    //testedElements.push(navIncElements);
+                    testedElements[key] = navIncElements;
+                } else {
+                    testedElements[key] = elements[key];
+                    //testedElements.push(elements[key]);
+                }
+            }
+        }
+        return testedElements;
+    }
+
+    processNavElements(element: any, userRole: string) {
+        let elementWithNav = {} as any; //needs to be object!!
+        let settings = {} as any;
+        let nav = {} as any;
+        for (const key in element) {
+            if (key === "settings") {
+                for (const innerKey of Object.keys(element[key])) {
+                    if (innerKey !== "nav") {
+                        settings[innerKey] = element[key][innerKey];
+                    } else {
+                        settings[innerKey] = this.processElements(element[key][innerKey], userRole);
+                    }
+                }
+                elementWithNav[key] = settings;
+                settings = [];
+            } else {
+                elementWithNav[key] = element[key];
+            }
+        }
+        return elementWithNav;
+    }

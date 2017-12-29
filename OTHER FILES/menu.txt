@@ -1,0 +1,661 @@
+import { Aurelia, PLATFORM, autoinject } from "aurelia-framework";
+//import { test } from '../components/accounting/generalJournals/newGeneralJournal/newGeneralJournal'
+
+@autoinject
+export class Menu {
+    roleBasedArray: any;
+    userMenuList: any
+
+    constructor() { }
+
+    public userMenu(userName: string, userRole: string): any {
+        //console.log("userRole: ", userRole);
+        ////console.log(this.menuList().filter(r => r.settings.roles && r.settings.roles.includes(userRole)));
+
+        ////this.roleBasedArray.push(this.testForRole(this.menuList(), userRole));
+        //this.roleBasedArray = this.testForRole(this.menuList(), userRole)
+        //console.log("roleBasedArray: ", this.roleBasedArray)
+        //this.newArrayMembers = this.roleBasedArray.filter(r => r.settings.nav && r.settings.nav.includes(i => i.settings.nav.roles(userRole)));
+        //console.log("newArrayMembers: ", this.newArrayMembers);
+
+        var firstLevelNode: any;
+        var secondLevelNode: any;
+        var thirdLevelNode: any;
+        var forthLevelNode: any;
+        console.log("gets Here as well", this.menuList().length);
+        for (var firstLevel = 0; firstLevel < this.menuList().length; firstLevel++) {
+            console.log("FirstLevel, NODE: ", firstLevel, this.menuList()[firstLevel].settings.nav)
+
+            //if (this.menuList()[firstLevel].settings.nav) {
+            //    for (var secondLevel = 0; secondLevel < this.menuList()[firstLevel].settings.nav.length; secondLevel++) {
+            //        console.log("SecondLevel: ", this.menuList()[firstLevel].settings.nav[secondLevel].navSettings.subNav)
+            //        if (this.menuList()[firstLevel].settings.nav[secondLevel].navSettings.subNav) {
+            //            for (var thirdLevel = 0; thirdLevel < this.menuList()[firstLevel].settings.nav[secondLevel].navSettings.subNav.length; thirdLevel++) {
+            //                if (this.menuList()[firstLevel].settings.nav[secondLevel].navSettings.subNav[thirdLevel].subNavSettings.subSubNav) {
+            //                    for (var forthLevel = 0; forthLevel < this.menuList()[firstLevel].settings.nav[secondLevel].navSettings.subNav[thirdLevel].subNavSettings.subSubNav.length; forthLevel++) {
+            //                        console.log("forth Level NODE: ", forthLevel, this.menuList()[firstLevel].settings.nav[secondLevel].navSettings.subNav[thirdLevel].subNavSettings.subSubNav[forthLevel]);
+
+            //                    }
+
+            //                }
+
+            //            }
+
+            //        }
+
+            //    }
+
+            //}
+
+        }
+
+
+    }
+
+
+    testForRole(arrayMember: any, userRole: string) {
+        return arrayMember.filter(r => r.settings.roles && r.settings.roles.includes(userRole))
+    }
+
+    public menuList(): any {
+        return [
+            {
+                route: ["", "scheduler"],
+                name: "scheduler",
+                settings: {
+                    icon: "user",
+                    //auth: true,
+                    roles: ["Employee", "Admin"],
+                    pos: "left"
+                },
+                moduleId: PLATFORM.moduleName("../components/scheduler/scheduler"),
+                nav: true,
+                title: "scheduler"
+            },
+
+            // CLIENTS
+            {
+                route: "clients",
+                name: "clients",
+                moduleId: PLATFORM.moduleName("../components/clients/clientList/clientList"),
+                title: "Clients",
+                nav: true,
+                settings: {
+                    nav: [
+                        {
+                            href: "#clients/clientsList",
+                            title: "Client List",
+                            navSettings: {
+                                icon: "list",
+                                roles: ["Employee", "Admin"],
+                            }
+                        },
+                        {
+                            navSettings: {
+                                roles: ["Employee", "Admin"],
+                                divider: true,
+                            }
+                        },
+                        {
+                            href: "#clients/Create",
+                            title: "Create Client",
+                            navSettings: {
+                                icon: "user",
+                                roles: ["Employee", "Admin"],
+                            }
+                        }
+                    ],
+                    icon: "user",
+                    auth: true,
+                    roles: ["Employee", "Admin"],
+                    pos: "left"
+                }
+            },
+
+            // Clients - 1st level routes
+            {
+                route: "clients/ClientsList",
+                name: "clientList",
+                moduleId: PLATFORM.moduleName("../components/clients/clientList/clientList"),
+                href: "#clients/clientsList",
+                title: "Client List",
+                settings: {
+                    icon: "list",
+                    auth: true,
+                    roles: ["Employee", "Admin"],
+                    pos: "left"
+                }
+            },
+            {
+                route: "clients/create",
+                name: "newClient",
+                moduleId: PLATFORM.moduleName("../components/clients/newClient/newClient"),
+                href: "#clients/Create",
+                title: "Create Client",
+                settings: {
+                    icon: "user",
+                    auth: true,
+                    roles: ["Employee", "Admin"],
+                    pos: "left"
+                }
+            },
+
+            // JOBS
+            {
+                route: "jobs",
+                name: "jobs",
+                moduleId: PLATFORM.moduleName("../components/jobs/jobsList"),
+                settings: {
+                    icon: "list",
+                    auth: true,
+                    roles: ["Employee"/*, "Admin"*/],
+                    pos: "left"
+                },
+                nav: true,
+                title: "Jobs"
+            },
+
+            // ACCOUNTING
+
+            // Accounting - 1st level route WITH SUBROUTES
+            {
+                route: "accounting",
+                name: "accounting",
+                moduleId: PLATFORM.moduleName("../components/accounting/ledgerEnquiry/ledgerEnquiry"),
+                title: "Accounting",
+                nav: true,
+                settings: {
+                    nav: [
+                        {
+                            title: "Creditor Cost Invoices",
+                            navSettings: {
+                                subNav: [
+                                    {
+                                        title: 'Creditor Payments',
+                                        subNavSettings: {
+                                            subSubNav: [
+                                                {
+                                                    href: '#accounting/creditorCostInvoices/payments/paymentsRegister',
+                                                    title: 'Payments Register',
+                                                    subSubNavSettings: {
+                                                        icon: 'list',
+                                                        roles: ["Employee", "Admin"]
+                                                    }
+                                                },
+                                                {
+                                                    subSubNavSettings: {
+                                                        roles: ["Employee", "Admin"],
+                                                        divider: true,
+                                                    }
+                                                },
+                                                {
+                                                    href: '#accounting/creditorCostInvoices/payments/creditorPromptPayments',
+                                                    title: 'Creditor Prompt Payments',
+                                                    subSubNavSettings: {
+                                                        icon: 'usd',
+                                                        roles: ["Employee", "Admin"]
+                                                    }
+                                                },
+                                                {
+                                                    href: '#accounting/creditorCostInvoices/payments/payOutstandingCreditorInvoices',
+                                                    title: 'Pay Outstanding Creditor Invoices',
+                                                    subSubNavSettings: {
+                                                        icon: 'edit',
+                                                        roles: ["Employee", "Admin"]
+                                                    }
+                                                },
+                                            ],
+                                            icon: 'usd',
+                                            nav: true,
+                                            roles: ["Employee", "Admin"]
+                                        }
+                                    },
+                                    {
+                                        subNavSettings: {
+                                            roles: ["Employee", "Admin"],
+                                            divider: true,
+                                        }
+                                    },
+                                    {
+                                        href: '#accounting/creditorCostInvoices/listCreditorCostInvoices',
+                                        title: 'List - Creditor Cost Invoices',
+                                        subNavSettings: {
+                                            icon: 'list',
+                                            roles: ["Employee", "Admin"]
+                                        }
+                                    },
+                                    {
+                                        href: '#accounting/creditorCostInvoices/newCreditorCostInvoices',
+                                        title: 'New - Creditor Cost Invoices',
+                                        subNavSettings: {
+                                            icon: 'edit',
+                                            roles: ["Employee", "Admin"]
+                                        }
+                                    },
+                                ],
+                                icon: "tasks",
+                                nav: true,
+                                roles: ["Employee", "Admin"],
+                            }
+                        },
+                        {
+                            title: "Deposits",
+                            navSettings: {
+                                subNav: [
+                                    {
+                                        href: '#accounting/deposits/depositsRegister',
+                                        title: 'Deposits Register',
+                                        subNavSettings: {
+                                            icon: 'list',
+                                            roles: ["Employee", "Admin"]
+                                        }
+                                    },
+                                    {
+                                        href: '#accounting/deposits/newDeposits',
+                                        title: 'New - Deposits',
+                                        subNavSettings: {
+                                            icon: 'edit',
+                                            roles: ["Employee", "Admin"]
+                                        }
+                                    },
+                                ],
+                                icon: "piggy-bank",
+                                roles: ["Employee", "Admin"],
+                            }
+                        },
+                        {
+                            navSettings: {
+                                roles: ["Employee", "Admin"],
+                                divider: true,
+                            }
+                        },
+                        {
+                            title: "General Journals",
+                            navSettings: {
+                                subNav: [
+                                    {
+                                        href: '#accounting/generalJournals/generalJournalRegister',
+                                        title: 'General Journal Register',
+                                        subNavSettings: {
+                                            icon: 'list',
+                                            roles: ["Employee", "Admin"]
+                                        }
+                                    },
+                                    {
+                                        href: '#accounting/generalJournals/newGeneralJournal',
+                                        title: 'New General Journal',
+                                        subNavSettings: {
+                                            icon: 'edit',
+                                            roles: ["Employee", "Admin"]
+                                        }
+                                    },
+                                ],
+                                icon: "education",
+                                nav: true,
+                                roles: ["Employee", "Admin"],
+                            }
+                        },
+                        {
+                            navSettings: {
+                                roles: ["Employee", "Admin"],
+                                divider: true,
+                            }
+                        },
+                        {
+                            href: "#accounting/bankReconciliation",
+                            title: "Bank Reconciliation",
+                            navSettings: {
+                                icon: "piggy-bank",
+                                roles: ["Employee", "Admin"],
+                            }
+                        },
+                        {
+                            href: "#accounting/BAS",
+                            title: "BAS Statement",
+                            navSettings: {
+                                icon: "piggy-bank",
+                                roles: ["Employee", "Admin"],
+                            }
+                        },
+                        {
+                            navSettings: {
+                                roles: ["Employee", "Admin"],
+                                divider: true,
+                            }
+                        },
+                        {
+                            href: "#accounting/ledgerEnquiry",
+                            title: "Ledger Enquiry",
+                            navSettings: {
+                                icon: "filter",
+                                roles: ["Employee", "Admin"],
+                            }
+                        },
+                        // account maintenance
+                        {
+                            navSettings: {
+                                roles: ["Employee", "Admin"],
+                                divider: true,
+                            }
+                        },
+                        {
+                            title: "Chart of Accounts",
+                            navSettings: {
+                                subNav: [
+                                    {
+                                        title: 'Account Maintenance',
+                                        subNavSettings: {
+                                            subSubNav: [
+                                                {
+                                                    href: '#accounting/chartOfAccounts/AccountMaintenance/chartOfAccountsRegister',
+                                                    title: 'Chart Of Accounts Register',
+                                                    subSubNavSettings: {
+                                                        icon: 'list',
+                                                        roles: ["Employee", "Admin"]
+                                                    }
+                                                },
+                                                {
+                                                    href: '#accounting/chartOfAccounts/AccountMaintenance/newAccount',
+                                                    title: 'New Account',
+                                                    subSubNavSettings: {
+                                                        icon: 'usd',
+                                                        roles: ["Employee", "Admin"]
+                                                    }
+                                                },
+                                            ],
+                                            icon: 'usd',
+                                            nav: true,
+                                            roles: ["Employee", "Admin"]
+                                        }
+                                    },
+                                    {
+                                        href: 'accounting/chartOfAccounts/controlAccounts',
+                                        title: 'Control Account Management',
+                                        subNavSettings: {
+                                            icon: 'list',
+                                            nav: true,
+                                            roles: ["Employee", "Admin"]
+                                        }
+                                    },
+                                ],
+                                icon: "tasks",
+                                nav: true,
+                                roles: ["Employee", "Admin"],
+                            }
+                        },
+                    ],
+                    icon: "usd",
+                    auth: true,
+                    roles: ["Employee", "Admin"],
+                    pos: "left"
+                }
+            },
+            // Accounting - ROUTES
+
+            //    Accounting - Creditor Cost Invoices - Payments - 3rd level routes
+            {
+                route: "accounting/creditorCostInvoices/payments/paymentsRegister",
+                name: "paymentsRegister",
+                moduleId: PLATFORM.moduleName("../components/accounting/creditorCostInvoices/payments/paymentsRegister/paymentsRegister"),
+                href: '#accounting/creditorCostInvoices/payments/listCreditorPayments',
+                title: 'List - Creditor Payments',
+                 
+                settings: {
+                    icon: 'list',
+                    auth: true,
+                    roles: ["Employee", "Admin"],
+                    pos: "left"
+                }
+            },
+            {
+                route: "accounting/creditorCostInvoices/payments/creditorPromptPayments",
+                name: "promptPayments",
+                moduleId: PLATFORM.moduleName("../components/accounting/creditorCostInvoices/payments/creditorPromptPayments/creditorPromptPayments"),
+                href: '#accounting/creditorCostInvoices/payments/creditorPromptPayments',
+                title: 'Prompt Payments',
+                settings: {
+                    icon: 'usd',
+                    auth: true,
+                    nav: true,
+                    roles: ["Employee", "Admin"],
+                    pos: "left"
+                }
+            },
+            {
+                route: "accounting/creditorCostInvoices/payments/payOutstandingCreditorInvoices",
+                name: "payments",
+                moduleId: PLATFORM.moduleName("../components/accounting/creditorCostInvoices/payments/payOutstandingCreditorInvoices/payOutstandingCreditorInvoices"),
+                href: '#accounting/creditorCostInvoices/payments/payOutstandingCreditorInvoices',
+                title: 'Prompt Payments',
+                settings: {
+                    icon: 'usd',
+                    auth: true,
+                    nav: true,
+                    roles: ["Employee", "Admin"],
+                    pos: "left"
+                }
+            },
+
+            // Accounting - Creditor Cost Invoices - 2nd level routes
+            {
+                route: "accounting/creditorCostInvoices/listCreditorCostInvoices",
+                name: "listCreditorCostInvoices",
+                moduleId: PLATFORM.moduleName("../components/accounting/creditorCostInvoices/listCreditorCostInvoices/listCreditorCostInvoices"),
+                href: '#accounting/creditorCostInvoices/listCreditorCostInvoices',
+                title: 'List - Creditor Cost Invoices',
+                settings: {
+                    icon: 'list',
+                    auth: true,
+                    nav: true,
+                    roles: ["Employee", "Admin"],
+                    pos: "left"
+                }
+            },
+            {
+                route: "accounting/creditorCostInvoices/newCreditorCostInvoices",
+                name: "newCreditorCostInvoices",
+                moduleId: PLATFORM.moduleName("../components/accounting/creditorCostInvoices/newCreditorCostInvoice/newCreditorCostInvoice"),
+                href: '#accounting/creditorCostInvoices/newCreditorCostInvoices',
+                title: 'New - Creditor Cost Invoices',
+                settings: {
+                    icon: 'pencil',
+                    auth: true,
+                    nav: true,
+                    roles: ["Employee", "Admin"],
+                    pos: "left"
+                }
+            },
+
+            // Accounting - Deposits - 2nd level routes
+            {
+                route: "accounting/deposits/depositsRegister",
+                name: "depositsRegister",
+                moduleId: PLATFORM.moduleName("../components/accounting/deposits/depositsRegister/depositsRegister"),
+                href: "#accounting/deposits/depositsRegister",
+                title: "List - Deposits",
+                settings: {
+                    icon: "list",
+                    auth: true,
+                    nav: true,
+                    roles: ["Employee", "Admin"],
+                    pos: "left"
+                }
+            },
+            {
+                route: "accounting/deposits/newDeposits",
+                name: "listDeposits",
+                moduleId: PLATFORM.moduleName("../components/accounting/deposits/newDeposit/newDeposit"),
+                href: "#accounting/deposits/newDeposits",
+                title: "New Deposits",
+                settings: {
+                    icon: "edit",
+                    auth: true,
+                    nav: true,
+                    roles: ["Employee", "Admin"],
+                    pos: "left"
+                }
+            },
+
+            // Accounting - General Journals
+            {
+                route: "accounting/generalJournals/generalJournalRegister",
+                name: "generalJournalRegister",
+                moduleId: PLATFORM.moduleName("../components/accounting/generalJournals/generalJournalRegister/generalJournalRegister"),
+                href: "#accounting/generalJournals/generalJournalRegister",
+                title: "General Journal Register",
+                settings: {
+                    icon: "list",
+                    auth: true,
+                    nav: true,
+                    roles: ["Employee", "Admin"],
+                    pos: "left"
+                }
+            },
+            {
+                route: "accounting/generalJournals/newGeneralJournal",
+                name: "newGeneralJournal",
+                moduleId: PLATFORM.moduleName("../components/accounting/generalJournals/newGeneralJournal/newGeneralJournal"),
+                href: "#accounting/generalJournals/newGeneralJournal",
+                title: "New General Journal",
+                settings: {
+                    icon: "edit",
+                    auth: true,
+                    nav: true,
+                    roles: ["Employee", "Admin"],
+                    pos: "left"
+                }
+            },
+
+            // Accounting - BankReconciliation
+            {
+                route: "accounting/bankReconciliation",
+                name: "paymentRegister",
+                moduleId: PLATFORM.moduleName("../components/accounting/bankReconciliation/bankReconciliation"),
+                href: "#accounting/bankReconciliation",
+                title: "Bank Reconciliation",
+                settings: {
+                    icon: "list",
+                    auth: true,
+                    nav: true,
+                    roles: ["Employee", "Admin"],
+                    pos: "left"
+                }
+            },
+            // Accounting - BAS
+            {
+                route: "accounting/BAS",
+                name: "BAS",
+                moduleId: PLATFORM.moduleName("../components/accounting/BAS/BAS"),
+                href: "#accounting/BAS",
+                title: "BAS Statement",
+                settings: {
+                    icon: "filter",
+                    auth: true,
+                    nav: true,
+                    roles: ["Employee", "Admin"],
+                    pos: "left"
+                }
+            },
+
+            // Accounting - Ledger Enquiry
+            {
+                route: "accounting/ledgerEnquiry",
+                name: "ledgerEnquiry",
+                moduleId: PLATFORM.moduleName("../components/accounting/ledgerEnquiry/ledgerEnquiry"),
+                href: "#accounting/ledgerEnquiry",
+                title: "Ledger Enquiry",
+                settings: {
+                    icon: "filter",
+                    auth: true,
+                    nav: true,
+                    roles: ["Employee", "Admin"],
+                    pos: "left"
+                }
+            },
+
+            // Accounting - Chart of Accounts 2nd level routes
+            {
+                route: "accounting/chartOfAccounts/accountMaintenance/chartOfAccountsRegister",
+                name: "generalJournalRegister",
+                moduleId: PLATFORM.moduleName("../components/accounting/chartOfAccounts/accountMaintenance/chartOfAccountsRegister/chartOfAccountsRegister"),
+                href: "#accounting/chartOfAccounts/accountMaintenance/chartOfAccountsRegister",
+                title: "Chart Of Accounts - Register",
+                settings: {
+                    icon: "list",
+                    auth: true,
+                    nav: true,
+                    roles: ["Employee", "Admin"],
+                    pos: "left"
+                }
+            },
+            {
+                route: "accounting/chartOfAccounts/accountMaintenance/newAccount",
+                name: "newAccount",
+                moduleId: PLATFORM.moduleName("../components/accounting/chartOfAccounts/accountMaintenance/newAccount/newAccount"),
+                href: "#accounting/chartOfAccounts/accountMaintenance/newAccount",
+                title: "New Account",
+                settings: {
+                    icon: "edit",
+                    auth: true,
+                    nav: true,
+                    roles: ["Employee", "Admin"],
+                    pos: "left"
+                }
+            },
+
+            // Accounting - Chart of Accounts 1st level routes
+            {
+                route: "accounting/chartOfAccounts/controlAccounts",
+                name: "controlAccounts",
+                moduleId: PLATFORM.moduleName("../components/accounting/chartOfAccounts/controlAccounts/controlAccounts"),
+                href: "#controlAccounts",
+                title: "Control Accounts",
+                settings: {
+                    icon: "list",
+                    auth: true,
+                    nav: true,
+                    roles: ["Employee", "Admin"],
+                    pos: "left"
+                }
+            },
+
+
+            // ADMINISTRAION
+            {
+                route: "companyDetail",
+                name: "companyDetail",
+                moduleId: PLATFORM.moduleName("../components/administration/companyDetail/companyDetail"),
+                settings: {
+                    icon: "list",
+                    auth: true,
+                    roles: ["Employee", "Admin"],
+                    pos: "left"
+                },
+                nav: true,
+                title: "Company Detail"
+            },
+            {
+                route: "user",
+                name: "user",
+                moduleId: PLATFORM.moduleName("../components/administration/user/user"),
+                settings: {
+                    icon: "user",
+                    auth: true,
+                    roles: ["Employee", "Admin"],
+                    pos: "right"
+                },
+                nav: true,
+                title: "User"
+            },
+            {
+                route: "notFound",
+                name: "notFound",
+                moduleId: PLATFORM.moduleName("../components/notFound/notFound"),
+                nav: false,
+                title: "Not Found",
+                settings: { auth: false, roles: ["Employee", "Admin"] },
+
+            }
+        ];
+    }
+}

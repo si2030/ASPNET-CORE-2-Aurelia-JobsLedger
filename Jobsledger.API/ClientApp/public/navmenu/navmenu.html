@@ -14,9 +14,9 @@
             <div class="navbar-collapse collapse">
 
                 <ul class="nav navbar-nav">
-
+                    <!--Menu items for the left side-->
                     <li repeat.for="row of router.navigation" class="${ row.isActive ? 'link-active' : '' }">
-                        <a href.bind="row.href" if.bind="!row.settings.nav">${ row.title }</a>
+                        <a href.bind="row.href" if.bind="!row.settings.nav && row.settings.pos==left">${ row.title }</a>
 
                         <a href.bind="row.href" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"
                            if.bind="row.settings.nav">
@@ -33,7 +33,5 @@
                 </ul>
             </div>
         </div>
-        <div if.bind="isLoggedIn">success</div>
-    </div>
-   My LoggedIn Value: ${ isLoggedIn }
+            </div>
 </template>

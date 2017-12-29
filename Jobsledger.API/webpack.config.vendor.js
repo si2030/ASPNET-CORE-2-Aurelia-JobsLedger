@@ -5,7 +5,7 @@ var extractCSS = new ExtractTextPlugin('vendor.css');
 
 module.exports = ({ prod } = {}) => {
     const isDevBuild = !prod;
-    
+
     return [{
         stats: { modules: false },
         resolve: {
@@ -32,9 +32,10 @@ module.exports = ({ prod } = {}) => {
                 'aurelia-templating-resources',
                 'aurelia-templating-router',
                 'aurelia-validation',
+                'font-awesome/css/font-awesome.css',
+                'jquery',
                 'bootstrap',
                 'bootstrap/dist/css/bootstrap.css',
-                'jquery'
             ],
         },
         output: {

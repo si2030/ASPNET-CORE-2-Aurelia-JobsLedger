@@ -9,19 +9,31 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 import { autoinject } from "aurelia-framework";
 import { Router } from 'aurelia-router';
-import { AuthService } from '../../auth/auth-service';
+import { AuthService } from "../../services/auth/auth-service";
 var Navmenu = /** @class */ (function () {
     function Navmenu(authService, router) {
         this.authService = authService;
         this.router = router;
-        this.isLoggedIn = false;
         this.userName = 'anonymous';
-        this.isLoggedIn = authService.isAuthenticated();
-        this.userName = authService.getUserName();
+        this.userName = this.authService.getUserName();
+        this.userRole = this.authService.getUserRole();
     }
+    Object.defineProperty(Navmenu.prototype, "routes", {
+        get: function () {
+            var _this = this;
+            return this.router.navigation.filter(function (r) { return r.settings.roles.indexOf(_this.userRole) > -1; });
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Navmenu.prototype.logout = function () {
+        localStorage.removeItem('origin');
+        this.authService.forceReturnToPublic();
+    };
     Navmenu = __decorate([
         autoinject,
-        __metadata("design:paramtypes", [AuthService, Router])
+        __metadata("design:paramtypes", [AuthService,
+            Router])
     ], Navmenu);
     return Navmenu;
 }());

@@ -6,11 +6,40 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="ClientApp\auth\auth-service.ts" />
-    <None Remove="ClientApp\app\components\auth\logout.ts" />
-    <None Remove="ClientApp\app\components\auth\tokenService.ts" />
-    <None Remove="ClientApp\app\components\auth\userService.ts" />
+    <None Remove="ClientApp\app\app\menu.ts" />
+    <None Remove="ClientApp\app\app\menu1.js" />
+    <None Remove="ClientApp\app\app\menu1.js.map" />
+    <None Remove="ClientApp\app\app\menu1.ts" />
+    <None Remove="ClientApp\app\app\menu2.js" />
+    <None Remove="ClientApp\app\app\menu2.js.map" />
+    <None Remove="ClientApp\app\app\menu2.ts" />
+    <None Remove="ClientApp\app\components\accounting\chartOfAccounts\accountMaintenance.ts" />
+    <None Remove="ClientApp\app\components\accounting\chartOfAccounts\accountMaintenance\chartOfAccountsRegister\chartOfAccountsRegister.ts" />
+    <None Remove="ClientApp\app\components\accounting\chartOfAccounts\accountMaintenance\newAccount\newAccount.ts" />
+    <None Remove="ClientApp\app\components\accounting\bankReconciliation\bankReconciliation.ts" />
+    <None Remove="ClientApp\app\components\accounting\BAS\BAS.ts" />
+    <None Remove="ClientApp\app\components\accounting\creditorCostInvoices\listCreditorCostInvoices\listCreditorCostInvoices.ts" />
+    <None Remove="ClientApp\app\components\accounting\creditorCostInvoices\newCreditorCostInvoice\newCreditorCostInvoice.ts" />
+    <None Remove="ClientApp\app\components\accounting\creditorCostInvoices\payments\payments.ts" />
+    <None Remove="ClientApp\app\components\accounting\creditorCostInvoices\payments\payOutstandingCreditorInvoices\payOutstandingCreditorInvoices.ts" />
+    <None Remove="ClientApp\app\components\accounting\deposits\depositList.ts" />
+    <None Remove="ClientApp\app\components\accounting\deposits\newDeposit\newDeposit.ts" />
+    <None Remove="ClientApp\app\components\accounting\generalJournals\generalJournalRegister\generalJournalRegister.ts" />
+    <None Remove="ClientApp\app\components\accounting\generalJournals\newGeneralJournal\newGeneralJournal.ts" />
+    <None Remove="ClientApp\app\components\accounting\ledgerEnquiry\ledgerEnquiry.ts" />
+    <None Remove="ClientApp\app\components\accounting\creditorCostInvoices\payments\paymentsRegister\paymentsRegister.ts" />
+    <None Remove="ClientApp\app\components\accounting\receipts\receipts.ts" />
+    <None Remove="ClientApp\app\components\administration\user\listUsers\listUsers.ts" />
+    <None Remove="ClientApp\app\components\administration\user\user.ts" />
+    <None Remove="ClientApp\app\components\administration\companyDetail\companyDetail.ts" />
+    <None Remove="ClientApp\app\components\notFound\notFound.ts" />
+    <None Remove="ClientApp\services\messages\animateOnChange.ts" />
+    <None Remove="ClientApp\services\messages\messages.ts" />
+    <None Remove="ClientApp\services\auth\auth-service.ts" />
+    <None Remove="ClientApp\public\components\notFound\notfound.ts" />
     <None Remove="ClientApp\public\public\public.ts" />
+    <None Remove="ClientApp\services\publicMessages\animateOnChange.ts" />
+    <None Remove="ClientApp\services\publicMessages\publicMessages.ts" />
   </ItemGroup>
 
   <ItemGroup>
@@ -20,7 +49,6 @@
   </ItemGroup>
   
   <ItemGroup>
-    <Folder Include="ClientApp\app\components\auth\register\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
 
@@ -45,10 +73,34 @@
     </ItemGroup>
   
     <ItemGroup>
-      <TypeScriptCompile Include="ClientApp\auth\auth-service.ts" />
-      <TypeScriptCompile Include="ClientApp\auth\tokenService.ts" />
-      <TypeScriptCompile Include="ClientApp\auth\user-Service.ts" />
+      <TypeScriptCompile Include="ClientApp\app\app\menu.ts" />
+      <TypeScriptCompile Include="ClientApp\app\components\accounting\chartOfAccounts\accountMaintenance\chartOfAccountsRegister\chartOfAccountsRegister.ts" />
+      <TypeScriptCompile Include="ClientApp\app\components\accounting\chartOfAccounts\accountMaintenance\newAccount\newAccount.ts" />
+      <TypeScriptCompile Include="ClientApp\app\components\accounting\chartOfAccounts\controlAccounts\controlAccounts.ts" />
+      <TypeScriptCompile Include="ClientApp\app\components\accounting\bankReconciliation\bankReconciliation.ts" />
+      <TypeScriptCompile Include="ClientApp\app\components\accounting\BAS\BAS.ts" />
+      <TypeScriptCompile Include="ClientApp\app\components\accounting\creditorCostInvoices\listCreditorCostInvoices\listCreditorCostInvoices.ts" />
+      <TypeScriptCompile Include="ClientApp\app\components\accounting\creditorCostInvoices\newCreditorCostInvoice\newCreditorCostInvoice.ts" />
+      <TypeScriptCompile Include="ClientApp\app\components\accounting\creditorCostInvoices\payments\creditorPromptPayments\creditorPromptPayments.ts" />
+      <TypeScriptCompile Include="ClientApp\app\components\accounting\creditorCostInvoices\payments\payOutstandingCreditorInvoices\payOutstandingCreditorInvoices.ts" />
+      <TypeScriptCompile Include="ClientApp\app\components\accounting\deposits\depositsRegister\depositsRegister.ts" />
+      <TypeScriptCompile Include="ClientApp\app\components\accounting\deposits\newDeposit\newDeposit.ts" />
+      <TypeScriptCompile Include="ClientApp\app\components\accounting\generalJournals\generalJournalRegister\generalJournalRegister.ts" />
+      <TypeScriptCompile Include="ClientApp\app\components\accounting\generalJournals\newGeneralJournal\newGeneralJournal.ts" />
+      <TypeScriptCompile Include="ClientApp\app\components\accounting\ledgerEnquiry\ledgerEnquiry.ts" />
+      <TypeScriptCompile Include="ClientApp\app\components\accounting\creditorCostInvoices\payments\paymentsRegister\paymentsRegister.ts" />
+      <TypeScriptCompile Include="ClientApp\app\components\accounting\receipts\receipts.ts" />
+      <TypeScriptCompile Include="ClientApp\app\components\administration\user\listUsers\listUsers.ts" />
+      <TypeScriptCompile Include="ClientApp\app\components\administration\user\newUser\newUser.ts" />
+      <TypeScriptCompile Include="ClientApp\app\components\notFound\notFound.ts" />
+      <TypeScriptCompile Include="ClientApp\app\components\administration\companyDetail\companyDetail.ts" />
+      <TypeScriptCompile Include="ClientApp\services\messages\animateOnChange.ts" />
+      <TypeScriptCompile Include="ClientApp\services\messages\messages.ts" />
+      <TypeScriptCompile Include="ClientApp\services\auth\auth-service.ts" />
+      <TypeScriptCompile Include="ClientApp\public\components\notFound\notFound.ts" />
       <TypeScriptCompile Include="ClientApp\public\public\public.ts" />
+      <TypeScriptCompile Include="ClientApp\services\publicMessages\animateOnChange.ts" />
+      <TypeScriptCompile Include="ClientApp\services\publicMessages\publicMessages.ts" />
     </ItemGroup>
 	
 	<Target Name="DebugRunWebpack" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('wwwroot\dist') ">

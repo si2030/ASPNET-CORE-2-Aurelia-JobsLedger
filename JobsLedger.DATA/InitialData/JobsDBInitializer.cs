@@ -265,10 +265,9 @@ namespace JobsLedger.DATA.InitialData
 
             _userCounter.Value = _userCounter.Value + 1;  // We need to progress the counter to the next value.
 
-            // create admin roles for new admin user
-            context.UserRoles.AddRange(new UserRole[] { new UserRole() { RoleId = 1, UserId = 1 },
-                                                            new UserRole() { RoleId = 2, UserId = 1 }
-                                                          });
+            // create admin role for new admin user
+            context.UserRoles.Add(new UserRole() { RoleId = 1, UserId = 1 });
+
             context.SaveChanges();
         }
     }

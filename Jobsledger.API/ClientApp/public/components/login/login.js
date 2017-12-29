@@ -11,8 +11,8 @@ import { HttpClient } from "aurelia-fetch-client";
 import { autoinject } from "aurelia-framework";
 import { Router } from "aurelia-router";
 import { ValidationControllerFactory, ValidationRules } from "aurelia-validation";
-import { BootstrapFormRenderer } from "../../../utilities/bootstrapFormRenderer";
-import { AuthService } from "../../../auth/auth-service";
+import { BootstrapFormRenderer } from "../../../services/bootstrapFormRenderer/bootstrapFormRenderer";
+import { AuthService } from "../../../services/auth/auth-service";
 var Login = /** @class */ (function () {
     function Login(authService, router, http, controllerFactory) {
         this.authService = authService;
@@ -34,9 +34,7 @@ var Login = /** @class */ (function () {
         }
     };
     Login = __decorate([
-        autoinject
-        //@inject(NewInstance.of(ValidationController))
-        ,
+        autoinject,
         __metadata("design:paramtypes", [AuthService,
             Router,
             HttpClient,

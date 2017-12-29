@@ -1,17 +1,29 @@
 ﻿import { autoinject, bindable, bindingMode } from "aurelia-framework";
 import { Router } from 'aurelia-router'
-import { AuthService } from '../../auth/auth-service'
 
+import { AuthService } from "../../services/auth/auth-service";
 
 @autoinject
 export class Navmenu {
+    public userName: string = 'anonymous';
+    private userRole: any;
 
-     public isLoggedIn: boolean = false;
-     public userName: string = 'anonymous';
 
-    constructor(public authService: AuthService, public router: Router) {
-        this.isLoggedIn = authService.isAuthenticated();
-        this.userName = authService.getUserName();
+    constructor(public authService: AuthService,
+                public router: Router)
+    {
+        this.userName = this.authService.getUserName();
+        this.userRole = this.authService.getUserRole();
+    }
+
+    get routes() {
+
+        return this.router.navigation.filter(r => r.settings.roles.indexOf(this.userRole) > -1);
+    }
+
+    logout() {
+        localStorage.removeItem('origin');
+        this.authService.forceReturnToPublic();
     }
 }
 

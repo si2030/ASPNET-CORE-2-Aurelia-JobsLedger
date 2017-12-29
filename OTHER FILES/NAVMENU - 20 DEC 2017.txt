@@ -1,0 +1,74 @@
+<template>
+    <require from="./navmenu.css"></require>
+    <div class="main-nav">
+        <div class="navbar navbar-inverse">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#/scheduler">Jobsledger</a>
+            </div>
+            <div class="navbar-collapse collapse">
+
+                <ul class="nav navbar-nav">
+                    <li repeat.for="route of router.navigation" class="${route.isActive ? 'active' : ''}">
+                        <a href.bind="route.href" if.bind="!route.settings.nav"><span class="glyphicon glyphicon-${ route.settings.icon }"></span> ${route.title}</a>
+
+                        <a href.bind="route.href" if.bind="route.settings.nav" class="dropdown-toggle" data-toggle="dropdown">
+                            <span class="glyphicon glyphicon-${ route.settings.icon }"></span> ${route.title} <span class="caret"></span> <!--First level menu heading - requires route.settings.nav to exist-->
+                        </a>
+
+                        <ul if.bind="route.settings.nav" class="dropdown-menu">
+                            <li repeat.for="menu of route.settings.nav" class="dropdown-submenu">
+                                <a href.bind="menu.href" if.bind="!menu.navSettings.subNav"><span class="glyphicon glyphicon-${ menu.navSettings.icon }"></span> ${menu.title}</a>
+
+                                <a href.bind="menu.href" if.bind="menu.navSettings.subNav" class="dropdown-toggle" data-toggle="dropdown">
+                                    <span class="glyphicon glyphicon-${ menu.navSettings.icon }"></span> ${menu.title} <span class="caret-right"></span>
+                                </a>
+                                <ul if.bind="menu.navSettings.subNav" class="dropdown-menu">
+                                    <li repeat.for="subMenu of menu.navSettings.subNav" class="dropdown-submenu">
+                                        <a href.bind="subMenu.href" if.bind="!subMenu.subNavSettings.subSubNav"><span class="glyphicon glyphicon-${ subMenu.subNavSettings.icon }"></span> ${subMenu.title}</a>
+
+                                        <a href.bind="subMenu.href" if.bind="subMenu.subNavSettings.subSubNav" class="dropdown-toggle" data-toggle="dropdown">
+                                            <span class="glyphicon glyphicon-${ subMenu.subNavSettings.icon }"></span> ${subMenu.title} <span class="caret-right"></span>
+                                        </a>
+                                        <ul if.bind="subMenu.subNavSettings.subSubNav" class="dropdown-menu">
+                                            <li repeat.for="lowestSubMenu of subMenu.subNavSettings.subSubNav" class="dropdown-submenu">
+                                                <a href.bind="lowestSubMenu.href"> <span class="glyphicon glyphicon-${ lowestSubMenu.subSubNavSettings.icon }"></span> ${lowestSubMenu.title}</a>
+                                            </li>
+                                        </ul>                        
+                                    </li>
+                                </ul>
+                                <!--<span class="divider" if.bind="menu.navSettings.divider"> </span>-->
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li repeat.for="row of routes" if.bind="row.settings.pos == 'right'" class="${ row.isActive ? 'link-active' : '' }">
+                        <a href.bind="row.href" if.bind="!row.settings.nav">${ row.title }</a>
+
+                        <a href.bind="row.href" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"
+                           if.bind="row.settings.nav">
+                            ${row.title}
+                            <span class="caret"></span>
+                        </a>
+
+                        <ul if.bind="row.settings.nav" class="dropdown-menu">
+                            <li repeat.for="menu of row.settings.nav">
+                                <a href.bind="menu.href">${menu.title}</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#" click.delegate="logout()">Log Out</a></li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</template>

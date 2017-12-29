@@ -1,0 +1,59 @@
+    public userMenu(userName: string, userRole: string): any {
+
+        var firstLevelNode = Array();
+        var secondLevelNode = Array();
+        var thirdLevelNode = Array();
+        var forthLevelNode = Array();
+        console.log("MENU LENGTH: ", this.menuList().length);
+
+        for (var firstLevel = 0; firstLevel < this.menuList().length; firstLevel++) {  // FIRST LEVEL
+
+            if (this.menuList()[firstLevel].settings.nav) {
+                for (var secondLevel = 0; secondLevel < this.menuList()[firstLevel].settings.nav.length; secondLevel++) {
+
+                    if (this.menuList()[firstLevel].settings.nav[secondLevel].navSettings.subNav) {
+                        for (var thirdLevel = 0; thirdLevel < this.menuList()[firstLevel].settings.nav[secondLevel].navSettings.subNav.length; thirdLevel++) {
+
+                            if (this.menuList()[firstLevel].settings.nav[secondLevel].navSettings.subNav[thirdLevel].subNavSettings.subSubNav) {
+                                for (var forthLevel = 0; forthLevel < this.menuList()[firstLevel].settings.nav[secondLevel].navSettings.subNav[thirdLevel].subNavSettings.subSubNav.length; forthLevel++) {
+
+                                    if (this.menuList()[firstLevel].settings.nav[secondLevel].navSettings.subNav[thirdLevel].subNavSettings.subSubNav[forthLevel].subSubNavSettings.roles.includes(userRole)) {
+
+                                        if (!this.menuList()[firstLevel].settings.nav[secondLevel].navSettings.subNav[thirdLevel].subNavSettings.subSubNav[forthLevel].subSubNavSettings.divider) {
+                                            forthLevelNode.push(this.menuList()[firstLevel].settings.nav[secondLevel].navSettings.subNav[thirdLevel].subNavSettings.subSubNav[forthLevel])
+                                        }
+                                    }
+                                }
+                            } else {
+                                if (this.menuList()[firstLevel].settings.nav[secondLevel].navSettings.subNav[thirdLevel].subNavSettings.roles.includes(userRole)) {
+
+                                    if (!this.menuList()[firstLevel].settings.nav[secondLevel].navSettings.subNav[thirdLevel].subNavSettings.divider)
+                                        thirdLevelNode.push(this.menuList()[firstLevel].settings.nav[secondLevel].navSettings.subNav[thirdLevel])
+                                }
+                            }
+                        }
+                    } else {
+                        if (this.menuList()[firstLevel].settings.nav[secondLevel].navSettings.roles.includes(userRole)) {
+
+                            if (!this.menuList()[firstLevel].settings.nav[secondLevel].navSettings.divider) {
+                                secondLevelNode.push(this.menuList()[firstLevel].settings.nav[secondLevel])
+                            }
+                        }
+                    }
+                }
+            }
+            if (this.menuList()[firstLevel].settings.roles.includes(userRole)) {
+                this.userMenuList.push(this.menuList()[firstLevel]);
+            }
+        }
+
+
+        console.log("SecondLevelNode: ", secondLevelNode);
+        console.log("thirdLevelNode: ", thirdLevelNode);
+        console.log("forthLevelNode: ", forthLevelNode);
+        this.userMenuList.push(secondLevelNode);
+        this.userMenuList.push(thirdLevelNode);
+        this.userMenuList.push(forthLevelNode);
+
+        console.log("userMenuList: ", this.userMenuList);
+    }

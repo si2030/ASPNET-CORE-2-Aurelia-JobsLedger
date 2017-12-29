@@ -4,3 +4,50 @@
         padding-top: 50px;
     }
 }
+/* For the message alerts at the top of the page*/
+.alert {
+    margin-bottom: 1px;
+    height: 30px;
+    line-height: 30px;
+    padding: 0px 15px;
+}
+
+    .background-animation-add {
+        -webkit-animation: changeBack 0.5s;
+        animation: changeBack 0.5s;
+    }
+
+    .background-animation-remove {
+        -webkit-animation: fadeIn 0.5s;
+        animation: fadeIn 0.5s;
+    }
+
+    @-webkit-keyframes changeBack {
+        0% {
+            background-color: white;
+        }
+
+        50% {
+            background-color: lightgreen;
+        }
+
+        100% {
+            background-color: white;
+        }
+    }
+
+    @keyframes changeBack {
+        0% {
+            background-color: white;
+        }
+
+        50% {
+            background-color: lightgreen;
+        }
+
+        100% {
+            background-color: white;
+        }
+    }
+
+
