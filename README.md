@@ -2,7 +2,10 @@
 Project that uses ASPNET CORE as the server with Aurelia as the front end with webpack in TYPESCRIPT.
 
 
-You will obviously need VISUAL STUDIO 2017 and it does need to have entity framework and all extras.. (tick all the options of you are unsure)
+This is truely a work in progress. I am learning these technologies as I go so there are probably many areas that could easily be improved.
+
+
+You will obviously need VISUAL STUDIO 2017 and it does need to have entity framework and all extras.. (tick all the options of you are unsure when you are installing it)
 
 
 Also, ignore the OTHER FILES directory.. these are files that were used for questions on Stackoverflow etc and have nothing to do with the running project.
