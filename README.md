@@ -1,5 +1,5 @@
 # ASPNET-CORE-2-Aurelia-JobsLedger
-Project that uses ASPNET CORE as the server with Aurelia as the front end with webpack.
+Project that uses ASPNET CORE as the server with Aurelia as the front end with webpack in TYPESCRIPT.
 
 You will obviously need VISUAL STUDIO and it does need to have entity framework and all extras.. (tick all the options of you are unsure)
 
