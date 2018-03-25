@@ -54,7 +54,7 @@ dotnet ef database update -s ../JobsLedger.API
 <h2>The Aurelia Front End</h2>
 This is definitely a work in progress. It works but I am still learning this framework with quite a bit to go. This is how far I have got in a few months part time.
 
-h2>Running this</h2>
+<h2>Running this</h2>
 The Aurelia front end is split into two seperate sections - public and app. public is for your "public website" with a login option... and "app is your "application" although I have a long way to go.
 
 To get to your "app" you have log in. username = "admin" and password = "password". It will load dummy data on the first load.
