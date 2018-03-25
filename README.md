@@ -1,7 +1,7 @@
 # ASPNET-CORE-2-Aurelia-JobsLedger
 Project that uses ASPNET CORE as the server with Aurelia as the front end with webpack in TYPESCRIPT.
 
-You will obviously need VISUAL STUDIO and it does need to have entity framework and all extras.. (tick all the options of you are unsure)
+You will obviously need VISUAL STUDIO 2017 and it does need to have entity framework and all extras.. (tick all the options of you are unsure)
 
 Also, ignore the OTHER FILES directory.. these are files that were used for questions on Stackoverflow etc and have nothing to do with the running project.
 
@@ -12,22 +12,22 @@ NOTE: Part 1 below has already been done. Its just mentioned to help with the un
 
 create the following migrations.cs file (just need to do this once AND ITS NOT THE SAME FILE AS THE ONE Entity Framework Core 2 creates - I just named it the same and placed it in the web project -Jobsledger.api (NOTE THAT THE FILE IS ALREADY CREATED BUT IT STILL NEEDS TO BE MENTIONED) - Entity Framework Core 2 uses it). This has to be in the API project - Thats JobsLedger.API
 
-using JobsLedger.DATA;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Design;
-using Microsoft.Extensions.Configuration;
-using System.IO;
+    using JobsLedger.DATA;
+    using Microsoft.EntityFrameworkCore;
+    using Microsoft.EntityFrameworkCore.Design;
+    using Microsoft.Extensions.Configuration;
+    using System.IO;
 
-namespace JobsLedger.API
-{
-public class DesignTimeDbContextFactory : IDesignTimeDbContextFactory
-{
-public JobsLedgerAPIContext CreateDbContext(string[] args)
-{
-IConfigurationRoot configuration = new ConfigurationBuilder()
-.SetBasePath(Directory.GetCurrentDirectory())
-.AddJsonFile("appsettings.json")
-.Build();
+    namespace JobsLedger.API
+    {
+    public class DesignTimeDbContextFactory : IDesignTimeDbContextFactory
+    {
+    public JobsLedgerAPIContext CreateDbContext(string[] args)
+    {
+    IConfigurationRoot configuration = new ConfigurationBuilder()
+    .SetBasePath(Directory.GetCurrentDirectory())
+    .AddJsonFile("appsettings.json")
+    .Build();
 
         var builder = new DbContextOptionsBuilder<JobsLedgerAPIContext>();
 
