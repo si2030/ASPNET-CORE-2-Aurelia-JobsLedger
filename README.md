@@ -1,16 +1,22 @@
 # ASPNET-CORE-2-Aurelia-JobsLedger
 Project that uses ASPNET CORE as the server with Aurelia as the front end with webpack in TYPESCRIPT.
 
+
 You will obviously need VISUAL STUDIO 2017 and it does need to have entity framework and all extras.. (tick all the options of you are unsure)
 
+
 Also, ignore the OTHER FILES directory.. these are files that were used for questions on Stackoverflow etc and have nothing to do with the running project.
+
 
 <h1>Setting up the database</h1>
 NOTE: Part 1 below has already been done. Its just mentioned to help with the understanding etc. Part 2 does need to be done!
 
+
 1). To create a migrations.cs file using Enitiy Framework Core 2 you have to do the following - From the project directory where your context resides - in this case JobsLedger.DATA - you have to....
 
+
 create the following migrations.cs file (just need to do this once AND ITS NOT THE SAME FILE AS THE ONE Entity Framework Core 2 creates - I just named it the same and placed it in the web project -Jobsledger.api (NOTE THAT THE FILE IS ALREADY CREATED BUT IT STILL NEEDS TO BE MENTIONED) - Entity Framework Core 2 uses it). This has to be in the API project - Thats JobsLedger.API
+
 
     using JobsLedger.DATA;
     using Microsoft.EntityFrameworkCore;
@@ -44,10 +50,11 @@ create the following migrations.cs file (just need to do this once AND ITS NOT T
 navigate to the same directory as the dbcontext file resides. In the case its the JobsLedger.DATA folder and in a command line you do the following. (open cmd in the JobsLedger.DATA folder)
 
  RUN THE FOLLOWING: 
-
 dotnet ef migrations add InitialMigration -s ../JobsLedger.API
 
+
 dotnet ef database update -s ../JobsLedger.API
+
 
 "-s" is the startup project.
 
@@ -57,4 +64,8 @@ This is definitely a work in progress. It works but I am still learning this fra
 <h2>Running this</h2>
 The Aurelia front end is split into two seperate sections - public and app. public is for your "public website" with a login option... and "app is your "application" although I have a long way to go.
 
-To get to your "app" you have log in. username = "admin" and password = "password". It will load dummy data on the first load.
+
+To get to your "app" you have log in. username = "admin" and password = "password". 
+
+
+It will load dummy data on the first load.
