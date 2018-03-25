@@ -23,11 +23,11 @@ create the following migrations.cs file (just need to do this once AND ITS NOT T
     public class DesignTimeDbContextFactory : IDesignTimeDbContextFactory
     {
     public JobsLedgerAPIContext CreateDbContext(string[] args)
-    {
-    IConfigurationRoot configuration = new ConfigurationBuilder()
-    .SetBasePath(Directory.GetCurrentDirectory())
-    .AddJsonFile("appsettings.json")
-    .Build();
+      {
+        IConfigurationRoot configuration = new ConfigurationBuilder()
+        .SetBasePath(Directory.GetCurrentDirectory())
+        .AddJsonFile("appsettings.json")
+        .Build();
 
         var builder = new DbContextOptionsBuilder<JobsLedgerAPIContext>();
 
@@ -36,9 +36,9 @@ create the following migrations.cs file (just need to do this once AND ITS NOT T
         builder.UseSqlServer(connectionString);
 
         return new JobsLedgerAPIContext(builder.Options);
+        }
+      }
     }
-}
-}
 
 2.) (THIS DOES NEED TO BE DONE!!)
 navigate to the same directory as the dbcontext file resides. In the case its the JobsLedger.DATA folder and in a command line you do the following. (open cmd in the JobsLedger.DATA folder)
