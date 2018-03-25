@@ -9,13 +9,13 @@ Also, ignore the OTHER FILES directory.. these are files that were used for ques
 
 
 <h1>Setting up the database</h1>
-NOTE: Part 1 below has already been done. Its just mentioned to help with the understanding etc. Part 2 does need to be done!
+NOTE: Part 1 below has already been done -i've already created this file however its just mentioned here to help with the understanding etc. Part 2 does need to be done!
 
 
-1). To create a migrations.cs file using Enitiy Framework Core 2 you have to do the following - From the project directory where your context resides - in this case JobsLedger.DATA - you have to....
+1). To create a migrations.cs file using Enitiy Framework Core 2 you would normally have to do the following if you have your context in another project... From the project directory where your context resides - in this case JobsLedger.DATA - you have to....
 
 
-create the following migrations.cs file (just need to do this once AND ITS NOT THE SAME FILE AS THE ONE Entity Framework Core 2 creates - I just named it the same and placed it in the web project -Jobsledger.api (NOTE THAT THE FILE IS ALREADY CREATED BUT IT STILL NEEDS TO BE MENTIONED) - Entity Framework Core 2 uses it). This has to be in the API project - Thats JobsLedger.API
+create the following migrations.cs file - DONE. (Normally you just need to do this once AND ITS NOT THE SAME FILE AS THE ONE Entity Framework Core 2 creates - I've just named it the same and placed it in the web project -Jobsledger.api (NOTE AGAIN THAT THIS FILE HAS ALREADY BEEN CREATED - just mentioning it here for completeness) - Entity Framework Core 2 uses it). This has to be in the API project - As I mentioned above thats JobsLedger.API
 
 
     using JobsLedger.DATA;
