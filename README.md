@@ -3,6 +3,8 @@ Project that uses ASPNET CORE as the server with Aurelia as the front end with w
 
 You will obviously need VISUAL STUDIO and it does need to have entity framework and all extras.. (tick all the options of you are unsure)
 
+Also, ignore the OTHER FILES directory.. these are files that were used for questions on Stackoverflow etc and have nothing to do with the running project.
+
 <h1>Setting up the database</h1>
 1). To create a migrations.cs file using Enitiy Framework Core 2 you have to do the following - From the project directory where your context resides - in this case JobsLedger.DATA - you have to....
 
